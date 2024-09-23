@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "educ8009-assignments"
+  sidebar: 
+    sytle: "docked"
+    search: false
+    contents: 
+      - text: "Home"
+        href: index.qmd
+      - section: "Lecture Notes"
+        contents: 
+          - session01/lecture-notes.ipynb
+      - section: "Assignments"
+
+format:
+  html:
+    theme: lumen
+    css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,17 @@
+---
+title: | 
+        Lecture Notes / Assignments \ 
+        on EDUC8009
+toc: false
+---
+ようこそ! 
+
+This is my personal repository for datasets, lecture notes & assignment submitions on EDUC8009 - DESCRIPTIVE AND INFERENTIAL STATISTICS. 
+
+As this course is tailored for SPSS users, here's the problem: I can only get my hands on the legal copy in our computer lab, where the machines are about as speedy as *a sloth on a lazy day*, sporting a single-channel 8GB of RAM. Apple may claim that 8 is enough (even greater than 16) for most users, and we all know that’s just some optimistic marketing. 
+
+So, I decided to take a detour and embrace the open-source revolution with sweety sidekick: `python=3.10` armed with the duo of Doolin and Dal..., sorry, `pandas` and `scipy.stats`. An `R=4.3.3` implementation will also be included in the solution of my assignment as well.
+
+![It all starts from `iris` and `mtcars`.](iris_mtcars.webp)
+
+Riko
