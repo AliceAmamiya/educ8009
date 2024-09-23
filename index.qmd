@@ -6,7 +6,7 @@ toc: false
 ---
 ようこそ! 
 
-This is my personal repository for datasets, lecture notes & assignment submitions on EDUC8009 - DESCRIPTIVE AND INFERENTIAL STATISTICS. 
+This is my personal repository for datasets, lecture notes & assignment submissions on EDUC8009 - DESCRIPTIVE AND INFERENTIAL STATISTICS. 
 
 As this course is tailored for SPSS users, here's the problem: I can only get my hands on the legal copy in our computer lab, where the machines are about as speedy as *a sloth on a lazy day*, sporting a single-channel 8GB of RAM. Apple may claim that 8 is enough (even greater than 16) for most users, and we all know that’s just some optimistic marketing. 
 
