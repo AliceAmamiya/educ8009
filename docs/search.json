@@ -2,12 +2,133 @@
   {
     "objectID": "session01/lecture-notes.html",
     "href": "session01/lecture-notes.html",
-    "title": "Session 01",
+    "title": "Session 01: Introduction",
     "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.\n\n\n# For descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\n# Ways to do description statistics in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
     "crumbs": [
-      "Lecture Notes",
-      "Session 01"
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html#summary",
+    "href": "session01/lecture-notes.html#summary",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html#implementations",
+    "href": "session01/lecture-notes.html#implementations",
+    "title": "Session 01: Introduction",
+    "section": "Implementations",
+    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html#descriptive-statistics",
+    "href": "session01/lecture-notes.html#descriptive-statistics",
+    "title": "Session 01: Introduction",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html",
+    "href": "session03/assignment.html",
+    "title": "Assignment - Session 03",
+    "section": "",
+    "text": "print('Hello World')",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment - Session 03"
+    ]
+  },
+  {
+    "objectID": "session02/lecture-notes.html",
+    "href": "session02/lecture-notes.html",
+    "title": "Section 02: Concepts",
+    "section": "",
+    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)",
+    "crumbs": [
+      "Coursework",
+      "Session02",
+      "Section 02: Concepts"
+    ]
+  },
+  {
+    "objectID": "session02/lecture-notes.html#summary",
+    "href": "session02/lecture-notes.html#summary",
+    "title": "Section 02: Concepts",
+    "section": "",
+    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)",
+    "crumbs": [
+      "Coursework",
+      "Session02",
+      "Section 02: Concepts"
+    ]
+  },
+  {
+    "objectID": "session02/lecture-notes.html#research-questions",
+    "href": "session02/lecture-notes.html#research-questions",
+    "title": "Section 02: Concepts",
+    "section": "Research Questions",
+    "text": "Research Questions\n\nVariables and causal relationships\n\nthe X-axis and Y-axis - assuming \\(X\\) will affect \\(Y\\)\n\n\\(X\\) =&gt; Independent var\n\n\\(Y\\) =&gt; Dependent var\n\n\nare \\(X\\) and \\(Y\\) correlated or associated?\ndoes \\(X\\) predict \\(Y\\)?\ndoes \\(X\\) cause/determine/influence \\(Y\\)? - strong evidence needed\n\n\nConfounding\n\nassociated with the \\(X\\) that cause or influence \\(Y\\)\nmay cause false association\ne.g. ice cream sales vs drowning incidents\n\naffected by confounder - temperature - another variable makes \\(X\\) and \\(Y\\) correlated.\n\ne.g. age vs wages\n\nage - associated with experience + wages\n\nControls:\n\nExperimental\nStatistical\n\n\n\n\nMediation\n\ne.g. wages - male vs female\n\nfrom average wages: yes they are correlated.\nbut: does it imply discrimination?\nlook deeper: control of occupations\n\nSimpson’s paradox\n\ngender –occupation–&gt; wages\n\n\n\n\n\nAddressing causal inferences\n\nTheory\nStatistically related\nTime: \\(X\\) happens earlier\nThe causal inferences: proof no rival explanations for the changes of \\(Y\\).\n\n(Brannon et al., 2017; Cozby & Bates, 2017)",
+    "crumbs": [
+      "Coursework",
+      "Session02",
+      "Section 02: Concepts"
+    ]
+  },
+  {
+    "objectID": "session02/lecture-notes.html#research-design",
+    "href": "session02/lecture-notes.html#research-design",
+    "title": "Section 02: Concepts",
+    "section": "Research Design",
+    "text": "Research Design\n\nExperiment\n\ngrouping and control\ncontrol group vs treatment group\nrandomized, standardized, clear-defined dependent variable\nRCT - Randomized controlled trial: cost, ethic, external validity\n\n\n\nNon-experiment\n\ncorrelational research: e.g. questionnaires\ncost: generally **doesn’t lead to causality”\n\ntemporal precedence + confounding\ncorrelations \\(\\neq\\) causation\n\n\n\n\nQuasi-experiment\n\nuse pre-existing groups - Nonequivalent control group\n\ne.g. free lunch in school 1 but not in school 2\nconfounding my exists\n\nuse data before and after the intervention - One-group pretest-post-test design\n\ne.g. maturation\n\n\n\n\nComparison of designs\n\ninternal validity vs external validity\ntrade-offs",
+    "crumbs": [
+      "Coursework",
+      "Session02",
+      "Section 02: Concepts"
+    ]
+  },
+  {
+    "objectID": "session02/lecture-notes.html#populations-and-samples",
+    "href": "session02/lecture-notes.html#populations-and-samples",
+    "title": "Section 02: Concepts",
+    "section": "Populations and Samples",
+    "text": "Populations and Samples",
+    "crumbs": [
+      "Coursework",
+      "Session02",
+      "Section 02: Concepts"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#why",
+    "href": "session03/lecture-notes.html#why",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "Why?",
+    "text": "Why?\nScreening:\n- missing data - unusually values - too small groups - mistakes - e.g. impossible values\nThen: correct them or drop them",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
     ]
   },
   {

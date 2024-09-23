@@ -5,15 +5,14 @@ project:
 website:
   title: "educ8009-assignments"
   sidebar: 
-    sytle: "docked"
+    style: "docked"
     search: false
     contents: 
       - text: "Home"
         href: index.qmd
-      - section: "Lecture Notes"
-        contents: 
-          - session01/lecture-notes.ipynb
-      - section: "Assignments"
+      - section: "Coursework"
+        contents: "*.ipynb"
+      - section: ""
 
 format:
   html:
