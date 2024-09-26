@@ -1,62 +1,146 @@
 [
   {
-    "objectID": "session01/lecture-notes.html",
-    "href": "session01/lecture-notes.html",
-    "title": "Session 01: Introduction",
+    "objectID": "session03/lecture-notes.html",
+    "href": "session03/lecture-notes.html",
+    "title": "Session 03: Descriptive Statistics",
     "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
-    "crumbs": [
-      "Coursework",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html#summary",
-    "href": "session01/lecture-notes.html#summary",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
-    "crumbs": [
-      "Coursework",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html#implementations",
-    "href": "session01/lecture-notes.html#implementations",
-    "title": "Session 01: Introduction",
-    "section": "Implementations",
-    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)",
-    "crumbs": [
-      "Coursework",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html#descriptive-statistics",
-    "href": "session01/lecture-notes.html#descriptive-statistics",
-    "title": "Session 01: Introduction",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64",
-    "crumbs": [
-      "Coursework",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session03/assignment.html",
-    "href": "session03/assignment.html",
-    "title": "Assignment - Session 03",
-    "section": "",
-    "text": "print('Hello World')",
+    "text": "preliminary data screening\nchoosing appropriate descriptive statistics based on data distribution\nthoroughly reporting statistical findings, e.g.:\n\ndata cleaning\noutlier handling procedures",
     "crumbs": [
       "Coursework",
       "Session03",
-      "Assignment - Session 03"
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#summary",
+    "href": "session03/lecture-notes.html#summary",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "",
+    "text": "preliminary data screening\nchoosing appropriate descriptive statistics based on data distribution\nthoroughly reporting statistical findings, e.g.:\n\ndata cleaning\noutlier handling procedures",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#why-doing-descriptive-statistics",
+    "href": "session03/lecture-notes.html#why-doing-descriptive-statistics",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "Why doing descriptive statistics?",
+    "text": "Why doing descriptive statistics?\nScreening:\n- missing data - unusually values - too small groups - mistakes - e.g. impossible values\nThen: correct them or drop them",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#frequency-distributions",
+    "href": "session03/lecture-notes.html#frequency-distributions",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "Frequency Distributions",
+    "text": "Frequency Distributions\n\nUsed for preliminary data screening\nFrequency tables for categorical variables\nHistograms for continuous variables\n\n\nimport pandas as pd\nfrom scipy import stats\nimport seaborn as sns\n\n\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\n\n# Frequency Tables for Categorical Variables (slides p.6)\ntemphr10['sex'].value_counts()\n\nsex\nMale      7\nFemale    3\nName: count, dtype: int64\n\n\n\n# Filtering missing data with haircolor dataset (p. 6)\nhaircolor = pd.read_spss('./datasets/haircolor.sav')\nhaircolor.columns\n\nIndex(['casenumber', 'haircolor', 'newgrouphaircolor'], dtype='object')\n\n\n\n# To count missing value, use sum() and isnull(). \nhaircolor.isnull().sum()\n\ncasenumber           0\nhaircolor            4\nnewgrouphaircolor    5\ndtype: int64\n\n\n\n\n\ncasenumber           0\nhaircolor            4\nnewgrouphaircolor    5\ndtype: int64\n\n\n\nThe total \\(N\\) for the study was 50. The sample included these hair color groups: 32% brown, 24% black, 16% blond, 6% red, 6% gray, 4% pink, 2% blue, 2% out‐of‐range scores, and 8% missing values.",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#central-tendency-measures",
+    "href": "session03/lecture-notes.html#central-tendency-measures",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "Central Tendency Measures",
+    "text": "Central Tendency Measures\n\nMode: Most frequent value\nMedian: Middle value\nMean: \\[M = \\bar{X} = \\frac{\\sum_{i=1}^N X_i}{N}\\]",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#variabilitydispersion-measures",
+    "href": "session03/lecture-notes.html#variabilitydispersion-measures",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "Variability/Dispersion Measures",
+    "text": "Variability/Dispersion Measures\n\nRange: Max - Min\nInterquartile Range (IQR): Q3 - Q1\nVariance: \\[s^2 = \\frac{\\sum_{i=1}^N (X_i - M)^2}{N - 1}\\]\nStandard Deviation: \\[s = \\sqrt{s^2}\\]\n\n\n# BMI dataset and the boxplot\nbmi = pd.read_spss('./datasets/bmi.sav')\nbmi.columns\n\nIndex(['idnumber', 'Sex', 'Weight', 'height', 'BMI'], dtype='object')\n\n\n\nsns.boxplot(data=bmi, x='Sex', y='BMI')",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#z-scores",
+    "href": "session03/lecture-notes.html#z-scores",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "Z-scores",
+    "text": "Z-scores\n\\[z = \\frac{X - M}{SD}\\]",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#normal-distribution",
+    "href": "session03/lecture-notes.html#normal-distribution",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "5. Normal Distribution",
+    "text": "5. Normal Distribution\n\nBell-shaped curve\n68-95-99.7 rule for standard deviations",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#skewness-and-kurtosis",
+    "href": "session03/lecture-notes.html#skewness-and-kurtosis",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "6. Skewness and Kurtosis",
+    "text": "6. Skewness and Kurtosis\n\nMeasures of distribution shape\nSkewness: \\[\\frac{1}{N} \\sum(\\frac{X - M}{SD})^3\\]\nKurtosis: \\[\\frac{1}{N} \\sum(\\frac{X - M}{SD})^4\\]",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#assessing-normality",
+    "href": "session03/lecture-notes.html#assessing-normality",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "7. Assessing Normality",
+    "text": "7. Assessing Normality\n\nHistograms with normal curve\nQ-Q plots",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#outliers",
+    "href": "session03/lecture-notes.html#outliers",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "8. Outliers",
+    "text": "8. Outliers\n\nOften defined as |z| &gt; 3.29",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
+    ]
+  },
+  {
+    "objectID": "session03/lecture-notes.html#reporting-descriptive-statistics",
+    "href": "session03/lecture-notes.html#reporting-descriptive-statistics",
+    "title": "Session 03: Descriptive Statistics",
+    "section": "9. Reporting Descriptive Statistics",
+    "text": "9. Reporting Descriptive Statistics\n\nInclude sample size, measures of central tendency, and dispersion\nDescribe distribution shape and presence of outliers\nUse appropriate visualizations (histograms, boxplots)",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Session 03: Descriptive Statistics"
     ]
   },
   {
@@ -120,18 +204,6 @@
     ]
   },
   {
-    "objectID": "session03/lecture-notes.html#why",
-    "href": "session03/lecture-notes.html#why",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "Why?",
-    "text": "Why?\nScreening:\n- missing data - unusually values - too small groups - mistakes - e.g. impossible values\nThen: correct them or drop them",
-    "crumbs": [
-      "Coursework",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Lecture Notes / Assignments\non EDUC8009",
@@ -139,6 +211,126 @@
     "text": "ようこそ!\nThis is my personal repository for datasets, lecture notes & assignment submissions on EDUC8009 - DESCRIPTIVE AND INFERENTIAL STATISTICS.\nAs this course is tailored for SPSS users, here’s the problem: I can only get my hands on the legal copy in our computer lab, where the machines are about as speedy as a sloth on a lazy day, sporting a single-channel 8GB of RAM. Apple may claim that 8 is enough (even greater than 16) for most users, and we all know that’s just some optimistic marketing.\nSo, I decided to take a detour and embrace the open-source revolution with sweety sidekick: python=3.10 armed with the duo of Doolin and Dal…, sorry, pandas and scipy.stats. An R=4.3.3 implementation will also be included in the solution of my assignment as well.\n\n\n\nIt all starts from iris and mtcars.\n\n\nRiko",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html",
+    "href": "session01/lecture-notes.html",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html#summary",
+    "href": "session01/lecture-notes.html#summary",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html#implementations",
+    "href": "session01/lecture-notes.html#implementations",
+    "title": "Session 01: Introduction",
+    "section": "Implementations",
+    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html#descriptive-statistics",
+    "href": "session01/lecture-notes.html#descriptive-statistics",
+    "title": "Session 01: Introduction",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64",
+    "crumbs": [
+      "Coursework",
+      "Session01",
+      "Session 01: Introduction"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html",
+    "href": "session03/assignment.html",
+    "title": "Assignment: Laboratory 1",
+    "section": "",
+    "text": "A biologist was worried about the potential health effects of music festivals. So, one year she went to the Download Music Festival (http://www.downloadfestival.co.uk) and measured the hygiene of 810 concert goers over the three days of the festival. In theory each person was measured on each day but because it was difficult to track people down, there were some missing data on days 2 and 3. Hygiene was measured using a technique that results in a score ranging between 0 (you smell like a rotting corpse) and 5 (you smell like sweet roses). Sanitation is not always great at these places, so this researcher predicted that personal hygiene would go down dramatically over the three days of the festival. The data file is called download.sav.",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment: Laboratory 1"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html#preparation",
+    "href": "session03/assignment.html#preparation",
+    "title": "Assignment: Laboratory 1",
+    "section": "Preparation",
+    "text": "Preparation\nBefore working on the lab work , I started with a quick EDA.\n\ndf_download, metadata_download = pyreadstat.read_sav(\"./datasets/download.sav\")\n\n# A quick peek on the structure of the DataFrame. \nprint('0. An overall description of this dataset: \\n' + str(df_download.describe()) + '\\n')\nprint('1. Shape - rows and columns: \\n' + str(df_download.shape) + '\\n') \nprint('2. Variables (in SPSS) or column names: \\n ' + str(df_download.columns) + '\\n')\nprint('3. Missing values (if any): \\n ' + str(df_download.isnull().sum()) + '\\n')\n\n0. An overall description of this dataset: \n         ticket_no      gender       day_1       day_2       day_3\ncount   810.000000  810.000000  810.000000  264.000000  123.000000\nmean   3616.212346    1.769136    1.793358    0.960909    0.976504\nstd     610.241493    0.632679    0.944495    0.720780    0.710277\nmin    2111.000000    1.000000    0.020000    0.000000    0.020000\n25%    3096.250000    1.000000    1.312500    0.410000    0.440000\n50%    3620.500000    2.000000    1.790000    0.790000    0.760000\n75%    4154.750000    2.000000    2.230000    1.350000    1.525000\nmax    4765.000000    3.000000   20.020000    3.440000    3.410000\n\n1. Shape - rows and columns: \n(810, 5)\n\n2. Variables (in SPSS) or column names: \n Index(['ticket_no', 'gender', 'day_1', 'day_2', 'day_3'], dtype='object')\n\n3. Missing values (if any): \n ticket_no      0\ngender         0\nday_1          0\nday_2        546\nday_3        687\ndtype: int64\n\n\n\nFrom the result, I think there seems something wrong in the column day_1. We’ll check it later. Also, the column gender should be a categorical variable rather than an int. I then corrected it:\n\ndf_download['gender'] = df_download['gender'].astype('category')",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment: Laboratory 1"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html#question-1",
+    "href": "session03/assignment.html#question-1",
+    "title": "Assignment: Laboratory 1",
+    "section": "Question 1",
+    "text": "Question 1\n\nQ1a: What do 1, 2, and 3 mean in variable “gender”?\n\nAnswer:\n\n\n\nCode\nLabel\n\n\n\n\n1\nMale\n\n\n2\nFemale\n\n\n3\nNon-Binary\n\n\n\nSolution:\nI reached the mapping for categorical variables by accessing metadata from the given sav file by pyreadstats:\n\nprint(metadata_download.variable_value_labels)\n\n{'gender': {1.0: 'Male', 2.0: 'Female', 3.0: 'Non-binary'}}\n\n\nP.S. On another note, considering this is data from a music festival, should I assume that apart from the 90 individuals labeled themselves as ENBY, the terms “Female” and “Male” in the dataset include both cisgender and transgender individuals?\n\nQ1b: What are their percentages in the sample?\n\nAnswer:\n\n\n\nGender\nCount\nPercentage\n\n\n\n\nFemale\n443\n54.69%\n\n\nMale\n277\n34.20%\n\n\nNon-Binary\n90\n11.11%\n\n\n\nAnswer:\nSee Figure 1\nSolution:\n\n# Calculating the Percentage\npercentage = df_download['gender'].value_counts(normalize=True) * 100   # For percentage\nprint(percentage)\n\ngender\n2.0    54.691358\n1.0    34.197531\n3.0    11.111111\nName: proportion, dtype: float64\n\n\n\ngender_barplot = sns.barplot(percentage)\ngender_barplot.set_xticklabels(['Male', 'Female', 'Non-binary'])\nplt.show()\n\nC:\\Users\\Riko\\AppData\\Local\\Temp\\ipykernel_22976\\2800231647.py:4: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.\n  gender_barplot.set_xticklabels(['Male', 'Female', 'Non-binary'])\n\n\n\n\n\n\n\n\nFigure 1: Count of Gender",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment: Laboratory 1"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html#question-3",
+    "href": "session03/assignment.html#question-3",
+    "title": "Assignment: Laboratory 1",
+    "section": "Question 3",
+    "text": "Question 3\n\nDraw a histogram of day_1. Is there anything wrong with this variable?\n\nAnswer:\nSee Figure 2.\nSolution:\nFrom the EDA and the histogram shown below, we can clearly identify an outlier with a “hygiene score” significantly higher than the others. Given that the score should range between 0 and 5, this could probability be a typo or some other thing we may have overlooked.\n\nday1_hist = sns.histplot(df_download['day_1'])\nplt.show()\n\n\n\n\n\n\n\nFigure 2: Distribution of Hygiene Score in Day 1\n\n\n\n\n\n\n# Filter out the outlier\nprint(df_download[df_download['day_1'] &gt; 5.0])\n\n     ticket_no gender  day_1  day_2  day_3\n610     4158.0    2.0  20.02   2.44    NaN\n\n\nI filtered out this outlier, it’s in row number 610, and it turns out that based on the ranking, this lady was four times cleaner than the cleanest person at the music festival. Hmm… 4x cleaner? Sounds like something you’d read on a box of laundry pods (see Figure 3). Let’s call her Ms. Laundry Pod.\n\n\n\n\n\n\nFigure 3: 4x-cleaning-power\n\n\n\nI’m just saying this for fun (except the Ms. Laundry Pod part). The hygiene score is an interval variable that we can’t simply multiply or divide the values like what I did.",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment: Laboratory 1"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html#question-4",
+    "href": "session03/assignment.html#question-4",
+    "title": "Assignment: Laboratory 1",
+    "section": "Question 4",
+    "text": "Question 4\n\nHow many cases have missing values for day_2?\n\nAnswer:\n546 cases have missing values in the column day_2.\nSolution:\n\nprint(df_download.isnull().sum()['day_2'])\n\n546",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment: Laboratory 1"
+    ]
+  },
+  {
+    "objectID": "session03/assignment.html#question-5",
+    "href": "session03/assignment.html#question-5",
+    "title": "Assignment: Laboratory 1",
+    "section": "Question 5",
+    "text": "Question 5\n\nExcluding the outlier in day 1.\n\nSolution:\nThankfully, there’s only one outlier - Ms. Laundry Pod, located at row number 610. So, for this part, I’ll simply exclude that row and save the remaining data to a new DataFrame.\n\ndf_download_dropped_outlier = df_download.drop(610)\n# Or I could just enter the danger zone by dropping data on the DataFrame by:  \n# df_download.drop(610, inplace=True)\n\nAlso, I did a double check by plotting the data once more (see Figure 4).\n\n# Confirm if I'm in the right track. \ndf_download_dropped_outlier['day_1'].hist()\n\n\n\n\n\n\n\nFigure 4: Distribution of Hygiene Score in Day 1\n\n\n\n\n\n[EOF]",
+    "crumbs": [
+      "Coursework",
+      "Session03",
+      "Assignment: Laboratory 1"
     ]
   }
 ]
