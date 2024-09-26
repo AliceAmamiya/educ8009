@@ -221,6 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#preparation" id="toc-preparation" class="nav-link" data-scroll-target="#preparation">Preparation</a></li>
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
   <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
@@ -265,35 +266,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Draw a barplot of “gender” whose 𝑦-axis represents the percentage of each group.</li>
 <li>Draw a histogram of “day_1”. Is there anything wrong with this variable?</li>
 <li>How many cases have missing values for “day_2”?</li>
-<li>(Extra credit) Exclude the outlier. In SPSS, you can follow the procedure below.
-<ul>
-<li>⟨ Data ⟩ ⟶ ⟨ Select Cases ⟩</li>
-<li>Select “If condition is satisfied” in ⟨ Select ⟩</li>
-<li>⟨ If ⟩</li>
-<li>Double-click on the variable corresponding to “day_1” in the variable list</li>
-<li>⟨ &lt;= ⟩ ⟶ ⟨ 5 ⟩ ⟶ ⟨ Continue ⟩ ⟶ ⟨ OK ⟩</li>
-<li>Draw a histogram of “day_1” again in the same way as before.</li>
-</ul></li>
+<li>(Extra credit) Exclude the outlier. In SPSS, you can follow the procedure below.</li>
 </ol>
-<div id="cell-4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.246208Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:11.282197Z&quot;}" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> unittest.mock <span class="im">import</span> inplace</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyreadstat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>   - ⟨ Data ⟩ ⟶ ⟨ Select Cases ⟩
+   - Select “If condition is satisfied” in ⟨ Select ⟩
+   - ⟨ If ⟩
+   - Double-click on the variable corresponding to “day_1” in the variable list
+   - ⟨ &lt;= ⟩ ⟶ ⟨ 5 ⟩ ⟶ ⟨ Continue ⟩ ⟶ ⟨ OK ⟩
+   - Draw a histogram of “day_1” again in the same way as before.</code></pre>
+<div id="cell-4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.472847Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:55.467663Z&quot;}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> unittest.mock <span class="im">import</span> inplace</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pyreadstat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="preparation" class="level2">
 <h2 class="anchored" data-anchor-id="preparation">Preparation</h2>
 <p>Before working on the lab work , I started with a quick EDA.</p>
-<div id="cell-6" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.261573Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.250212Z&quot;}" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df_download, metadata_download <span class="op">=</span> pyreadstat.read_sav(<span class="st">"./datasets/download.sav"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A quick peek on the structure of the DataFrame. </span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'0. An overall description of this dataset: </span><span class="ch">\n</span><span class="st">'</span> <span class="op">+</span> <span class="bu">str</span>(df_download.describe()) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1. Shape - rows and columns: </span><span class="ch">\n</span><span class="st">'</span> <span class="op">+</span> <span class="bu">str</span>(df_download.shape) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>) </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'2. Variables (in SPSS) or column names: </span><span class="ch">\n</span><span class="st"> '</span> <span class="op">+</span> <span class="bu">str</span>(df_download.columns) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'3. Missing values (if any): </span><span class="ch">\n</span><span class="st"> '</span> <span class="op">+</span> <span class="bu">str</span>(df_download.isnull().<span class="bu">sum</span>()) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-6" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.488859Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.475860Z&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df_download, metadata_download <span class="op">=</span> pyreadstat.read_sav(<span class="st">"./datasets/download.sav"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A quick peek on the structure of the DataFrame. </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'0. An overall description of this dataset: </span><span class="ch">\n</span><span class="st">'</span> <span class="op">+</span> <span class="bu">str</span>(df_download.describe()) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'1. Shape - rows and columns: </span><span class="ch">\n</span><span class="st">'</span> <span class="op">+</span> <span class="bu">str</span>(df_download.shape) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>) </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'2. Variables (in SPSS) or column names: </span><span class="ch">\n</span><span class="st"> '</span> <span class="op">+</span> <span class="bu">str</span>(df_download.columns) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'3. Missing values (if any): </span><span class="ch">\n</span><span class="st"> '</span> <span class="op">+</span> <span class="bu">str</span>(df_download.isnull().<span class="bu">sum</span>()) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0. An overall description of this dataset: 
          ticket_no      gender       day_1       day_2       day_3
@@ -322,9 +321,9 @@ dtype: int64
 </code></pre>
 </div>
 </div>
-<p>From the result, I think there seems something wrong in the column <code>day_1</code>. We’ll check it later. Also, the column <code>gender</code> should be a categorical variable rather than an <code>int</code>. I then corrected it:</p>
-<div id="cell-8" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.354467Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.336628Z&quot;}" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df_download[<span class="st">'gender'</span>] <span class="op">=</span> df_download[<span class="st">'gender'</span>].astype(<span class="st">'category'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>From the output, it seems something going wrong with the column <code>day_1</code>. I’m sure I’ll check it later. Besides, the column <code>gender</code> should be a categorical variable rather than an <code>int</code> and should be corrected:</p>
+<div id="cell-8" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.551033Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.536871Z&quot;}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_download[<span class="st">'gender'</span>] <span class="op">=</span> df_download[<span class="st">'gender'</span>].astype(<span class="st">'category'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-1" class="level2">
@@ -357,8 +356,8 @@ dtype: int64
 </table>
 <p><strong>Solution:</strong></p>
 <p>I reached the mapping for categorical variables by accessing metadata from the given <code>sav</code> file by <code>pyreadstats</code>:</p>
-<div id="cell-10" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.385215Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.370215Z&quot;}" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metadata_download.variable_value_labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-10" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.581729Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.566719Z&quot;}" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metadata_download.variable_value_labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{'gender': {1.0: 'Male', 2.0: 'Female', 3.0: 'Non-binary'}}</code></pre>
 </div>
@@ -394,13 +393,11 @@ dtype: int64
 </tr>
 </tbody>
 </table>
-<p><strong>Answer:</strong></p>
-<p>See <a href="#fig-gender-counts" class="quarto-xref">Figure&nbsp;1</a></p>
 <p><strong>Solution:</strong></p>
-<div id="cell-13" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.477864Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.458865Z&quot;}" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculating the Percentage</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> df_download[<span class="st">'gender'</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>) <span class="op">*</span> <span class="dv">100</span>   <span class="co"># For percentage</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(percentage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-13" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.613324Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.598325Z&quot;}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculating the Percentage</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>percentage <span class="op">=</span> df_download[<span class="st">'gender'</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>) <span class="op">*</span> <span class="dv">100</span>   <span class="co"># For percentage</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(percentage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>gender
 2.0    54.691358
@@ -409,12 +406,21 @@ dtype: int64
 Name: proportion, dtype: float64</code></pre>
 </div>
 </div>
-<div id="cell-fig-gender-counts" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.632599Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.509441Z&quot;}" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gender_barplot <span class="op">=</span> sns.barplot(percentage)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>gender_barplot.set_xticklabels([<span class="st">'Male'</span>, <span class="st">'Female'</span>, <span class="st">'Non-binary'</span>])</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<blockquote class="blockquote">
+<p>Draw a barplot of “gender” whose 𝑦-axis represents the percentage of each group.</p>
+</blockquote>
+<p><strong>Answer:</strong></p>
+<p>See <a href="#fig-gender-counts" class="quarto-xref">Figure&nbsp;1</a></p>
+<p><strong>Solution:</strong></p>
+<div id="cell-fig-gender-counts" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.737630Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.629653Z&quot;}" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gender_barplot <span class="op">=</span> sns.barplot(percentage)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>gender_barplot.set_xticklabels([<span class="st">'Male'</span>, <span class="st">'Female'</span>, <span class="st">'Non-binary'</span>])</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\Riko\AppData\Local\Temp\ipykernel_22976\2800231647.py:4: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+<pre><code>C:\Users\Riko\AppData\Local\Temp\ipykernel_15292\2800231647.py:4: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
   gender_barplot.set_xticklabels(['Male', 'Female', 'Non-binary'])</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -440,9 +446,9 @@ Figure&nbsp;1: Count of Gender
 <p>See <a href="#fig-hist-day1" class="quarto-xref">Figure&nbsp;2</a>.</p>
 <p><strong>Solution:</strong></p>
 <p>From the EDA and the histogram shown below, we can clearly identify an outlier with a “hygiene score” significantly higher than the others. Given that the score should range between 0 and 5, this could probability be a typo or some other thing we may have overlooked.</p>
-<div id="cell-fig-hist-day1" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.772613Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.665098Z&quot;}" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>day1_hist <span class="op">=</span> sns.histplot(df_download[<span class="st">'day_1'</span>])</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-fig-hist-day1" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.924394Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.804877Z&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>day1_hist <span class="op">=</span> sns.histplot(df_download[<span class="st">'day_1'</span>])</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-hist-day1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -456,9 +462,9 @@ Figure&nbsp;2: Distribution of Hygiene Score in Day 1
 </div>
 </div>
 </div>
-<div id="cell-17" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.788611Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.776613Z&quot;}" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out the outlier</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_download[df_download[<span class="st">'day_1'</span>] <span class="op">&gt;</span> <span class="fl">5.0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-18" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.955881Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.940884Z&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out the outlier</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_download[df_download[<span class="st">'day_1'</span>] <span class="op">&gt;</span> <span class="fl">5.0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     ticket_no gender  day_1  day_2  day_3
 610     4158.0    2.0  20.02   2.44    NaN</code></pre>
@@ -485,8 +491,8 @@ Figure&nbsp;3: 4x-cleaning-power
 <p><strong>Answer:</strong></p>
 <p>546 cases have missing values in the column <code>day_2</code>.</p>
 <p><strong>Solution:</strong></p>
-<div id="cell-20" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.819124Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.804613Z&quot;}" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_download.isnull().<span class="bu">sum</span>()[<span class="st">'day_2'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-21" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:56.986470Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:56.972472Z&quot;}" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_download.isnull().<span class="bu">sum</span>()[<span class="st">'day_2'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>546</code></pre>
 </div>
@@ -499,15 +505,15 @@ Figure&nbsp;3: 4x-cleaning-power
 </blockquote>
 <p><strong>Solution:</strong></p>
 <p>Thankfully, there’s only one outlier - Ms.&nbsp;Laundry Pod, located at row number <code>610</code>. So, for this part, I’ll simply exclude that row and save the remaining data to a new <code>DataFrame</code>.</p>
-<div id="cell-22" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.850226Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.834895Z&quot;}" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df_download_dropped_outlier <span class="op">=</span> df_download.drop(<span class="dv">610</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Or I could just enter the danger zone by dropping data on the DataFrame by:  </span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># df_download.drop(610, inplace=True)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-23" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:57.017374Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:57.002362Z&quot;}" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df_download_dropped_outlier <span class="op">=</span> df_download.drop(<span class="dv">610</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Or I could just enter the danger zone by dropping data on the DataFrame by:  </span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># df_download.drop(610, inplace=True)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Also, I did a double check by plotting the data once more (see <a href="#fig-hist-day1-revised" class="quarto-xref">Figure&nbsp;4</a>).</p>
-<div id="cell-fig-hist-day1-revised" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T07:07:12.942230Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T07:07:12.866421Z&quot;}" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirm if I'm in the right track. </span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_download_dropped_outlier[<span class="st">'day_1'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-fig-hist-day1-revised" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-26T08:30:57.111173Z&quot;,&quot;start_time&quot;:&quot;2024-09-26T08:30:57.033704Z&quot;}" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirm if I'm in the right track. </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>df_download_dropped_outlier[<span class="st">'day_1'</span>].hist()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-hist-day1-revised" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
