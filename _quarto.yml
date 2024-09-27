@@ -11,7 +11,9 @@ website:
       - text: "Home"
         href: index.qmd
       - section: "Coursework"
-        contents: "*.ipynb"
+        contents: 
+          - auto: "*.ipynb"
+          - auto: "*.qmd"
       - section: ""
 
 format:

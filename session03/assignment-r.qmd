@@ -1,0 +1,95 @@
+---
+title: Laboratory 01 (feat. R)
+---
+
+# Objectives
+1. What do 1, 2, and 3 mean in variable “gender”? What are their percentages in the sample?
+2. Draw a barplot of “gender” whose 𝑦-axis represents the percentage of each group.
+3. Draw a histogram of “day_1”. Is there anything wrong with this variable?
+4. How many cases have missing values for “day_2”?
+5. (Extra credit) Exclude the outlier. 
+
+`base-r` version `4.3.3`
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+# Using `foreign` is truly a pain for handling SPSS data, I'll use heaven instead. 
+download_festival <- haven::read_sav('./datasets/download.sav')
+```
+
+## First peek
+```{r}
+print('A summary and structure of this dataset')
+summary(download_festival)
+str(download_festival)
+```
+
+## Q1a
+> What do 1, 2, and 3 mean in variable “gender”?
+```{r}
+print('Q1a: What do 1, 2, and 3 mean in variable “gender”?')
+download_festival$gender %>%
+  attr('labels')
+```
+
+## Q1b
+> What are their percentages in the sample?
+```{r}
+print('Q1b: What are their percentages in the sample?')
+gender_percentage <- download_festival %>%
+  group_by(gender) %>%
+  summarise(Percentage = n() / nrow(download_festival) * 100)
+print(gender_percentage)
+```
+
+## Q2
+> Draw a barplot of `gender` whose $y$-axis represents the percentage of each group.
+```{r}
+download_festival$gender <- factor(download_festival$gender, levels = c(1,2,3), labels = c('Male', 'Female', 'Non-binary'))
+
+ggplot(download_festival, aes(x=gender)) + 
+  geom_bar() + 
+  xlab('Gender') + 
+  ylab('Percentage') + 
+  scale_y_continuous(labels = scales::percent) + 
+  ggtitle('Percentage of Gender')
+```
+
+## Q3
+> Draw a histogram of `day_1`. Is there anything wrong with this variable?
+```{r}
+print('Draw a histogram of “day_1”. Is there anything wrong with this variable?')
+ggplot(download_festival, aes(x=day_1)) + 
+  geom_histogram(color = 1, bins=15) + 
+  xlab('Day 1') + 
+  ylab('Frequency / Count') + 
+  ggtitle('Histogram of hygiene score in the 1st Day (Raw data)')
+  print('An outlier found.')
+```
+
+## Q4
+> How many cases have missing values for `day_2`?
+```{r}
+print('How many cases have missing values for “day_2”?')
+summary(download_festival)
+print('Answer\'s on the 7th row, 546 cases missing.')
+```
+
+## Q5
+> Exclude the outlier. 
+```{r}
+print('Exclude Ms. Laundry Pod.')
+download_festival_no_outliers <- download_festival[download_festival$day_1 <= 5, ]
+ggplot(download_festival_no_outliers, aes(x=day_1)) + 
+  geom_histogram(color = 1, bins=15) + 
+  labs(title='Histogram of Hygiene Scores on the 1st Day', 
+        subtitle='Outlier removed') + 
+  xlab('Day 1') + 
+  ylab('Frequency / Count')
+```
+
+[EOF]

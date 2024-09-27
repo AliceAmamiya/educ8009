@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Session 01: Introduction – educ8009-assignments</title>
+<title>Laboratory 01 (feat. R) – educ8009-assignments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -143,7 +143,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Coursework</li><li class="breadcrumb-item"><a href="../session01/lecture-notes.html">Session01</a></li><li class="breadcrumb-item"><a href="../session01/lecture-notes.html">Session 01: Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Coursework</li><li class="breadcrumb-item"><a href="../session03/assignment-r.html">Session03</a></li><li class="breadcrumb-item"><a href="../session03/assignment-r.html">Laboratory 01 (feat. R)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -177,16 +177,16 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Session01</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../session01/lecture-notes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../session01/lecture-notes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Session 01: Introduction</span></a>
   </div>
 </li>
@@ -234,16 +234,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Session03</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../session03/assignment-r.html" class="sidebar-item-text sidebar-link">
+  <a href="../session03/assignment-r.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Laboratory 01 (feat. R)</span></a>
   </div>
 </li>
@@ -261,21 +261,25 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#implementations" id="toc-implementations" class="nav-link" data-scroll-target="#implementations">Implementations</a>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">Objectives</a>
   <ul class="collapse">
-  <li><a href="#in-spss-measures-of-variables" id="toc-in-spss-measures-of-variables" class="nav-link" data-scroll-target="#in-spss-measures-of-variables">In SPSS: Measures of variables</a></li>
+  <li><a href="#first-peek" id="toc-first-peek" class="nav-link" data-scroll-target="#first-peek">First peek</a></li>
+  <li><a href="#q1a" id="toc-q1a" class="nav-link" data-scroll-target="#q1a">Q1a</a></li>
+  <li><a href="#q1b" id="toc-q1b" class="nav-link" data-scroll-target="#q1b">Q1b</a></li>
+  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a></li>
+  <li><a href="#q3" id="toc-q3" class="nav-link" data-scroll-target="#q3">Q3</a></li>
+  <li><a href="#q4" id="toc-q4" class="nav-link" data-scroll-target="#q4">Q4</a></li>
+  <li><a href="#q5" id="toc-q5" class="nav-link" data-scroll-target="#q5">Q5</a></li>
   </ul></li>
-  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">Descriptive Statistics</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Coursework</li><li class="breadcrumb-item"><a href="../session01/lecture-notes.html">Session01</a></li><li class="breadcrumb-item"><a href="../session01/lecture-notes.html">Session 01: Introduction</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Coursework</li><li class="breadcrumb-item"><a href="../session03/assignment-r.html">Session03</a></li><li class="breadcrumb-item"><a href="../session03/assignment-r.html">Laboratory 01 (feat. R)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Session 01: Introduction</h1>
+<h1 class="title">Laboratory 01 (feat. R)</h1>
 </div>
 
 
@@ -292,114 +296,244 @@ window.Quarto = {
 </header>
 
 
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>We didn’t discuss too much on statistics or quantitative methods.</p>
-<p>Rather, we tried to import dataset into SPSS and played around with datasets below:</p>
-<ul>
-<li><code>mtcars</code>: a built-in dataset in <code>base-r</code>, wrapped in an <code>.xlsx</code> file for some reason.</li>
-<li><code>temphr10.sav</code>: a dataset came from the textbook, looks like a series of weather data.</li>
-</ul>
+<section id="objectives" class="level1">
+<h1>Objectives</h1>
+<ol type="1">
+<li>What do 1, 2, and 3 mean in variable “gender”? What are their percentages in the sample?</li>
+<li>Draw a barplot of “gender” whose 𝑦-axis represents the percentage of each group.</li>
+<li>Draw a histogram of “day_1”. Is there anything wrong with this variable?</li>
+<li>How many cases have missing values for “day_2”?</li>
+<li>(Extra credit) Exclude the outlier.</li>
+</ol>
+<p><code>base-r</code> version <code>4.3.3</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using `foreign` is truly a pain for handling SPSS data, I'll use heaven instead. </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>download_festival <span class="ot">&lt;-</span> haven<span class="sc">::</span><span class="fu">read_sav</span>(<span class="st">'./datasets/download.sav'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="first-peek" class="level2">
+<h2 class="anchored" data-anchor-id="first-peek">First peek</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'A summary and structure of this dataset'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "A summary and structure of this dataset"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(download_festival)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ticket_no        gender          day_1            day_2       
+ Min.   :2111   Min.   :1.000   Min.   : 0.020   Min.   :0.0000  
+ 1st Qu.:3096   1st Qu.:1.000   1st Qu.: 1.312   1st Qu.:0.4100  
+ Median :3620   Median :2.000   Median : 1.790   Median :0.7900  
+ Mean   :3616   Mean   :1.769   Mean   : 1.793   Mean   :0.9609  
+ 3rd Qu.:4155   3rd Qu.:2.000   3rd Qu.: 2.230   3rd Qu.:1.3500  
+ Max.   :4765   Max.   :3.000   Max.   :20.020   Max.   :3.4400  
+                                                 NA's   :546     
+     day_3       
+ Min.   :0.0200  
+ 1st Qu.:0.4400  
+ Median :0.7600  
+ Mean   :0.9765  
+ 3rd Qu.:1.5250  
+ Max.   :3.4100  
+ NA's   :687     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(download_festival)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [810 × 5] (S3: tbl_df/tbl/data.frame)
+ $ ticket_no: num [1:810] 2111 2229 2338 2384 2401 ...
+  ..- attr(*, "label")= chr "Ticket number"
+  ..- attr(*, "format.spss")= chr "F4.0"
+ $ gender   : dbl+lbl [1:810] 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, ...
+   ..@ label      : chr "Gender of concert goer"
+   ..@ format.spss: chr "F8.0"
+   ..@ labels     : Named num [1:3] 1 2 3
+   .. ..- attr(*, "names")= chr [1:3] "Male" "Female" "Non-binary"
+ $ day_1    : num [1:810] 2.64 0.97 0.84 3.03 0.88 0.85 1.56 3.02 2.29 1.11 ...
+  ..- attr(*, "label")= chr "Hygiene (day 1 of download festival)"
+  ..- attr(*, "format.spss")= chr "F8.2"
+ $ day_2    : num [1:810] 1.35 1.41 NA NA 0.08 NA NA NA NA 0.44 ...
+  ..- attr(*, "label")= chr "Hygiene (day 2 of download festival)"
+  ..- attr(*, "format.spss")= chr "F8.2"
+ $ day_3    : num [1:810] 1.61 0.29 NA NA NA NA NA NA NA 0.55 ...
+  ..- attr(*, "label")= chr "Hygiene (day 3 of download festival)"
+  ..- attr(*, "format.spss")= chr "F8.2"</code></pre>
+</div>
+</div>
 </section>
-<section id="implementations" class="level2">
-<h2 class="anchored" data-anchor-id="implementations">Implementations</h2>
-<p>Since I use python for my daily work, the data were loaded to pandas.</p>
-<div id="cell-3" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-23T06:38:25.643078Z&quot;,&quot;start_time&quot;:&quot;2024-09-23T06:38:24.553955Z&quot;}" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Also, for descriptive statistics, pandas itself is enough for the job. </span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="q1a" class="level2">
+<h2 class="anchored" data-anchor-id="q1a">Q1a</h2>
+<blockquote class="blockquote">
+<p>What do 1, 2, and 3 mean in variable “gender”?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Q1a: What do 1, 2, and 3 mean in variable “gender”?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Q1a: What do 1, 2, and 3 mean in variable “gender”?"</code></pre>
 </div>
-<div id="cell-4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-23T06:38:27.379682Z&quot;,&quot;start_time&quot;:&quot;2024-09-23T06:38:27.311852Z&quot;}" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the SPSS dataset called "temphr10.sav".</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>temphr10 <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/temphr10.sav'</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># I converted the excel file to csv. </span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mtcars <span class="op">=</span> pd.read_csv(<span class="st">'./datasets/mtcars.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="in-spss-measures-of-variables" class="level3">
-<h3 class="anchored" data-anchor-id="in-spss-measures-of-variables">In SPSS: Measures of variables</h3>
-<div id="cell-6" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-09-23T06:39:04.405819Z&quot;,&quot;start_time&quot;:&quot;2024-09-23T06:39:04.393748Z&quot;}" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># What's in the variable view in SPSS</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>temphr10.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>Index(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')</code></pre>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>download_festival<span class="sc">$</span>gender <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">attr</span>(<span class="st">'labels'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Male     Female Non-binary 
+         1          2          3 </code></pre>
 </div>
 </div>
-<p>In SPSS: - Nominal: labels, e.g.&nbsp;<em>races or gender / sex</em> - Ordinal: ranking - Interval: ordinal, equally spaced, e.g.&nbsp;<em>temperature, IQ</em> - Ratio: interval + a true zero point, e.g.&nbsp;<em>ago, wage, height, weight (it can be 0)</em></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 69%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Level of Measurement</th>
-<th>Valid Operations</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Nominal</td>
-<td><span class="math inline">\(=\)</span>, <span class="math inline">\(\neq\)</span></td>
-</tr>
-<tr class="even">
-<td>Ordinal</td>
-<td><span class="math inline">\(=\)</span>, <span class="math inline">\(\neq\)</span>, <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span></td>
-</tr>
-<tr class="odd">
-<td>Interval</td>
-<td><span class="math inline">\(=\)</span>, <span class="math inline">\(\neq\)</span>, <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span>, <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span></td>
-</tr>
-<tr class="even">
-<td>Ratio</td>
-<td><span class="math inline">\(=\)</span>, <span class="math inline">\(\neq\)</span>, <span class="math inline">\(&lt;\)</span>, <span class="math inline">\(&gt;\)</span>, <span class="math inline">\(+\)</span>, <span class="math inline">\(-\)</span>, <span class="math inline">\(\times\)</span>, <span class="math inline">\(\div\)</span></td>
-</tr>
-</tbody>
-</table>
 </section>
+<section id="q1b" class="level2">
+<h2 class="anchored" data-anchor-id="q1b">Q1b</h2>
+<blockquote class="blockquote">
+<p>What are their percentages in the sample?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Q1b: What are their percentages in the sample?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Q1b: What are their percentages in the sample?"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>gender_percentage <span class="ot">&lt;-</span> download_festival <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">Percentage =</span> <span class="fu">n</span>() <span class="sc">/</span> <span class="fu">nrow</span>(download_festival) <span class="sc">*</span> <span class="dv">100</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(gender_percentage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  gender         Percentage
+  &lt;dbl+lbl&gt;           &lt;dbl&gt;
+1 1 [Male]             34.2
+2 2 [Female]           54.7
+3 3 [Non-binary]       11.1</code></pre>
+</div>
+</div>
 </section>
-<section id="descriptive-statistics" class="level2">
-<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive Statistics</h2>
-<div id="cell-9" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ways to do descriptive things in pandas.</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>temphr10[<span class="st">'sex'</span>].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>count       10
-unique       2
-top       Male
-freq         7
-Name: sex, dtype: object</code></pre>
+<section id="q2" class="level2">
+<h2 class="anchored" data-anchor-id="q2">Q2</h2>
+<blockquote class="blockquote">
+<p>Draw a barplot of <code>gender</code> whose <span class="math inline">\(y\)</span>-axis represents the percentage of each group.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>download_festival<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">factor</span>(download_festival<span class="sc">$</span>gender, <span class="at">levels =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Male'</span>, <span class="st">'Female'</span>, <span class="st">'Non-binary'</span>))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(download_festival, <span class="fu">aes</span>(<span class="at">x=</span>gender)) <span class="sc">+</span> </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">'Gender'</span>) <span class="sc">+</span> </span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">'Percentage'</span>) <span class="sc">+</span> </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span>percent) <span class="sc">+</span> </span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Percentage of Gender'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="assignment-r_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-<div id="cell-10" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>temphr10[<span class="st">'Likert_rating'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>Likert_rating
-Neutral or Don't Know    3
-Agree                    2
-Disagree                 2
-Strongly Disagree        2
-Strongly Agree           1
-Name: count, dtype: int64</code></pre>
+</div>
+</section>
+<section id="q3" class="level2">
+<h2 class="anchored" data-anchor-id="q3">Q3</h2>
+<blockquote class="blockquote">
+<p>Draw a histogram of <code>day_1</code>. Is there anything wrong with this variable?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Draw a histogram of “day_1”. Is there anything wrong with this variable?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Draw a histogram of “day_1”. Is there anything wrong with this variable?"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(download_festival, <span class="fu">aes</span>(<span class="at">x=</span>day_1)) <span class="sc">+</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="dv">1</span>, <span class="at">bins=</span><span class="dv">15</span>) <span class="sc">+</span> </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">'Day 1'</span>) <span class="sc">+</span> </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">'Frequency / Count'</span>) <span class="sc">+</span> </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Histogram of hygiene score in the 1st Day (Raw data)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="assignment-r_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-<div id="cell-11" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>temphr10[<span class="st">'hr'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>hr
-75.0    2
-70.0    1
-69.0    1
-71.0    1
-62.0    1
-74.0    1
-80.0    1
-73.0    1
-82.0    1
-Name: count, dtype: int64</code></pre>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">'An outlier found.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "An outlier found."</code></pre>
 </div>
 </div>
+</section>
+<section id="q4" class="level2">
+<h2 class="anchored" data-anchor-id="q4">Q4</h2>
+<blockquote class="blockquote">
+<p>How many cases have missing values for <code>day_2</code>?</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'How many cases have missing values for “day_2”?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "How many cases have missing values for “day_2”?"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(download_festival)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ticket_no           gender        day_1            day_2       
+ Min.   :2111   Male      :277   Min.   : 0.020   Min.   :0.0000  
+ 1st Qu.:3096   Female    :443   1st Qu.: 1.312   1st Qu.:0.4100  
+ Median :3620   Non-binary: 90   Median : 1.790   Median :0.7900  
+ Mean   :3616                    Mean   : 1.793   Mean   :0.9609  
+ 3rd Qu.:4155                    3rd Qu.: 2.230   3rd Qu.:1.3500  
+ Max.   :4765                    Max.   :20.020   Max.   :3.4400  
+                                                  NA's   :546     
+     day_3       
+ Min.   :0.0200  
+ 1st Qu.:0.4400  
+ Median :0.7600  
+ Mean   :0.9765  
+ 3rd Qu.:1.5250  
+ Max.   :3.4100  
+ NA's   :687     </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Answer</span><span class="sc">\'</span><span class="st">s on the 7th row, 546 cases missing.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Answer's on the 7th row, 546 cases missing."</code></pre>
+</div>
+</div>
+</section>
+<section id="q5" class="level2">
+<h2 class="anchored" data-anchor-id="q5">Q5</h2>
+<blockquote class="blockquote">
+<p>Exclude the outlier.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Exclude Ms. Laundry Pod.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Exclude Ms. Laundry Pod."</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>download_festival_no_outliers <span class="ot">&lt;-</span> download_festival[download_festival<span class="sc">$</span>day_1 <span class="sc">&lt;=</span> <span class="dv">5</span>, ]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(download_festival_no_outliers, <span class="fu">aes</span>(<span class="at">x=</span>day_1)) <span class="sc">+</span> </span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="dv">1</span>, <span class="at">bins=</span><span class="dv">15</span>) <span class="sc">+</span> </span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">'Histogram of Hygiene Scores on the 1st Day'</span>, </span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle=</span><span class="st">'Outlier removed'</span>) <span class="sc">+</span> </span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">'Day 1'</span>) <span class="sc">+</span> </span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">'Frequency / Count'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="assignment-r_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>[EOF]</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
