@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Laboratory 02 – educ8009-assignments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session04/assignment.html">Session04</a></li><li class="breadcrumb-item"><a href="../session04/assignment.html">Laboratory 02</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">educ8009-assignments</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session03</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session03/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session03/assignment-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 01 (feat. R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Session04</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session04/assignment.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Laboratory 02</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <ul class="collapse">
+  <li><a href="#q1-frequency-distribution-of-pet" id="toc-q1-frequency-distribution-of-pet" class="nav-link" data-scroll-target="#q1-frequency-distribution-of-pet">Q1: Frequency distribution of <code>pet</code></a></li>
+  <li><a href="#q2-life-satisfaction-of-pet-owners" id="toc-q2-life-satisfaction-of-pet-owners" class="nav-link" data-scroll-target="#q2-life-satisfaction-of-pet-owners">Q2: Life satisfaction of pet owners</a></li>
+  <li><a href="#q3q5-histogram-of-life_satisfaction-by-pet" id="toc-q3q5-histogram-of-life_satisfaction-by-pet" class="nav-link" data-scroll-target="#q3q5-histogram-of-life_satisfaction-by-pet">Q3+Q5: Histogram of <code>life_satisfaction</code> (+ by pet)</a></li>
+  <li><a href="#q4-measurements-to-describe-variables" id="toc-q4-measurements-to-describe-variables" class="nav-link" data-scroll-target="#q4-measurements-to-describe-variables">Q4: Measurements to describe variables</a></li>
+  <li><a href="#q5-histogram-by-pet" id="toc-q5-histogram-by-pet" class="nav-link" data-scroll-target="#q5-histogram-by-pet">Q5: Histogram by <code>pet</code></a></li>
+  </ul></li>
+  <li><a href="#final-thoughts-faculty-of-education" id="toc-final-thoughts-faculty-of-education" class="nav-link" data-scroll-target="#final-thoughts-faculty-of-education">Final thoughts: FACULTY OF edu<strong>CAT</strong>ion</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session04/assignment.html">Session04</a></li><li class="breadcrumb-item"><a href="../session04/assignment.html">Laboratory 02</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Laboratory 02</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="context" class="level1">
+<h1>Context</h1>
+<p>A researcher wondered whether a fish or cat made a better pet. He found some people who had either fish or cats as pets and measured their life satisfaction and how much they like animals. The data are saved in <code>pets.sav</code>.</p>
+</section>
+<section id="objectives" class="level1">
+<h1>Objectives</h1>
+<ol type="1">
+<li><p>Describe the frequency distribution of pet.</p></li>
+<li><p>Draw boxplots for life satisfaction by pet. Compare the life satisfaction of those who have fish and those who have cats.</p></li>
+<li><p>Draw a histogram of life satisfaction. Describe your findings.</p></li>
+<li><p>Obtain the mean, median, standard deviation, range, and inter-quartile range of life satisfaction. Which indices for central tendency and dispersion will you choose to describe this variable? Why?</p></li>
+<li><p>(Extra credit) Draw histograms of life satisfaction by pet. In SPSS, you can follow the procedure below.</p>
+<pre><code>(1) ⟨ Graphs⟩ ⟶ ⟨ Chart Builder⟩ ⟶ ⟨ OK ⟩  
+(2) Double-click on ⟨ Simple Histogram ⟩ under ⟨ Histogram ⟩  
+(3) Check ⟨ Columns panel variable ⟩ under ⟨ Groups/Point ID ⟩  
+(4) Drag “Type of pet” to ⟨Panel? ⟩  
+(5) Drag “Life satisfaction” to ⟨ X-Axis? ⟩  
+(6) ⟨ OK ⟩  </code></pre>
+<p>Describe your findings.</p></li>
+</ol>
+<p>As always, I load the library required and the dataset. Since this time we don’t need to dig too much into the SPSS-reserved metadata of this file, I directly load the data through <code>pandas</code>’s <code>pd.read_spss()</code> function and did a quick summary on the existing dataset:</p>
+<div id="adad6cd414ffee15" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:17:50.717148Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:17:50.705722Z&quot;}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's rock and roll</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>pets <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/pets.sav'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8fefac4d93e90fc9" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:24:18.621966Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:24:18.610268Z&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A quick summary on its shape, columns, and data distribution: </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> summarize_aio(df):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    shape <span class="op">=</span> df.shape</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> df.columns</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    description <span class="op">=</span> df.describe()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'1. Just a peek of first 5 rows. '</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.head(<span class="dv">5</span>))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'2. Number of rows and columns of the loaded dataset: '</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"    Rows: "</span> <span class="op">+</span> <span class="bu">str</span>(shape[<span class="dv">0</span>]) <span class="op">+</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>          <span class="st">"</span><span class="ch">\n</span><span class="st">    Columns: "</span> <span class="op">+</span> <span class="bu">str</span>(shape[<span class="dv">1</span>]))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'3. Columns of the loaded dataset: '</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(columns)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'4. Description of the loaded dataset: '</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(description)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>summarize_aio(pets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1. Just a peek of first 5 rows. 
+    pet  animal  life_satisfaction
+0  Fish    69.0               47.0
+1  Fish    25.0                6.0
+2  Fish    31.0               47.0
+3  Fish    29.0               33.0
+4  Fish    12.0               13.0
+2. Number of rows and columns of the loaded dataset: 
+    Rows: 20
+    Columns: 3
+3. Columns of the loaded dataset: 
+Index(['pet', 'animal', 'life_satisfaction'], dtype='object')
+4. Description of the loaded dataset: 
+          animal  life_satisfaction
+count  20.000000          20.000000
+mean   36.200000          46.950000
+std    15.449749          17.506315
+min    12.000000           6.000000
+25%    25.000000          40.750000
+50%    35.000000          47.500000
+75%    45.250000          60.250000
+max    69.000000          72.000000</code></pre>
+</div>
+</div>
+</section>
+<section id="solutions" class="level1">
+<h1>Solutions</h1>
+<section id="q1-frequency-distribution-of-pet" class="level2">
+<h2 class="anchored" data-anchor-id="q1-frequency-distribution-of-pet">Q1: Frequency distribution of <code>pet</code></h2>
+<p>In SPSS, the Frequency function in Descriptive Statistics provides Frequency table with bar chart by default. I’ll follow this flavor in my report.</p>
+<p><strong>Answer</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Pet</th>
+<th>Frequency</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cat</td>
+<td>8</td>
+<td>60%</td>
+</tr>
+<tr class="even">
+<td>Fish</td>
+<td>12</td>
+<td>40%</td>
+</tr>
+</tbody>
+</table>
+<p>For the bar chart, see <a href="#fig-freq-bar-chart" class="quarto-xref">Figure&nbsp;1</a></p>
+<p><strong>Solution</strong></p>
+<div id="947cf3d803b79e3d" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:19:46.551566Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:19:46.541779Z&quot;}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># I use function for keeping the global namespace clean. </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> freq_distb(df, col_name):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    column <span class="op">=</span> df[<span class="bu">str</span>(col_name)]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'1. Frequency: '</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    freq <span class="op">=</span> column.value_counts()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(freq)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'----</span><span class="ch">\n</span><span class="st">2. Percentage(%): '</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    percentage <span class="op">=</span> column.value_counts(normalize<span class="op">=</span><span class="va">True</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(percentage)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>freq_distb(pets, col_name<span class="op">=</span><span class="st">'pet'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1. Frequency: 
+pet
+Fish    12
+Cat      8
+Name: count, dtype: int64
+----
+2. Percentage(%): 
+pet
+Fish    60.0
+Cat     40.0
+Name: proportion, dtype: float64</code></pre>
+</div>
+</div>
+<div id="cell-fig-freq-bar-chart" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting frequency</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>pets, x<span class="op">=</span><span class="st">'pet'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-freq-bar-chart" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-freq-bar-chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-freq-bar-chart-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-freq-bar-chart-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Bar Chart on Frequency of <code>pet</code>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q2-life-satisfaction-of-pet-owners" class="level2">
+<h2 class="anchored" data-anchor-id="q2-life-satisfaction-of-pet-owners">Q2: Life satisfaction of pet owners</h2>
+<p><strong>Answer</strong></p>
+<p>Based on the box plot (<a href="#fig-life-satisfaction" class="quarto-xref">Figure&nbsp;2</a>), life satisfaction of cat and fish owners differ in aspects below:</p>
+<ol type="1">
+<li>Median (<span class="math inline">\(Q_2\)</span>): The box-plot shows that cat people normally have higher median of life satisfaction than the fish people.</li>
+<li>IQR (<span class="math inline">\(Q_3 - Q_1\)</span>): The IQR for cat people is more concentrated, while for fish people, their IQR is much wider, which indicates more variability in life satisfaction.</li>
+<li>Range: Cat people’s life satisfaction ranges from around 50 to 70, with an outlier below 50. Fish owners’ life satisfaction ranges from about 15 to 65, with an outlier below 15.</li>
+</ol>
+<p>In conclusion, cat owners generally report higher and more consistent life satisfaction compared to fish owners.</p>
+<p>Cats win! ฅ<sup>•ﻌ•</sup>ฅ</p>
+<p><strong>Solution</strong></p>
+<div id="cell-fig-life-satisfaction" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:38:06.470025Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:38:06.302107Z&quot;}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting Box-plot for Cat and Fish.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sns.boxplot(pets, x<span class="op">=</span><span class="st">'pet'</span>, y<span class="op">=</span><span class="st">'life_satisfaction'</span>, hue<span class="op">=</span><span class="st">'pet'</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-life-satisfaction" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-life-satisfaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-life-satisfaction-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-life-satisfaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Life satisfaction
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q3q5-histogram-of-life_satisfaction-by-pet" class="level2">
+<h2 class="anchored" data-anchor-id="q3q5-histogram-of-life_satisfaction-by-pet">Q3+Q5: Histogram of <code>life_satisfaction</code> (+ by pet)</h2>
+<p><strong>Answer (for Question 3): The Overall Distribution (<a href="#fig-overall-histogram" class="quarto-xref">Figure&nbsp;3</a>)</strong></p>
+<ol type="1">
+<li>The overall distribution shows that the highest concentration of life satisfaction is <strong>around 50</strong>.</li>
+<li>Extremely low life satisfaction scores exist, with individuals reporting <strong>very low scores (around 10 to 30)</strong>.</li>
+<li>The peak at around 50 reflects the central tendency for both groups, but, again, the tail on the left side of this figure suggests significantly lower satisfaction exists.</li>
+</ol>
+<p><strong>Solution</strong></p>
+<div id="cell-fig-overall-histogram" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:28:05.196511Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:28:04.950881Z&quot;}" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>pets, x<span class="op">=</span><span class="st">'life_satisfaction'</span>, bins<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.show</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-overall-histogram" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-overall-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-overall-histogram-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-overall-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Overall distribution of life satisfaction
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Answer (for Question 5): A side-by-side comparison (<a href="#fig-side-by-side-histogram" class="quarto-xref">Figure&nbsp;4</a>)</strong></p>
+<ol type="1">
+<li>For cat owners:
+<ul>
+<li>Life satisfaction scores are concentrated between 50 and 70, with most scores around 60.</li>
+<li>The distribution is tight, with one outlier who has a significantly lower life satisfaction score.</li>
+</ul></li>
+<li>For fish owners:
+<ul>
+<li>Life satisfaction scores are more spreading, from around 10 to 60.</li>
+<li>The most frequent score is around 40-50, with several people having low satisfaction (below 20).</li>
+<li>Compared to cat owners, fish owners have a wider range of life satisfaction scores.</li>
+</ul></li>
+</ol>
+<div id="cell-fig-side-by-side-histogram" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T10:19:04.943886Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T10:19:04.445750Z&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.FacetGrid(data<span class="op">=</span>pets, col<span class="op">=</span><span class="st">'pet'</span>, hue<span class="op">=</span><span class="st">'pet'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> g.<span class="bu">map</span>(plt.hist, <span class="st">'life_satisfaction'</span>, bins<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-side-by-side-histogram" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-side-by-side-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-side-by-side-histogram-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-side-by-side-histogram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Overall distribution of life satisfaction
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q4-measurements-to-describe-variables" class="level2">
+<h2 class="anchored" data-anchor-id="q4-measurements-to-describe-variables">Q4: Measurements to describe variables</h2>
+<p><strong>Answer</strong></p>
+<p>Based on the dataset and output:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Values</th>
+<th>Overall (<code>pet</code>)</th>
+<th>Cat</th>
+<th>Fish</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean</td>
+<td>46.95</td>
+<td>60.13</td>
+<td>38.17</td>
+</tr>
+<tr class="even">
+<td>Median</td>
+<td>47.50</td>
+<td>63.00</td>
+<td>44.00</td>
+</tr>
+<tr class="odd">
+<td>Standard Deviation</td>
+<td>17.51</td>
+<td>11.10</td>
+<td>15.51</td>
+</tr>
+<tr class="even">
+<td>Range</td>
+<td>66.00</td>
+<td>35.00</td>
+<td>50.00</td>
+</tr>
+<tr class="odd">
+<td>Inter-quartile range</td>
+<td>19.50</td>
+<td>8.50</td>
+<td>15.75</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>For central tendency: Median
+<ul>
+<li>Median is a robust measure of central tendency, especially when there is a wide range of values and potential outliers.</li>
+<li>It is less affected by extreme values than the mean: providing a better representation of the typical life satisfaction for both cat and fish owners.</li>
+</ul></li>
+<li>For dispersion: IQR
+<ul>
+<li>IQR measures the spread of the middle 50% of the data, which is less influenced by outliers compared to the full range or standard deviation.</li>
+</ul></li>
+</ol>
+<p><strong>Solution</strong></p>
+<div id="c073720679db23e9" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:47:22.483014Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:47:22.476856Z&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_stats(group, group_name, column):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    dict_stats <span class="op">=</span> {</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Name'</span>: group_name,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Mean'</span>: group[column].mean(),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Median'</span>: group[column].median(),</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'SD'</span>: group[column].std(),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Range'</span>: group[column].<span class="bu">max</span>() <span class="op">-</span> group[column].<span class="bu">min</span>(),</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'IQR'</span>: stats.iqr(group[column])</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dict_stats</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> describe_var():</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Overall</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    overall_stats <span class="op">=</span> get_stats(pets, </span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>                              <span class="st">'Overall'</span>, </span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>                              <span class="st">'life_satisfaction'</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Meow</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    cat_stats <span class="op">=</span> get_stats(pets[pets[<span class="st">'pet'</span>] <span class="op">==</span> <span class="st">'Cat'</span>], </span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'Cat'</span>, </span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>                          <span class="st">'life_satisfaction'</span>)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fish</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>    fish_stats <span class="op">=</span> get_stats(pets[pets[<span class="st">'pet'</span>] <span class="op">==</span> <span class="st">'Fish'</span>], </span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>                           <span class="st">'Fish'</span>, </span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>                           <span class="st">'life_satisfaction'</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Output as a pd.DataFrame</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame([overall_stats, cat_stats, fish_stats])</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(describe_var())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      Name       Mean  Median         SD  Range    IQR
+0  Overall  46.950000    47.5  17.506315   66.0  19.50
+1      Cat  60.125000    63.0  11.102606   35.0   8.50
+2     Fish  38.166667    44.0  15.508551   50.0  15.75</code></pre>
+</div>
+</div>
+</section>
+<section id="q5-histogram-by-pet" class="level2">
+<h2 class="anchored" data-anchor-id="q5-histogram-by-pet">Q5: Histogram by <code>pet</code></h2>
+<p>See Question 3 + Question 5 (in Section 3.3).</p>
+</section>
+</section>
+<section id="final-thoughts-faculty-of-education" class="level1">
+<h1>Final thoughts: FACULTY OF edu<strong>CAT</strong>ion</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./alley-cats-e33.jpg" class="img-fluid figure-img"></p>
+<figcaption>Alley cats in front of E33</figcaption>
+</figure>
+</div>
+<p>It’s quite common to see a family of alley cats near the gate in front of our faculty. They sometimes meow at passersby, but most of the time, they remain silent, keeping their distance, never letting anyone touch them. And that’s fine—it’s important not to intrude on their family time. Cats are born to be free. There’s a certain magic about them that, even on the most exhausting days, dealing with numbers, code, and all those frustrating errors, just seeing them fills me with a sense of vitality. Maybe it’s not the same for everyone, but at least for me, they offer a brief respite from the chaos.</p>
+<p>Still, I can’t help but worry a little about their unchecked reproduction. Although the TNR (Trap-Neuter-Return) method seems like the most balanced solution for everyone involved, neither the government nor any NGOs have taken action—probably for a host of reasons. We all love cats, but in the real world, there are always constraints and trade-offs.</p>
+<p>So, the only thing I can say is:</p>
+<p>Kitty, live long and prosper 🖖.</p>
+<p>[EOF]</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
