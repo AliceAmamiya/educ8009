@@ -1,290 +1,14 @@
 [
   {
-    "objectID": "session03/lecture-notes.html",
-    "href": "session03/lecture-notes.html",
-    "title": "Session 03: Descriptive Statistics",
+    "objectID": "session04/assignment.html",
+    "href": "session04/assignment.html",
+    "title": "Laboratory 02",
     "section": "",
-    "text": "preliminary data screening\nchoosing appropriate descriptive statistics based on data distribution\nthoroughly reporting statistical findings, e.g.:\n\ndata cleaning\noutlier handling procedures",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#summary",
-    "href": "session03/lecture-notes.html#summary",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "",
-    "text": "preliminary data screening\nchoosing appropriate descriptive statistics based on data distribution\nthoroughly reporting statistical findings, e.g.:\n\ndata cleaning\noutlier handling procedures",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#why-doing-descriptive-statistics",
-    "href": "session03/lecture-notes.html#why-doing-descriptive-statistics",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "Why doing descriptive statistics?",
-    "text": "Why doing descriptive statistics?\nScreening:\n- missing data - unusually values - too small groups - mistakes - e.g. impossible values\nThen: correct them or drop them",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#frequency-distributions",
-    "href": "session03/lecture-notes.html#frequency-distributions",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "Frequency Distributions",
-    "text": "Frequency Distributions\n\nUsed for preliminary data screening\nFrequency tables for categorical variables\nHistograms for continuous variables\n\n\nimport pandas as pd\nfrom scipy import stats\nimport seaborn as sns\n\n\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\n\n# Frequency Tables for Categorical Variables (slides p.6)\ntemphr10['sex'].value_counts()\n\nsex\nMale      7\nFemale    3\nName: count, dtype: int64\n\n\n\n# Filtering missing data with haircolor dataset (p. 6)\nhaircolor = pd.read_spss('./datasets/haircolor.sav')\nhaircolor.columns\n\nIndex(['casenumber', 'haircolor', 'newgrouphaircolor'], dtype='object')\n\n\n\n# To count missing value, use sum() and isnull(). \nhaircolor.isnull().sum()\n\ncasenumber           0\nhaircolor            4\nnewgrouphaircolor    5\ndtype: int64\n\n\n\n\n\ncasenumber           0\nhaircolor            4\nnewgrouphaircolor    5\ndtype: int64\n\n\n\nThe total \\(N\\) for the study was 50. The sample included these hair color groups: 32% brown, 24% black, 16% blond, 6% red, 6% gray, 4% pink, 2% blue, 2% out‐of‐range scores, and 8% missing values.",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#central-tendency-measures",
-    "href": "session03/lecture-notes.html#central-tendency-measures",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "Central Tendency Measures",
-    "text": "Central Tendency Measures\n\nMode: Most frequent value\nMedian: Middle value\nMean: \\[M = \\bar{X} = \\frac{\\sum_{i=1}^N X_i}{N}\\]",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#variabilitydispersion-measures",
-    "href": "session03/lecture-notes.html#variabilitydispersion-measures",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "Variability/Dispersion Measures",
-    "text": "Variability/Dispersion Measures\n\nRange: Max - Min\nInterquartile Range (IQR): Q3 - Q1\nVariance: \\[s^2 = \\frac{\\sum_{i=1}^N (X_i - M)^2}{N - 1}\\]\nStandard Deviation: \\[s = \\sqrt{s^2}\\]\n\n\n# BMI dataset and the boxplot\nbmi = pd.read_spss('./datasets/bmi.sav')\nbmi.columns\n\nIndex(['idnumber', 'Sex', 'Weight', 'height', 'BMI'], dtype='object')\n\n\n\nsns.boxplot(data=bmi, x='Sex', y='BMI')",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#z-scores",
-    "href": "session03/lecture-notes.html#z-scores",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "Z-scores",
-    "text": "Z-scores\n\\[z = \\frac{X - M}{SD}\\]",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#normal-distribution",
-    "href": "session03/lecture-notes.html#normal-distribution",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "5. Normal Distribution",
-    "text": "5. Normal Distribution\n\nBell-shaped curve\n68-95-99.7 rule for standard deviations",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#skewness-and-kurtosis",
-    "href": "session03/lecture-notes.html#skewness-and-kurtosis",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "6. Skewness and Kurtosis",
-    "text": "6. Skewness and Kurtosis\n\nMeasures of distribution shape\nSkewness: \\[\\frac{1}{N} \\sum(\\frac{X - M}{SD})^3\\]\nKurtosis: \\[\\frac{1}{N} \\sum(\\frac{X - M}{SD})^4\\]",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#assessing-normality",
-    "href": "session03/lecture-notes.html#assessing-normality",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "7. Assessing Normality",
-    "text": "7. Assessing Normality\n\nHistograms with normal curve\nQ-Q plots",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#outliers",
-    "href": "session03/lecture-notes.html#outliers",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "8. Outliers",
-    "text": "8. Outliers\n\nOften defined as |z| &gt; 3.29",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/lecture-notes.html#reporting-descriptive-statistics",
-    "href": "session03/lecture-notes.html#reporting-descriptive-statistics",
-    "title": "Session 03: Descriptive Statistics",
-    "section": "9. Reporting Descriptive Statistics",
-    "text": "9. Reporting Descriptive Statistics\n\nInclude sample size, measures of central tendency, and dispersion\nDescribe distribution shape and presence of outliers\nUse appropriate visualizations (histograms, boxplots)",
-    "crumbs": [
-      "Lecture Notes",
-      "Session03",
-      "Session 03: Descriptive Statistics"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html",
-    "href": "session03/assignment-r.html",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "What do 1, 2, and 3 mean in variable “gender”? What are their percentages in the sample?\nDraw a barplot of “gender” whose 𝑦-axis represents the percentage of each group.\nDraw a histogram of “day_1”. Is there anything wrong with this variable?\nHow many cases have missing values for “day_2”?\n(Extra credit) Exclude the outlier.\n\nbase-r version 4.3.3\n\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\n\n# Using `foreign` is truly a pain for handling SPSS data, I'll use heaven instead. \ndownload_festival &lt;- haven::read_sav('./datasets/download.sav')\n\n\n\n\nprint('A summary and structure of this dataset')\n\n[1] \"A summary and structure of this dataset\"\n\nsummary(download_festival)\n\n   ticket_no        gender          day_1            day_2       \n Min.   :2111   Min.   :1.000   Min.   : 0.020   Min.   :0.0000  \n 1st Qu.:3096   1st Qu.:1.000   1st Qu.: 1.312   1st Qu.:0.4100  \n Median :3620   Median :2.000   Median : 1.790   Median :0.7900  \n Mean   :3616   Mean   :1.769   Mean   : 1.793   Mean   :0.9609  \n 3rd Qu.:4155   3rd Qu.:2.000   3rd Qu.: 2.230   3rd Qu.:1.3500  \n Max.   :4765   Max.   :3.000   Max.   :20.020   Max.   :3.4400  \n                                                 NA's   :546     \n     day_3       \n Min.   :0.0200  \n 1st Qu.:0.4400  \n Median :0.7600  \n Mean   :0.9765  \n 3rd Qu.:1.5250  \n Max.   :3.4100  \n NA's   :687     \n\nstr(download_festival)\n\ntibble [810 × 5] (S3: tbl_df/tbl/data.frame)\n $ ticket_no: num [1:810] 2111 2229 2338 2384 2401 ...\n  ..- attr(*, \"label\")= chr \"Ticket number\"\n  ..- attr(*, \"format.spss\")= chr \"F4.0\"\n $ gender   : dbl+lbl [1:810] 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, ...\n   ..@ label      : chr \"Gender of concert goer\"\n   ..@ format.spss: chr \"F8.0\"\n   ..@ labels     : Named num [1:3] 1 2 3\n   .. ..- attr(*, \"names\")= chr [1:3] \"Male\" \"Female\" \"Non-binary\"\n $ day_1    : num [1:810] 2.64 0.97 0.84 3.03 0.88 0.85 1.56 3.02 2.29 1.11 ...\n  ..- attr(*, \"label\")= chr \"Hygiene (day 1 of download festival)\"\n  ..- attr(*, \"format.spss\")= chr \"F8.2\"\n $ day_2    : num [1:810] 1.35 1.41 NA NA 0.08 NA NA NA NA 0.44 ...\n  ..- attr(*, \"label\")= chr \"Hygiene (day 2 of download festival)\"\n  ..- attr(*, \"format.spss\")= chr \"F8.2\"\n $ day_3    : num [1:810] 1.61 0.29 NA NA NA NA NA NA NA 0.55 ...\n  ..- attr(*, \"label\")= chr \"Hygiene (day 3 of download festival)\"\n  ..- attr(*, \"format.spss\")= chr \"F8.2\"\n\n\n\n\n\n\nWhat do 1, 2, and 3 mean in variable “gender”?\n\n\nprint('Q1a: What do 1, 2, and 3 mean in variable “gender”?')\n\n[1] \"Q1a: What do 1, 2, and 3 mean in variable “gender”?\"\n\ndownload_festival$gender %&gt;%\n  attr('labels')\n\n      Male     Female Non-binary \n         1          2          3 \n\n\n\n\n\n\nWhat are their percentages in the sample?\n\n\nprint('Q1b: What are their percentages in the sample?')\n\n[1] \"Q1b: What are their percentages in the sample?\"\n\ngender_percentage &lt;- download_festival %&gt;%\n  group_by(gender) %&gt;%\n  summarise(Percentage = n() / nrow(download_festival) * 100)\nprint(gender_percentage)\n\n# A tibble: 3 × 2\n  gender         Percentage\n  &lt;dbl+lbl&gt;           &lt;dbl&gt;\n1 1 [Male]             34.2\n2 2 [Female]           54.7\n3 3 [Non-binary]       11.1\n\n\n\n\n\n\nDraw a barplot of gender whose \\(y\\)-axis represents the percentage of each group.\n\n\ndownload_festival$gender &lt;- factor(download_festival$gender, levels = c(1,2,3), labels = c('Male', 'Female', 'Non-binary'))\n\nggplot(download_festival, aes(x=gender)) + \n  geom_bar() + \n  xlab('Gender') + \n  ylab('Percentage') + \n  scale_y_continuous(labels = scales::percent) + \n  ggtitle('Percentage of Gender')\n\n\n\n\n\n\n\n\n\n\n\n\nDraw a histogram of day_1. Is there anything wrong with this variable?\n\n\nprint('Draw a histogram of “day_1”. Is there anything wrong with this variable?')\n\n[1] \"Draw a histogram of “day_1”. Is there anything wrong with this variable?\"\n\nggplot(download_festival, aes(x=day_1)) + \n  geom_histogram(color = 1, bins=15) + \n  xlab('Day 1') + \n  ylab('Frequency / Count') + \n  ggtitle('Histogram of hygiene score in the 1st Day (Raw data)')\n\n\n\n\n\n\n\n  print('An outlier found.')\n\n[1] \"An outlier found.\"\n\n\n\n\n\n\nHow many cases have missing values for day_2?\n\n\nprint('How many cases have missing values for “day_2”?')\n\n[1] \"How many cases have missing values for “day_2”?\"\n\nsummary(download_festival)\n\n   ticket_no           gender        day_1            day_2       \n Min.   :2111   Male      :277   Min.   : 0.020   Min.   :0.0000  \n 1st Qu.:3096   Female    :443   1st Qu.: 1.312   1st Qu.:0.4100  \n Median :3620   Non-binary: 90   Median : 1.790   Median :0.7900  \n Mean   :3616                    Mean   : 1.793   Mean   :0.9609  \n 3rd Qu.:4155                    3rd Qu.: 2.230   3rd Qu.:1.3500  \n Max.   :4765                    Max.   :20.020   Max.   :3.4400  \n                                                  NA's   :546     \n     day_3       \n Min.   :0.0200  \n 1st Qu.:0.4400  \n Median :0.7600  \n Mean   :0.9765  \n 3rd Qu.:1.5250  \n Max.   :3.4100  \n NA's   :687     \n\nprint('Answer\\'s on the 7th row, 546 cases missing.')\n\n[1] \"Answer's on the 7th row, 546 cases missing.\"\n\n\n\n\n\n\nExclude the outlier.\n\n\nprint('Exclude Ms. Laundry Pod.')\n\n[1] \"Exclude Ms. Laundry Pod.\"\n\ndownload_festival_no_outliers &lt;- download_festival[download_festival$day_1 &lt;= 5, ]\nggplot(download_festival_no_outliers, aes(x=day_1)) + \n  geom_histogram(color = 1, bins=15) + \n  labs(title='Histogram of Hygiene Scores on the 1st Day', \n        subtitle='Outlier removed') + \n  xlab('Day 1') + \n  ylab('Frequency / Count')\n\n\n\n\n\n\n\n\n[EOF]",
+    "text": "A researcher wondered whether a fish or cat made a better pet. He found some people who had either fish or cats as pets and measured their life satisfaction and how much they like animals. The data are saved in pets.sav.",
     "crumbs": [
       "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#first-peek",
-    "href": "session03/assignment-r.html#first-peek",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "print('A summary and structure of this dataset')\n\n[1] \"A summary and structure of this dataset\"\n\nsummary(download_festival)\n\n   ticket_no        gender          day_1            day_2       \n Min.   :2111   Min.   :1.000   Min.   : 0.020   Min.   :0.0000  \n 1st Qu.:3096   1st Qu.:1.000   1st Qu.: 1.312   1st Qu.:0.4100  \n Median :3620   Median :2.000   Median : 1.790   Median :0.7900  \n Mean   :3616   Mean   :1.769   Mean   : 1.793   Mean   :0.9609  \n 3rd Qu.:4155   3rd Qu.:2.000   3rd Qu.: 2.230   3rd Qu.:1.3500  \n Max.   :4765   Max.   :3.000   Max.   :20.020   Max.   :3.4400  \n                                                 NA's   :546     \n     day_3       \n Min.   :0.0200  \n 1st Qu.:0.4400  \n Median :0.7600  \n Mean   :0.9765  \n 3rd Qu.:1.5250  \n Max.   :3.4100  \n NA's   :687     \n\nstr(download_festival)\n\ntibble [810 × 5] (S3: tbl_df/tbl/data.frame)\n $ ticket_no: num [1:810] 2111 2229 2338 2384 2401 ...\n  ..- attr(*, \"label\")= chr \"Ticket number\"\n  ..- attr(*, \"format.spss\")= chr \"F4.0\"\n $ gender   : dbl+lbl [1:810] 1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, ...\n   ..@ label      : chr \"Gender of concert goer\"\n   ..@ format.spss: chr \"F8.0\"\n   ..@ labels     : Named num [1:3] 1 2 3\n   .. ..- attr(*, \"names\")= chr [1:3] \"Male\" \"Female\" \"Non-binary\"\n $ day_1    : num [1:810] 2.64 0.97 0.84 3.03 0.88 0.85 1.56 3.02 2.29 1.11 ...\n  ..- attr(*, \"label\")= chr \"Hygiene (day 1 of download festival)\"\n  ..- attr(*, \"format.spss\")= chr \"F8.2\"\n $ day_2    : num [1:810] 1.35 1.41 NA NA 0.08 NA NA NA NA 0.44 ...\n  ..- attr(*, \"label\")= chr \"Hygiene (day 2 of download festival)\"\n  ..- attr(*, \"format.spss\")= chr \"F8.2\"\n $ day_3    : num [1:810] 1.61 0.29 NA NA NA NA NA NA NA 0.55 ...\n  ..- attr(*, \"label\")= chr \"Hygiene (day 3 of download festival)\"\n  ..- attr(*, \"format.spss\")= chr \"F8.2\"",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#q1a",
-    "href": "session03/assignment-r.html#q1a",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "What do 1, 2, and 3 mean in variable “gender”?\n\n\nprint('Q1a: What do 1, 2, and 3 mean in variable “gender”?')\n\n[1] \"Q1a: What do 1, 2, and 3 mean in variable “gender”?\"\n\ndownload_festival$gender %&gt;%\n  attr('labels')\n\n      Male     Female Non-binary \n         1          2          3",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#q1b",
-    "href": "session03/assignment-r.html#q1b",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "What are their percentages in the sample?\n\n\nprint('Q1b: What are their percentages in the sample?')\n\n[1] \"Q1b: What are their percentages in the sample?\"\n\ngender_percentage &lt;- download_festival %&gt;%\n  group_by(gender) %&gt;%\n  summarise(Percentage = n() / nrow(download_festival) * 100)\nprint(gender_percentage)\n\n# A tibble: 3 × 2\n  gender         Percentage\n  &lt;dbl+lbl&gt;           &lt;dbl&gt;\n1 1 [Male]             34.2\n2 2 [Female]           54.7\n3 3 [Non-binary]       11.1",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#q2",
-    "href": "session03/assignment-r.html#q2",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "Draw a barplot of gender whose \\(y\\)-axis represents the percentage of each group.\n\n\ndownload_festival$gender &lt;- factor(download_festival$gender, levels = c(1,2,3), labels = c('Male', 'Female', 'Non-binary'))\n\nggplot(download_festival, aes(x=gender)) + \n  geom_bar() + \n  xlab('Gender') + \n  ylab('Percentage') + \n  scale_y_continuous(labels = scales::percent) + \n  ggtitle('Percentage of Gender')",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#q3",
-    "href": "session03/assignment-r.html#q3",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "Draw a histogram of day_1. Is there anything wrong with this variable?\n\n\nprint('Draw a histogram of “day_1”. Is there anything wrong with this variable?')\n\n[1] \"Draw a histogram of “day_1”. Is there anything wrong with this variable?\"\n\nggplot(download_festival, aes(x=day_1)) + \n  geom_histogram(color = 1, bins=15) + \n  xlab('Day 1') + \n  ylab('Frequency / Count') + \n  ggtitle('Histogram of hygiene score in the 1st Day (Raw data)')\n\n\n\n\n\n\n\n  print('An outlier found.')\n\n[1] \"An outlier found.\"",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#q4",
-    "href": "session03/assignment-r.html#q4",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "How many cases have missing values for day_2?\n\n\nprint('How many cases have missing values for “day_2”?')\n\n[1] \"How many cases have missing values for “day_2”?\"\n\nsummary(download_festival)\n\n   ticket_no           gender        day_1            day_2       \n Min.   :2111   Male      :277   Min.   : 0.020   Min.   :0.0000  \n 1st Qu.:3096   Female    :443   1st Qu.: 1.312   1st Qu.:0.4100  \n Median :3620   Non-binary: 90   Median : 1.790   Median :0.7900  \n Mean   :3616                    Mean   : 1.793   Mean   :0.9609  \n 3rd Qu.:4155                    3rd Qu.: 2.230   3rd Qu.:1.3500  \n Max.   :4765                    Max.   :20.020   Max.   :3.4400  \n                                                  NA's   :546     \n     day_3       \n Min.   :0.0200  \n 1st Qu.:0.4400  \n Median :0.7600  \n Mean   :0.9765  \n 3rd Qu.:1.5250  \n Max.   :3.4100  \n NA's   :687     \n\nprint('Answer\\'s on the 7th row, 546 cases missing.')\n\n[1] \"Answer's on the 7th row, 546 cases missing.\"",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session03/assignment-r.html#q5",
-    "href": "session03/assignment-r.html#q5",
-    "title": "Laboratory 01 (feat. R)",
-    "section": "",
-    "text": "Exclude the outlier.\n\n\nprint('Exclude Ms. Laundry Pod.')\n\n[1] \"Exclude Ms. Laundry Pod.\"\n\ndownload_festival_no_outliers &lt;- download_festival[download_festival$day_1 &lt;= 5, ]\nggplot(download_festival_no_outliers, aes(x=day_1)) + \n  geom_histogram(color = 1, bins=15) + \n  labs(title='Histogram of Hygiene Scores on the 1st Day', \n        subtitle='Outlier removed') + \n  xlab('Day 1') + \n  ylab('Frequency / Count')\n\n\n\n\n\n\n\n\n[EOF]",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01 (feat. R)"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html",
-    "href": "session01/lecture-notes.html",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
-    "crumbs": [
-      "Lecture Notes",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html#summary",
-    "href": "session01/lecture-notes.html#summary",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data.",
-    "crumbs": [
-      "Lecture Notes",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html#implementations",
-    "href": "session01/lecture-notes.html#implementations",
-    "title": "Session 01: Introduction",
-    "section": "Implementations",
-    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)",
-    "crumbs": [
-      "Lecture Notes",
-      "Session01",
-      "Session 01: Introduction"
-    ]
-  },
-  {
-    "objectID": "session01/lecture-notes.html#descriptive-statistics",
-    "href": "session01/lecture-notes.html#descriptive-statistics",
-    "title": "Session 01: Introduction",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64",
-    "crumbs": [
-      "Lecture Notes",
-      "Session01",
-      "Session 01: Introduction"
+      "Session04",
+      "Laboratory 02"
     ]
   },
   {
@@ -298,147 +22,63 @@
     ]
   },
   {
-    "objectID": "session02/lecture-notes.html",
-    "href": "session02/lecture-notes.html",
-    "title": "Section 02: Concepts",
-    "section": "",
-    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)",
-    "crumbs": [
-      "Lecture Notes",
-      "Session02",
-      "Section 02: Concepts"
-    ]
-  },
-  {
-    "objectID": "session02/lecture-notes.html#summary",
-    "href": "session02/lecture-notes.html#summary",
-    "title": "Section 02: Concepts",
-    "section": "",
-    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)",
-    "crumbs": [
-      "Lecture Notes",
-      "Session02",
-      "Section 02: Concepts"
-    ]
-  },
-  {
-    "objectID": "session02/lecture-notes.html#research-questions",
-    "href": "session02/lecture-notes.html#research-questions",
-    "title": "Section 02: Concepts",
-    "section": "Research Questions",
-    "text": "Research Questions\n\nVariables and causal relationships\n\nthe X-axis and Y-axis - assuming \\(X\\) will affect \\(Y\\)\n\n\\(X\\) =&gt; Independent var\n\n\\(Y\\) =&gt; Dependent var\n\n\nare \\(X\\) and \\(Y\\) correlated or associated?\ndoes \\(X\\) predict \\(Y\\)?\ndoes \\(X\\) cause/determine/influence \\(Y\\)? - strong evidence needed\n\n\nConfounding\n\nassociated with the \\(X\\) that cause or influence \\(Y\\)\nmay cause false association\ne.g. ice cream sales vs drowning incidents\n\naffected by confounder - temperature - another variable makes \\(X\\) and \\(Y\\) correlated.\n\ne.g. age vs wages\n\nage - associated with experience + wages\n\nControls:\n\nExperimental\nStatistical\n\n\n\n\nMediation\n\ne.g. wages - male vs female\n\nfrom average wages: yes they are correlated.\nbut: does it imply discrimination?\nlook deeper: control of occupations\n\nSimpson’s paradox\n\ngender –occupation–&gt; wages\n\n\n\n\n\nAddressing causal inferences\n\nTheory\nStatistically related\nTime: \\(X\\) happens earlier\nThe causal inferences: proof no rival explanations for the changes of \\(Y\\).\n\n(Brannon et al., 2017; Cozby & Bates, 2017)",
-    "crumbs": [
-      "Lecture Notes",
-      "Session02",
-      "Section 02: Concepts"
-    ]
-  },
-  {
-    "objectID": "session02/lecture-notes.html#research-design",
-    "href": "session02/lecture-notes.html#research-design",
-    "title": "Section 02: Concepts",
-    "section": "Research Design",
-    "text": "Research Design\n\nExperiment\n\ngrouping and control\ncontrol group vs treatment group\nrandomized, standardized, clear-defined dependent variable\nRCT - Randomized controlled trial: cost, ethic, external validity\n\n\n\nNon-experiment\n\ncorrelational research: e.g. questionnaires\ncost: generally **doesn’t lead to causality”\n\ntemporal precedence + confounding\ncorrelations \\(\\neq\\) causation\n\n\n\n\nQuasi-experiment\n\nuse pre-existing groups - Nonequivalent control group\n\ne.g. free lunch in school 1 but not in school 2\nconfounding my exists\n\nuse data before and after the intervention - One-group pretest-post-test design\n\ne.g. maturation\n\n\n\n\nComparison of designs\n\ninternal validity vs external validity\ntrade-offs",
-    "crumbs": [
-      "Lecture Notes",
-      "Session02",
-      "Section 02: Concepts"
-    ]
-  },
-  {
-    "objectID": "session02/lecture-notes.html#populations-and-samples",
-    "href": "session02/lecture-notes.html#populations-and-samples",
-    "title": "Section 02: Concepts",
-    "section": "Populations and Samples",
-    "text": "Populations and Samples",
-    "crumbs": [
-      "Lecture Notes",
-      "Session02",
-      "Section 02: Concepts"
-    ]
-  },
-  {
-    "objectID": "session03/assignment.html",
-    "href": "session03/assignment.html",
-    "title": "Laboratory 01",
-    "section": "",
-    "text": "A biologist was worried about the potential health effects of music festivals. So, one year she went to the Download Music Festival (http://www.downloadfestival.co.uk) and measured the hygiene of 810 concert goers over the three days of the festival. In theory each person was measured on each day but because it was difficult to track people down, there were some missing data on days 2 and 3. Hygiene was measured using a technique that results in a score ranging between 0 (you smell like a rotting corpse) and 5 (you smell like sweet roses). Sanitation is not always great at these places, so this researcher predicted that personal hygiene would go down dramatically over the three days of the festival. The data file is called download.sav.",
+    "objectID": "session04/assignment.html#q1-frequency-distribution-of-pet",
+    "href": "session04/assignment.html#q1-frequency-distribution-of-pet",
+    "title": "Laboratory 02",
+    "section": "Q1: Frequency distribution of pet",
+    "text": "Q1: Frequency distribution of pet\nIn SPSS, the Frequency function in Descriptive Statistics provides Frequency table with bar chart by default. I’ll follow this flavor in my report.\nAnswer\n\n\n\nPet\nFrequency\nPercentage\n\n\n\n\nCat\n8\n60%\n\n\nFish\n12\n40%\n\n\n\nFor the bar chart, see Figure 1\nSolution\n\n# I use function for keeping the global namespace clean. \ndef freq_distb(df, col_name):\n    column = df[str(col_name)]\n    print('1. Frequency: ')\n    freq = column.value_counts()\n    print(freq)\n    print('----\\n2. Percentage(%): ')\n    percentage = column.value_counts(normalize=True) * 100\n    print(percentage)\n\nfreq_distb(pets, col_name='pet')\n\n1. Frequency: \npet\nFish    12\nCat      8\nName: count, dtype: int64\n----\n2. Percentage(%): \npet\nFish    60.0\nCat     40.0\nName: proportion, dtype: float64\n\n\n\n# Plotting frequency\nsns.countplot(data=pets, x='pet')\n\n\n\n\n\n\n\nFigure 1: Bar Chart on Frequency of pet",
     "crumbs": [
       "Labs",
-      "Session03",
-      "Laboratory 01"
+      "Session04",
+      "Laboratory 02"
     ]
   },
   {
-    "objectID": "session03/assignment.html#preparation",
-    "href": "session03/assignment.html#preparation",
-    "title": "Laboratory 01",
-    "section": "Preparation",
-    "text": "Preparation\nBefore working on the lab work , I started with a quick EDA.\n\ndf_download, metadata_download = pyreadstat.read_sav(\"./datasets/download.sav\")\n\n# A quick peek on the structure of the DataFrame. \nprint('0. An overall description of this dataset: \\n' + str(df_download.describe()) + '\\n')\nprint('1. Shape - rows and columns: \\n' + str(df_download.shape) + '\\n') \nprint('2. Variables (in SPSS) or column names: \\n ' + str(df_download.columns) + '\\n')\nprint('3. Missing values (if any): \\n ' + str(df_download.isnull().sum()) + '\\n')\n\n0. An overall description of this dataset: \n         ticket_no      gender       day_1       day_2       day_3\ncount   810.000000  810.000000  810.000000  264.000000  123.000000\nmean   3616.212346    1.769136    1.793358    0.960909    0.976504\nstd     610.241493    0.632679    0.944495    0.720780    0.710277\nmin    2111.000000    1.000000    0.020000    0.000000    0.020000\n25%    3096.250000    1.000000    1.312500    0.410000    0.440000\n50%    3620.500000    2.000000    1.790000    0.790000    0.760000\n75%    4154.750000    2.000000    2.230000    1.350000    1.525000\nmax    4765.000000    3.000000   20.020000    3.440000    3.410000\n\n1. Shape - rows and columns: \n(810, 5)\n\n2. Variables (in SPSS) or column names: \n Index(['ticket_no', 'gender', 'day_1', 'day_2', 'day_3'], dtype='object')\n\n3. Missing values (if any): \n ticket_no      0\ngender         0\nday_1          0\nday_2        546\nday_3        687\ndtype: int64\n\n\n\nFrom the output, it seems something going wrong with the column day_1. I’m sure I’ll check it later. Besides, the column gender should be a categorical variable rather than an int and should be corrected:\n\ndf_download['gender'] = df_download['gender'].astype('category')",
+    "objectID": "session04/assignment.html#q2-life-satisfaction-of-pet-owners",
+    "href": "session04/assignment.html#q2-life-satisfaction-of-pet-owners",
+    "title": "Laboratory 02",
+    "section": "Q2: Life satisfaction of pet owners",
+    "text": "Q2: Life satisfaction of pet owners\nAnswer\nBased on the box plot (Figure 2), life satisfaction of cat and fish owners differ in aspects below:\n\nMedian (\\(Q_2\\)): The box-plot shows that cat people normally have higher median of life satisfaction than the fish people.\nIQR (\\(Q_3 - Q_1\\)): The IQR for cat people is more concentrated, while for fish people, their IQR is much wider, which indicates more variability in life satisfaction.\nRange: Cat people’s life satisfaction ranges from around 50 to 70, with an outlier below 50. Fish owners’ life satisfaction ranges from about 15 to 65, with an outlier below 15.\n\nIn conclusion, cat owners generally report higher and more consistent life satisfaction compared to fish owners.\nCats win! ฅ•ﻌ•ฅ\nSolution\n\n# Plotting Box-plot for Cat and Fish.\nsns.boxplot(pets, x='pet', y='life_satisfaction', hue='pet')\nplt.show()\n\n\n\n\n\n\n\nFigure 2: Life satisfaction",
     "crumbs": [
       "Labs",
-      "Session03",
-      "Laboratory 01"
+      "Session04",
+      "Laboratory 02"
     ]
   },
   {
-    "objectID": "session03/assignment.html#question-1",
-    "href": "session03/assignment.html#question-1",
-    "title": "Laboratory 01",
-    "section": "Question 1",
-    "text": "Question 1\n\nQ1a: What do 1, 2, and 3 mean in variable “gender”?\n\nAnswer:\n\n\n\nCode\nLabel\n\n\n\n\n1\nMale\n\n\n2\nFemale\n\n\n3\nNon-Binary\n\n\n\nSolution:\nI reached the mapping for categorical variables by accessing metadata from the given sav file by pyreadstats:\n\nprint(metadata_download.variable_value_labels)\n\n{'gender': {1.0: 'Male', 2.0: 'Female', 3.0: 'Non-binary'}}\n\n\nP.S. On another note, considering this is data from a music festival, should I assume that apart from the 90 individuals labeled themselves as ENBY, the terms “Female” and “Male” in the dataset include both cisgender and transgender individuals?\n\nQ1b: What are their percentages in the sample?\n\nAnswer:\n\n\n\nGender\nCount\nPercentage\n\n\n\n\nFemale\n443\n54.69%\n\n\nMale\n277\n34.20%\n\n\nNon-Binary\n90\n11.11%\n\n\n\nSolution:\n\n# Calculating the Percentage\npercentage = df_download['gender'].value_counts(normalize=True) * 100   # For percentage\nprint(percentage)\n\ngender\n2.0    54.691358\n1.0    34.197531\n3.0    11.111111\nName: proportion, dtype: float64\n\n\n\nReport the result (in a formal way)\nAnd the results of Question 1a and 1b should be reported in a formal way:\nThe total \\(N\\) for ths dataset (for the study) was 810. The sample included the following gender groups: 54.69% male, 34.20% female and 11.11% of non-binary.",
+    "objectID": "session04/assignment.html#q3q5-histogram-of-life_satisfaction-by-pet",
+    "href": "session04/assignment.html#q3q5-histogram-of-life_satisfaction-by-pet",
+    "title": "Laboratory 02",
+    "section": "Q3+Q5: Histogram of life_satisfaction (+ by pet)",
+    "text": "Q3+Q5: Histogram of life_satisfaction (+ by pet)\nAnswer (for Question 3): The Overall Distribution (Figure 3)\n\nThe overall distribution shows that the highest concentration of life satisfaction is around 50.\nExtremely low life satisfaction scores exist, with individuals reporting very low scores (around 10 to 30).\nThe peak at around 50 reflects the central tendency for both groups, but, again, the tail on the left side of this figure suggests significantly lower satisfaction exists.\n\nSolution\n\nsns.histplot(data=pets, x='life_satisfaction', bins=15)\nplt.show\n\n\n\n\n\n\n\nFigure 3: Overall distribution of life satisfaction\n\n\n\n\n\nAnswer (for Question 5): A side-by-side comparison (Figure 4)\n\nFor cat owners:\n\nLife satisfaction scores are concentrated between 50 and 70, with most scores around 60.\nThe distribution is tight, with one outlier who has a significantly lower life satisfaction score.\n\nFor fish owners:\n\nLife satisfaction scores are more spreading, from around 10 to 60.\nThe most frequent score is around 40-50, with several people having low satisfaction (below 20).\nCompared to cat owners, fish owners have a wider range of life satisfaction scores.\n\n\n\ng = sns.FacetGrid(data=pets, col='pet', hue='pet')\ng = g.map(plt.hist, 'life_satisfaction', bins=15)\nplt.show()\n\n\n\n\n\n\n\nFigure 4: Overall distribution of life satisfaction",
     "crumbs": [
       "Labs",
-      "Session03",
-      "Laboratory 01"
+      "Session04",
+      "Laboratory 02"
     ]
   },
   {
-    "objectID": "session03/assignment.html#question-2",
-    "href": "session03/assignment.html#question-2",
-    "title": "Laboratory 01",
-    "section": "Question 2",
-    "text": "Question 2\n\nDraw a barplot of “gender” whose 𝑦-axis represents the percentage of each group.\n\nAnswer:\nSee Figure 1\nSolution:\n\ngender_barplot = sns.barplot(percentage)\ngender_barplot.set_xticklabels(['Male', 'Female', 'Non-binary'])\nplt.show()\n\nC:\\Users\\Riko\\AppData\\Local\\Temp\\ipykernel_15292\\2800231647.py:4: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.\n  gender_barplot.set_xticklabels(['Male', 'Female', 'Non-binary'])\n\n\n\n\n\n\n\n\nFigure 1: Count of Gender",
+    "objectID": "session04/assignment.html#q4-measurements-to-describe-variables",
+    "href": "session04/assignment.html#q4-measurements-to-describe-variables",
+    "title": "Laboratory 02",
+    "section": "Q4: Measurements to describe variables",
+    "text": "Q4: Measurements to describe variables\nAnswer\nBased on the dataset and output:\n\n\n\nValues\nOverall (pet)\nCat\nFish\n\n\n\n\nMean\n46.95\n60.13\n38.17\n\n\nMedian\n47.50\n63.00\n44.00\n\n\nStandard Deviation\n17.51\n11.10\n15.51\n\n\nRange\n66.00\n35.00\n50.00\n\n\nInter-quartile range\n19.50\n8.50\n15.75\n\n\n\n\nFor central tendency: Median\n\nMedian is a robust measure of central tendency, especially when there is a wide range of values and potential outliers.\nIt is less affected by extreme values than the mean: providing a better representation of the typical life satisfaction for both cat and fish owners.\n\nFor dispersion: IQR\n\nIQR measures the spread of the middle 50% of the data, which is less influenced by outliers compared to the full range or standard deviation.\n\n\nSolution\n\ndef get_stats(group, group_name, column):\n    dict_stats = {\n        'Name': group_name,\n        'Mean': group[column].mean(),\n        'Median': group[column].median(),\n        'SD': group[column].std(),\n        'Range': group[column].max() - group[column].min(),\n        'IQR': stats.iqr(group[column])\n    }\n    return dict_stats\n\n\ndef describe_var():\n    # Overall\n    overall_stats = get_stats(pets, \n                              'Overall', \n                              'life_satisfaction')\n    # Meow\n    cat_stats = get_stats(pets[pets['pet'] == 'Cat'], \n                          'Cat', \n                          'life_satisfaction')\n    # Fish\n    fish_stats = get_stats(pets[pets['pet'] == 'Fish'], \n                           'Fish', \n                           'life_satisfaction')\n    # Output as a pd.DataFrame\n    df = pd.DataFrame([overall_stats, cat_stats, fish_stats])\n    return df\n\nprint(describe_var())\n\n      Name       Mean  Median         SD  Range    IQR\n0  Overall  46.950000    47.5  17.506315   66.0  19.50\n1      Cat  60.125000    63.0  11.102606   35.0   8.50\n2     Fish  38.166667    44.0  15.508551   50.0  15.75",
     "crumbs": [
       "Labs",
-      "Session03",
-      "Laboratory 01"
+      "Session04",
+      "Laboratory 02"
     ]
   },
   {
-    "objectID": "session03/assignment.html#question-3",
-    "href": "session03/assignment.html#question-3",
-    "title": "Laboratory 01",
-    "section": "Question 3",
-    "text": "Question 3\n\nDraw a histogram of day_1. Is there anything wrong with this variable?\n\nAnswer:\nSee Figure 2.\nSolution:\nFrom the EDA and the histogram shown below (see Figure 2), we can clearly identify an outlier with a “hygiene score” significantly higher than the others. Given that the score should range between 0 and 5, this could probability be a typo or some other thing we may have overlooked.\n\nday1_hist = sns.histplot(df_download['day_1'])\nplt.show()\n\n\n\n\n\n\n\nFigure 2: Distribution of Hygiene Score in Day 1\n\n\n\n\n\n\n# Filter out the outlier\nprint(df_download[df_download['day_1'] &gt; 5.0])\n\n     ticket_no gender  day_1  day_2  day_3\n610     4158.0    2.0  20.02   2.44    NaN\n\n\nI filtered out this outlier, it’s in row number 610, and it turns out that based on the ranking, this lady was four times cleaner than the cleanest person at the music festival. Hmm… 4x cleaner? Sounds like something you’d read on a box of laundry pods (see Figure 3). Let’s call her Ms. Laundry Pod.\n\n\n\n\n\n\nFigure 3: 4x-cleaning-power\n\n\n\nI’m just saying this for fun (except the Ms. Laundry Pod part). The hygiene score is an interval variable that we can’t simply multiply or divide the values like what I did.",
+    "objectID": "session04/assignment.html#q5-histogram-by-pet",
+    "href": "session04/assignment.html#q5-histogram-by-pet",
+    "title": "Laboratory 02",
+    "section": "Q5: Histogram by pet",
+    "text": "Q5: Histogram by pet\nSee Question 3 + Question 5 (in Section 3.3).",
     "crumbs": [
       "Labs",
-      "Session03",
-      "Laboratory 01"
-    ]
-  },
-  {
-    "objectID": "session03/assignment.html#question-4",
-    "href": "session03/assignment.html#question-4",
-    "title": "Laboratory 01",
-    "section": "Question 4",
-    "text": "Question 4\n\nHow many cases have missing values for day_2?\n\nAnswer:\n546 cases have missing values in the column day_2.\nSolution:\n\nprint(df_download.isnull().sum()['day_2'])\n\n546",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01"
-    ]
-  },
-  {
-    "objectID": "session03/assignment.html#question-5",
-    "href": "session03/assignment.html#question-5",
-    "title": "Laboratory 01",
-    "section": "Question 5",
-    "text": "Question 5\n\nExcluding the outlier in day 1.\n\nSolution:\nThankfully, there’s only one outlier - Ms. Laundry Pod, located at row number 610. So, for this part, I’ll simply exclude that row and save the remaining data to a new DataFrame.\n\ndf_download_dropped_outlier = df_download.drop(610)\n# Or I could just enter the danger zone by dropping data on the DataFrame by:  \n# df_download.drop(610, inplace=True)\n\nAlso, I double checked by plotting the data once more (see Figure 4).\n\n# A plot to confirm if I'm on the right track. \ndf_download_dropped_outlier['day_1'].hist()\n\n\n\n\n\n\n\nFigure 4: Distribution of Hygiene Score in Day 1\n\n\n\n\n\n[EOF]",
-    "crumbs": [
-      "Labs",
-      "Session03",
-      "Laboratory 01"
+      "Session04",
+      "Laboratory 02"
     ]
   }
 ]
