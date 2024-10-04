@@ -283,7 +283,7 @@ window.Quarto = {
 (6) ⟨ OK ⟩  </code></pre>
 <p>Describe your findings.</p></li>
 </ol>
-<p>As always, I load the library required and the dataset. Since this time we don’t need to dig too much into the SPSS-reserved metadata of this file, I directly load the data through <code>pandas</code>’s <code>pd.read_spss()</code> function and did a quick summary on the existing dataset:</p>
+<p>As always, I load everything I need then feed the dataset in. Since this time there’s no need to dig too much into the SPSS-reserved metadata (the code-variable mapping thinbg), I directly load the data through <code>pandas</code>’s <code>pd.read_spss()</code> function and did a quick summary on the existing dataset:</p>
 <div id="adad6cd414ffee15" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:17:50.717148Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:17:50.705722Z&quot;}" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
@@ -362,8 +362,14 @@ max    69.000000          72.000000</code></pre>
 <td>12</td>
 <td>40%</td>
 </tr>
+<tr class="odd">
+<td>Total</td>
+<td>20</td>
+<td>100%</td>
+</tr>
 </tbody>
 </table>
+<p>The total <span class="math inline">\(N = 20\)</span> includes 60% of cat owners and 40% of fish owners. No missing value.</p>
 <p>For the bar chart, see <a href="#fig-freq-bar-chart" class="quarto-xref">Figure&nbsp;1</a></p>
 <p><strong>Solution</strong></p>
 <div id="947cf3d803b79e3d" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-10-02T09:19:46.551566Z&quot;,&quot;start_time&quot;:&quot;2024-10-02T09:19:46.541779Z&quot;}" data-execution_count="3">
@@ -543,12 +549,11 @@ Figure&nbsp;4: Overall distribution of life satisfaction
 </tbody>
 </table>
 <ol type="1">
-<li>For central tendency: Median
+<li>For central tendency: Median (<span class="math inline">\(Q_2\)</span>)
 <ul>
-<li>Median is a robust measure of central tendency, especially when there is a wide range of values and potential outliers.</li>
-<li>It is less affected by extreme values than the mean: providing a better representation of the typical life satisfaction for both cat and fish owners.</li>
+<li>Median is a robust measure of central tendency, especially when there is a wide range of values and potential outliers. It is less affected by extreme values than the mean: providing a better representation of the typical life satisfaction for both cat and fish owners.</li>
 </ul></li>
-<li>For dispersion: IQR
+<li>For dispersion: IQR (<span class="math inline">\(Q_3 - Q_1\)</span>)
 <ul>
 <li>IQR measures the spread of the middle 50% of the data, which is less influenced by outliers compared to the full range or standard deviation.</li>
 </ul></li>
