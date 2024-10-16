@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Laboratory 04 – educ8009-assignments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session07-08/assignment.html">Session07 08</a></li><li class="breadcrumb-item"><a href="../session07-08/assignment.html">Laboratory 04</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">educ8009-assignments</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session03</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session03/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session03/assignment-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 01 (feat. R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session04</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session04/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 02</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session05 06</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session05-06/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 03</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Session07 08</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session07-08/assignment.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Laboratory 04</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <ul class="collapse">
+  <li><a href="#a-quick-dataset-check-up" id="toc-a-quick-dataset-check-up" class="nav-link" data-scroll-target="#a-quick-dataset-check-up">A quick dataset check-up</a></li>
+  <li><a href="#q1-data-distribution" id="toc-q1-data-distribution" class="nav-link" data-scroll-target="#q1-data-distribution">Q1: Data distribution</a></li>
+  <li><a href="#q2-the-scatterplot" id="toc-q2-the-scatterplot" class="nav-link" data-scroll-target="#q2-the-scatterplot">Q2: The (s)catterplot</a></li>
+  <li><a href="#q3-the-pearsons-r-of-dinner_time-and-meow" id="toc-q3-the-pearsons-r-of-dinner_time-and-meow" class="nav-link" data-scroll-target="#q3-the-pearsons-r-of-dinner_time-and-meow">Q3: The Pearson’s <span class="math inline">\(r\)</span> of <code>dinner_time</code> and <code>meow</code></a></li>
+  <li><a href="#q4-test-h_0-at-the-5-level" id="toc-q4-test-h_0-at-the-5-level" class="nav-link" data-scroll-target="#q4-test-h_0-at-the-5-level">Q4: Test <span class="math inline">\(H_0\)</span> at the 5% level</a></li>
+  <li><a href="#q5-95-ci-of-rho" id="toc-q5-95-ci-of-rho" class="nav-link" data-scroll-target="#q5-95-ci-of-rho">Q5: 95% CI of <span class="math inline">\(\rho\)</span></a></li>
+  </ul></li>
+  <li><a href="#final-thoughts-cats-good-humans-bad." id="toc-final-thoughts-cats-good-humans-bad." class="nav-link" data-scroll-target="#final-thoughts-cats-good-humans-bad.">Final thoughts: Cats good, humans bad.</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session07-08/assignment.html">Session07 08</a></li><li class="breadcrumb-item"><a href="../session07-08/assignment.html">Laboratory 04</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Laboratory 04</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="context" class="level1">
+<h1>Context</h1>
+<pre><code> _._     _,-'""`-._
+(,-.`._,'(       |\`-/|
+    `-.-' \ )-`( , o o)
+          `-    \`_`"'-</code></pre>
+<p>Open the data in the file catterplot.sav. These data measure two variables:</p>
+<ul>
+<li><code>dinner_time</code>: the time since last feeding a cat.</li>
+<li><code>meow</code>: how loud their purr is.</li>
+</ul>
+</section>
+<section id="objectives" class="level1">
+<h1>Objectives</h1>
+<ol type="1">
+<li>Describe the distribution of <code>dinner_time</code>.</li>
+<li>Draw a scatterplot of <code>meow</code> against <code>dinner_time</code> with the LOESS curve. Do you think the two variables are linearly related?</li>
+<li>Compute the correlation coefficient of <code>dinner_time</code> and <code>meow</code>. Does the correlation coefficient suggest a strong linear relationship?</li>
+<li>Test the null hypothesis that the two variables are not linearly related at the 5% level.</li>
+<li>(Extra credit) Obtain a 95% confidence interval for the population correlation coefficient of the two variables.</li>
+</ol>
+</section>
+<section id="solutions" class="level1">
+<h1>Solutions</h1>
+<section id="a-quick-dataset-check-up" class="level2">
+<h2 class="anchored" data-anchor-id="a-quick-dataset-check-up">A quick dataset check-up</h2>
+<div id="cell-4" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2"></a>catterplot_df <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/catterplot.sav'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="bu">print</span>(<span class="ss">f'Description on the dataset: </span><span class="ch">\n</span><span class="ss">'</span>,catterplot_df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Description on the dataset: 
+        dinner_time       meow
+count    78.000000  78.000000
+mean      9.865385   8.217949
+std       6.068159   3.747371
+min       1.000000   2.000000
+25%       5.000000   5.000000
+50%       9.000000   8.000000
+75%      14.000000  12.000000
+max      24.000000  15.000000</code></pre>
+</div>
+</div>
+</section>
+<section id="q1-data-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="q1-data-distribution">Q1: Data distribution</h2>
+<p><strong>Answer</strong></p>
+<div id="tbl-centrality" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-centrality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Mean, mode and median
+</figcaption>
+<div aria-describedby="tbl-centrality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Measurement</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mean</td>
+<td>9.87</td>
+</tr>
+<tr class="even">
+<td>Median</td>
+<td>9.00</td>
+</tr>
+<tr class="odd">
+<td>Mode</td>
+<td>5.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><a href="#tbl-centrality" class="quarto-xref">Table&nbsp;1</a> lists measurements on the central tendency of this data, the mean (9.87) is slightly higher than the median (9.00) but much higher than the mode (5.00). The distribution is right-skewed as shown by <a href="#fig-dinner-time-hist" class="quarto-xref">Figure&nbsp;1</a>, and a longer tail is found on the right side. There is a clear peak around 5, which indicates most cats in this sample were fed with in 5 hours.</p>
+<p><strong>Solution</strong></p>
+<p>To describe the distribution of the dataset, I will again use the mean, median, and mode to assess central tendency, along with a histogram to visualize the distribution.</p>
+<div id="cell-6" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> centrality(df): </span>
+<span id="cb4-2"><a href="#cb4-2"></a>    mean <span class="op">=</span> df.mean()</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    median <span class="op">=</span> df.median()</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    mode <span class="op">=</span> df.mode()[<span class="dv">0</span>]</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="cf">return</span> mean, median, mode</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a>cats_mean, cats_median, cats_mode <span class="op">=</span> centrality(catterplot_df[<span class="st">'dinner_time'</span>])</span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="bu">print</span>(<span class="ss">f'Central Tendency: </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>      <span class="ss">f'Mean: </span><span class="sc">{</span>cats_mean<span class="sc">}</span><span class="ss">, </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>      <span class="ss">f'Median: </span><span class="sc">{</span>cats_median<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span> </span>
+<span id="cb4-11"><a href="#cb4-11"></a>      <span class="ss">f'Mode: </span><span class="sc">{</span>cats_mode<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Central Tendency: 
+Mean: 9.865384615384615, 
+Median: 9.0 
+Mode: 5.0</code></pre>
+</div>
+</div>
+<div id="cell-fig-dinner-time-hist" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># Create a histogram to reveal the distribution. </span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>dinner_time_hist <span class="op">=</span> sns.histplot(catterplot_df, x<span class="op">=</span><span class="st">'dinner_time'</span>, kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">23</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Set titles and labels for x- and y- axis</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>dinner_time_hist.set_title(<span class="st">'Distribution of the time since last feeding a cat'</span>)</span>
+<span id="cb6-8"><a href="#cb6-8"></a>dinner_time_hist.set_xlabel(<span class="st">'last_feed: Time elapsed since the last feed'</span>)</span>
+<span id="cb6-9"><a href="#cb6-9"></a>dinner_time_hist.set_ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb6-10"><a href="#cb6-10"></a><span class="co"># Display the plot</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-dinner-time-hist" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dinner-time-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-dinner-time-hist-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dinner-time-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Distribution of Dinner Time
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q2-the-scatterplot" class="level2">
+<h2 class="anchored" data-anchor-id="q2-the-scatterplot">Q2: The (s)catterplot</h2>
+<p><strong>Answer</strong></p>
+<p>The scatter plot in <a href="#fig-catterplot" class="quarto-xref">Figure&nbsp;2</a> shows that the data, at least, forms a perfect shape of a cat! However, the scattered points and the gentle slope of the LOESS curve suggest that there is not a strong linear relationship between the time since the last feeding (<code>dinner_time</code>) and the loudness of purring (<code>meow</code>). The scatter plot also indicates a weak correlation between these two variables.</p>
+<p><strong>Solution</strong></p>
+<div id="cell-fig-catterplot" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>catterplot <span class="op">=</span> sns.regplot(catterplot_df, x<span class="op">=</span><span class="st">'dinner_time'</span>, y<span class="op">=</span><span class="st">'meow'</span>, fit_reg<span class="op">=</span><span class="va">True</span>, lowess<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>catterplot.set_title(<span class="st">'The (S)catterplot'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a>catterplot.set_xlabel(<span class="st">'last_feed: Time elapsed since the last feed'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a>catterplot.set_ylabel(<span class="st">'meow: Loudness of Purring'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-catterplot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-catterplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-catterplot-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-catterplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The (s)catterplot on meow againt dinnertime.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q3-the-pearsons-r-of-dinner_time-and-meow" class="level2">
+<h2 class="anchored" data-anchor-id="q3-the-pearsons-r-of-dinner_time-and-meow">Q3: The Pearson’s <span class="math inline">\(r\)</span> of <code>dinner_time</code> and <code>meow</code></h2>
+<p><strong>Answer</strong></p>
+<p><span class="math inline">\(r \approx -6.12 \times 10^{-3}\)</span></p>
+<p>The pearson’s correlation coefficient <span class="math inline">\(r \approx -6.12 \times 10^{-3}\)</span> is very close to zero, suggesting there may be no linear relationship between <code>dinner_time</code> and <code>meow</code> in this dataset. However, it’s important to note that the data lacks further details. Specifically, we don’t know whether it was collected from a single cat fed multiple times (78 times in this case) or from 78 different cats. Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.</p>
+<p>In conclusion, the pearson’s <span class="math inline">\(r\)</span> suggests there is no strong linear relationship between the two variables.</p>
+<p><strong>Solution</strong></p>
+<p>To calculate the pearson’s <span class="math inline">\(r\)</span>, I use the formula<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<p><span class="math display">\[r = \frac{\sum_{Z_XZ_Y}}{N-1}\]</span></p>
+<div id="cell-11" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a>pearson_r_cats, p_cats <span class="op">=</span> stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)</span>
+<span id="cb8-4"><a href="#cb8-4"></a></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="bu">print</span>(<span class="ss">f'Correlation Coefficient</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb8-6"><a href="#cb8-6"></a>      <span class="ss">f'Pearson-r: </span><span class="sc">{</span>pearson_r_cats<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>      <span class="ss">f'p-value: </span><span class="sc">{</span>p_cats<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Correlation Coefficient
+Pearson-r: -0.006117549224989473
+p-value: 0.9576068830096687</code></pre>
+</div>
+</div>
+</section>
+<section id="q4-test-h_0-at-the-5-level" class="level2">
+<h2 class="anchored" data-anchor-id="q4-test-h_0-at-the-5-level">Q4: Test <span class="math inline">\(H_0\)</span> at the 5% level</h2>
+<p><strong>Answer</strong></p>
+<p><span class="math inline">\(p \approx 0.9576\)</span></p>
+<p>The <span class="math inline">\(p\)</span>-value is much greater than the significance level <span class="math inline">\(\alpha = 0.05\)</span>, therefore, we fail to reject the null hypothesis (<span class="math inline">\(H_0\)</span>) that <code>dinner_time</code> and <code>meow</code> are not linearly related. This means that there is insufficient evidence to suggest a linear relationship between <code>dinner_time</code> and <code>meow</code> at the 5% significance level, the sample does not indicate a significant linear correlation between the two variables.</p>
+<p><strong>Solution</strong></p>
+<p>The null hypothesis (<span class="math inline">\(H_0\)</span>) and the alternative hypothesis (<span class="math inline">\(H_1\)</span>) are formulated as follows:</p>
+<ul>
+<li><span class="math inline">\(H_0:\rho = 0\)</span>: no linear relationship.</li>
+<li><span class="math inline">\(H_1:\rho \neq 0\)</span>: linear relationship exists.</li>
+</ul>
+<p>Given <span class="math inline">\(r \approx -0.0061\)</span>, <span class="math inline">\(p \approx 0.9576\)</span> and <span class="math inline">\(\alpha = 0.05\)</span>:</p>
+<div id="cell-13" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> test_hypothesis(p_value, alpha<span class="op">=</span><span class="fl">0.05</span>): </span>
+<span id="cb10-2"><a href="#cb10-2"></a>    <span class="bu">print</span>(<span class="ss">f'Given the p-value=</span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss"> and alpha=</span><span class="sc">{</span>alpha<span class="sc">}</span><span class="ss">:'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a>    <span class="cf">if</span> p_value <span class="op">&lt;</span> alpha:</span>
+<span id="cb10-4"><a href="#cb10-4"></a>        <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: </span><span class="ch">\n</span><span class="st">There is evidence of a linear relationship."</span>)</span>
+<span id="cb10-5"><a href="#cb10-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb10-6"><a href="#cb10-6"></a>        <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: </span><span class="ch">\n</span><span class="st">No significant linear relationship."</span>)</span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a>test_hypothesis(p_cats, alpha<span class="op">=</span><span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Given the p-value=0.9576068830096687 and alpha=0.05:
+Fail to reject the null hypothesis: 
+No significant linear relationship.</code></pre>
+</div>
+</div>
+</section>
+<section id="q5-95-ci-of-rho" class="level2">
+<h2 class="anchored" data-anchor-id="q5-95-ci-of-rho">Q5: 95% CI of <span class="math inline">\(\rho\)</span></h2>
+<p><strong>Answer</strong></p>
+<p>The 95% confidence interval for the population correlation coefficient <span class="math inline">\(\rho\)</span> is approximately: <span class="math display">\[[-0.2283, 0.2167]\]</span></p>
+<p><strong>Solution</strong></p>
+<p>Given <span class="math inline">\(N = 78\)</span>, <span class="math inline">\(r = -6.12 \times 10^{-3}\)</span>, the 95% confidence interval for the population correlation coefficient <span class="math inline">\(\rho\)</span> is then calculated based on the Fisher <span class="math inline">\(z\)</span>-transformation, steps of calculation is listed below and I wrapped the calculation procedure in a single function:</p>
+<p><span class="math inline">\(z\)</span>-transformation</p>
+<p><span class="math display">\[
+z = \frac{1}{2}ln(\frac{1+r}{1-r}) = artanh(r)
+\]</span></p>
+<p>Standard error of <span class="math inline">\(z\)</span></p>
+<p><span class="math display">\[
+SE_z = \frac{1}{\sqrt{N-3}}
+\]</span></p>
+<p>CI in the <span class="math inline">\(z\)</span>-scale</p>
+<p><span class="math display">\[
+z_{lower} = z - c \times SE_z
+\]</span></p>
+<p><span class="math display">\[
+z_{upper} = z - c \times SE_z
+\]</span></p>
+<p>Inverse Fisher transformation</p>
+<p><span class="math display">\[
+r = \frac{exp(2z)-1}{exp(2z)+1} = tanh(z)
+\]</span></p>
+<p>Finally we get</p>
+<p><span class="math display">\[
+r_{lower} = tanh(z_{lower})
+\]</span> <span class="math display">\[
+r_{upper} = tanh(z_{upper})
+\]</span></p>
+<div id="cell-15" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt, tanh, atanh</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a>n_cats <span class="op">=</span> <span class="bu">len</span>(catterplot_df)</span>
+<span id="cb12-4"><a href="#cb12-4"></a></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="kw">def</span> ci_rho(n, pearson_r, alpha<span class="op">=</span><span class="fl">0.05</span>):</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="co"># z-transformation</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a>    z <span class="op">=</span> atanh(pearson_r)</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    <span class="co"># SEM of z</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>    se_z <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> sqrt(n <span class="op">-</span> <span class="dv">3</span>)</span>
+<span id="cb12-10"><a href="#cb12-10"></a>    <span class="co"># CI in the z score in the 95% level.  </span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>    c <span class="op">=</span> stats.norm.ppf(<span class="dv">1</span> <span class="op">-</span> alpha <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb12-12"><a href="#cb12-12"></a>    z_lower <span class="op">=</span> z <span class="op">-</span> c <span class="op">*</span> se_z</span>
+<span id="cb12-13"><a href="#cb12-13"></a>    z_upper <span class="op">=</span> z <span class="op">+</span> c <span class="op">*</span> se_z</span>
+<span id="cb12-14"><a href="#cb12-14"></a>    <span class="co"># Inverse Fisher transformation</span></span>
+<span id="cb12-15"><a href="#cb12-15"></a>    r_lower <span class="op">=</span> tanh(z_lower)</span>
+<span id="cb12-16"><a href="#cb12-16"></a>    r_upper <span class="op">=</span> tanh(z_upper)</span>
+<span id="cb12-17"><a href="#cb12-17"></a>    <span class="cf">return</span> r_lower, r_upper</span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-19"><a href="#cb12-19"></a>r_lower_cats, r_upper_cats <span class="op">=</span> ci_rho(n_cats, pearson_r_cats)</span>
+<span id="cb12-20"><a href="#cb12-20"></a></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="bu">print</span>(<span class="ss">f'0.95 Confidence Intervals of rho: </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a>      <span class="ss">f'Lower Limit: </span><span class="sc">{</span>r_lower_cats<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb12-23"><a href="#cb12-23"></a>      <span class="ss">f'Upper Limit: </span><span class="sc">{</span>r_upper_cats<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.95 Confidence Intervals of rho: 
+Lower Limit: -0.22833745967041358 
+Upper Limit: 0.21670822097748485</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="final-thoughts-cats-good-humans-bad." class="level1">
+<h1>Final thoughts: Cats good, humans bad.</h1>
+<p>In Chinese social media, there’s a meme called “Cats good, humans bad” (貓好人壞), which humorously suggests that cats are always right and any misbehavior is blamed on humans. My partner and I keep an American Shorthair (see <a href="#fig-the-prince" class="quarto-xref">Figure&nbsp;3</a>) in our rented place, and we call him <em>the Prince</em>, not because of his noble lineage, but due to his annoying behaviors that sometimes drive us crazy. For instance, when he desires food, he jumps on our bed and meows loudly, trying to wake us up in the early morning!</p>
+<div id="fig-the-prince" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-the-prince-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./the-prince.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-the-prince-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The Prince
+</figcaption>
+</figure>
+</div>
+<p>I think if I plot the <code>loudness</code> of our Prince’s meowing, the peak would definitely appear BEFORE <code>mealtime</code>, as he meows to summon his servant.</p>
+<p>And he eats better than we do! According to my partner, she steams duck breasts for our cat at low temperature to keep the meat juicy, a process that takes hours to prepare. Meanwhile, his two poor owners often resort to instant food from the supermarket or just grab a meal from the nearby Saizeriya. (Yes, there’s a Saizeriya close to our block!)</p>
+<p>Yet, we always remind ourselves that we are not serving the Prince to the best of our abilities. The kitty is always innocent!</p>
+<p>貓好人壞.</p>
+<p>Alright, it’s good to be a cat like the Prince, who keeps meowing at the door, knowing that at the start and the end of the day, a two-legged monster will appear to feed him, regardless of how stressful and dangerous the world outside may be.</p>
+<p>We all love him, without any doubt!</p>
+<pre><code>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠤⠒⠒⠈⠉⠙⠒⠲⣌⠉⢁⣀⢼⠷⠃⠈⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢶⠲⣿⠋⠉⠉⠽⠛⣹⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠤⣀⠀⠑⠞⠒⠒⠒⠀⠀⣼⣦⣀⢴⡆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠈⢆⠀⠀⠀⠀⠀⢸⠏⠀⠀⠀⠀⠄⠀⠀⠁⠀⢠⠀⠈⠑⢄⠀⡀⢄⡄⠀⢠⣿⣿⡧⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠈⣆⠀⠀⠀⢀⠃⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⢇⠀⠀⠀⢀⡘⡄⠁⢀⠟⠉⠁⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⡖⠢⢤⣏⢆⠀⠀⡆⢀⡆⢀⠀⠀⢸⠀⠀⠀⠀⠀⡀⠸⡀⠀⠀⠀⠓⠸⡀⠘⣆⡀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠹⡄⠀⠈⠝⢷⣼⡇⢸⠁⠀⠀⠀⡘⣾⠀⠀⠀⠀⠗⠦⠥⠤⡤⠂⠀⠀⡇⠀⣿⣄⠀⠘⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⢹⡤⠆⢀⡴⢿⡇⢸⠀⢸⡴⠊⠉⠙⠣⣀⠀⡀⠀⠀⣨⣿⣿⡶⣤⡆⢳⡀⣿⠀⠉⠒⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠘⡇⠀⡠⢲⠃⢃⠈⣦⣘⡷⢶⣶⣦⣄⠈⠁⠀⠀⣾⣏⢽⣿⣧⣟⡇⠀⡿⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠇⠈⣰⠋⢳⠘⣤⢼⡈⣇⢿⡾⡟⡿⠃⠀⣀⡀⠀⠙⠓⠛⠋⣸⣵⠄⢸⣰⠃⠀⠀⠀⠀⢀⡠⠤⠤⢄⠀⠀⠀
+⠀⠀⠘⡤⠃⠀⢸⣿⠻⡀⢣⡈⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠠⠾⢏⡿⠀⢸⢿⠀⠀⢠⣤⡔⠁⣀⢄⡀⠀⠙⡄⠀
+⠀⠀⠀⠀⠀⢠⣿⢿⡄⠀⢲⣯⡟⠁⠀⠀⠀⠒⠊⠉⠀⠀⠀⣀⣴⠾⣤⣴⢃⣼⠀⠀⠀⣽⠁⠀⢠⡜⠁⠀⠀⢰⠀
+⠀⠀⠀⠀⠀⠠⢷⡆⢱⣀⠈⢻⣏⣑⣶⠤⠤⣤⠤⠤⠤⠶⣏⠉⠀⢀⠿⣇⣴⠃⠀⠀⠀⠘⡄⠀⠀⠡⠄⠀⠀⡜⠀
+⠀⠀⠀⣷⡀⢰⠋⢻⢸⠈⠉⠉⠁⠀⠀⠀⣾⡿⠒⠤⢄⣰⡟⣷⣀⢸⣠⠏⢹⠀⣀⣠⠀⠀⠈⠢⠤⠤⠤⠤⠊⠀⠀
+⠀⠀⠀⡟⢳⣿⠀⠌⣸⠁⣀⣀⣀⣠⠴⠊⠉⢑⣒⠤⣤⣤⣶⣿⠾⣯⠉⠓⠻⣏⢁⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠐⣷⠀⣿⣧⣾⡟⠋⡜⠉⠁⠀⠀⠸⣍⠉⢉⠉⣿⣿⣅⠀⢠⠃⠀⢸⡀⠈⢿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⡾⠁⠈⡟⠁⡜⠀⠀⢀⡀⠀⠀⠘⡆⠁⡰⠋⢣⢹⠳⣮⠀⠀⠈⣷⠀⠀⠀⠙⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⠁⡀⣀⡿⠞⠀⠀⠀⠈⡇⠀⠀⠀⠳⠞⠀⠀⠈⠻⠖⠁⠀⠀⠀⠈⢷⡄⠀⠀⠈⢳⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠘⠻⢻⣿⠀⠀⠀⠀⠀⢰⡧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⡀⢀⣿⣇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⣿⠀⠠⡀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⠗⠙⠳⣄⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⡞⠉⠉⠑⢄⡈⠻⢤⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠈⠳⣄⠀⠀⠀
+⠀⠀⢀⣾⠀⠀⠀⠀⠀⠈⠒⣼⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠃⠀⠀⠀⠀⠀⠈⠏⠒⠤
+⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⡰⠛⢿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠛⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀</code></pre>
+<p><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I just put the formula here for … fun? I didn’t actually calculated on hand this time. :P<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>An easter egg hidden by <a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
