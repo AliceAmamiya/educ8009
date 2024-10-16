@@ -252,32 +252,100 @@
     ]
   },
   {
-    "objectID": "session01/lecture-notes.html",
-    "href": "session01/lecture-notes.html",
-    "title": "Session 01: Introduction",
+    "objectID": "session07-08/assignment.html",
+    "href": "session07-08/assignment.html",
+    "title": "Laboratory 04",
     "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+    "text": "_._     _,-'\"\"`-._\n(,-.`._,'(       |\\`-/|\n    `-.-' \\ )-`( , o o)\n          `-    \\`_`\"'-\nOpen the data in the file catterplot.sav. These data measure two variables:\n\ndinner_time: the time since last feeding a cat.\nmeow: how loud their purr is.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#summary",
-    "href": "session01/lecture-notes.html#summary",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+    "objectID": "session07-08/assignment.html#a-quick-dataset-check-up",
+    "href": "session07-08/assignment.html#a-quick-dataset-check-up",
+    "title": "Laboratory 04",
+    "section": "A quick dataset check-up",
+    "text": "A quick dataset check-up\n\nimport pandas as pd\ncatterplot_df = pd.read_spss('./datasets/catterplot.sav')\n\nprint(f'Description on the dataset: \\n',catterplot_df.describe())\n\nDescription on the dataset: \n        dinner_time       meow\ncount    78.000000  78.000000\nmean      9.865385   8.217949\nstd       6.068159   3.747371\nmin       1.000000   2.000000\n25%       5.000000   5.000000\n50%       9.000000   8.000000\n75%      14.000000  12.000000\nmax      24.000000  15.000000",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#implementations",
-    "href": "session01/lecture-notes.html#implementations",
-    "title": "Session 01: Introduction",
-    "section": "Implementations",
-    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+    "objectID": "session07-08/assignment.html#q1-data-distribution",
+    "href": "session07-08/assignment.html#q1-data-distribution",
+    "title": "Laboratory 04",
+    "section": "Q1: Data distribution",
+    "text": "Q1: Data distribution\nAnswer\n\n\n\nTable 1: Mean, mode and median\n\n\n\n\n\nMeasurement\nValue\n\n\n\n\nMean\n9.87\n\n\nMedian\n9.00\n\n\nMode\n5.00\n\n\n\n\n\n\nTable 1 lists measurements on the central tendency of this data, the mean (9.87) is slightly higher than the median (9.00) but much higher than the mode (5.00). The distribution is right-skewed as shown by Figure 1, and a longer tail is found on the right side. There is a clear peak around 5, which indicates most cats in this sample were fed with in 5 hours.\nSolution\nTo describe the distribution of the dataset, I will again use the mean, median, and mode to assess central tendency, along with a histogram to visualize the distribution.\n\ndef centrality(df): \n    mean = df.mean()\n    median = df.median()\n    mode = df.mode()[0]\n    return mean, median, mode\n\ncats_mean, cats_median, cats_mode = centrality(catterplot_df['dinner_time'])\nprint(f'Central Tendency: \\n'\n      f'Mean: {cats_mean}, \\n'\n      f'Median: {cats_median} \\n' \n      f'Mode: {cats_mode}')\n\nCentral Tendency: \nMean: 9.865384615384615, \nMedian: 9.0 \nMode: 5.0\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Create a histogram to reveal the distribution. \ndinner_time_hist = sns.histplot(catterplot_df, x='dinner_time', kde=True, bins=23)\n# Set titles and labels for x- and y- axis\ndinner_time_hist.set_title('Distribution of the time since last feeding a cat')\ndinner_time_hist.set_xlabel('last_feed: Time elapsed since the last feed')\ndinner_time_hist.set_ylabel('Frequency')\n# Display the plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Distribution of Dinner Time",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#descriptive-statistics",
-    "href": "session01/lecture-notes.html#descriptive-statistics",
-    "title": "Session 01: Introduction",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
+    "objectID": "session07-08/assignment.html#q2-the-scatterplot",
+    "href": "session07-08/assignment.html#q2-the-scatterplot",
+    "title": "Laboratory 04",
+    "section": "Q2: The (s)catterplot",
+    "text": "Q2: The (s)catterplot\nAnswer\nThe scatter plot in Figure 2 shows that the data, at least, forms a perfect shape of a cat! However, the scattered points and the gentle slope of the LOESS curve suggest that there is not a strong linear relationship between the time since the last feeding (dinner_time) and the loudness of purring (meow). The scatter plot also indicates a weak correlation between these two variables.\nSolution\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ncatterplot = sns.regplot(catterplot_df, x='dinner_time', y='meow', fit_reg=True, lowess=True)\ncatterplot.set_title('The (S)catterplot')\ncatterplot.set_xlabel('last_feed: Time elapsed since the last feed')\ncatterplot.set_ylabel('meow: Loudness of Purring')\nplt.show()\n\n\n\n\n\n\n\nFigure 2: The (s)catterplot on meow againt dinnertime.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-and-meow",
+    "href": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-and-meow",
+    "title": "Laboratory 04",
+    "section": "Q3: The Pearson’s \\(r\\) of dinner_time and meow",
+    "text": "Q3: The Pearson’s \\(r\\) of dinner_time and meow\nAnswer\n\\(r \\approx -6.12 \\times 10^{-3}\\)\nThe pearson’s correlation coefficient \\(r \\approx -6.12 \\times 10^{-3}\\) is very close to zero, suggesting there may be no linear relationship between dinner_time and meow in this dataset. However, it’s important to note that the data lacks further details. Specifically, we don’t know whether it was collected from a single cat fed multiple times (78 times in this case) or from 78 different cats. Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.\nIn conclusion, the pearson’s \\(r\\) suggests there is no strong linear relationship between the two variables.\nSolution\nTo calculate the pearson’s \\(r\\), I use the formula1:\n\\[r = \\frac{\\sum_{Z_XZ_Y}}{N-1}\\]\n\nimport scipy.stats as stats\n\npearson_r_cats, p_cats = stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)\n\nprint(f'Correlation Coefficient\\n'\n      f'Pearson-r: {pearson_r_cats}\\n'\n      f'p-value: {p_cats}')\n\nCorrelation Coefficient\nPearson-r: -0.006117549224989473\np-value: 0.9576068830096687",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q4-test-h_0-at-the-5-level",
+    "href": "session07-08/assignment.html#q4-test-h_0-at-the-5-level",
+    "title": "Laboratory 04",
+    "section": "Q4: Test \\(H_0\\) at the 5% level",
+    "text": "Q4: Test \\(H_0\\) at the 5% level\nAnswer\n\\(p \\approx 0.9576\\)\nThe \\(p\\)-value is much greater than the significance level \\(\\alpha = 0.05\\), therefore, we fail to reject the null hypothesis (\\(H_0\\)) that dinner_time and meow are not linearly related. This means that there is insufficient evidence to suggest a linear relationship between dinner_time and meow at the 5% significance level, the sample does not indicate a significant linear correlation between the two variables.\nSolution\nThe null hypothesis (\\(H_0\\)) and the alternative hypothesis (\\(H_1\\)) are formulated as follows:\n\n\\(H_0:\\rho = 0\\): no linear relationship.\n\\(H_1:\\rho \\neq 0\\): linear relationship exists.\n\nGiven \\(r \\approx -0.0061\\), \\(p \\approx 0.9576\\) and \\(\\alpha = 0.05\\):\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis: \\nThere is evidence of a linear relationship.\")\n    else:\n        print(\"Fail to reject the null hypothesis: \\nNo significant linear relationship.\")\n\ntest_hypothesis(p_cats, alpha=0.05)\n\nGiven the p-value=0.9576068830096687 and alpha=0.05:\nFail to reject the null hypothesis: \nNo significant linear relationship.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q5-95-ci-of-rho",
+    "href": "session07-08/assignment.html#q5-95-ci-of-rho",
+    "title": "Laboratory 04",
+    "section": "Q5: 95% CI of \\(\\rho\\)",
+    "text": "Q5: 95% CI of \\(\\rho\\)\nAnswer\nThe 95% confidence interval for the population correlation coefficient \\(\\rho\\) is approximately: \\[[-0.2283, 0.2167]\\]\nSolution\nGiven \\(N = 78\\), \\(r = -6.12 \\times 10^{-3}\\), the 95% confidence interval for the population correlation coefficient \\(\\rho\\) is then calculated based on the Fisher \\(z\\)-transformation, steps of calculation is listed below and I wrapped the calculation procedure in a single function:\n\\(z\\)-transformation\n\\[\nz = \\frac{1}{2}ln(\\frac{1+r}{1-r}) = artanh(r)\n\\]\nStandard error of \\(z\\)\n\\[\nSE_z = \\frac{1}{\\sqrt{N-3}}\n\\]\nCI in the \\(z\\)-scale\n\\[\nz_{lower} = z - c \\times SE_z\n\\]\n\\[\nz_{upper} = z - c \\times SE_z\n\\]\nInverse Fisher transformation\n\\[\nr = \\frac{exp(2z)-1}{exp(2z)+1} = tanh(z)\n\\]\nFinally we get\n\\[\nr_{lower} = tanh(z_{lower})\n\\] \\[\nr_{upper} = tanh(z_{upper})\n\\]\n\nfrom math import sqrt, tanh, atanh\n\nn_cats = len(catterplot_df)\n\ndef ci_rho(n, pearson_r, alpha=0.05):\n    # z-transformation\n    z = atanh(pearson_r)\n    # SEM of z\n    se_z = 1 / sqrt(n - 3)\n    # CI in the z score in the 95% level.  \n    c = stats.norm.ppf(1 - alpha / 2)\n    z_lower = z - c * se_z\n    z_upper = z + c * se_z\n    # Inverse Fisher transformation\n    r_lower = tanh(z_lower)\n    r_upper = tanh(z_upper)\n    return r_lower, r_upper\n\nr_lower_cats, r_upper_cats = ci_rho(n_cats, pearson_r_cats)\n\nprint(f'0.95 Confidence Intervals of rho: \\n'\n      f'Lower Limit: {r_lower_cats} \\n'\n      f'Upper Limit: {r_upper_cats}')\n\n0.95 Confidence Intervals of rho: \nLower Limit: -0.22833745967041358 \nUpper Limit: 0.21670822097748485",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#footnotes",
+    "href": "session07-08/assignment.html#footnotes",
+    "title": "Laboratory 04",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI just put the formula here for … fun? I didn’t actually calculated on hand this time. :P↩︎\nAn easter egg hidden by ↩︎",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
     "objectID": "session05-06/assignment.html",
@@ -376,16 +444,44 @@
     ]
   },
   {
-    "objectID": "session05-06/assignment.html#q3-95-ci-for-switch-players-mean-pain-score",
-    "href": "session05-06/assignment.html#q3-95-ci-for-switch-players-mean-pain-score",
+    "objectID": "session05-06/assignment.html#q5-95-ci-for-switch-players-mean-pain-score",
+    "href": "session05-06/assignment.html#q5-95-ci-for-switch-players-mean-pain-score",
     "title": "Laboratory 03",
-    "section": "Q3: 95% CI for Switch players’ mean pain score",
-    "text": "Q3: 95% CI for Switch players’ mean pain score\nAnswer\nThe 95% confidence interval for the mean pain score of those who played on a Nintendo Switch is \\([3.14, 4.33]\\).\nSolution\n\nCheck the structure of column switch then apply the filtering:\n\n\n# Check how many people get injured while playing\nprint(f'Variables in the column switch: \\n', switch['switch'].value_counts())\n# Filter out all switch players\ninjury_ns = switch[switch['switch'] == 'Playing switch']['injury']\n# And a sanity check\nprint(f'Filtered data: \\n', injury_ns.describe())\n\nVariables in the column switch: \n switch\nPlaying switch     60\nWatching switch    60\nName: count, dtype: int64\nFiltered data: \n count    60.000000\nmean      3.733333\nstd       2.313312\nmin       0.000000\n25%       2.000000\n50%       3.500000\n75%       5.000000\nmax      10.000000\nName: injury, dtype: float64\n\n\n\nCalculating the CI:\n\nGiven \\(N_{player} = 60\\), then the \\(df_{player} = N_{player} - 1 = 59\\),\nBased on the data we also have \\(M_{player} \\approx 3.73\\) and \\(SE_{M_{player}} \\approx 0.30\\)\nThe 95% confidence interval for the mean pain score of those who played on a Nintendo Switch is:\n\\[\n[M - c \\times SE_M, M + c \\times SE_M] \\approx [3.14, 4.33]\n\\]\n\ninjury_ns_mean = injury_ns.mean()\ninjury_ns_sem = injury_ns.sem()\ninjury_ns_dregf = len(injury_ns) - 1\n\nprint(f'Sample size: {len(injury_ns)}, \\n'\n      f'Degree of Freedom: {injury_ns_dregf},\\n'\n      f'Mean: {injury_ns_mean},\\n'\n      f'Standard Error: {injury_ns_sem}')\n\ninjury_ns_ci = confidence_interval(0.05, injury_ns_mean, injury_ns_sem, injury_ns_dregf)\nprint(f'\\nThe 95% CI for Switch players: \\n', injury_ns_ci)\n\nSample size: 60, \nDegree of Freedom: 59,\nMean: 3.7333333333333334,\nStandard Error: 0.29864729557842784\nCI (Lower):  3.1357414752023387\nCI (Upper):  4.3309251914643285\n\nThe 95% CI for Switch players: \n [3.1357414752023387, 4.3309251914643285]",
+    "section": "Q5: 95% CI for Switch players’ mean pain score",
+    "text": "Q5: 95% CI for Switch players’ mean pain score\nAnswer\nThe 95% confidence interval for the mean pain score of those who played on a Nintendo Switch is \\([3.14, 4.33]\\).\nSolution\n\nCheck the structure of column switch then apply the filtering:\n\n\n# Check how many people get injured while playing\nprint(f'Variables in the column switch: \\n', switch['switch'].value_counts())\n# Filter out all switch players\ninjury_ns = switch[switch['switch'] == 'Playing switch']['injury']\n# And a sanity check\nprint(f'Filtered data: \\n', injury_ns.describe())\n\nVariables in the column switch: \n switch\nPlaying switch     60\nWatching switch    60\nName: count, dtype: int64\nFiltered data: \n count    60.000000\nmean      3.733333\nstd       2.313312\nmin       0.000000\n25%       2.000000\n50%       3.500000\n75%       5.000000\nmax      10.000000\nName: injury, dtype: float64\n\n\n\nCalculating the CI:\n\nGiven \\(N_{player} = 60\\), then the \\(df_{player} = N_{player} - 1 = 59\\),\nBased on the data we also have \\(M_{player} \\approx 3.73\\) and \\(SE_{M_{player}} \\approx 0.30\\)\nThe 95% confidence interval for the mean pain score of those who played on a Nintendo Switch is:\n\\[\n[M - c \\times SE_M, M + c \\times SE_M] \\approx [3.14, 4.33]\n\\]\n\ninjury_ns_mean = injury_ns.mean()\ninjury_ns_sem = injury_ns.sem()\ninjury_ns_dregf = len(injury_ns) - 1\n\nprint(f'Sample size: {len(injury_ns)}, \\n'\n      f'Degree of Freedom: {injury_ns_dregf},\\n'\n      f'Mean: {injury_ns_mean},\\n'\n      f'Standard Error: {injury_ns_sem}')\n\ninjury_ns_ci = confidence_interval(0.05, injury_ns_mean, injury_ns_sem, injury_ns_dregf)\nprint(f'\\nThe 95% CI for Switch players: \\n', injury_ns_ci)\n\nSample size: 60, \nDegree of Freedom: 59,\nMean: 3.7333333333333334,\nStandard Error: 0.29864729557842784\nCI (Lower):  3.1357414752023387\nCI (Upper):  4.3309251914643285\n\nThe 95% CI for Switch players: \n [3.1357414752023387, 4.3309251914643285]",
     "crumbs": [
       "Labs",
       "Session05 06",
       "Laboratory 03"
     ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html",
+    "href": "session01/lecture-notes.html",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#summary",
+    "href": "session01/lecture-notes.html#summary",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#implementations",
+    "href": "session01/lecture-notes.html#implementations",
+    "title": "Session 01: Introduction",
+    "section": "Implementations",
+    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+  },
+  {
+    "objectID": "session01/lecture-notes.html#descriptive-statistics",
+    "href": "session01/lecture-notes.html#descriptive-statistics",
+    "title": "Session 01: Introduction",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
   },
   {
     "objectID": "session02/lecture-notes.html",
@@ -514,102 +610,6 @@
     "text": "ようこそ!\nThis is my personal repository for datasets, lecture notes & assignment submissions on EDUC8009 - DESCRIPTIVE AND INFERENTIAL STATISTICS.\nAs this course is tailored for SPSS users, here’s the problem: I can only get my hands on the legal copy in our computer lab, where the machines are about as speedy as a sloth on a lazy day, sporting a single-channel 8GB of RAM. Apple may claim that 8 is enough (even greater than 16) for most users, and we all know that’s just some optimistic marketing.\nSo, I decided to take a detour and embrace the open-source revolution with sweety sidekick: python=3.10 armed with the duo of Doolin and Dal…, sorry, pandas and scipy.stats. An R=4.3.3 implementation will also be included in the solution of my assignment as well.\n\n\n\nIt all starts from iris and mtcars.\n\n\nRiko",
     "crumbs": [
       "Home"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html",
-    "href": "session07-08/assignment.html",
-    "title": "Laboratory 04",
-    "section": "",
-    "text": "_._     _,-'\"\"`-._\n(,-.`._,'(       |\\`-/|\n    `-.-' \\ )-`( , o o)\n          `-    \\`_`\"'-\nOpen the data in the file catterplot.sav. These data measure two variables:\n\ndinner_time: the time since last feeding a cat.\nmeow: how loud their purr is.",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#a-quick-dataset-check-up",
-    "href": "session07-08/assignment.html#a-quick-dataset-check-up",
-    "title": "Laboratory 04",
-    "section": "A quick dataset check-up",
-    "text": "A quick dataset check-up\n\nimport pandas as pd\ncatterplot_df = pd.read_spss('./datasets/catterplot.sav')\n\nprint(f'Description on the dataset: \\n',catterplot_df.describe())\n\nDescription on the dataset: \n        dinner_time       meow\ncount    78.000000  78.000000\nmean      9.865385   8.217949\nstd       6.068159   3.747371\nmin       1.000000   2.000000\n25%       5.000000   5.000000\n50%       9.000000   8.000000\n75%      14.000000  12.000000\nmax      24.000000  15.000000",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q1-data-distribution",
-    "href": "session07-08/assignment.html#q1-data-distribution",
-    "title": "Laboratory 04",
-    "section": "Q1: Data distribution",
-    "text": "Q1: Data distribution\nAnswer\n\n\n\nTable 1: Mean, mode and median\n\n\n\n\n\nMeasurement\nValue\n\n\n\n\nMean\n9.87\n\n\nMedian\n9.00\n\n\nMode\n5.00\n\n\n\n\n\n\nTable 1 lists measurements on the central tendency of this data, the mean (9.87) is slightly higher than the median (9.00) but much higher than the mode (5.00). The distribution is right-skewed as shown by Figure 1, and a longer tail is found on the right side. There is a clear peak around 5, which indicates most cats in this sample were fed with in 5 hours.\nSolution\nTo describe the distribution of the dataset, I will again use the mean, median, and mode to assess central tendency, along with a histogram to visualize the distribution.\n\ndef centrality(df): \n    mean = df.mean()\n    median = df.median()\n    mode = df.mode()[0]\n    return mean, median, mode\n\ncats_mean, cats_median, cats_mode = centrality(catterplot_df['dinner_time'])\nprint(f'Central Tendency: \\n'\n      f'Mean: {cats_mean}, \\n'\n      f'Median: {cats_median} \\n' \n      f'Mode: {cats_mode}')\n\nCentral Tendency: \nMean: 9.865384615384615, \nMedian: 9.0 \nMode: 5.0\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Create a histogram to reveal the distribution. \ndinner_time_hist = sns.histplot(catterplot_df, x='dinner_time', kde=True, bins=23)\n# Set titles and labels for x- and y- axis\ndinner_time_hist.set_title('Distribution of the time since last feeding a cat')\ndinner_time_hist.set_xlabel('last_feed: Time elapsed since the last feed')\ndinner_time_hist.set_ylabel('Frequency')\n# Display the plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Distribution of Dinner Time",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q2-the-scatterplot",
-    "href": "session07-08/assignment.html#q2-the-scatterplot",
-    "title": "Laboratory 04",
-    "section": "Q2: The (s)catterplot",
-    "text": "Q2: The (s)catterplot\nAnswer\nThe scatter plot in Figure 2 shows that the data, at least, forms a perfect shape of a cat! However, the scattered points and the gentle slope of the LOESS curve suggest that there is not a strong linear relationship between the time since the last feeding (dinner_time) and the loudness of purring (meow). The scatter plot also indicates a weak correlation between these two variables.\nSolution\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ncatterplot = sns.regplot(catterplot_df, x='dinner_time', y='meow', fit_reg=True, lowess=True)\ncatterplot.set_title('The (S)catterplot')\ncatterplot.set_xlabel('last_feed: Time elapsed since the last feed')\ncatterplot.set_ylabel('meow: Loudness of Purring')\nplt.show()\n\n\n\n\n\n\n\nFigure 2: The (s)catterplot on meow againt dinnertime.",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#footnotes",
-    "href": "session07-08/assignment.html#footnotes",
-    "title": "Laboratory 04",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nI just put the formula here for … fun? I didn’t actually calculated on hand this time. :P↩︎\nAn easter egg hidden by ↩︎",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-and-meow",
-    "href": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-and-meow",
-    "title": "Laboratory 04",
-    "section": "Q3: The Pearson’s \\(r\\) of dinner_time and meow",
-    "text": "Q3: The Pearson’s \\(r\\) of dinner_time and meow\nAnswer\n\\(r \\approx -6.12 \\times 10^{-3}\\)\nThe pearson’s correlation coefficient \\(r \\approx -6.12 \\times 10^{-3}\\) is very close to zero, suggesting there may be no linear relationship between dinner_time and meow in this dataset. However, it’s important to note that the data lacks further details. Specifically, we don’t know whether it was collected from a single cat fed multiple times (78 times in this case) or from 78 different cats. Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.\nIn conclusion, the pearson’s \\(r\\) suggests there is no strong linear relationship between the two variables.\nSolution\nTo calculate the pearson’s \\(r\\), I use the formula1:\n\\[r = \\frac{\\sum_{Z_XZ_Y}}{N-1}\\]\n\nimport scipy.stats as stats\n\npearson_r_cats, p_cats = stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)\n\nprint(f'Correlation Coefficient\\n'\n      f'Pearson-r: {pearson_r_cats}\\n'\n      f'p-value: {p_cats}')\n\nCorrelation Coefficient\nPearson-r: -0.006117549224989473\np-value: 0.9576068830096687",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q4-test-h_0-at-the-5-level",
-    "href": "session07-08/assignment.html#q4-test-h_0-at-the-5-level",
-    "title": "Laboratory 04",
-    "section": "Q4: Test \\(H_0\\) at the 5% level",
-    "text": "Q4: Test \\(H_0\\) at the 5% level\nAnswer\n\\(p \\approx 0.9576\\)\nThe \\(p\\)-value is much greater than the significance level \\(\\alpha = 0.05\\), therefore, we fail to reject the null hypothesis (\\(H_0\\)) that dinner_time and meow are not linearly related. This means that there is insufficient evidence to suggest a linear relationship between dinner_time and meow at the 5% significance level, the sample does not indicate a significant linear correlation between the two variables.\nSolution\nThe null hypothesis (\\(H_0\\)) and the alternative hypothesis (\\(H_1\\)) are formulated as follows:\n\n\\(H_0:\\rho = 0\\): no linear relationship.\n\\(H_1:\\rho \\neq 0\\): linear relationship exists.\n\nGiven \\(r \\approx -0.0061\\), \\(p \\approx 0.9576\\) and \\(\\alpha = 0.05\\):\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis: \\nThere is evidence of a linear relationship.\")\n    else:\n        print(\"Fail to reject the null hypothesis: \\nNo significant linear relationship.\")\n\ntest_hypothesis(p_cats, alpha=0.05)\n\nGiven the p-value=0.9576068830096687 and alpha=0.05:\nFail to reject the null hypothesis: \nNo significant linear relationship.",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q5-95-ci-of-rho",
-    "href": "session07-08/assignment.html#q5-95-ci-of-rho",
-    "title": "Laboratory 04",
-    "section": "Q5: 95% CI of \\(\\rho\\)",
-    "text": "Q5: 95% CI of \\(\\rho\\)\nAnswer\nThe 95% confidence interval for the population correlation coefficient \\(\\rho\\) is approximately: \\[[-0.2283, 0.2167]\\]\nSolution\nGiven \\(N = 78\\), \\(r = -6.12 \\times 10^{-3}\\), the 95% confidence interval for the population correlation coefficient \\(\\rho\\) is then calculated based on the Fisher \\(z\\)-transformation, steps of calculation is listed below and I wrapped the calculation procedure in a single function:\n\\(z\\)-transformation\n\\[\nz = \\frac{1}{2}ln(\\frac{1+r}{1-r}) = artanh(r)\n\\]\nStandard error of \\(z\\)\n\\[\nSE_z = \\frac{1}{\\sqrt{N-3}}\n\\]\nCI in the \\(z\\)-scale\n\\[\nz_{lower} = z - c \\times SE_z\n\\]\n\\[\nz_{upper} = z - c \\times SE_z\n\\]\nInverse Fisher transformation\n\\[\nr = \\frac{exp(2z)-1}{exp(2z)+1} = tanh(z)\n\\]\nFinally we get\n\\[\nr_{lower} = tanh(z_{lower})\n\\] \\[\nr_{upper} = tanh(z_{upper})\n\\]\n\nfrom math import sqrt, tanh, atanh\n\nn_cats = len(catterplot_df)\n\ndef ci_rho(n, pearson_r, alpha=0.05):\n    # z-transformation\n    z = atanh(pearson_r)\n    # SEM of z\n    se_z = 1 / sqrt(n - 3)\n    # CI in the z score in the 95% level.  \n    c = stats.norm.ppf(1 - alpha / 2)\n    z_lower = z - c * se_z\n    z_upper = z + c * se_z\n    # Inverse Fisher transformation\n    r_lower = tanh(z_lower)\n    r_upper = tanh(z_upper)\n    return r_lower, r_upper\n\nr_lower_cats, r_upper_cats = ci_rho(n_cats, pearson_r_cats)\n\nprint(f'0.95 Confidence Intervals of rho: \\n'\n      f'Lower Limit: {r_lower_cats} \\n'\n      f'Upper Limit: {r_upper_cats}')\n\n0.95 Confidence Intervals of rho: \nLower Limit: -0.22833745967041358 \nUpper Limit: 0.21670822097748485",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
     ]
   }
 ]
