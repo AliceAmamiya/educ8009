@@ -261,7 +261,14 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
+  <li><a href="#reply-on-the-feedback-of-lab-3" id="toc-reply-on-the-feedback-of-lab-3" class="nav-link active" data-scroll-target="#reply-on-the-feedback-of-lab-3">Reply on the feedback of Lab 3</a>
+  <ul class="collapse">
+  <li><a href="#on-4.4-q3-function-for-calculating-the-ci" id="toc-on-4.4-q3-function-for-calculating-the-ci" class="nav-link" data-scroll-target="#on-4.4-q3-function-for-calculating-the-ci">On 4.4 Q3: Function for calculating the CI</a></li>
+  <li><a href="#on-4.5-q4-p-value-in-my-report" id="toc-on-4.5-q4-p-value-in-my-report" class="nav-link" data-scroll-target="#on-4.5-q4-p-value-in-my-report">On 4.5 Q4: <span class="math inline">\(p\)</span>-value in my report</a></li>
+  <li><a href="#on-4.2.2-q1b-trap-in-the-future" id="toc-on-4.2.2-q1b-trap-in-the-future" class="nav-link" data-scroll-target="#on-4.2.2-q1b-trap-in-the-future">On 4.2.2 Q1b: Trap in the future</a></li>
+  <li><a href="#while-i-was-writing-this-part" id="toc-while-i-was-writing-this-part" class="nav-link" data-scroll-target="#while-i-was-writing-this-part">While I was writing this part</a></li>
+  </ul></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
   <ul class="collapse">
@@ -298,6 +305,41 @@ window.Quarto = {
 </header>
 
 
+<section id="reply-on-the-feedback-of-lab-3" class="level1">
+<h1>Reply on the feedback of Lab 3</h1>
+<p>Again, thanks for your feedback on last assignment. Here’s my response:</p>
+<section id="on-4.4-q3-function-for-calculating-the-ci" class="level2">
+<h2 class="anchored" data-anchor-id="on-4.4-q3-function-for-calculating-the-ci">On 4.4 Q3: Function for calculating the CI</h2>
+<p>Absolutely! The awesome <code>scipy</code> library does so much more than a TI-84. The <code>scipy.stats.t</code> module covers all aspects of the <span class="math inline">\(t\)</span>-test workflow, and the <code>interval</code> method provides the confidence interval in no time:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>stats.t.interval(confidence<span class="op">=</span><span class="fl">0.95</span>, </span>
+<span id="cb1-2"><a href="#cb1-2"></a>                 df<span class="op">=</span><span class="dv">119</span>, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>                 loc<span class="op">=</span>injury_mean, </span>
+<span id="cb1-4"><a href="#cb1-4"></a>                 scale<span class="op">=</span>injury_sem)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Which outputs:</p>
+<pre><code>(2.53106725077079, 3.252266082562543)</code></pre>
+<p>Humans make mistakes sometimes, so calling the function not only saves time but also helps avoid the chance of errors. As you explained the equations in the lecture and demonstrated the calculations, I think it’s best to follow your approach for the math as well.</p>
+<p>I do this only when I’m doing assignments and just for fun. I never trust myself (in most cases) and my knowledge so I never do these dangerous thing to the real world data. :P</p>
+</section>
+<section id="on-4.5-q4-p-value-in-my-report" class="level2">
+<h2 class="anchored" data-anchor-id="on-4.5-q4-p-value-in-my-report">On 4.5 Q4: <span class="math inline">\(p\)</span>-value in my report</h2>
+<p>Got it! This part was refined and updated on the <a href="https://shen.riko.work/educ8009/session05-06/assignment.html#q4-summarizing-the-findings">web doc</a>.</p>
+</section>
+<section id="on-4.2.2-q1b-trap-in-the-future" class="level2">
+<h2 class="anchored" data-anchor-id="on-4.2.2-q1b-trap-in-the-future">On 4.2.2 Q1b: Trap in the future</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource latex number-lines code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1"></a>{<span class="fu">\huge</span> NOOOOOOOOOOOO!}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>I believe my fellow classmates and I suffered enough from the traps in the quizzes.</p>
+</section>
+<section id="while-i-was-writing-this-part" class="level2">
+<h2 class="anchored" data-anchor-id="while-i-was-writing-this-part">While I was writing this part</h2>
+<p>My lord jumped on my desk for a warm greeting:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./the-prince-2.jpg" class="img-fluid figure-img"></p>
+<figcaption>The Lord</figcaption>
+</figure>
+</div>
+</section>
+</section>
 <section id="context" class="level1">
 <h1>Context</h1>
 <pre><code> _._     _,-'""`-._
@@ -324,11 +366,11 @@ window.Quarto = {
 <h1>Solutions</h1>
 <section id="a-quick-dataset-check-up" class="level2">
 <h2 class="anchored" data-anchor-id="a-quick-dataset-check-up">A quick dataset check-up</h2>
-<div id="cell-4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2"></a>catterplot_df <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/catterplot.sav'</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="bu">print</span>(<span class="ss">f'Description on the dataset: </span><span class="ch">\n</span><span class="ss">'</span>,catterplot_df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-6" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-2"><a href="#cb5-2"></a>catterplot_df <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/catterplot.sav'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="bu">print</span>(<span class="ss">f'Description on the dataset: </span><span class="ch">\n</span><span class="ss">'</span>,catterplot_df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Description on the dataset: 
         dinner_time       meow
@@ -380,18 +422,18 @@ Table&nbsp;1: Mean, mode and median
 <p><a href="#tbl-centrality" class="quarto-xref">Table&nbsp;1</a> lists measurements on the central tendency of this data, the mean (9.87) is slightly higher than the median (9.00) but much higher than the mode (5.00). The distribution is right-skewed as shown by <a href="#fig-dinner-time-hist" class="quarto-xref">Figure&nbsp;1</a>, and a longer tail is found on the right side. There is a clear peak around 5, which indicates most cats in this sample were fed with in 5 hours.</p>
 <p><strong>Solution</strong></p>
 <p>To describe the distribution of the dataset, I will again use the mean, median, and mode to assess central tendency, along with a histogram to visualize the distribution.</p>
-<div id="cell-6" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> centrality(df): </span>
-<span id="cb4-2"><a href="#cb4-2"></a>    mean <span class="op">=</span> df.mean()</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    median <span class="op">=</span> df.median()</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    mode <span class="op">=</span> df.mode()[<span class="dv">0</span>]</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    <span class="cf">return</span> mean, median, mode</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a>cats_mean, cats_median, cats_mode <span class="op">=</span> centrality(catterplot_df[<span class="st">'dinner_time'</span>])</span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="bu">print</span>(<span class="ss">f'Central Tendency: </span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a>      <span class="ss">f'Mean: </span><span class="sc">{</span>cats_mean<span class="sc">}</span><span class="ss">, </span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a>      <span class="ss">f'Median: </span><span class="sc">{</span>cats_median<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span> </span>
-<span id="cb4-11"><a href="#cb4-11"></a>      <span class="ss">f'Mode: </span><span class="sc">{</span>cats_mode<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-8" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> centrality(df): </span>
+<span id="cb7-2"><a href="#cb7-2"></a>    mean <span class="op">=</span> df.mean()</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    median <span class="op">=</span> df.median()</span>
+<span id="cb7-4"><a href="#cb7-4"></a>    mode <span class="op">=</span> df.mode()[<span class="dv">0</span>]</span>
+<span id="cb7-5"><a href="#cb7-5"></a>    <span class="cf">return</span> mean, median, mode</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>cats_mean, cats_median, cats_mode <span class="op">=</span> centrality(catterplot_df[<span class="st">'dinner_time'</span>])</span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="bu">print</span>(<span class="ss">f'Central Tendency: </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a>      <span class="ss">f'Mean: </span><span class="sc">{</span>cats_mean<span class="sc">}</span><span class="ss">, </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>      <span class="ss">f'Median: </span><span class="sc">{</span>cats_median<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span> </span>
+<span id="cb7-11"><a href="#cb7-11"></a>      <span class="ss">f'Mode: </span><span class="sc">{</span>cats_mode<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Central Tendency: 
 Mean: 9.865384615384615, 
@@ -399,18 +441,18 @@ Median: 9.0
 Mode: 5.0</code></pre>
 </div>
 </div>
-<div id="cell-fig-dinner-time-hist" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="co"># Create a histogram to reveal the distribution. </span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>dinner_time_hist <span class="op">=</span> sns.histplot(catterplot_df, x<span class="op">=</span><span class="st">'dinner_time'</span>, kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">23</span>)</span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Set titles and labels for x- and y- axis</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a>dinner_time_hist.set_title(<span class="st">'Distribution of the time since last feeding a cat'</span>)</span>
-<span id="cb6-8"><a href="#cb6-8"></a>dinner_time_hist.set_xlabel(<span class="st">'last_feed: Time elapsed since the last feed'</span>)</span>
-<span id="cb6-9"><a href="#cb6-9"></a>dinner_time_hist.set_ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="co"># Display the plot</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-fig-dinner-time-hist" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb9-3"><a href="#cb9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="co"># Create a histogram to reveal the distribution. </span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>dinner_time_hist <span class="op">=</span> sns.histplot(catterplot_df, x<span class="op">=</span><span class="st">'dinner_time'</span>, kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">23</span>)</span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="co"># Set titles and labels for x- and y- axis</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>dinner_time_hist.set_title(<span class="st">'Distribution of the time since last feeding a cat'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>dinner_time_hist.set_xlabel(<span class="st">'last_feed: Time elapsed since the last feed'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9"></a>dinner_time_hist.set_ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb9-10"><a href="#cb9-10"></a><span class="co"># Display the plot</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-dinner-time-hist" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -430,15 +472,15 @@ Figure&nbsp;1: Distribution of Dinner Time
 <p><strong>Answer</strong></p>
 <p>The scatter plot in <a href="#fig-catterplot" class="quarto-xref">Figure&nbsp;2</a> shows that the data, at least, forms a perfect shape of a cat! However, the scattered points and the gentle slope of the LOESS curve suggest that there is not a strong linear relationship between the time since the last feeding (<code>dinner_time</code>) and the loudness of purring (<code>meow</code>). The scatter plot also indicates a weak correlation between these two variables.</p>
 <p><strong>Solution</strong></p>
-<div id="cell-fig-catterplot" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb7-3"><a href="#cb7-3"></a></span>
-<span id="cb7-4"><a href="#cb7-4"></a>catterplot <span class="op">=</span> sns.regplot(catterplot_df, x<span class="op">=</span><span class="st">'dinner_time'</span>, y<span class="op">=</span><span class="st">'meow'</span>, fit_reg<span class="op">=</span><span class="va">True</span>, lowess<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a>catterplot.set_title(<span class="st">'The (S)catterplot'</span>)</span>
-<span id="cb7-6"><a href="#cb7-6"></a>catterplot.set_xlabel(<span class="st">'last_feed: Time elapsed since the last feed'</span>)</span>
-<span id="cb7-7"><a href="#cb7-7"></a>catterplot.set_ylabel(<span class="st">'meow: Loudness of Purring'</span>)</span>
-<span id="cb7-8"><a href="#cb7-8"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-fig-catterplot" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a>catterplot <span class="op">=</span> sns.regplot(catterplot_df, x<span class="op">=</span><span class="st">'dinner_time'</span>, y<span class="op">=</span><span class="st">'meow'</span>, fit_reg<span class="op">=</span><span class="va">True</span>, lowess<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-5"><a href="#cb10-5"></a>catterplot.set_title(<span class="st">'The (S)catterplot'</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>catterplot.set_xlabel(<span class="st">'last_feed: Time elapsed since the last feed'</span>)</span>
+<span id="cb10-7"><a href="#cb10-7"></a>catterplot.set_ylabel(<span class="st">'meow: Loudness of Purring'</span>)</span>
+<span id="cb10-8"><a href="#cb10-8"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-catterplot" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -457,19 +499,22 @@ Figure&nbsp;2: The (s)catterplot on meow againt dinnertime.
 <h2 class="anchored" data-anchor-id="q3-the-pearsons-r-of-dinner_time-and-meow">Q3: The Pearson’s <span class="math inline">\(r\)</span> of <code>dinner_time</code> and <code>meow</code></h2>
 <p><strong>Answer</strong></p>
 <p><span class="math inline">\(r \approx -6.12 \times 10^{-3}\)</span></p>
-<p>The pearson’s correlation coefficient <span class="math inline">\(r \approx -6.12 \times 10^{-3}\)</span> is very close to zero, suggesting there may be no linear relationship between <code>dinner_time</code> and <code>meow</code> in this dataset. However, it’s important to note that the data lacks further details. Specifically, we don’t know whether it was collected from a single cat fed multiple times (78 times in this case) or from 78 different cats. Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.</p>
-<p>In conclusion, the pearson’s <span class="math inline">\(r\)</span> suggests there is no strong linear relationship between the two variables.</p>
+<p>The pearson’s correlation coefficient <span class="math inline">\(r \approx -6.12 \times 10^{-3}\)</span> is very close to zero, suggesting there may be no linear relationship between <code>dinner_time</code> and <code>meow</code> in this dataset. However, it’s important to note that the data lacks further details, particularly regarding the sampling procedure. Specifically, we don’t know if the data represents multiple observations of a single cat (in which case it would be a single case) or if it was collected from several different cats (in which case the sample size and whether the sample is similar to population of interest needs to be justified). Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>In conclusion, the pearson’s <span class="math inline">\(r\)</span> suggests there is no strong linear relationship between the time since last feed and the volume of cats’ purring. That’s all I can say.</p>
 <p><strong>Solution</strong></p>
-<p>To calculate the pearson’s <span class="math inline">\(r\)</span>, I use the formula<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<p>To calculate the pearson’s <span class="math inline">\(r\)</span>, I use the formula<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
 <p><span class="math display">\[r = \frac{\sum_{Z_XZ_Y}}{N-1}\]</span></p>
-<div id="cell-11" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a>pearson_r_cats, p_cats <span class="op">=</span> stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)</span>
-<span id="cb8-4"><a href="#cb8-4"></a></span>
-<span id="cb8-5"><a href="#cb8-5"></a><span class="bu">print</span>(<span class="ss">f'Correlation Coefficient</span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb8-6"><a href="#cb8-6"></a>      <span class="ss">f'Pearson-r: </span><span class="sc">{</span>pearson_r_cats<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>      <span class="ss">f'p-value: </span><span class="sc">{</span>p_cats<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-13" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>pearson_r_results_cats <span class="op">=</span> stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)</span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a>pearson_r_cats <span class="op">=</span> pearson_r_results_cats[<span class="dv">0</span>]</span>
+<span id="cb11-6"><a href="#cb11-6"></a>p_cats <span class="op">=</span> pearson_r_results_cats[<span class="dv">1</span>]</span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="bu">print</span>(<span class="ss">f'Correlation Coefficient</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a>      <span class="ss">f'Pearson-r: </span><span class="sc">{</span>pearson_r_cats<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a>      <span class="ss">f'p-value: </span><span class="sc">{</span>pearson_r_results_cats[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Correlation Coefficient
 Pearson-r: -0.006117549224989473
@@ -489,15 +534,15 @@ p-value: 0.9576068830096687</code></pre>
 <li><span class="math inline">\(H_1:\rho \neq 0\)</span>: linear relationship exists.</li>
 </ul>
 <p>Given <span class="math inline">\(r \approx -0.0061\)</span>, <span class="math inline">\(p \approx 0.9576\)</span> and <span class="math inline">\(\alpha = 0.05\)</span>:</p>
-<div id="cell-13" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">def</span> test_hypothesis(p_value, alpha<span class="op">=</span><span class="fl">0.05</span>): </span>
-<span id="cb10-2"><a href="#cb10-2"></a>    <span class="bu">print</span>(<span class="ss">f'Given the p-value=</span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss"> and alpha=</span><span class="sc">{</span>alpha<span class="sc">}</span><span class="ss">:'</span>)</span>
-<span id="cb10-3"><a href="#cb10-3"></a>    <span class="cf">if</span> p_value <span class="op">&lt;</span> alpha:</span>
-<span id="cb10-4"><a href="#cb10-4"></a>        <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: </span><span class="ch">\n</span><span class="st">There is evidence of a linear relationship."</span>)</span>
-<span id="cb10-5"><a href="#cb10-5"></a>    <span class="cf">else</span>:</span>
-<span id="cb10-6"><a href="#cb10-6"></a>        <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: </span><span class="ch">\n</span><span class="st">No significant linear relationship."</span>)</span>
-<span id="cb10-7"><a href="#cb10-7"></a></span>
-<span id="cb10-8"><a href="#cb10-8"></a>test_hypothesis(p_cats, alpha<span class="op">=</span><span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-15" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> test_hypothesis(p_value, alpha<span class="op">=</span><span class="fl">0.05</span>): </span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="bu">print</span>(<span class="ss">f'Given the p-value=</span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss"> and alpha=</span><span class="sc">{</span>alpha<span class="sc">}</span><span class="ss">:'</span>)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="cf">if</span> p_value <span class="op">&lt;</span> alpha:</span>
+<span id="cb13-4"><a href="#cb13-4"></a>        <span class="bu">print</span>(<span class="st">"Reject the null hypothesis: </span><span class="ch">\n</span><span class="st">There is evidence of a linear relationship."</span>)</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-6"><a href="#cb13-6"></a>        <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis: </span><span class="ch">\n</span><span class="st">No significant linear relationship."</span>)</span>
+<span id="cb13-7"><a href="#cb13-7"></a></span>
+<span id="cb13-8"><a href="#cb13-8"></a>test_hypothesis(p_cats, alpha<span class="op">=</span><span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Given the p-value=0.9576068830096687 and alpha=0.05:
 Fail to reject the null hypothesis: 
@@ -536,30 +581,47 @@ r_{lower} = tanh(z_{lower})
 \]</span> <span class="math display">\[
 r_{upper} = tanh(z_{upper})
 \]</span></p>
-<div id="cell-15" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt, tanh, atanh</span>
-<span id="cb12-2"><a href="#cb12-2"></a></span>
-<span id="cb12-3"><a href="#cb12-3"></a>n_cats <span class="op">=</span> <span class="bu">len</span>(catterplot_df)</span>
-<span id="cb12-4"><a href="#cb12-4"></a></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="kw">def</span> ci_rho(n, pearson_r, alpha<span class="op">=</span><span class="fl">0.05</span>):</span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="co"># z-transformation</span></span>
-<span id="cb12-7"><a href="#cb12-7"></a>    z <span class="op">=</span> atanh(pearson_r)</span>
-<span id="cb12-8"><a href="#cb12-8"></a>    <span class="co"># SEM of z</span></span>
-<span id="cb12-9"><a href="#cb12-9"></a>    se_z <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> sqrt(n <span class="op">-</span> <span class="dv">3</span>)</span>
-<span id="cb12-10"><a href="#cb12-10"></a>    <span class="co"># CI in the z score in the 95% level.  </span></span>
-<span id="cb12-11"><a href="#cb12-11"></a>    c <span class="op">=</span> stats.norm.ppf(<span class="dv">1</span> <span class="op">-</span> alpha <span class="op">/</span> <span class="dv">2</span>)</span>
-<span id="cb12-12"><a href="#cb12-12"></a>    z_lower <span class="op">=</span> z <span class="op">-</span> c <span class="op">*</span> se_z</span>
-<span id="cb12-13"><a href="#cb12-13"></a>    z_upper <span class="op">=</span> z <span class="op">+</span> c <span class="op">*</span> se_z</span>
-<span id="cb12-14"><a href="#cb12-14"></a>    <span class="co"># Inverse Fisher transformation</span></span>
-<span id="cb12-15"><a href="#cb12-15"></a>    r_lower <span class="op">=</span> tanh(z_lower)</span>
-<span id="cb12-16"><a href="#cb12-16"></a>    r_upper <span class="op">=</span> tanh(z_upper)</span>
-<span id="cb12-17"><a href="#cb12-17"></a>    <span class="cf">return</span> r_lower, r_upper</span>
-<span id="cb12-18"><a href="#cb12-18"></a></span>
-<span id="cb12-19"><a href="#cb12-19"></a>r_lower_cats, r_upper_cats <span class="op">=</span> ci_rho(n_cats, pearson_r_cats)</span>
-<span id="cb12-20"><a href="#cb12-20"></a></span>
-<span id="cb12-21"><a href="#cb12-21"></a><span class="bu">print</span>(<span class="ss">f'0.95 Confidence Intervals of rho: </span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb12-22"><a href="#cb12-22"></a>      <span class="ss">f'Lower Limit: </span><span class="sc">{</span>r_lower_cats<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb12-23"><a href="#cb12-23"></a>      <span class="ss">f'Upper Limit: </span><span class="sc">{</span>r_upper_cats<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-17" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt, tanh, atanh</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a>n_cats <span class="op">=</span> <span class="bu">len</span>(catterplot_df)</span>
+<span id="cb15-4"><a href="#cb15-4"></a></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="kw">def</span> ci_rho(n, pearson_r, alpha<span class="op">=</span><span class="fl">0.05</span>):</span>
+<span id="cb15-6"><a href="#cb15-6"></a>    <span class="co"># z-transformation</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>    z <span class="op">=</span> atanh(pearson_r)</span>
+<span id="cb15-8"><a href="#cb15-8"></a>    <span class="co"># SEM of z</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a>    se_z <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> sqrt(n <span class="op">-</span> <span class="dv">3</span>)</span>
+<span id="cb15-10"><a href="#cb15-10"></a>    <span class="co"># CI in the z score in the 95% level.  </span></span>
+<span id="cb15-11"><a href="#cb15-11"></a>    c <span class="op">=</span> stats.norm.ppf(<span class="dv">1</span> <span class="op">-</span> alpha <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb15-12"><a href="#cb15-12"></a>    z_lower <span class="op">=</span> z <span class="op">-</span> c <span class="op">*</span> se_z</span>
+<span id="cb15-13"><a href="#cb15-13"></a>    z_upper <span class="op">=</span> z <span class="op">+</span> c <span class="op">*</span> se_z</span>
+<span id="cb15-14"><a href="#cb15-14"></a>    <span class="co"># Inverse Fisher transformation</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a>    r_lower <span class="op">=</span> tanh(z_lower)</span>
+<span id="cb15-16"><a href="#cb15-16"></a>    r_upper <span class="op">=</span> tanh(z_upper)</span>
+<span id="cb15-17"><a href="#cb15-17"></a>    <span class="cf">return</span> r_lower, r_upper</span>
+<span id="cb15-18"><a href="#cb15-18"></a></span>
+<span id="cb15-19"><a href="#cb15-19"></a>r_lower_cats, r_upper_cats <span class="op">=</span> ci_rho(n_cats, pearson_r_cats)</span>
+<span id="cb15-20"><a href="#cb15-20"></a></span>
+<span id="cb15-21"><a href="#cb15-21"></a><span class="bu">print</span>(<span class="ss">f'0.95 Confidence Intervals of rho: </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb15-22"><a href="#cb15-22"></a>      <span class="ss">f'Lower Limit: </span><span class="sc">{</span>r_lower_cats<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb15-23"><a href="#cb15-23"></a>      <span class="ss">f'Upper Limit: </span><span class="sc">{</span>r_upper_cats<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.95 Confidence Intervals of rho: 
+Lower Limit: -0.22833745967041358 
+Upper Limit: 0.21670822097748485</code></pre>
+</div>
+</div>
+<div id="cell-18" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Or just call the function: </span></span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co"># Ths pearson-r results was calculated in Q3, and stored in pearson_r_results_cats</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># Just apply the confidence_interval method on the pearson_r_results_cats, and bingo! </span></span>
+<span id="cb17-5"><a href="#cb17-5"></a></span>
+<span id="cb17-6"><a href="#cb17-6"></a>ci_rho_cats <span class="op">=</span> pearson_r_results_cats.confidence_interval(confidence_level<span class="op">=</span><span class="fl">0.95</span>) <span class="co"># It does the Fisher transformation by default</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="bu">print</span>(<span class="ss">f'0.95 Confidence Intervals of rho: </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb17-9"><a href="#cb17-9"></a>      <span class="ss">f'Lower Limit: </span><span class="sc">{</span>ci_rho_cats[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb17-10"><a href="#cb17-10"></a>      <span class="ss">f'Upper Limit: </span><span class="sc">{</span>ci_rho_cats[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.95 Confidence Intervals of rho: 
 Lower Limit: -0.22833745967041358 
@@ -570,7 +632,6 @@ Upper Limit: 0.21670822097748485</code></pre>
 </section>
 <section id="final-thoughts-cats-good-humans-bad." class="level1">
 <h1>Final thoughts: Cats good, humans bad.</h1>
-<p>In Chinese social media, there’s a meme called “Cats good, humans bad” (貓好人壞), which humorously suggests that cats are always right and any misbehavior is blamed on humans. My partner and I keep an American Shorthair (see <a href="#fig-the-prince" class="quarto-xref">Figure&nbsp;3</a>) in our rented place, and we call him <em>the Prince</em>, not because of his noble lineage, but due to his annoying behaviors that sometimes drive us crazy. For instance, when he desires food, he jumps on our bed and meows loudly, trying to wake us up in the early morning!</p>
 <div id="fig-the-prince" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-the-prince-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -581,36 +642,38 @@ Figure&nbsp;3: The Prince
 </figcaption>
 </figure>
 </div>
+<p>In Chinese social media, there’s a meme called “Cats good, humans bad” (貓好人壞), which humorously suggests that cats are always right and any misbehavior is blamed on humans. My partner and I keep an American Shorthair (see <a href="#fig-the-prince" class="quarto-xref">Figure&nbsp;3</a>) in our rented place, and we call him <em>the Prince</em>, not because of his noble lineage, but due to his annoying behaviors that sometimes drive us crazy. For instance, when he desires food, he jumps on our bed and meows loudly, trying to wake us up in the early morning!</p>
 <p>I think if I plot the <code>loudness</code> of our Prince’s meowing, the peak would definitely appear BEFORE <code>mealtime</code>, as he meows to summon his servant.</p>
 <p>And he eats better than we do! According to my partner, she steams duck breasts for our cat at low temperature to keep the meat juicy, a process that takes hours to prepare. Meanwhile, his two poor owners often resort to instant food from the supermarket or just grab a meal from the nearby Saizeriya. (Yes, there’s a Saizeriya close to our block!)</p>
 <p>Yet, we always remind ourselves that we are not serving the Prince to the best of our abilities. The kitty is always innocent!</p>
 <p>貓好人壞.</p>
-<p>Alright, it’s good to be a cat like the Prince, who keeps meowing at the door, knowing that at the start and the end of the day, a two-legged monster will appear to feed him, regardless of how stressful and dangerous the world outside may be.</p>
+<p>Alright, it’s good to be a cat like the Prince, who keeps meowing at the door, knowing that at the start and the end of the day, a two-legged monster will appear to feed him, regardless of how stressful and dangerous those poor monsters in the world outside might encounter.</p>
 <p>We all love him, without any doubt!</p>
-<pre><code>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠤⠒⠒⠈⠉⠙⠒⠲⣌⠉⢁⣀⢼⠷⠃⠈⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⢶⠲⣿⠋⠉⠉⠽⠛⣹⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠤⣀⠀⠑⠞⠒⠒⠒⠀⠀⣼⣦⣀⢴⡆⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠈⢆⠀⠀⠀⠀⠀⢸⠏⠀⠀⠀⠀⠄⠀⠀⠁⠀⢠⠀⠈⠑⢄⠀⡀⢄⡄⠀⢠⣿⣿⡧⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠈⣆⠀⠀⠀⢀⠃⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⢇⠀⠀⠀⢀⡘⡄⠁⢀⠟⠉⠁⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⡖⠢⢤⣏⢆⠀⠀⡆⢀⡆⢀⠀⠀⢸⠀⠀⠀⠀⠀⡀⠸⡀⠀⠀⠀⠓⠸⡀⠘⣆⡀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠹⡄⠀⠈⠝⢷⣼⡇⢸⠁⠀⠀⠀⡘⣾⠀⠀⠀⠀⠗⠦⠥⠤⡤⠂⠀⠀⡇⠀⣿⣄⠀⠘⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⢹⡤⠆⢀⡴⢿⡇⢸⠀⢸⡴⠊⠉⠙⠣⣀⠀⡀⠀⠀⣨⣿⣿⡶⣤⡆⢳⡀⣿⠀⠉⠒⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠘⡇⠀⡠⢲⠃⢃⠈⣦⣘⡷⢶⣶⣦⣄⠈⠁⠀⠀⣾⣏⢽⣿⣧⣟⡇⠀⡿⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠇⠈⣰⠋⢳⠘⣤⢼⡈⣇⢿⡾⡟⡿⠃⠀⣀⡀⠀⠙⠓⠛⠋⣸⣵⠄⢸⣰⠃⠀⠀⠀⠀⢀⡠⠤⠤⢄⠀⠀⠀
-⠀⠀⠘⡤⠃⠀⢸⣿⠻⡀⢣⡈⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠠⠾⢏⡿⠀⢸⢿⠀⠀⢠⣤⡔⠁⣀⢄⡀⠀⠙⡄⠀
-⠀⠀⠀⠀⠀⢠⣿⢿⡄⠀⢲⣯⡟⠁⠀⠀⠀⠒⠊⠉⠀⠀⠀⣀⣴⠾⣤⣴⢃⣼⠀⠀⠀⣽⠁⠀⢠⡜⠁⠀⠀⢰⠀
-⠀⠀⠀⠀⠀⠠⢷⡆⢱⣀⠈⢻⣏⣑⣶⠤⠤⣤⠤⠤⠤⠶⣏⠉⠀⢀⠿⣇⣴⠃⠀⠀⠀⠘⡄⠀⠀⠡⠄⠀⠀⡜⠀
-⠀⠀⠀⣷⡀⢰⠋⢻⢸⠈⠉⠉⠁⠀⠀⠀⣾⡿⠒⠤⢄⣰⡟⣷⣀⢸⣠⠏⢹⠀⣀⣠⠀⠀⠈⠢⠤⠤⠤⠤⠊⠀⠀
-⠀⠀⠀⡟⢳⣿⠀⠌⣸⠁⣀⣀⣀⣠⠴⠊⠉⢑⣒⠤⣤⣤⣶⣿⠾⣯⠉⠓⠻⣏⢁⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠐⣷⠀⣿⣧⣾⡟⠋⡜⠉⠁⠀⠀⠸⣍⠉⢉⠉⣿⣿⣅⠀⢠⠃⠀⢸⡀⠈⢿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠘⡾⠁⠈⡟⠁⡜⠀⠀⢀⡀⠀⠀⠘⡆⠁⡰⠋⢣⢹⠳⣮⠀⠀⠈⣷⠀⠀⠀⠙⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⢠⠁⡀⣀⡿⠞⠀⠀⠀⠈⡇⠀⠀⠀⠳⠞⠀⠀⠈⠻⠖⠁⠀⠀⠀⠈⢷⡄⠀⠀⠈⢳⡄⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠘⠻⢻⣿⠀⠀⠀⠀⠀⢰⡧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⡀⢀⣿⣇⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣿⣿⠀⠠⡀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⠗⠙⠳⣄⠀⠀⠀⠀⠀
-⠀⠀⠀⢀⡞⠉⠉⠑⢄⡈⠻⢤⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠈⠳⣄⠀⠀⠀
-⠀⠀⢀⣾⠀⠀⠀⠀⠀⠈⠒⣼⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠃⠀⠀⠀⠀⠀⠈⠏⠒⠤
-⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⡰⠛⢿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠛⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀</code></pre>
-<p><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<hr>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource plain number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a href="#cb19-1"></a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-2"><a href="#cb19-2"></a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠤⠤⠒⠒⠈⠉⠙⠒⠲⣌⠉⢀⣀⢼⠷⠃⠈⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-3"><a href="#cb19-3"></a>⠀⢶⠲⣿⠋⠉⠉⠽⠛⣹⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠤⣀⠀⠑⠞⠒⠒⠒⠀⠀⣼⣦⣀⢴⡆⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-4"><a href="#cb19-4"></a>⠀⠈⢆⠀⠀⠀⠀⠀⢸⠏⠀⠀⠀⠀⠄⠀⠀⠁⠀⢠⠀⠈⠑⢄⠀⡀⢄⡄⠀⢠⣿⣿⡧⢸⠁⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-5"><a href="#cb19-5"></a>⠀⠀⠈⣆⠀⠀⠀⢀⠃⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⢇⠀⠀⠀⢀⡘⡄⠁⢀⠟⠉⠁⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-6"><a href="#cb19-6"></a>⡖⠢⢤⣏⢆⠀⠀⡆⢀⡆⢀⠀⠀⢸⠀⠀⠀⠀⠀⡀⠸⡀⠀⠀⠀⠓⠸⡀⠘⣆⡀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-7"><a href="#cb19-7"></a>⠹⡄⠀⠈⠝⢷⣼⡇⢸⠁⠀⠀⠀⡘⣾⠀⠀⠀⠀⠗⠦⠤⠤⡤⠂⠀⠀⡇⠀⣿⣄⠀⠘⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-8"><a href="#cb19-8"></a>⠀⢹⡤⠆⢀⡴⢿⡇⢸⠀⢸⡴⠊⠉⠙⠣⣀⠀⡀⠀⠀⣨⣿⣿⡶⣤⡆⢳⡀⣿⠀⠉⠒⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-9"><a href="#cb19-9"></a>⠀⠘⡇⠀⡠⢲⠃⢃⠈⣦⣘⡷⢶⣶⣦⣄⠈⠁⠀⠀⣾⣏⢽⣿⣧⣟⡇⠀⡿⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-10"><a href="#cb19-10"></a>⠀⠀⠇⠈⣰⠋⢳⠘⣤⢼⡈⣇⢿⡾⡟⡿⠃⠀⣀⡀⠀⠙⠓⠛⠋⣸⣵⠄⢸⣰⠃⠀⠀⠀⠀⢀⡠⠤⠤⢄⠀⠀⠀</span>
+<span id="cb19-11"><a href="#cb19-11"></a>⠀⠀⠘⡤⠃⠀⢸⣿⠻⡀⢣⡈⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠠⠾⢏⡿⠀⢸⢿⠀⠀⢠⣤⡔⠁⣀⢄⡀⠀⠙⡄⠀</span>
+<span id="cb19-12"><a href="#cb19-12"></a>⠀⠀⠀⠀⠀⢠⣿⢿⡄⠀⢲⣯⡟⠁⠀⠀⠀⠒⠊⠉⠀⠀⠀⣀⣴⠾⣤⣴⢃⣼⠀⠀⠀⣽⠁⠀⢠⡜⠁⠀⠀⢰⠀</span>
+<span id="cb19-13"><a href="#cb19-13"></a>⠀⠀⠀⠀⠀⠠⢷⡆⢱⣀⠈⢻⣏⣑⣶⠤⠤⣤⠤⠤⠤⠶⣏⠉⠀⢀⠿⣇⣴⠃⠀⠀⠀⠘⡄⠀⠀⠡⠄⠀⠀⡜⠀</span>
+<span id="cb19-14"><a href="#cb19-14"></a>⠀⠀⠀⣷⡀⢰⠋⢻⢸⠈⠉⠉⠁⠀⠀⠀⣾⡿⠒⠤⢄⣰⡟⣷⣀⢸⣠⠏⢹⠀⣀⣠⠀⠀⠈⠢⠤⠤⠤⠤⠊⠀⠀</span>
+<span id="cb19-15"><a href="#cb19-15"></a>⠀⠀⠀⡟⢳⣿⠀⠌⣸⠁⣀⣀⣀⣠⠴⠊⠉⢑⣒⠤⣤⣤⣶⣿⠾⣯⠉⠓⠻⣏⢁⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-16"><a href="#cb19-16"></a>⠀⠀⠐⣷⠀⣿⣧⣾⡟⠋⡜⠉⠁⠀⠀⠸⣍⠉⢉⠉⣿⣿⣅⠀⢠⠃⠀⢸⡀⠈⢿⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-17"><a href="#cb19-17"></a>⠀⠀⠀⠘⡾⠁⠈⡟⠁⡜⠀⠀⢀⡀⠀⠀⠘⡆⠁⡰⠋⢣⢹⠳⣮⠀⠀⠈⣷⠀⠀⠀⠙⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-18"><a href="#cb19-18"></a>⠀⠀⠀⢠⠁⡀⣀⡿⠞⠀⠀⠀⠈⡇⠀⠀⠀⠳⠞⠀⠀⠈⠻⠖⠁⠀⠀⠀⠈⢷⡄⠀⠀⠈⢳⡄⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-19"><a href="#cb19-19"></a>⠀⠀⠀⠘⠻⢻⣿⠀⠀⠀⠀⠀⢰⡧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢧⡀⢀⣿⣇⠀⠀⠀⠀⠀⠀⠀</span>
+<span id="cb19-20"><a href="#cb19-20"></a>⠀⠀⠀⠀⠀⣿⣿⠀⠠⡀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⠗⠙⠳⣄⠀⠀⠀⠀⠀</span>
+<span id="cb19-21"><a href="#cb19-21"></a>⠀⠀⠀⢀⡞⠉⠉⠑⢄⡈⠻⢤⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠈⠳⣄⠀⠀⠀</span>
+<span id="cb19-22"><a href="#cb19-22"></a>⠀⠀⢀⣾⠀⠀⠀⠀⠀⠈⠒⣼⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠃⠀⠀⠀⠀⠀⠈⠏⠒⠤</span>
+<span id="cb19-23"><a href="#cb19-23"></a>⢀⡴⠋⠀⠀⠀⠀⠀⠀⠀⡰⠛⢿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⠛⠦⣄⡀⠀⠀⠀⠀⠀⠀⠀</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 
 
 </section>
@@ -619,8 +682,9 @@ Figure&nbsp;3: The Prince
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>I just put the formula here for … fun? I didn’t actually calculated on hand this time. :P<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>An easter egg hidden by <a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>As a devoted servant to cat, I must say that, in my experience, our cat never purrs after a meal. So, there’s definitely no relationship between those variables in my case. Staying silent seems to be his strategy for navigating this wild and dangerous world.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I just put the formula here for … nothing? I didn’t actually calculated on hand this time. :P<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>An easter egg here, something can’t be compiled by {}.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

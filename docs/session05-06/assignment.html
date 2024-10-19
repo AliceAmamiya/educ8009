@@ -347,13 +347,13 @@ window.Quarto = {
 <section id="a-peek-on-the-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="a-peek-on-the-dataset">A peek on the dataset</h2>
 <p>As usual, I load modules that I may need in this laboratory assignment, then the dataset to my RAM and check attributes of the given dataset.</p>
-<div id="cell-5" class="cell" data-execution_count="14">
+<div id="cell-5" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Load the dataset</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a>switch <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/switch.sav'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-6" class="cell" data-execution_count="15">
+<div id="cell-6" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Descriptions</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(<span class="ss">f'Shape: </span><span class="ch">\n</span><span class="ss">'</span>, switch.shape, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>(<span class="ss">f'Columns: </span><span class="ch">\n</span><span class="ss">'</span>, switch.columns, <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
@@ -432,7 +432,7 @@ Table&nbsp;1: Mean, mode and median
 <li>A long tail extends to the higher scores, indicating the frequency of pain scores gradually decreases as the scores increase.</li>
 </ol>
 <p><strong>Solution</strong></p>
-<div id="cell-8" class="cell" data-execution_count="16">
+<div id="cell-8" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>injury <span class="op">=</span> switch[<span class="st">'injury'</span>]</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co"># Calculate measurements of central tendency</span></span>
@@ -453,7 +453,7 @@ Mode:  2.0
 Median:  2.0</code></pre>
 </div>
 </div>
-<div id="cell-fig-injury-histogram" class="cell" data-execution_count="17">
+<div id="cell-fig-injury-histogram" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb6-3"><a href="#cb6-3"></a></span>
@@ -524,7 +524,7 @@ Figure&nbsp;1: Distribution of the pain scores
 <p><span class="math display">\[
 SE_M = \frac{SD}{\sqrt{N}} \approx 0.18
 \]</span></p>
-<div id="cell-12" class="cell" data-execution_count="18">
+<div id="cell-12" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
 <span id="cb7-2"><a href="#cb7-2"></a></span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="co"># Standard Error Mean</span></span>
@@ -541,7 +541,7 @@ SE_M = \frac{SD}{\sqrt{N}} \approx 0.18
 <p><span class="math display">\[
 t = \frac{M - \mu_{hyp}}{SE_{M}} \approx 4.90
 \]</span></p>
-<div id="cell-14" class="cell" data-execution_count="19">
+<div id="cell-14" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># t statistic</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a>injury_t <span class="op">=</span> (injury.mean() <span class="op">-</span> <span class="dv">2</span>) <span class="op">/</span> injury.sem()</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="bu">print</span>(<span class="ss">f't: '</span>, injury_t)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -556,7 +556,7 @@ df = N - 1 = 120 - 1 = 119
 <p>With <span class="math inline">\(t \approx 4.90\)</span> and <span class="math inline">\(df = 119\)</span>, then use survivor function to reach the <span class="math inline">\(p\)</span>-value: <span class="math display">\[
 p \approx 3.11 \times 10^{-6}
 \]</span></p>
-<div id="cell-16" class="cell" data-execution_count="20">
+<div id="cell-16" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="co"># 119 is the degree of freedom; Two-sided times two</span></span>
@@ -569,7 +569,7 @@ p \approx 3.11 \times 10^{-6}
 </div>
 <p>The <span class="math inline">\(p\)</span>-value is much smaller than 0.001 (<span class="math inline">\(p &lt; 0.001\)</span>), the null hypothesis should be rejected.</p>
 <p>I also did a sanity check with the ready-to-use function <code>scipy.stats.ttest_1samp</code>:</p>
-<div id="cell-18" class="cell" data-execution_count="21">
+<div id="cell-18" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># A san-check on my calculation result: </span></span>
 <span id="cb13-2"><a href="#cb13-2"></a></span>
 <span id="cb13-3"><a href="#cb13-3"></a>injury_ttest_1samp <span class="op">=</span> stats.ttest_1samp(injury, <span class="dv">2</span>, alternative<span class="op">=</span><span class="st">'two-sided'</span>)</span>
@@ -587,7 +587,7 @@ p-value:  3.1051091723547962e-06</code></pre>
 <p><span class="math display">\[
 d = \frac{M - \mu_{hyp}}{SD} = \frac{t}{\sqrt{N}} \approx 0.45
 \]</span></p>
-<div id="cell-20" class="cell" data-execution_count="22">
+<div id="cell-20" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Effect Size d</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a></span>
 <span id="cb15-3"><a href="#cb15-3"></a>injury_d <span class="op">=</span> injury_t <span class="op">/</span> sqrt(<span class="dv">120</span>)</span>
@@ -606,7 +606,7 @@ d = \frac{M - \mu_{hyp}}{SD} = \frac{t}{\sqrt{N}} \approx 0.45
 <p><span class="math display">\[
 [M - c \times SE_M, M + c \times SE_M] \approx [2.53, 3.25]
 \]</span></p>
-<div id="cell-22" class="cell" data-execution_count="23">
+<div id="cell-22" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># CI for two-tailed t-statistics</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a><span class="kw">def</span> confidence_interval(alpha, mean, sem, df): </span>
 <span id="cb17-3"><a href="#cb17-3"></a>    c <span class="op">=</span> stats.t.interval(<span class="dv">1</span> <span class="op">-</span> alpha, df)[<span class="dv">1</span>]</span>
@@ -624,11 +624,21 @@ CI (Upper):  3.252266082562543
 [2.53106725077079, 3.252266082562543]</code></pre>
 </div>
 </div>
+<div id="cell-23" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># And scipy.stats.t does the same thing. </span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>stats.t.interval(confidence<span class="op">=</span><span class="fl">0.95</span>, </span>
+<span id="cb19-3"><a href="#cb19-3"></a>                 df<span class="op">=</span><span class="dv">119</span>, </span>
+<span id="cb19-4"><a href="#cb19-4"></a>                 loc<span class="op">=</span>injury_mean, </span>
+<span id="cb19-5"><a href="#cb19-5"></a>                 scale<span class="op">=</span>injury_sem)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<pre><code>(2.53106725077079, 3.252266082562543)</code></pre>
+</div>
+</div>
 </section>
 <section id="q4-summarizing-the-findings" class="level2">
 <h2 class="anchored" data-anchor-id="q4-summarizing-the-findings">Q4: Summarizing the findings</h2>
 <p><strong>Answer</strong></p>
-<p>A one‐sample <span class="math inline">\(t\)</span>-test is conducted to reveal whether mean pain score for a sample of <span class="math inline">\(N = 120\)</span> patients differed from the minor pain with a score of 2. For this example, <span class="math inline">\(M = 2.89\)</span>, <span class="math inline">\(SD = 1.99\)</span> and <span class="math inline">\(SE_M = 0.18\)</span>. The 95% CI for <span class="math inline">\(M\)</span> was <span class="math inline">\([2.53, 3.25]\)</span>. The result was <span class="math inline">\(t(119) = 4.90\)</span>, <span class="math inline">\(p = 3.11 \times 10^{-6}\)</span>, two tailed. The effect size is <span class="math inline">\(d = 0.45\)</span> by Cohen’s standards, which represents a medium effect. The difference between the sample mean (<span class="math inline">\(M = 2.89\)</span>) and the score of minor pain (2) is statistically significant using <span class="math inline">\(\alpha = 0.05\)</span>, two tailed.</p>
+<p>A one‐sample <span class="math inline">\(t\)</span>-test is conducted to reveal whether mean pain score for a sample of <span class="math inline">\(N = 120\)</span> patients differed from the minor pain with a score of 2. For this example, <span class="math inline">\(M = 2.89\)</span>, <span class="math inline">\(SD = 1.99\)</span> and <span class="math inline">\(SE_M = 0.18\)</span>. The 95% CI for <span class="math inline">\(M\)</span> was <span class="math inline">\([2.53, 3.25]\)</span>. The result was <span class="math inline">\(t(119) = 4.90\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, two tailed. The effect size is <span class="math inline">\(d = 0.45\)</span> by Cohen’s standards, which represents a medium effect. The difference between the sample mean (<span class="math inline">\(M = 2.89\)</span>) and the score of minor pain (2) is statistically significant using <span class="math inline">\(\alpha = 0.05\)</span>, two tailed.</p>
 </section>
 <section id="q5-95-ci-for-switch-players-mean-pain-score" class="level2">
 <h2 class="anchored" data-anchor-id="q5-95-ci-for-switch-players-mean-pain-score">Q5: 95% CI for Switch players’ mean pain score</h2>
@@ -638,13 +648,13 @@ CI (Upper):  3.252266082562543
 <ol type="1">
 <li>Check the structure of column <code>switch</code> then apply the filtering:</li>
 </ol>
-<div id="cell-25" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># Check how many people get injured while playing</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="bu">print</span>(<span class="ss">f'Variables in the column switch: </span><span class="ch">\n</span><span class="ss">'</span>, switch[<span class="st">'switch'</span>].value_counts())</span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="co"># Filter out all switch players</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a>injury_ns <span class="op">=</span> switch[switch[<span class="st">'switch'</span>] <span class="op">==</span> <span class="st">'Playing switch'</span>][<span class="st">'injury'</span>]</span>
-<span id="cb19-5"><a href="#cb19-5"></a><span class="co"># And a sanity check</span></span>
-<span id="cb19-6"><a href="#cb19-6"></a><span class="bu">print</span>(<span class="ss">f'Filtered data: </span><span class="ch">\n</span><span class="ss">'</span>, injury_ns.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-26" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Check how many people get injured while playing</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="bu">print</span>(<span class="ss">f'Variables in the column switch: </span><span class="ch">\n</span><span class="ss">'</span>, switch[<span class="st">'switch'</span>].value_counts())</span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="co"># Filter out all switch players</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>injury_ns <span class="op">=</span> switch[switch[<span class="st">'switch'</span>] <span class="op">==</span> <span class="st">'Playing switch'</span>][<span class="st">'injury'</span>]</span>
+<span id="cb21-5"><a href="#cb21-5"></a><span class="co"># And a sanity check</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a><span class="bu">print</span>(<span class="ss">f'Filtered data: </span><span class="ch">\n</span><span class="ss">'</span>, injury_ns.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Variables in the column switch: 
  switch
@@ -672,18 +682,18 @@ Based on the data we also have <span class="math inline">\(M_{player} \approx 3.
 <p><span class="math display">\[
 [M - c \times SE_M, M + c \times SE_M] \approx [3.14, 4.33]
 \]</span></p>
-<div id="cell-27" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>injury_ns_mean <span class="op">=</span> injury_ns.mean()</span>
-<span id="cb21-2"><a href="#cb21-2"></a>injury_ns_sem <span class="op">=</span> injury_ns.sem()</span>
-<span id="cb21-3"><a href="#cb21-3"></a>injury_ns_dregf <span class="op">=</span> <span class="bu">len</span>(injury_ns) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a></span>
-<span id="cb21-5"><a href="#cb21-5"></a><span class="bu">print</span>(<span class="ss">f'Sample size: </span><span class="sc">{</span><span class="bu">len</span>(injury_ns)<span class="sc">}</span><span class="ss">, </span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a>      <span class="ss">f'Degree of Freedom: </span><span class="sc">{</span>injury_ns_dregf<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb21-7"><a href="#cb21-7"></a>      <span class="ss">f'Mean: </span><span class="sc">{</span>injury_ns_mean<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">'</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a>      <span class="ss">f'Standard Error: </span><span class="sc">{</span>injury_ns_sem<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb21-9"><a href="#cb21-9"></a></span>
-<span id="cb21-10"><a href="#cb21-10"></a>injury_ns_ci <span class="op">=</span> confidence_interval(<span class="fl">0.05</span>, injury_ns_mean, injury_ns_sem, injury_ns_dregf)</span>
-<span id="cb21-11"><a href="#cb21-11"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">The 95% CI for Switch players: </span><span class="ch">\n</span><span class="ss">'</span>, injury_ns_ci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-28" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>injury_ns_mean <span class="op">=</span> injury_ns.mean()</span>
+<span id="cb23-2"><a href="#cb23-2"></a>injury_ns_sem <span class="op">=</span> injury_ns.sem()</span>
+<span id="cb23-3"><a href="#cb23-3"></a>injury_ns_dregf <span class="op">=</span> <span class="bu">len</span>(injury_ns) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a></span>
+<span id="cb23-5"><a href="#cb23-5"></a><span class="bu">print</span>(<span class="ss">f'Sample size: </span><span class="sc">{</span><span class="bu">len</span>(injury_ns)<span class="sc">}</span><span class="ss">, </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb23-6"><a href="#cb23-6"></a>      <span class="ss">f'Degree of Freedom: </span><span class="sc">{</span>injury_ns_dregf<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a>      <span class="ss">f'Mean: </span><span class="sc">{</span>injury_ns_mean<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb23-8"><a href="#cb23-8"></a>      <span class="ss">f'Standard Error: </span><span class="sc">{</span>injury_ns_sem<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb23-9"><a href="#cb23-9"></a></span>
+<span id="cb23-10"><a href="#cb23-10"></a>injury_ns_ci <span class="op">=</span> confidence_interval(<span class="fl">0.05</span>, injury_ns_mean, injury_ns_sem, injury_ns_dregf)</span>
+<span id="cb23-11"><a href="#cb23-11"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="ch">\n</span><span class="ss">The 95% CI for Switch players: </span><span class="ch">\n</span><span class="ss">'</span>, injury_ns_ci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Sample size: 60, 
 Degree of Freedom: 59,
