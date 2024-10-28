@@ -352,7 +352,7 @@
     "href": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-v.-meow",
     "title": "Laboratory 04",
     "section": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow",
-    "text": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow\nAnswer\n\\(r \\approx -6.12 \\times 10^{-3}\\)\nThe pearson’s correlation coefficient \\(r \\approx -6.12 \\times 10^{-3}\\) is very close to zero, suggesting there may be no linear relationship between dinner_time and meow in this dataset. However, it’s important to note that the data lacks further details, particularly regarding the sampling procedure. Specifically, we don’t know if the data represents multiple observations of a single cat (in which case it would be a single case) or if it was collected from several different cats (in which case the sample size and whether the sample is similar to population of interest needs to be justified). Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.1\nIn conclusion, the pearson’s \\(r\\) suggests there is no strong linear relationship between the time since last feed and the volume of cats’ purring. That’s all I can say.\nSolution\nTo calculate the pearson’s \\(r\\), I use the formula2:\n\\[r = \\frac{\\sum_{Z_XZ_Y}}{N-1}\\]\n\nimport scipy.stats as stats\n\npearson_r_results_cats = stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)\n\npearson_r_cats = pearson_r_results_cats[0]\np_cats = pearson_r_results_cats[1]\n\nprint(f'Correlation Coefficient\\n'\n      f'Pearson-r: {pearson_r_cats}\\n'\n      f'p-value: {pearson_r_results_cats[1]}')\n\nCorrelation Coefficient\nPearson-r: -0.006117549224989473\np-value: 0.9576068830096687",
+    "text": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow\nAnswer\n\\(r \\approx -6.12 \\times 10^{-3}\\)\nThe pearson’s correlation coefficient \\(r \\approx -6.12 \\times 10^{-3}\\) is very close to zero, suggesting there may be no linear relationship between dinner_time and meow in this dataset. However, it’s important to note that the data lacks further details, particularly regarding the sampling procedure. Specifically, we don’t know if the data represents multiple observations of a single cat (in which case it would be a single case) or if it was collected from several different cats (in which case the sample size and whether the sample is similar to population of interest needs to be justified). Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.1\nIn conclusion, the pearson’s \\(r\\) suggests there is no strong linear relationship between the time since last feed and the volume of cats’ purring. That’s all I can say.\nSolution\nTo calculate the pearson’s \\(r\\), I use the formula2:\n\\[r = \\frac{\\sum{Z_XZ_Y}}{N-1}\\]\n\nimport scipy.stats as stats\n\npearson_r_results_cats = stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)\n\npearson_r_cats = pearson_r_results_cats[0]\np_cats = pearson_r_results_cats[1]\n\nprint(f'Correlation Coefficient\\n'\n      f'Pearson-r: {pearson_r_cats}\\n'\n      f'p-value: {pearson_r_results_cats[1]}')\n\nCorrelation Coefficient\nPearson-r: -0.006117549224989473\np-value: 0.9576068830096687",
     "crumbs": [
       "Labs",
       "Session07 08",
@@ -394,6 +394,34 @@
       "Session07 08",
       "Laboratory 04"
     ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html",
+    "href": "session01/lecture-notes.html",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#summary",
+    "href": "session01/lecture-notes.html#summary",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#implementations",
+    "href": "session01/lecture-notes.html#implementations",
+    "title": "Session 01: Introduction",
+    "section": "Implementations",
+    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+  },
+  {
+    "objectID": "session01/lecture-notes.html#descriptive-statistics",
+    "href": "session01/lecture-notes.html#descriptive-statistics",
+    "title": "Session 01: Introduction",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
   },
   {
     "objectID": "session05-06/assignment.html",
@@ -504,32 +532,112 @@
     ]
   },
   {
-    "objectID": "session01/lecture-notes.html",
-    "href": "session01/lecture-notes.html",
-    "title": "Session 01: Introduction",
+    "objectID": "session09-10/assignment.html",
+    "href": "session09-10/assignment.html",
+    "title": "Laboratory 05",
     "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+    "text": "For all typos on Lab 4 (e.g. 4.4 Q3): All fixed on the online version.",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#summary",
-    "href": "session01/lecture-notes.html#summary",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+    "objectID": "session09-10/assignment.html#a-peek-on-the-dataset-as-always",
+    "href": "session09-10/assignment.html#a-peek-on-the-dataset-as-always",
+    "title": "Laboratory 05",
+    "section": "A peek on the dataset as always",
+    "text": "A peek on the dataset as always\n\nimport pandas as pd\n\ntea = pd.read_spss('./datasets/tea.sav')\nprint(tea.describe())\n\n              tea     cog_fun\ncount  716.000000  716.000000\nmean     3.032123   50.611732\nstd      1.669245    9.882814\nmin      0.000000   24.000000\n25%      2.000000   44.000000\n50%      3.000000   51.000000\n75%      4.000000   57.000000\nmax      8.000000   80.000000",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#implementations",
-    "href": "session01/lecture-notes.html#implementations",
-    "title": "Session 01: Introduction",
-    "section": "Implementations",
-    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+    "objectID": "session09-10/assignment.html#q1-the-bivariate-regression-equation",
+    "href": "session09-10/assignment.html#q1-the-bivariate-regression-equation",
+    "title": "Laboratory 05",
+    "section": "Q1: The bivariate regression equation",
+    "text": "Q1: The bivariate regression equation\nAnswer\nGiven the independent variable \\(X\\), the predicted \\(\\hat Y_{cog\\_fun}\\) 2 is:\n\\[\n\\hat Y_{cog\\_fun} = \\beta_0 + \\beta_1X\n\\]",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#descriptive-statistics",
-    "href": "session01/lecture-notes.html#descriptive-statistics",
-    "title": "Session 01: Introduction",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
+    "objectID": "session09-10/assignment.html#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data",
+    "href": "session09-10/assignment.html#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data",
+    "title": "Laboratory 05",
+    "section": "Q2: Whether bi-variate regression is a good choice for the data",
+    "text": "Q2: Whether bi-variate regression is a good choice for the data\nAnswer\nThe bi-variate regression may not be a strong model for this data for:\n\nThe Pearson’s Correlation: The Pearson’s correlation coefficient (\\(r \\approx 0.0777\\)) indicates a relatively weak positive relationship between tea consumption and cognitive function. The \\(p\\)-value (\\(p \\approx 0.0378\\)) is below 0.05, suggesting that the weak correlation is statistically significant.\nLinearity and Distribution: The scatter plot in Figure 1 shows that a weak and flat linear relationship between tea consumption and cognitive function, which aligns with the low Pearson’s \\(r\\). While the histograms in Figure 2 show that the cognitive function scores are approximately normally distributed.\nHowever, the sample size (\\(N = 716\\)) is relatively large, which may be beneficial for conducting a regression.\n\nBased on this weak linear trend, although bi-variate regression could be employed as they meet the assumption of a linear regression, the model may not explain much variability in cognitive function. Other factors like age, education background even SES may (and must) influence cognitive function. For sake of this assignment, I will assume that other variables either do not vary significantly across participants or are not measured.\nSolution\n\nimport scipy.stats as stats\ntea_pearsonr, tea_pvalue = stats.pearsonr(tea.tea, tea.cog_fun)\nprint(f'Pearson\\'s r: {tea_pearsonr}\\n'\n      f'p-value: {tea_pvalue}')\n\nPearson's r: 0.07765252417388956\np-value: 0.03776954868447832\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ntea_scatter = sns.lmplot(tea, x='tea', y='cog_fun')\ntea_scatter.fig.suptitle('Scatter plot on tea v. cog_fun')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Scatter Plot on tea v. cog_fun\n\n\n\n\n\n\nfig, ax =plt.subplots(1,2)\nsns.histplot(tea, x='tea', kde=True, bins=8, ax=ax[0])\nsns.histplot(tea, x='cog_fun', kde=True, ax=ax[1])\nax[0].set_title('Tea')\nax[1].set_title('Cognitive Function')\nfig.suptitle('Histograms on variables: Tea and Cognitive Function')\n\nplt.show()\n\n\n\n\n\n\n\nFigure 2: Distribution of cups of tea and cognitive function scores",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q3-bivariate-regression-analysis",
+    "href": "session09-10/assignment.html#q3-bivariate-regression-analysis",
+    "title": "Laboratory 05",
+    "section": "Q3: Bivariate regression analysis",
+    "text": "Q3: Bivariate regression analysis\nAnswer\nIntercept: \\(\\beta_0 \\approx 49.2177\\), suggests that when a respondent drinks 0 cups of tea per day, the expected cognitive function score is 49.2177.\nSlope: \\(\\beta_1 \\approx 0.4597\\), indicates a positive relationship between tea consumption and cognitive function. For each additional cup of tea consumed per day, the cognitive function score increases by approximately 0.4597 points.\nSolution\n\ndef print_linregress(x, y): \n      b1, b0, r, p, stderr =  stats.linregress(x=x, y=y)\n      print(f'Intercept: {b0}')\n      print(f'Slope: {b1}')\n      print(f'R-squared: {r**2}')\n      print(f'P-value: {p}')\n      print(f'Standard error: {stderr}')\n\nprint_linregress(tea['tea'], tea['cog_fun'])\n\nIntercept: 49.217731459509174\nSlope: 0.45974402348753085\nR-squared: 0.006029914510576479\nP-value: 0.03776954868447834\nStandard error: 0.22090119534570854\n\n\nIn the world of python, scipy.stats works fine for applying basic linear models, however, statsmodels gives you this pretty damn cool all-in-one summary output as shown below:\n\nimport statsmodels.api as sm\n\ndef bivariate_regression(x, y): \n    X = sm.add_constant(x)\n    model = sm.OLS(y, X).fit()\n    summary = model.summary()\n    print(summary)\n    return model\n\ntea_model = bivariate_regression(tea['tea'], tea['cog_fun'])\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                cog_fun   R-squared:                       0.006\nModel:                            OLS   Adj. R-squared:                  0.005\nMethod:                 Least Squares   F-statistic:                     4.331\nDate:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378\nTime:                        19:52:27   Log-Likelihood:                -2653.5\nNo. Observations:                 716   AIC:                             5311.\nDf Residuals:                     714   BIC:                             5320.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         49.2177      0.764     64.382      0.000      47.717      50.719\ntea            0.4597      0.221      2.081      0.038       0.026       0.893\n==============================================================================\nOmnibus:                        0.140   Durbin-Watson:                   1.912\nProb(Omnibus):                  0.932   Jarque-Bera (JB):                0.229\nSkew:                          -0.009   Prob(JB):                        0.892\nKurtosis:                       2.914   Cond. No.                         7.65\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q4-the-slope-from-the-standardized-regression",
+    "href": "session09-10/assignment.html#q4-the-slope-from-the-standardized-regression",
+    "title": "Laboratory 05",
+    "section": "Q4: The slope from the standardized regression",
+    "text": "Q4: The slope from the standardized regression\nAnswer\nQ4a: Interpret the slope from the standardized regression.\n\\[\\beta^* \\approx 0.07765\\]\nThe standardized slope is approximately 0.07765, means that for every one standard deviation increase in tea consumption, the cognitive function score increases by 0.07765 standard deviations.\nQ4b: From which regression (raw or standardized) is the slope easier to interpret and understand?\nIt depends.\nThe raw slope is easy to interpret in the context of the actual units of measurement as it represents the change in the dependent variable (cog_fun) for a one-unit change in the independent variable (tea).\nThe standardized slope makes comparing effects across different variables or studies much easier as it tells us how many standard deviations the dependent variable changes for a one standard deviation change in the independent variable.\nSolution\nBoth the independent (tea) and dependent variables (cog_fun) are transformed into z-scores, then:\n\n# Preparing standardized\ntea['tea_std'] = tea['tea'].apply(lambda x: (x - tea['tea'].mean()) / tea['tea'].std())\ntea['cog_fun_std'] = tea['cog_fun'].apply(lambda x: (x - tea['cog_fun'].mean()) / tea['cog_fun'].std())\n\n# Intercept and slope of standardized regression\nprint_linregress(tea['tea_std'], tea['cog_fun_std'])\n\nIntercept: -1.2880252063838454e-16\nSlope: 0.07765252417388924\nR-squared: 0.006029914510576491\nP-value: 0.0377695486844781\nStandard error: 0.03731105688226283\n\n\n\n# And the pretty damn detailed OLS summary\nbivariate_regression(tea['tea_std'], tea['cog_fun_std'])\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:            cog_fun_std   R-squared:                       0.006\nModel:                            OLS   Adj. R-squared:                  0.005\nMethod:                 Least Squares   F-statistic:                     4.331\nDate:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378\nTime:                        19:52:27   Log-Likelihood:                -1013.3\nNo. Observations:                 716   AIC:                             2031.\nDf Residuals:                     714   BIC:                             2040.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst      -6.765e-17      0.037  -1.81e-15      1.000      -0.073       0.073\ntea_std        0.0777      0.037      2.081      0.038       0.004       0.151\n==============================================================================\nOmnibus:                        0.140   Durbin-Watson:                   1.912\nProb(Omnibus):                  0.932   Jarque-Bera (JB):                0.229\nSkew:                          -0.009   Prob(JB):                        0.892\nKurtosis:                       2.914   Cond. No.                         1.00\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n\n\n&lt;statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7ff15145ae90&gt;",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day",
+    "href": "session09-10/assignment.html#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day",
+    "title": "Laboratory 05",
+    "section": "Q5: Cognitive function score if drink 3 cups of tea per day",
+    "text": "Q5: Cognitive function score if drink 3 cups of tea per day\nAnswer\nGiven \\(X = 3\\), the cognitive function score for a respondent who drinks 3 cups of tea per day is:\n\\[\\hat Y = \\beta_0 + \\beta_1 \\times 3 \\approx 50.5970\\]\nHowever, the prediction might not be very close to the true score. Although the slope is statistically significant (with a \\(p\\)-value of \\(p = 0.038\\)), the low \\(R\\)-squared (\\(R^2 \\approx 0.006\\)) indicates that statistically, there’s only 0.6% of the variance in cognitive function scores is explained by tea consumption.\nSolution\n\ncog_fun_after_3_cups = tea_model.predict([1.0, 3]) # The 1.0 here is the constant required by statsmodels\nprint(f'Cognitive function score if drink 3 cups of tea per day: \\n'\n      f'{cog_fun_after_3_cups[0]}')\n\nCognitive function score if drink 3 cups of tea per day: \n50.59696352997175",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q6-tea-predicts-cognitive-function",
+    "href": "session09-10/assignment.html#q6-tea-predicts-cognitive-function",
+    "title": "Laboratory 05",
+    "section": "Q6: Tea predicts cognitive function?",
+    "text": "Q6: Tea predicts cognitive function?\nAnswers\nThe \\(p\\)-value for the slope is:\n\\[p \\approx 0.0378\\]\nSince the \\(p\\)-value is less than 0.05 (\\(p &lt; 0.05\\)), we can reject the null hypothesis (\\(H_0\\)). This suggests that there is evidence of an association between tea consumption and cognitive function scores.\nHowever, the low \\(R\\)-squared value (\\(R^2 \\approx 0.006\\)) indicates that tea consumption explains only a tiny fraction of the variability in cognitive function.\nWhile the results suggest a statistically significant but weak association between tea consumption and cognitive function, they do not provide evidence of a causal effect. Besides, if simply drinking more tea could raise cognitive scores, we might think about advising children to drink tea to guarantee a bright future! That said, those less inclined to drink tea might still end up in schools of education.\nSolution\nHypothesis:\n\\(H_0\\): The slope (\\(\\beta_1\\)) is zero, meaning tea consumption does not predict cognitive function.\n\\(H_1\\): The slope (\\(\\beta_1\\)) is not zero, meaning tea consumption does predict cognitive function.\n\ntea_p_value = tea_model.pvalues['tea']\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis.\")\n    else:\n        print(\"Fail to reject the null hypothesis.\")\n\ntest_hypothesis(tea_p_value, alpha=0.05)\n\nGiven the p-value=0.03776954868447742 and alpha=0.05:\nReject the null hypothesis.",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#footnotes",
+    "href": "session09-10/assignment.html#footnotes",
+    "title": "Laboratory 05",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nOh wait, could this kind of torture be approved by the IRB?↩︎\nAdd \\(\\epsilon\\) if consider the error term.↩︎",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
   },
   {
     "objectID": "session02/lecture-notes.html",
