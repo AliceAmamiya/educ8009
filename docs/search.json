@@ -851,5 +851,29 @@
       "Session04",
       "Laboratory 02"
     ]
+  },
+  {
+    "objectID": "session11-12/assignment.html#about-the-web-doc",
+    "href": "session11-12/assignment.html#about-the-web-doc",
+    "title": "Laboratory 06",
+    "section": "",
+    "text": "I’ve open-sourced all the labs, including questions and solutions, on my GitHub repository. Unlike PDFs, the web version can be updated at any time — even after it’s published. The flexibility of HTML may reflects the evolving way we produce knowledge in academia.",
+    "crumbs": [
+      "Labs",
+      "Session11 12",
+      "Laboratory 06"
+    ]
+  },
+  {
+    "objectID": "session11-12/assignment.html#q2-drop-item-to-improve-the-scale",
+    "href": "session11-12/assignment.html#q2-drop-item-to-improve-the-scale",
+    "title": "Laboratory 06",
+    "section": "Q2: Drop item to improve the scale",
+    "text": "Q2: Drop item to improve the scale\nAnswer\nI would like to drop Question 5, “People try to tell you that SPSS makes statistics easier to understand but it doesn’t”, for following reason:\n\nThe lowest inter-item correlation: see Table 1, which was generated from SPSS (sorry about that).\nThe lowest corrected item-total correlation: \\(0.2593\\)\nCronbach’s alpha increases when this item is deleted: from \\(\\alpha \\approx 0.6873\\) to \\(\\alpha \\approx 0.6888\\).2\n\n\n\n\nTable 1: Inter-Item Correlation Matrix\n\n\n\n\n\n\nQ1\nQ3\nQ4\nQ5\nQ6\nQ7\nQ8\n\n\n\n\nQ1\n1.000\n.217\n.223\n.150\n.176\n.207\n.227\n\n\nQ3\n.217\n1.000\n.319\n.196\n.271\n.284\n.320\n\n\nQ4\n.223\n.319\n1.000\n.187\n.240\n.341\n.371\n\n\nQ5\n.150\n.196\n.187\n1.000\n.153\n.123\n.164\n\n\nQ6\n.176\n.271\n.240\n.153\n1.000\n.232\n.264\n\n\nQ7\n.207\n.284\n.341\n.123\n.232\n1.000\n.349\n\n\nQ8\n.227\n.320\n.371\n.164\n.264\n.349\n1.000\n\n\n\n\n\n\nSolution\n\n# Calculate item-total correlations\ndef item_total_correlation(df):\n    total_score = df.sum(axis=1)\n    correlations = {}\n    for question in df.columns:\n        total_excluding_item = total_score - df[question]\n        correlation = df[question].corr(total_excluding_item)\n        correlations[question] = correlation\n    return correlations\n\n# Calculate the Cronbach's alpha after deleting each item\ndef cronbach_alpha_if_deleted(df):\n    alphas = {}\n    for question in df.columns:\n        df_without_item = df.drop(question, axis=1)\n        alpha = pg.cronbach_alpha(df_without_item)[0]\n        alphas[question] = alpha\n    return alphas\n\n# Calculate item-total correlation\nitem_correlations = item_total_correlation(fear_df_item2_excluded)\nprint(f'Item-total Correlations:')\nfor item in item_correlations: \n    print(item, 'to total', item_correlations[item])\nprint(f'======================')\nalphas_if_deleted = cronbach_alpha_if_deleted(fear_df_item2_excluded)\nprint(f'Cronbach\\'s Alpha if an item deleted:')\nfor item in alphas_if_deleted: \n    print(f'If {item} is deleted: ', alphas_if_deleted[item])\n\n# Present the result\nprint(f'======================')\nbest_item_to_delete_corr = min(item_correlations, key=item_correlations.get)\nprint(f'Item that has lowest item-total correlation coefficient: ', best_item_to_delete_corr)\nbest_item_to_delete_alpha = max(alphas_if_deleted, key=alphas_if_deleted.get)\nprint(f'Item that would improve Cronbach\\'s alpha the most if deleted: {best_item_to_delete_alpha}')\n\nItem-total Correlations:\nQ1 to total 0.32493144386994777\nQ3 to total 0.44890601739301994\nQ4 to total 0.4726060003637261\nQ5 to total 0.2592530237967403\nQ6 to total 0.36566649644104937\nQ7 to total 0.4267725068168662\nQ8 to total 0.47718130451492624\n======================\nCronbach's Alpha if an item deleted:\nIf Q1 is deleted:  0.672004161791457\nIf Q3 is deleted:  0.6384165554243204\nIf Q4 is deleted:  0.6315956086496489\nIf Q5 is deleted:  0.6887820469122623\nIf Q6 is deleted:  0.6611984636617284\nIf Q7 is deleted:  0.6445525162609321\nIf Q8 is deleted:  0.6308404954800185\n======================\nItem that has lowest item-total correlation coefficient:  Q5\nItem that would improve Cronbach's alpha the most if deleted: Q5",
+    "crumbs": [
+      "Labs",
+      "Session11 12",
+      "Laboratory 06"
+    ]
   }
 ]
