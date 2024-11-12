@@ -333,6 +333,34 @@
     ]
   },
   {
+    "objectID": "session01/lecture-notes.html",
+    "href": "session01/lecture-notes.html",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#summary",
+    "href": "session01/lecture-notes.html#summary",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#implementations",
+    "href": "session01/lecture-notes.html#implementations",
+    "title": "Session 01: Introduction",
+    "section": "Implementations",
+    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+  },
+  {
+    "objectID": "session01/lecture-notes.html#descriptive-statistics",
+    "href": "session01/lecture-notes.html#descriptive-statistics",
+    "title": "Session 01: Introduction",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
+  },
+  {
     "objectID": "session05-06/assignment.html",
     "href": "session05-06/assignment.html",
     "title": "Laboratory 03",
@@ -441,32 +469,100 @@
     ]
   },
   {
-    "objectID": "session01/lecture-notes.html",
-    "href": "session01/lecture-notes.html",
-    "title": "Session 01: Introduction",
+    "objectID": "session13-14/assignment.html",
+    "href": "session13-14/assignment.html",
+    "title": "Laboratory 07",
     "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+    "text": "Finally I noticed something on the requirement of all lab assignments I have ignored from the very beginning:\nI therefore turned echo for few code block to false. The long and annoying code must be interruptive while reading.",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#summary",
-    "href": "session01/lecture-notes.html#summary",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+    "objectID": "session13-14/assignment.html#context",
+    "href": "session13-14/assignment.html#context",
+    "title": "Laboratory 07",
+    "section": "Context",
+    "text": "Context\nIn Laboratory 5 we analyzed tea.sav, which contains cognitive function scores of participants who consumed varying amounts of tea every day. Now we hope to study whether there is a difference in cognitive function scores between individuals who do not drink tea and those who drink two cups of tea per day.",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#implementations",
-    "href": "session01/lecture-notes.html#implementations",
-    "title": "Session 01: Introduction",
-    "section": "Implementations",
-    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+    "objectID": "session13-14/assignment.html#objectives",
+    "href": "session13-14/assignment.html#objectives",
+    "title": "Laboratory 07",
+    "section": "Objectives",
+    "text": "Objectives\n\nDo you think the independent-samples \\(t\\)-test is a good choice? Why or why not?\nConduct an independent-samples \\(t\\)-test. Write a short paragraph that summarizes and interprets the results of the test.",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
   },
   {
-    "objectID": "session01/lecture-notes.html#descriptive-statistics",
-    "href": "session01/lecture-notes.html#descriptive-statistics",
-    "title": "Session 01: Introduction",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
+    "objectID": "session13-14/assignment.html#solutions",
+    "href": "session13-14/assignment.html#solutions",
+    "title": "Laboratory 07",
+    "section": "Solutions",
+    "text": "Solutions\n\nQ1: Why independent-samples \\(t\\)-test?\nGiven:\n\\(X\\): cups of tea\n\\(Y\\): cognitive function scores\nGroup 1: not drink tea per day (tea == 0)\nGroup 2: 2 cups of tea per day (tea == 2)\nIn addition, in the description of Lab 5:\n\nThe researcher recruits a large group of respondents and randomly assigns each one with a different number of cups of tea to drink every day.\n\nBased on the assumption of independent-samples t-test and the design of the experiment, It might be a good choice for the following reason:\n\nContinuous Variable: The dependent variable, cognitive function scores, is continuous, which is suitable for an independent-samples \\(t\\)-test.\nNormal Distribution: The scores appear to follow a normal distribution, and with a large sample size, the Central Limit Theorem supports the normality assumption.\nIndependence Between Groups: Each participant belongs to only one group (either tea = 0 or tea = 2), ensuring independence of scores between groups.\nRandom Sampling: Random sampling ensures that scores are independent within groups, fulfilling this assumption of the independent-samples \\(t\\)-test.\n\nThese points may confirm that the independent-samples \\(t\\)-test is an appropriate statistical method for this analysis.\n\n\n\n\n\n\n\n\nFigure 1: Histograms on cognitive function for 0-and 2-cup-tea drinker\n\n\n\n\n\n\n\nQ2: Interpret the independent-samples \\(t\\)-test result.\nThe Levene’s Test resulted \\(F \\approx 0.0797\\) and a high \\(p \\approx 0.7781\\), indicated that there is no significant difference in variances between the groups, however, due to the unequal sample size, we may stick on the Welch’s \\(t\\)-test here. The result was shown as follows:\nIn the independent-samples \\(t\\)-test comparing cognitive function scores between individuals who do not drink tea (Group 1) and those who drink two cups of tea per day (Group 2), the results indicated a \\(t(89.65) \\approx 1.375\\), \\(p \\approx 0.1725\\), two-tailed, which suggests that there is no statistically significant difference in cognitive function scores between the two groups at the conventional level of \\(\\alpha = 0.05\\). The 95% confidence interval for the difference in means are \\([-1.11, 6.09]\\). The effect size, measured by Cohen’s \\(d \\approx 0.23\\), reflecting a small effect. Additionally, the Bayes factor \\(BF_{10} \\approx 0.432\\) suggests that the evidence is more in favor of the null hypothesis than the alternative. Overall, these findings imply that drinking two cups of tea per day does not significantly impact cognitive function compared to non-tea drinkers within the context of this experiment.\n\n\nLevene's Test for Equality of Variances: \nF: 0.07969429918151855\nSig: 0.7780595985739489\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nT\ndof\nalternative\np-val\nCI95%\ncohen-d\nBF10\npower\n\n\n\n\nWelch’s \\(t\\)-test applied\n1.37534\n89.6494\ntwo-sided\n0.172453\n[-1.11 6.09]\n0.229847\n0.432\n0.26855\n\n\nIndependent-samples \\(t\\)-test\n1.34901\n168\ntwo-sided\n0.17915\n[-1.15 6.14]\n0.229847\n0.418\n0.26855",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
+  },
+  {
+    "objectID": "session13-14/assignment.html#context-1",
+    "href": "session13-14/assignment.html#context-1",
+    "title": "Laboratory 07",
+    "section": "Context",
+    "text": "Context\nIn Laboratory 1 we analyzed download.sav, which contains hygiene scores of concert goers over three days of a rock music festival. Now we hope to study the relationship between hygiene scores on days 2 and 3.",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
+  },
+  {
+    "objectID": "session13-14/assignment.html#objectives-1",
+    "href": "session13-14/assignment.html#objectives-1",
+    "title": "Laboratory 07",
+    "section": "Objectives",
+    "text": "Objectives\n\nIs the correlation coefficient an appropriate measure of the relationship between hygiene scores on days 2 and 3? Why or why not?\nConduct a paired-samples 𝑡 test. Write a short paragraph that summarizes and interprets the results of the test.",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
+  },
+  {
+    "objectID": "session13-14/assignment.html#solutions-1",
+    "href": "session13-14/assignment.html#solutions-1",
+    "title": "Laboratory 07",
+    "section": "Solutions",
+    "text": "Solutions\nYou may still remember the Ms. Laundry Pod the Outlier in the story of Lab 1. The bad news is she’s still living in the provided dataset. While the good news is this typo only happens on day_1 and since we are interested in the hygiene scores for day_2 and day_3 this time, we may not need to “say goodbye” as we did in Lab 1.\n良かったね、ランドリーポッドさん。1\nor should I say that?\nSince the assumption of paired sample \\(t\\)-test requires the same variable measured in the same units for the two situations, all participants without hygiene scores for either day_2 or day_3 should be dropped. The pingouin package will handle this automatically while doing the math, but not for plotting. The new \\(N = 123\\).\nさよなら、ランドリーポッドさん。\n\n\n\n\n\nindex\nticket_no\nday_1\nday_2\nday_3\n\n\n\n\ncount\n123\n123\n123\n123\n\n\nmean\n3647.98\n1.65146\n0.92748\n0.976504\n\n\nstd\n626.302\n0.643897\n0.666004\n0.710277\n\n\nmin\n2111\n0.43\n0.05\n0.02\n\n\n25%\n3274.5\n1.16\n0.425\n0.44\n\n\n50%\n3649\n1.55\n0.78\n0.76\n\n\n75%\n4183\n2.095\n1.215\n1.525\n\n\nmax\n4724\n3.38\n3.44\n3.41\n\n\n\n\n\n\nQ3: Is correlation coefficient appropriate\nRecall back to the assumption of Pearson’s \\(r\\), the correlation coefficient is partially an appropriate measure to study the relationship between hygiene scores on days 2 and 3:\n\nSample Size: As suggested in the description of Lab1, the researcher had tested all comers with an \\(N = 123\\), which is relatively large and similar to the population of interest.\nLinear Relationship: The scatter plot on the relationship between hygiene scores on Day 2 and Day 3 (see Figure 2) shows a clear linear trend, indicating a positive linear relationship. This suggests that using a correlation coefficient to measure this relationship is appropriate.\nScale of Measurement: The hygiene scores are continuous variables, making the correlation coefficient suitable.\nPaired Observations: The data represents paired measurements from the same individuals.\nOutliers: There seems not appear to be any significant outliers that would severely distort the correlation.\n\nHowever: As for the normality: While there is some skewness (as shown by Figure 3), the relationship appears reasonably linear and without extreme outliers that would severely distort the correlation.\n\n\n\n\n\n\n\n\nFigure 2: Scatter-plot on hygiene scores between day 2 vs day 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Histograms on Hygiene Scores of Day 2 vs Day 3\n\n\n\n\n\n\n\nQ4: Interpret the paired-sample \\(t\\)-test result\nA paired sample \\(t\\)-test was conducted to compare the hygiene scores between days 2 and 3 of the Download Music Festival. The test yielded \\(t(122) \\approx -0.9685\\), \\(p \\approx 0.3347\\). This indicates that there is no statistically significant difference in hygiene scores between the two days. The 95% CI for the mean difference is \\([-0.15, 0.05]\\), suggesting that any difference is likely small and not meaningful. The effect size, as measured by Cohen’s \\(d \\approx 0.0712\\), indicating a negligible effect. The Bayes Factor \\(BF_{10} \\approx 0.158\\) suggests that the data provide more support for the null hypothesis than the alternative. Overall, the results suggest no substantial change in hygiene scores from day 2 to day 3 2.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT\ndof\nalternative\np-val\nCI95%\ncohen-d\nBF10\npower\n\n\n\n\n-0.968472\n122\ntwo-sided\n0.334725\n[-0.15 0.05]\n0.071205\n0.158\n0.122744",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
+  },
+  {
+    "objectID": "session13-14/assignment.html#footnotes",
+    "href": "session13-14/assignment.html#footnotes",
+    "title": "Laboratory 07",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis sounds like an anime quote.↩︎\nThat’s definitely true for a music festival full of sweat, alcohol, Seishun (青春, that’s youth in Japanese) and romance! Only problem for these activities is they are too “リア充”, it’s a shame the bands there never appears to play Anisongs. There’s no random Togenashi Togeari (トゲナシトゲアリ) appear on the stage of summer music festival, at least you can’t count this happen in Greater China.  If you can’t figure out what I am saying, skip it TTATT.↩︎",
+    "crumbs": [
+      "Labs",
+      "Session13 14",
+      "Laboratory 07"
+    ]
   },
   {
     "objectID": "session07-08/assignment.html",
