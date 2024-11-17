@@ -463,7 +463,7 @@ Sig: 0.7780595985739489</code></pre>
 <p>You may still remember the <em>Ms.&nbsp;Laundry Pod the Outlier</em> in the story of Lab 1. The bad news is she’s still living in the provided dataset. While the good news is this typo only happens on <code>day_1</code> and since we are interested in the hygiene scores for <code>day_2</code> and <code>day_3</code> this time, we may not need to “say goodbye” as we did in Lab 1.</p>
 <p>良かったね、ランドリーポッドさん。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><strong>or should I say that?</strong></p>
-<p>Since the assumption of paired sample <span class="math inline">\(t\)</span>-test requires the same variable measured in the same units for the two situations, all participants without hygiene scores for either <code>day_2</code> or <code>day_3</code> should be dropped. The <code>pingouin</code> package will handle this automatically while doing the math, but not for plotting. The new <span class="math inline">\(N = 123\)</span>.</p>
+<p>Since the assumption of paired sample <span class="math inline">\(t\)</span>-test requires the same variable measured in the same units for the two situations, all participants without hygiene scores for either <code>day_2</code> or <code>day_3</code> should be dropped. The <code>pingouin</code> package will handle this automatically while doing the math, but not for plotting. Therefore, a new <code>DataFrame</code> was created with a new <span class="math inline">\(N = 123\)</span>.</p>
 <p>さよなら、ランドリーポッドさん。</p>
 <div id="cell-12" class="cell">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="117">
