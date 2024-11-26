@@ -1,0 +1,87 @@
+---
+title: "Laboratory 09"
+format:
+    html: 
+        code-line-numbers: true
+    pdf:
+        documentclass: article
+        margin-left: 1in
+        margin-right: 1in
+        margin-top: 1in
+        margin-bottom: 1in
+        toc: true
+        number-sections: true
+        code-line-numbers: true
+        header-includes:
+            - \usepackage{fvextra}
+            - \usepackage{xeCJK}
+            - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+---
+
+# Part A: Beer-goggles effect
+
+## Context
+
+Have you heard of the beer-goggles effect? It predicts that subjective perceptions of physical attractiveness become inaccurate after drinking alcohol. The logic is that alcohol consumption has been shown to reduce accuracy in symmetry judgement, and symmetric faces have been shown to be rated as more attractive. If the beer-goggles effect is driven by alcohol impairing symmetry judgement then you would expect a stronger effect for unattractive (asymmetric) faces (because alcohol will affect the perception of asymmetry) than attractive (symmetric) ones.
+
+An anthropologist was interested in the effects of facial attractiveness on the beer-goggles effect. She randomly selected 48 participants. Participants were randomly subdivided into three groups of 16: 
+
+1. a placebo group drank 500 ml of alcohol-free beer; 
+2. a low-dose group drank 500 ml of average strength beer (4% ABV); and 
+3. a high-dose group drank 500 ml of strong beer (7% ABV). 
+
+Within each group, half ($n =8$) rated the attractiveness of 50 photos of unattractive (asymmetric) faces on a scale from 0 (pass me a paper bag) to 10 (pass me their phone number) and the remaining half rated 50 photos of attractive (symmetric) faces. The outcome for each participant was their median rating across the 50 photos. The data are in `goggles.sav`.
+
+## Objectives
+
+1. Conduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial $\eta^2$.
+2. Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.
+3. Summarize your findings from the analyses.
+
+## Solutions (Q1-Q3 combined)
+
+The Levene's test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected).So, based on the results from the factorial ANOVA:
+
+There is a significant main effect of alcohol consumption on attractiveness ratings, $F(2, 42) = 6.041$, $p = 0.005$, with a ${\eta_p}^2 = 0.223$, indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.
+
+The main effect on facial attractiveness on attractiveness ratings is significant as well, $F(1, 42) = 15.583$, $p < 0.001$, with a $ {\eta_p}^2 = 0.271 $, showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.
+
+For the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, $F(2, 42) = 8.507$, $p < 0.001$, with a ${\eta_p}^2 = 0.288$. The *beer-goggles effect* appears more pronounced for unattractive faces: ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.
+
+Additionally, the line chart in @fig-line-chart-q3 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting the hypothesis that alcohol affects symmetry perception more in unattractive faces.
+
+![The interaction of type of face and alcohol consumption on the ratings](./q3-line-chart.png){#fig-line-chart-q3}
+
+Overall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings. 
+
+# Part B: Lighting conditions considered
+
+## Context 
+
+The researcher took a follow-up sample of 26 people and gave them doses of alcohol (0 pints, 2 pints, 4 pints and 6 pints of lager) over four different weeks. She asked them to rate a bunch of photos of unattractive faces in either dim or bright lighting. The outcome measure was the mean attractiveness rating (out of 100) of the faces and the predictors were the dose of alcohol and the lighting conditions. The data are in `goggles_lighting.sav`.
+
+## Objectives
+
+4. Conduct a repeated-measures ANOVA to study whether the dose of alcohol affects the mean attractiveness rating in bright lighting. Report the result of the test and the corresponding effect size.
+5. Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ be alcohol consumption, and include error bars showing the 95% confidence intervals of the means.
+6. Summarize your findings from the analyses.
+7. (Extra credit) Test whether alcohol dose and lighting interact to magnify the beer goggles effect. In SPSS, we can add another factor, lighting with two levels, to the repeated-measures ANOVA procedure in SPSS.
+
+## Solutions
+
+### Q4-Q6: Repeated-measures ANOVA
+
+The effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, $F(3, 75) = 25.198$, $p < 0.001$, ${\eta_p}^2 = 0.502$, indicating a large effect size, suggesting that the dose of alcohol explains about 50% of the variance in attractiveness ratings. The chart shown in @fig-line-chart-q5 also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the "beer-goggles effect" hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.
+
+![](./q5-line-chart.png){#fig-line-chart-q5}
+
+### Q7: The magnification of the beer goggles effect
+
+**Main Effect of Alcohol Dose:**: There is a significant main effect of alcohol dose on attractiveness ratings, $F(3, 75) = 104.385$, $p < 0.001$, with a large effect size (partial $\eta^2 = 0.807$). This indicates that different alcohol doses significantly change attractiveness ratings.
+
+**Main Effect of Lighting:**: A significant main effect of lighting on attractiveness ratings is observed, $F(1, 25) = 23.421$, $p < 0.001$, with a substantial effect size (partial $\eta^2 = 0.484$). This underscores the impact of lighting conditions on perceived attractiveness.
+
+**Interaction Effect between Dose and Lighting:**
+The interaction between alcohol dose and lighting is significant, $F(3, 75) = 22.218$, $p < 0.001$, with a considerable effect size (partial $\eta^2 = 0.471$). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.
+
+Overall, the significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.

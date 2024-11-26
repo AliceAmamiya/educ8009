@@ -366,7 +366,7 @@ Write a short paragraph to summarize your findings.</li>
 <p>Group 1: 0 hours daily exposure on phone microwave (the control group);</p>
 <p>Group 2-6: 1 hour - 5 hours of daily exposure on phone microwave.</p>
 <p>Examination of a histogram shown in <a href="#fig-histo-tumour-grid" class="quarto-xref">Figure&nbsp;1</a> of tumor sizes indicate that the scores were approximately normally distributed with no extreme outliers.</p>
-<div id="cell-fig-histo-tumour-grid" class="cell" data-execution_count="13">
+<div id="cell-fig-histo-tumour-grid" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div id="fig-histo-tumour-grid" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -419,14 +419,14 @@ Table&nbsp;1: Levene Test of Homogeneity of Variances
 </figure>
 </div>
 </div>
-<div class="cell" data-execution_count="5">
-<div id="tbl-anova" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="5">
+<div class="cell" data-execution_count="4">
+<div id="tbl-anova" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: One-way ANOVA
 </figcaption>
 <div aria-describedby="tbl-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="5">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="4">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 13%">
@@ -474,14 +474,14 @@ Table&nbsp;2: One-way ANOVA
 </figure>
 </div>
 </div>
-<div class="cell" data-execution_count="6">
-<div id="tbl-welch-f" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="6">
+<div class="cell" data-execution_count="5">
+<div id="tbl-welch-f" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="5">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-welch-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;3: Welch ANOVA
 </figcaption>
 <div aria-describedby="tbl-welch-f-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="6">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="5">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -537,14 +537,14 @@ Table&nbsp;3: Welch ANOVA
 <p>On the Levene’s test we have <span class="math inline">\(F(5,\ 114) = 10.2453\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>. There’s already a violation on the homogeneity of variances assumption. Should I do this?</p>
 <p><strong>Results:</strong></p>
 <p>All possible pairwise comparisons were made using the Tukey HSD (as listed in <a href="#tbl-hsd" class="quarto-xref">Table&nbsp;4</a>). On <span class="math inline">\(\alpha = 0.05\)</span>, significant differences were found between most pairs of groups. The tumor sizes for 0 hours differ significantly from all other exposure groups except the group of 1 hour (<span class="math inline">\(p = 0.0790\)</span>). While tumor sizes for 1 hour differ significantly from 2 hours and higher. No significant difference between 4 and 5 hours (<span class="math inline">\(p = 0.9551\)</span>). Overall, tumor size increases with more exposure.</p>
-<div class="cell" data-execution_count="7">
-<div id="tbl-hsd" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="7">
+<div class="cell" data-execution_count="6">
+<div id="tbl-hsd" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="6">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-hsd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;4: Pairwise comparisons with Tukey HSD
 </figcaption>
 <div aria-describedby="tbl-hsd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="7">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="6">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 5%">
@@ -749,14 +749,14 @@ Table&nbsp;4: Pairwise comparisons with Tukey HSD
 <p>Given the equal variance assumption is violated and the Welch ANOVA was tested instead of the classic one-way ANOVA in the former section, the Games-Howell test seems to be much more optimal than HSD as it is much more robust to the heterogeneity of variances.</p>
 <p><strong>Results:</strong></p>
 <p>Games–Howell test revealed significant differences between all groups (<span class="math inline">\(p &lt; 0.001\)</span>, as shown in <a href="#tbl-gameshowell" class="quarto-xref">Table&nbsp;5</a>) for all groups except between 4 and 5 hours (group 5 and 6).</p>
-<div class="cell" data-execution_count="8">
-<div id="tbl-gameshowell" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="8">
+<div class="cell" data-execution_count="7">
+<div id="tbl-gameshowell" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="7">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gameshowell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;5: Pairwise comparisons with Games-Howell
 </figcaption>
 <div aria-describedby="tbl-gameshowell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="8">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="7">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 5%">
@@ -977,7 +977,7 @@ Table&nbsp;5: Pairwise comparisons with Games-Howell
 <section id="q4-the-box-plot" class="level2">
 <h2 class="anchored" data-anchor-id="q4-the-box-plot">Q4: The box-plot</h2>
 <p>The boxplot is shown as <a href="#fig-boxplot" class="quarto-xref">Figure&nbsp;2</a>, which visually supports the findings above, showing a significant and linear increase in tumor size with more mobile phone usage, while also highlighting the variance issue across groups. The boxplot shows a increase in median tumor size with more mobile phone usage, which aligns with the statistical analysis. Besides, the spread of data increases with more exposure, and there are a few outliers, particularly in the 5-hour group. However, The increase in tumor size appears to plateau between 4 and 5 hours, which reflects the Tukey HSD results on showing no significant difference between these groups.</p>
-<div id="cell-fig-boxplot" class="cell" data-execution_count="9">
+<div id="cell-fig-boxplot" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div id="fig-boxplot" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -995,7 +995,7 @@ Figure&nbsp;2: Boxplots for tumour size by groups of mobile phone usage
 <section id="q5-assumptions-of-anova" class="level2">
 <h2 class="anchored" data-anchor-id="q5-assumptions-of-anova">Q5: Assumptions of ANOVA</h2>
 <p>The significant Levene’s test (<span class="math inline">\(p &lt; 0.001\)</span>) and the error bar of 95% CI (see <a href="#fig-errorbar" class="quarto-xref">Figure&nbsp;3</a>) reveals there was little variance across samples, indicating a violation of the assumption on equal variances. So both the standard one-way ANOVA and Tukey HSD test, which assumes equal variances, might not be the most appropriate choice. Although the large sample sizes in each group (<span class="math inline">\(n = 20\)</span>) might help for this issue. The results should be interpreted with caution, and alternative methods (in this lab work the Welch ANOVA and Games-Howell test was selected) could be considered for more robustness.</p>
-<div id="cell-fig-errorbar" class="cell">
+<div id="cell-fig-errorbar" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div id="fig-errorbar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1026,7 +1026,7 @@ Figure&nbsp;3: Error bars: 95% CI
 <img src="./treatment.jpg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-treatment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: An attempt. Shot on Thursday.
+Figure&nbsp;4: An attempt. Shot on Thursday by Ms.&nbsp;Xinyue Yao.
 </figcaption>
 </figure>
 </div>

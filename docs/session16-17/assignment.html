@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture Notes / Assignments on EDUC8009 – educ8009-assignments</title>
+<title>Laboratory 09 – educ8009-assignments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,11 +67,40 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked fullcontent">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -80,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session16-17/assignment.html">Session16 17</a></li><li class="breadcrumb-item"><a href="../session16-17/assignment.html">Laboratory 09</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -92,14 +121,14 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">educ8009-assignments</a> 
+      <a href="../">educ8009-assignments</a> 
     </div>
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
@@ -123,13 +152,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session03/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session03/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 01</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session03/assignment-r.html" class="sidebar-item-text sidebar-link">
+  <a href="../session03/assignment-r.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 01 (feat. R)</span></a>
   </div>
 </li>
@@ -146,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session04/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session04/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 02</span></a>
   </div>
 </li>
@@ -163,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session05-06/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session05-06/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 03</span></a>
   </div>
 </li>
@@ -180,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session07-08/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session07-08/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 04</span></a>
   </div>
 </li>
@@ -197,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session09-10/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session09-10/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 05</span></a>
   </div>
 </li>
@@ -214,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session11-12/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session11-12/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 06</span></a>
   </div>
 </li>
@@ -231,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session13-14/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session13-14/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 07</span></a>
   </div>
 </li>
@@ -248,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session15-16/assignment.html" class="sidebar-item-text sidebar-link">
+  <a href="../session15-16/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 08</span></a>
   </div>
 </li>
@@ -256,17 +285,17 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
  <span class="menu-text">Session16 17</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./session16-17/assignment.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Laboratory 08</span></a>
+  <a href="../session16-17/assignment.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Laboratory 09</span></a>
   </div>
 </li>
       </ul>
@@ -278,14 +307,36 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-a-beer-goggles-effect" id="toc-part-a-beer-goggles-effect" class="nav-link active" data-scroll-target="#part-a-beer-goggles-effect">Part A: Beer-goggles effect</a>
+  <ul class="collapse">
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#solutions-q1-q3-combined" id="toc-solutions-q1-q3-combined" class="nav-link" data-scroll-target="#solutions-q1-q3-combined">Solutions (Q1-Q3 combined)</a></li>
+  </ul></li>
+  <li><a href="#part-b-lighting-conditions-considered" id="toc-part-b-lighting-conditions-considered" class="nav-link" data-scroll-target="#part-b-lighting-conditions-considered">Part B: Lighting conditions considered</a>
+  <ul class="collapse">
+  <li><a href="#context-1" id="toc-context-1" class="nav-link" data-scroll-target="#context-1">Context</a></li>
+  <li><a href="#objectives-1" id="toc-objectives-1" class="nav-link" data-scroll-target="#objectives-1">Objectives</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <ul class="collapse">
+  <li><a href="#q4-q6-repeated-measures-anova" id="toc-q4-q6-repeated-measures-anova" class="nav-link" data-scroll-target="#q4-q6-repeated-measures-anova">Q4-Q6: Repeated-measures ANOVA</a></li>
+  <li><a href="#q7-the-magnification-of-the-beer-goggles-effect" id="toc-q7-the-magnification-of-the-beer-goggles-effect" class="nav-link" data-scroll-target="#q7-the-magnification-of-the-beer-goggles-effect">Q7: The magnification of the beer goggles effect</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session16-17/assignment.html">Session16 17</a></li><li class="breadcrumb-item"><a href="../session16-17/assignment.html">Laboratory 09</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><p>Lecture Notes / Assignments<br>
-on EDUC8009</p></h1>
+<h1 class="title">Laboratory 09</h1>
 </div>
 
 
@@ -302,19 +353,89 @@ on EDUC8009</p></h1>
 </header>
 
 
-<p>ようこそ!</p>
-<p>This is my personal repository for datasets, lecture notes &amp; assignment submissions on EDUC8009 - DESCRIPTIVE AND INFERENTIAL STATISTICS.</p>
-<p>As this course is tailored for SPSS users, here’s the problem: I can only get my hands on the legal copy in our computer lab, where the machines are about as speedy as <em>a sloth on a lazy day</em>, sporting a single-channel 8GB of RAM. Apple may claim that 8 is enough (even greater than 16) for most users, and we all know that’s just some optimistic marketing.</p>
-<p>So, I decided to take a detour and embrace the open-source revolution with sweety sidekick: <code>python=3.10</code> armed with the duo of Doolin and Dal…, sorry, <code>pandas</code> and <code>scipy.stats</code>. An <code>R=4.3.3</code> implementation will also be included in the solution of my assignment as well.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="iris_mtcars.webp" class="img-fluid figure-img"></p>
-<figcaption>It all starts from <code>iris</code> and <code>mtcars</code>.</figcaption>
+<section id="part-a-beer-goggles-effect" class="level1">
+<h1>Part A: Beer-goggles effect</h1>
+<section id="context" class="level2">
+<h2 class="anchored" data-anchor-id="context">Context</h2>
+<p>Have you heard of the beer-goggles effect? It predicts that subjective perceptions of physical attractiveness become inaccurate after drinking alcohol. The logic is that alcohol consumption has been shown to reduce accuracy in symmetry judgement, and symmetric faces have been shown to be rated as more attractive. If the beer-goggles effect is driven by alcohol impairing symmetry judgement then you would expect a stronger effect for unattractive (asymmetric) faces (because alcohol will affect the perception of asymmetry) than attractive (symmetric) ones.</p>
+<p>An anthropologist was interested in the effects of facial attractiveness on the beer-goggles effect. She randomly selected 48 participants. Participants were randomly subdivided into three groups of 16:</p>
+<ol type="1">
+<li>a placebo group drank 500 ml of alcohol-free beer;</li>
+<li>a low-dose group drank 500 ml of average strength beer (4% ABV); and</li>
+<li>a high-dose group drank 500 ml of strong beer (7% ABV).</li>
+</ol>
+<p>Within each group, half (<span class="math inline">\(n =8\)</span>) rated the attractiveness of 50 photos of unattractive (asymmetric) faces on a scale from 0 (pass me a paper bag) to 10 (pass me their phone number) and the remaining half rated 50 photos of attractive (symmetric) faces. The outcome for each participant was their median rating across the 50 photos. The data are in <code>goggles.sav</code>.</p>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<ol type="1">
+<li>Conduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial <span class="math inline">\(\eta^2\)</span>.</li>
+<li>Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.</li>
+<li>Summarize your findings from the analyses.</li>
+</ol>
+</section>
+<section id="solutions-q1-q3-combined" class="level2">
+<h2 class="anchored" data-anchor-id="solutions-q1-q3-combined">Solutions (Q1-Q3 combined)</h2>
+<p>The Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected).So, based on the results from the factorial ANOVA:</p>
+<p>There is a significant main effect of alcohol consumption on attractiveness ratings, <span class="math inline">\(F(2, 42) = 6.041\)</span>, <span class="math inline">\(p = 0.005\)</span>, with a <span class="math inline">\({\eta_p}^2 = 0.223\)</span>, indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.</p>
+<p>The main effect on facial attractiveness on attractiveness ratings is significant as well, <span class="math inline">\(F(1, 42) = 15.583\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a $ {_p}^2 = 0.271 $, showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.</p>
+<p>For the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, <span class="math inline">\(F(2, 42) = 8.507\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a <span class="math inline">\({\eta_p}^2 = 0.288\)</span>. The <em>beer-goggles effect</em> appears more pronounced for unattractive faces: ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.</p>
+<p>Additionally, the line chart in <a href="#fig-line-chart-q3" class="quarto-xref">Figure&nbsp;1</a> illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting the hypothesis that alcohol affects symmetry perception more in unattractive faces.</p>
+<div id="fig-line-chart-q3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-line-chart-q3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./q3-line-chart.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-chart-q3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The interaction of type of face and alcohol consumption on the ratings
+</figcaption>
 </figure>
 </div>
-<p>Riko</p>
+<p>Overall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.</p>
+</section>
+</section>
+<section id="part-b-lighting-conditions-considered" class="level1">
+<h1>Part B: Lighting conditions considered</h1>
+<section id="context-1" class="level2">
+<h2 class="anchored" data-anchor-id="context-1">Context</h2>
+<p>The researcher took a follow-up sample of 26 people and gave them doses of alcohol (0 pints, 2 pints, 4 pints and 6 pints of lager) over four different weeks. She asked them to rate a bunch of photos of unattractive faces in either dim or bright lighting. The outcome measure was the mean attractiveness rating (out of 100) of the faces and the predictors were the dose of alcohol and the lighting conditions. The data are in <code>goggles_lighting.sav</code>.</p>
+</section>
+<section id="objectives-1" class="level2">
+<h2 class="anchored" data-anchor-id="objectives-1">Objectives</h2>
+<ol start="4" type="1">
+<li>Conduct a repeated-measures ANOVA to study whether the dose of alcohol affects the mean attractiveness rating in bright lighting. Report the result of the test and the corresponding effect size.</li>
+<li>Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ be alcohol consumption, and include error bars showing the 95% confidence intervals of the means.</li>
+<li>Summarize your findings from the analyses.</li>
+<li>(Extra credit) Test whether alcohol dose and lighting interact to magnify the beer goggles effect. In SPSS, we can add another factor, lighting with two levels, to the repeated-measures ANOVA procedure in SPSS.</li>
+</ol>
+</section>
+<section id="solutions" class="level2">
+<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
+<section id="q4-q6-repeated-measures-anova" class="level3">
+<h3 class="anchored" data-anchor-id="q4-q6-repeated-measures-anova">Q4-Q6: Repeated-measures ANOVA</h3>
+<p>The effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, <span class="math inline">\(F(3, 75) = 25.198\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, <span class="math inline">\({\eta_p}^2 = 0.502\)</span>, indicating a large effect size, suggesting that the dose of alcohol explains about 50% of the variance in attractiveness ratings. The chart shown in <a href="#fig-line-chart-q5" class="quarto-xref">Figure&nbsp;2</a> also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the “beer-goggles effect” hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.</p>
+<div id="fig-line-chart-q5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-line-chart-q5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./q5-line-chart.png" id="fig-line-chart-q5" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-line-chart-q5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="q7-the-magnification-of-the-beer-goggles-effect" class="level3">
+<h3 class="anchored" data-anchor-id="q7-the-magnification-of-the-beer-goggles-effect">Q7: The magnification of the beer goggles effect</h3>
+<p>The significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.</p>
+<p><strong>Main Effect of Alcohol Dose:</strong>: There is a significant main effect of alcohol dose on attractiveness ratings, <span class="math inline">\(F(3, 75) = 104.385\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a large effect size (partial <span class="math inline">\(\eta^2 = 0.807\)</span>). This indicates that different alcohol doses significantly change attractiveness ratings.</p>
+<p><strong>Main Effect of Lighting:</strong>: A significant main effect of lighting on attractiveness ratings is observed, <span class="math inline">\(F(1, 25) = 23.421\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a substantial effect size (partial <span class="math inline">\(\eta^2 = 0.484\)</span>). This underscores the impact of lighting conditions on perceived attractiveness.</p>
+<p><strong>Interaction Effect between Dose and Lighting:</strong> The interaction between alcohol dose and lighting is significant, <span class="math inline">\(F(3, 75) = 22.218\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a considerable effect size (partial <span class="math inline">\(\eta^2 = 0.471\)</span>). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
