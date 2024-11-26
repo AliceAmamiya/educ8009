@@ -274,147 +274,122 @@
     ]
   },
   {
-    "objectID": "session07-08/assignment.html",
-    "href": "session07-08/assignment.html",
-    "title": "Laboratory 04",
+    "objectID": "session02/lecture-notes.html",
+    "href": "session02/lecture-notes.html",
+    "title": "Section 02: Concepts",
     "section": "",
-    "text": "Again, thanks for your feedback on last assignment. Here’s my response:\n\n\nAbsolutely! The awesome scipy library does so much more than a TI-84. The scipy.stats.t module covers all aspects of the \\(t\\)-test workflow, and the interval method provides the confidence interval in no time:\nstats.t.interval(confidence=0.95, \n                 df=119, \n                 loc=injury_mean, \n                 scale=injury_sem)\nWhich outputs:\n(2.53106725077079, 3.252266082562543)\nHumans make mistakes sometimes, so calling the function not only saves time but also helps avoid the chance of errors. As you explained the equations in the lecture and demonstrated the calculations, I think it’s best to follow your approach for the math as well.\nI do this only when I’m doing assignments and just for fun. (In most cases) I never trust myself and my knowledge so I never do these dangerous thing to the real world data. :P\n\n\n\nGot it! This part was refined and updated on the web doc.\n\n\n\n{\\huge NOOOOOOOOOOOO!}\nI believe my fellow classmates and I suffered enough from the traps in the quizzes.\n\n\n\nMy lord jumped on my desk for a warm greeting:\n\n\n\nThe Lord",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
+    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)"
   },
   {
-    "objectID": "session07-08/assignment.html#on-4.4-q3-function-for-calculating-the-ci",
-    "href": "session07-08/assignment.html#on-4.4-q3-function-for-calculating-the-ci",
-    "title": "Laboratory 04",
+    "objectID": "session02/lecture-notes.html#summary",
+    "href": "session02/lecture-notes.html#summary",
+    "title": "Section 02: Concepts",
     "section": "",
-    "text": "Absolutely! The awesome scipy library does so much more than a TI-84. The scipy.stats.t module covers all aspects of the \\(t\\)-test workflow, and the interval method provides the confidence interval in no time:\nstats.t.interval(confidence=0.95, \n                 df=119, \n                 loc=injury_mean, \n                 scale=injury_sem)\nWhich outputs:\n(2.53106725077079, 3.252266082562543)\nHumans make mistakes sometimes, so calling the function not only saves time but also helps avoid the chance of errors. As you explained the equations in the lecture and demonstrated the calculations, I think it’s best to follow your approach for the math as well.\nI do this only when I’m doing assignments and just for fun. (In most cases) I never trust myself and my knowledge so I never do these dangerous thing to the real world data. :P",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
+    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)"
   },
   {
-    "objectID": "session07-08/assignment.html#on-4.5-q4-p-value-in-my-report",
-    "href": "session07-08/assignment.html#on-4.5-q4-p-value-in-my-report",
-    "title": "Laboratory 04",
+    "objectID": "session02/lecture-notes.html#research-questions",
+    "href": "session02/lecture-notes.html#research-questions",
+    "title": "Section 02: Concepts",
+    "section": "Research Questions",
+    "text": "Research Questions\n\nVariables and causal relationships\n\nthe X-axis and Y-axis - assuming \\(X\\) will affect \\(Y\\)\n\n\\(X\\) =&gt; Independent var\n\n\\(Y\\) =&gt; Dependent var\n\n\nare \\(X\\) and \\(Y\\) correlated or associated?\ndoes \\(X\\) predict \\(Y\\)?\ndoes \\(X\\) cause/determine/influence \\(Y\\)? - strong evidence needed\n\n\nConfounding\n\nassociated with the \\(X\\) that cause or influence \\(Y\\)\nmay cause false association\ne.g. ice cream sales vs drowning incidents\n\naffected by confounder - temperature - another variable makes \\(X\\) and \\(Y\\) correlated.\n\ne.g. age vs wages\n\nage - associated with experience + wages\n\nControls:\n\nExperimental\nStatistical\n\n\n\n\nMediation\n\ne.g. wages - male vs female\n\nfrom average wages: yes they are correlated.\nbut: does it imply discrimination?\nlook deeper: control of occupations\n\nSimpson’s paradox\n\ngender –occupation–&gt; wages\n\n\n\n\n\nAddressing causal inferences\n\nTheory\nStatistically related\nTime: \\(X\\) happens earlier\nThe causal inferences: proof no rival explanations for the changes of \\(Y\\).\n\n(Brannon et al., 2017; Cozby & Bates, 2017)"
+  },
+  {
+    "objectID": "session02/lecture-notes.html#research-design",
+    "href": "session02/lecture-notes.html#research-design",
+    "title": "Section 02: Concepts",
+    "section": "Research Design",
+    "text": "Research Design\n\nExperiment\n\ngrouping and control\ncontrol group vs treatment group\nrandomized, standardized, clear-defined dependent variable\nRCT - Randomized controlled trial: cost, ethic, external validity\n\n\n\nNon-experiment\n\ncorrelational research: e.g. questionnaires\ncost: generally **doesn’t lead to causality”\n\ntemporal precedence + confounding\ncorrelations \\(\\neq\\) causation\n\n\n\n\nQuasi-experiment\n\nuse pre-existing groups - Nonequivalent control group\n\ne.g. free lunch in school 1 but not in school 2\nconfounding my exists\n\nuse data before and after the intervention - One-group pretest-post-test design\n\ne.g. maturation\n\n\n\n\nComparison of designs\n\ninternal validity vs external validity\ntrade-offs"
+  },
+  {
+    "objectID": "session02/lecture-notes.html#populations-and-samples",
+    "href": "session02/lecture-notes.html#populations-and-samples",
+    "title": "Section 02: Concepts",
+    "section": "Populations and Samples",
+    "text": "Populations and Samples"
+  },
+  {
+    "objectID": "session16-17/assignment.html",
+    "href": "session16-17/assignment.html",
+    "title": "Laboratory 09",
     "section": "",
-    "text": "Got it! This part was refined and updated on the web doc.",
+    "text": "Have you heard of the beer-goggles effect? It predicts that subjective perceptions of physical attractiveness become inaccurate after drinking alcohol. The logic is that alcohol consumption has been shown to reduce accuracy in symmetry judgement, and symmetric faces have been shown to be rated as more attractive. If the beer-goggles effect is driven by alcohol impairing symmetry judgement then you would expect a stronger effect for unattractive (asymmetric) faces (because alcohol will affect the perception of asymmetry) than attractive (symmetric) ones.\nAn anthropologist was interested in the effects of facial attractiveness on the beer-goggles effect. She randomly selected 48 participants. Participants were randomly subdivided into three groups of 16:\n\na placebo group drank 500 ml of alcohol-free beer;\na low-dose group drank 500 ml of average strength beer (4% ABV); and\na high-dose group drank 500 ml of strong beer (7% ABV).\n\nWithin each group, half (\\(n =8\\)) rated the attractiveness of 50 photos of unattractive (asymmetric) faces on a scale from 0 (pass me a paper bag) to 10 (pass me their phone number) and the remaining half rated 50 photos of attractive (symmetric) faces. The outcome for each participant was their median rating across the 50 photos. The data are in goggles.sav.\n\n\n\n\nConduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial \\(\\eta_p^2\\).\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\nSummarize your findings from the analyses.\n\n\n\n\n\n\nJust mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:\nA \\(3 \\times 2\\) factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating \\(Y\\) could be predicted from level of alcohol consumption (\\(A_1 =\\) Placebo, \\(A_2 =\\) Low dose, \\(A_3 =\\) High dose), facial attractiveness (\\(B_1 =\\) Unattractive, \\(B_2 =\\) Attractive), and the interaction between doses of alcohol and the facial attractiveness.\n\n\n\nTable 1: \\(3 \\times 2\\) factorial ANOVA (RANKING by ALCOHOL and FACETYPE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nALCOHOL\n16.542\n2\n8.271\n6.041\n.005\n.223\n\n\nFACETYPE\n21.333\n1\n21.333\n15.583\n&lt;.001\n.271\n\n\n\\(A \\times F\\)\n23.292\n2\n11.646\n8.507\n&lt;.001\n.288\n\n\nError\n57.500\n42\n1.369\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F_A(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\(\\eta_p^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F_B(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.271\\), showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F_{A \\times B}(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.288\\). The beer-goggles effect is more pronounced for unattractive faces (see Figure 1): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
-    "objectID": "session07-08/assignment.html#on-4.2.2-q1b-trap-in-the-future",
-    "href": "session07-08/assignment.html#on-4.2.2-q1b-trap-in-the-future",
-    "title": "Laboratory 04",
+    "objectID": "session16-17/assignment.html#context",
+    "href": "session16-17/assignment.html#context",
+    "title": "Laboratory 09",
     "section": "",
-    "text": "{\\huge NOOOOOOOOOOOO!}\nI believe my fellow classmates and I suffered enough from the traps in the quizzes.",
+    "text": "Have you heard of the beer-goggles effect? It predicts that subjective perceptions of physical attractiveness become inaccurate after drinking alcohol. The logic is that alcohol consumption has been shown to reduce accuracy in symmetry judgement, and symmetric faces have been shown to be rated as more attractive. If the beer-goggles effect is driven by alcohol impairing symmetry judgement then you would expect a stronger effect for unattractive (asymmetric) faces (because alcohol will affect the perception of asymmetry) than attractive (symmetric) ones.\nAn anthropologist was interested in the effects of facial attractiveness on the beer-goggles effect. She randomly selected 48 participants. Participants were randomly subdivided into three groups of 16:\n\na placebo group drank 500 ml of alcohol-free beer;\na low-dose group drank 500 ml of average strength beer (4% ABV); and\na high-dose group drank 500 ml of strong beer (7% ABV).\n\nWithin each group, half (\\(n =8\\)) rated the attractiveness of 50 photos of unattractive (asymmetric) faces on a scale from 0 (pass me a paper bag) to 10 (pass me their phone number) and the remaining half rated 50 photos of attractive (symmetric) faces. The outcome for each participant was their median rating across the 50 photos. The data are in goggles.sav.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
-    "objectID": "session07-08/assignment.html#while-i-was-writing-this-part",
-    "href": "session07-08/assignment.html#while-i-was-writing-this-part",
-    "title": "Laboratory 04",
+    "objectID": "session16-17/assignment.html#objectives",
+    "href": "session16-17/assignment.html#objectives",
+    "title": "Laboratory 09",
     "section": "",
-    "text": "My lord jumped on my desk for a warm greeting:\n\n\n\nThe Lord",
+    "text": "Conduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial \\(\\eta_p^2\\).\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\nSummarize your findings from the analyses.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
-    "objectID": "session07-08/assignment.html#a-quick-dataset-check-up",
-    "href": "session07-08/assignment.html#a-quick-dataset-check-up",
-    "title": "Laboratory 04",
-    "section": "A quick dataset check-up",
-    "text": "A quick dataset check-up\n\nimport pandas as pd\ncatterplot_df = pd.read_spss('./datasets/catterplot.sav')\n\nprint(f'Description on the dataset: \\n',catterplot_df.describe())\n\nDescription on the dataset: \n        dinner_time       meow\ncount    78.000000  78.000000\nmean      9.865385   8.217949\nstd       6.068159   3.747371\nmin       1.000000   2.000000\n25%       5.000000   5.000000\n50%       9.000000   8.000000\n75%      14.000000  12.000000\nmax      24.000000  15.000000",
+    "objectID": "session16-17/assignment.html#solutions-q1-q3-combined",
+    "href": "session16-17/assignment.html#solutions-q1-q3-combined",
+    "title": "Laboratory 09",
+    "section": "",
+    "text": "Just mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:\nA \\(3 \\times 2\\) factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating \\(Y\\) could be predicted from level of alcohol consumption (\\(A_1 =\\) Placebo, \\(A_2 =\\) Low dose, \\(A_3 =\\) High dose), facial attractiveness (\\(B_1 =\\) Unattractive, \\(B_2 =\\) Attractive), and the interaction between doses of alcohol and the facial attractiveness.\n\n\n\nTable 1: \\(3 \\times 2\\) factorial ANOVA (RANKING by ALCOHOL and FACETYPE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScore\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nALCOHOL\n16.542\n2\n8.271\n6.041\n.005\n.223\n\n\nFACETYPE\n21.333\n1\n21.333\n15.583\n&lt;.001\n.271\n\n\n\\(A \\times F\\)\n23.292\n2\n11.646\n8.507\n&lt;.001\n.288\n\n\nError\n57.500\n42\n1.369\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F_A(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\(\\eta_p^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F_B(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.271\\), showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F_{A \\times B}(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.288\\). The beer-goggles effect is more pronounced for unattractive faces (see Figure 1): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
-    "objectID": "session07-08/assignment.html#q1-data-distribution",
-    "href": "session07-08/assignment.html#q1-data-distribution",
-    "title": "Laboratory 04",
-    "section": "Q1: Data distribution",
-    "text": "Q1: Data distribution\nAnswer\n\n\n\nTable 1: Mean, mode and median\n\n\n\n\n\nMeasurement\nValue\n\n\n\n\nMean\n9.87\n\n\nMedian\n9.00\n\n\nMode\n5.00\n\n\n\n\n\n\nTable 1 lists measurements on the central tendency of this data, the mean (9.87) is slightly higher than the median (9.00) but much higher than the mode (5.00). The distribution is right-skewed as shown by Figure 1, and a longer tail is found on the right side. There is a clear peak around 5, which indicates most cats in this sample were fed with in 5 hours.\nSolution\nTo describe the distribution of the dataset, I will again use the mean, median, and mode to assess central tendency, along with a histogram to visualize the distribution.\n\ndef centrality(df): \n    mean = df.mean()\n    median = df.median()\n    mode = df.mode()[0]\n    return mean, median, mode\n\ncats_mean, cats_median, cats_mode = centrality(catterplot_df['dinner_time'])\nprint(f'Central Tendency: \\n'\n      f'Mean: {cats_mean}, \\n'\n      f'Median: {cats_median} \\n' \n      f'Mode: {cats_mode}')\n\nCentral Tendency: \nMean: 9.865384615384615, \nMedian: 9.0 \nMode: 5.0\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Create a histogram to reveal the distribution. \ndinner_time_hist = sns.histplot(catterplot_df, x='dinner_time', kde=True, bins=23)\n# Set titles and labels for x- and y- axis\ndinner_time_hist.set_title('Distribution of the time since last feeding a cat')\ndinner_time_hist.set_xlabel('last_feed: Time elapsed since the last feed')\ndinner_time_hist.set_ylabel('Frequency')\n# Display the plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Distribution of Dinner Time",
+    "objectID": "session16-17/assignment.html#context-1",
+    "href": "session16-17/assignment.html#context-1",
+    "title": "Laboratory 09",
+    "section": "Context",
+    "text": "Context\nThe researcher took a follow-up sample of 26 people and gave them doses of alcohol (0 pints, 2 pints, 4 pints and 6 pints of lager) over four different weeks. She asked them to rate a bunch of photos of unattractive faces in either dim or bright lighting. The outcome measure was the mean attractiveness rating (out of 100) of the faces and the predictors were the dose of alcohol and the lighting conditions. The data are in goggles_lighting.sav.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
-    "objectID": "session07-08/assignment.html#q2-the-scatterplot",
-    "href": "session07-08/assignment.html#q2-the-scatterplot",
-    "title": "Laboratory 04",
-    "section": "Q2: The (s)catterplot",
-    "text": "Q2: The (s)catterplot\nAnswer\nThe scatter plot in Figure 2 shows that the data, at least, forms a perfect shape of a cat! However, the scattered points and the gentle slope of the LOESS curve suggest that there is not a strong linear relationship between the time since the last feeding (dinner_time) and the loudness of purring (meow). The scatter plot also indicates a weak correlation between these two variables.\nSolution\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ncatterplot = sns.regplot(catterplot_df, x='dinner_time', y='meow', fit_reg=True, lowess=True)\ncatterplot.set_title('The (S)catterplot')\ncatterplot.set_xlabel('last_feed: Time elapsed since the last feed')\ncatterplot.set_ylabel('meow: Loudness of Purring')\nplt.show()\n\n\n\n\n\n\n\nFigure 2: The (s)catterplot on meow againt dinnertime.",
+    "objectID": "session16-17/assignment.html#objectives-1",
+    "href": "session16-17/assignment.html#objectives-1",
+    "title": "Laboratory 09",
+    "section": "Objectives",
+    "text": "Objectives\n\nConduct a repeated-measures ANOVA to study whether the dose of alcohol affects the mean attractiveness rating in bright lighting. Report the result of the test and the corresponding effect size.\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ be alcohol consumption, and include error bars showing the 95% confidence intervals of the means.\nSummarize your findings from the analyses.\n(Extra credit) Test whether alcohol dose and lighting interact to magnify the beer goggles effect. In SPSS, we can add another factor, lighting with two levels, to the repeated-measures ANOVA procedure in SPSS.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
-    "objectID": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-v.-meow",
-    "href": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-v.-meow",
-    "title": "Laboratory 04",
-    "section": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow",
-    "text": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow\nAnswer\n\\(r \\approx -6.12 \\times 10^{-3}\\)\nThe pearson’s correlation coefficient \\(r \\approx -6.12 \\times 10^{-3}\\) is very close to zero, suggesting there may be no linear relationship between dinner_time and meow in this dataset. However, it’s important to note that the data lacks further details, particularly regarding the sampling procedure. Specifically, we don’t know if the data represents multiple observations of a single cat (in which case it would be a single case) or if it was collected from several different cats (in which case the sample size and whether the sample is similar to population of interest needs to be justified). Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.1\nIn conclusion, the pearson’s \\(r\\) suggests there is no strong linear relationship between the time since last feed and the volume of cats’ purring. That’s all I can say.\nSolution\nTo calculate the pearson’s \\(r\\), I use the formula2:\n\\[r = \\frac{\\sum{Z_XZ_Y}}{N-1}\\]\n\nimport scipy.stats as stats\n\npearson_r_results_cats = stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)\n\npearson_r_cats = pearson_r_results_cats[0]\np_cats = pearson_r_results_cats[1]\n\nprint(f'Correlation Coefficient\\n'\n      f'Pearson-r: {pearson_r_cats}\\n'\n      f'p-value: {pearson_r_results_cats[1]}')\n\nCorrelation Coefficient\nPearson-r: -0.006117549224989473\np-value: 0.9576068830096687",
+    "objectID": "session16-17/assignment.html#solutions",
+    "href": "session16-17/assignment.html#solutions",
+    "title": "Laboratory 09",
+    "section": "",
+    "text": "Just mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:\nA \\(3 \\times 2\\) factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating \\(Y\\) could be predicted from level of alcohol consumption (\\(A_1 =\\) Placebo, \\(A_2 =\\) Low dose, \\(A_3 =\\) High dose), facial attractiveness (\\(B_1 =\\) Unattractive, \\(B_2 =\\) Attractive), and the interaction between doses of alcohol and the facial attractiveness.\n\n\n\nTable 1: \\(3 \\times 2\\) factorial ANOVA (RANKING by ALCOHOL and FACETYPE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nALCOHOL\n16.542\n2\n8.271\n6.041\n.005\n.223\n\n\nFACETYPE\n21.333\n1\n21.333\n15.583\n&lt;.001\n.271\n\n\n\\(A \\times F\\)\n23.292\n2\n11.646\n8.507\n&lt;.001\n.288\n\n\nError\n57.500\n42\n1.369\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F_A(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\(\\eta_p^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F_B(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.271\\), showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F_{A \\times B}(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.288\\). The beer-goggles effect is more pronounced for unattractive faces (see Figure 1): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
     "crumbs": [
       "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q4-test-h_0-at-the-5-sig-level",
-    "href": "session07-08/assignment.html#q4-test-h_0-at-the-5-sig-level",
-    "title": "Laboratory 04",
-    "section": "Q4: Test \\(H_0\\) at the 5% sig-level",
-    "text": "Q4: Test \\(H_0\\) at the 5% sig-level\nAnswer\n\\(p \\approx 0.9576\\)\nThe \\(p\\)-value is much greater than the significance level \\(\\alpha = 0.05\\), therefore, we fail to reject the null hypothesis (\\(H_0\\)) that dinner_time and meow are not linearly related. This means that there is insufficient evidence to suggest a linear relationship between dinner_time and meow at the 5% significance level, the sample does not indicate a significant linear correlation between the two variables.\nSolution\nThe null hypothesis (\\(H_0\\)) and the alternative hypothesis (\\(H_1\\)) are formulated as follows:\n\n\\(H_0:\\rho = 0\\): no linear relationship.\n\\(H_1:\\rho \\neq 0\\): linear relationship exists.\n\nGiven \\(r \\approx -0.0061\\), \\(p \\approx 0.9576\\) and \\(\\alpha = 0.05\\):\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis: \\nThere is evidence of a linear relationship.\")\n    else:\n        print(\"Fail to reject the null hypothesis: \\nNo significant linear relationship.\")\n\ntest_hypothesis(p_cats, alpha=0.05)\n\nGiven the p-value=0.9576068830096687 and alpha=0.05:\nFail to reject the null hypothesis: \nNo significant linear relationship.",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#q5-95-ci-of-rho",
-    "href": "session07-08/assignment.html#q5-95-ci-of-rho",
-    "title": "Laboratory 04",
-    "section": "Q5: 95% CI of \\(\\rho\\)",
-    "text": "Q5: 95% CI of \\(\\rho\\)\nAnswer\nThe 95% confidence interval for the population correlation coefficient \\(\\rho\\) is approximately: \\[[-0.2283, 0.2167]\\]\nSolution\nGiven \\(N = 78\\), \\(r = -6.12 \\times 10^{-3}\\), the 95% confidence interval for the population correlation coefficient \\(\\rho\\) is then calculated based on the Fisher \\(z\\)-transformation, steps of calculation is listed below and I wrapped the calculation procedure in a single function:\n\\(z\\)-transformation\n\\[\nz = \\frac{1}{2}ln(\\frac{1+r}{1-r}) = artanh(r)\n\\]\nStandard error of \\(z\\)\n\\[\nSE_z = \\frac{1}{\\sqrt{N-3}}\n\\]\nCI in the \\(z\\)-scale\n\\[\nz_{lower} = z - c \\times SE_z\n\\]\n\\[\nz_{upper} = z - c \\times SE_z\n\\]\nInverse Fisher transformation\n\\[\nr = \\frac{exp(2z)-1}{exp(2z)+1} = tanh(z)\n\\]\nFinally we get\n\\[\nr_{lower} = tanh(z_{lower})\n\\] \\[\nr_{upper} = tanh(z_{upper})\n\\]\n\nfrom math import sqrt, tanh, atanh\n\nn_cats = len(catterplot_df)\n\ndef ci_rho(n, pearson_r, alpha=0.05):\n    # z-transformation\n    z = atanh(pearson_r)\n    # SEM of z\n    se_z = 1 / sqrt(n - 3)\n    # CI in the z score in the 95% level.  \n    c = stats.norm.ppf(1 - alpha / 2)\n    z_lower = z - c * se_z\n    z_upper = z + c * se_z\n    # Inverse Fisher transformation\n    r_lower = tanh(z_lower)\n    r_upper = tanh(z_upper)\n    return r_lower, r_upper\n\nr_lower_cats, r_upper_cats = ci_rho(n_cats, pearson_r_cats)\n\nprint(f'0.95 Confidence Intervals of rho: \\n'\n      f'Lower Limit: {r_lower_cats} \\n'\n      f'Upper Limit: {r_upper_cats}')\n\n0.95 Confidence Intervals of rho: \nLower Limit: -0.22833745967041358 \nUpper Limit: 0.21670822097748485\n\n\n\n# Or just call the function: \n\n# Ths pearson-r results was calculated in Q3, and stored in pearson_r_results_cats\n# Just apply the confidence_interval method on the pearson_r_results_cats, and bingo! \n\nci_rho_cats = pearson_r_results_cats.confidence_interval(confidence_level=0.95) # It does the Fisher transformation by default\n\nprint(f'0.95 Confidence Intervals of rho: \\n'\n      f'Lower Limit: {ci_rho_cats[0]} \\n'\n      f'Upper Limit: {ci_rho_cats[1]}')\n\n0.95 Confidence Intervals of rho: \nLower Limit: -0.22833745967041358 \nUpper Limit: 0.21670822097748485",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
-    ]
-  },
-  {
-    "objectID": "session07-08/assignment.html#footnotes",
-    "href": "session07-08/assignment.html#footnotes",
-    "title": "Laboratory 04",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAs a devoted servant to cat, I must say that, in my experience, our cat never purrs after a meal. So, there’s definitely no relationship between those variables in my case. Staying silent seems to be his strategy for navigating this wild and dangerous world.↩︎\nI just put the formula here for … nothing? I didn’t actually calculated on hand this time. :P↩︎\nAn easter egg here, something can’t be compiled by {}.↩︎",
-    "crumbs": [
-      "Labs",
-      "Session07 08",
-      "Laboratory 04"
+      "Session16 17",
+      "Laboratory 09"
     ]
   },
   {
@@ -758,39 +733,148 @@
     ]
   },
   {
-    "objectID": "session02/lecture-notes.html",
-    "href": "session02/lecture-notes.html",
-    "title": "Section 02: Concepts",
+    "objectID": "session07-08/assignment.html",
+    "href": "session07-08/assignment.html",
+    "title": "Laboratory 04",
     "section": "",
-    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)"
+    "text": "Again, thanks for your feedback on last assignment. Here’s my response:\n\n\nAbsolutely! The awesome scipy library does so much more than a TI-84. The scipy.stats.t module covers all aspects of the \\(t\\)-test workflow, and the interval method provides the confidence interval in no time:\nstats.t.interval(confidence=0.95, \n                 df=119, \n                 loc=injury_mean, \n                 scale=injury_sem)\nWhich outputs:\n(2.53106725077079, 3.252266082562543)\nHumans make mistakes sometimes, so calling the function not only saves time but also helps avoid the chance of errors. As you explained the equations in the lecture and demonstrated the calculations, I think it’s best to follow your approach for the math as well.\nI do this only when I’m doing assignments and just for fun. (In most cases) I never trust myself and my knowledge so I never do these dangerous thing to the real world data. :P\n\n\n\nGot it! This part was refined and updated on the web doc.\n\n\n\n{\\huge NOOOOOOOOOOOO!}\nI believe my fellow classmates and I suffered enough from the traps in the quizzes.\n\n\n\nMy lord jumped on my desk for a warm greeting:\n\n\n\nThe Lord",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session02/lecture-notes.html#summary",
-    "href": "session02/lecture-notes.html#summary",
-    "title": "Section 02: Concepts",
+    "objectID": "session07-08/assignment.html#on-4.4-q3-function-for-calculating-the-ci",
+    "href": "session07-08/assignment.html#on-4.4-q3-function-for-calculating-the-ci",
+    "title": "Laboratory 04",
     "section": "",
-    "text": "Brief review on:\n\nimport data on SPSS\ntypes of variable (i.e. measurement) in SPSS.\nSPSS syntax - a “code-like” thing to replicate what we have done\n\nResearch Questions and Design: showed general concepts future scholars must learn before (otherwise how could they get into the graduate school)"
+    "text": "Absolutely! The awesome scipy library does so much more than a TI-84. The scipy.stats.t module covers all aspects of the \\(t\\)-test workflow, and the interval method provides the confidence interval in no time:\nstats.t.interval(confidence=0.95, \n                 df=119, \n                 loc=injury_mean, \n                 scale=injury_sem)\nWhich outputs:\n(2.53106725077079, 3.252266082562543)\nHumans make mistakes sometimes, so calling the function not only saves time but also helps avoid the chance of errors. As you explained the equations in the lecture and demonstrated the calculations, I think it’s best to follow your approach for the math as well.\nI do this only when I’m doing assignments and just for fun. (In most cases) I never trust myself and my knowledge so I never do these dangerous thing to the real world data. :P",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session02/lecture-notes.html#research-questions",
-    "href": "session02/lecture-notes.html#research-questions",
-    "title": "Section 02: Concepts",
-    "section": "Research Questions",
-    "text": "Research Questions\n\nVariables and causal relationships\n\nthe X-axis and Y-axis - assuming \\(X\\) will affect \\(Y\\)\n\n\\(X\\) =&gt; Independent var\n\n\\(Y\\) =&gt; Dependent var\n\n\nare \\(X\\) and \\(Y\\) correlated or associated?\ndoes \\(X\\) predict \\(Y\\)?\ndoes \\(X\\) cause/determine/influence \\(Y\\)? - strong evidence needed\n\n\nConfounding\n\nassociated with the \\(X\\) that cause or influence \\(Y\\)\nmay cause false association\ne.g. ice cream sales vs drowning incidents\n\naffected by confounder - temperature - another variable makes \\(X\\) and \\(Y\\) correlated.\n\ne.g. age vs wages\n\nage - associated with experience + wages\n\nControls:\n\nExperimental\nStatistical\n\n\n\n\nMediation\n\ne.g. wages - male vs female\n\nfrom average wages: yes they are correlated.\nbut: does it imply discrimination?\nlook deeper: control of occupations\n\nSimpson’s paradox\n\ngender –occupation–&gt; wages\n\n\n\n\n\nAddressing causal inferences\n\nTheory\nStatistically related\nTime: \\(X\\) happens earlier\nThe causal inferences: proof no rival explanations for the changes of \\(Y\\).\n\n(Brannon et al., 2017; Cozby & Bates, 2017)"
+    "objectID": "session07-08/assignment.html#on-4.5-q4-p-value-in-my-report",
+    "href": "session07-08/assignment.html#on-4.5-q4-p-value-in-my-report",
+    "title": "Laboratory 04",
+    "section": "",
+    "text": "Got it! This part was refined and updated on the web doc.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session02/lecture-notes.html#research-design",
-    "href": "session02/lecture-notes.html#research-design",
-    "title": "Section 02: Concepts",
-    "section": "Research Design",
-    "text": "Research Design\n\nExperiment\n\ngrouping and control\ncontrol group vs treatment group\nrandomized, standardized, clear-defined dependent variable\nRCT - Randomized controlled trial: cost, ethic, external validity\n\n\n\nNon-experiment\n\ncorrelational research: e.g. questionnaires\ncost: generally **doesn’t lead to causality”\n\ntemporal precedence + confounding\ncorrelations \\(\\neq\\) causation\n\n\n\n\nQuasi-experiment\n\nuse pre-existing groups - Nonequivalent control group\n\ne.g. free lunch in school 1 but not in school 2\nconfounding my exists\n\nuse data before and after the intervention - One-group pretest-post-test design\n\ne.g. maturation\n\n\n\n\nComparison of designs\n\ninternal validity vs external validity\ntrade-offs"
+    "objectID": "session07-08/assignment.html#on-4.2.2-q1b-trap-in-the-future",
+    "href": "session07-08/assignment.html#on-4.2.2-q1b-trap-in-the-future",
+    "title": "Laboratory 04",
+    "section": "",
+    "text": "{\\huge NOOOOOOOOOOOO!}\nI believe my fellow classmates and I suffered enough from the traps in the quizzes.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
-    "objectID": "session02/lecture-notes.html#populations-and-samples",
-    "href": "session02/lecture-notes.html#populations-and-samples",
-    "title": "Section 02: Concepts",
-    "section": "Populations and Samples",
-    "text": "Populations and Samples"
+    "objectID": "session07-08/assignment.html#while-i-was-writing-this-part",
+    "href": "session07-08/assignment.html#while-i-was-writing-this-part",
+    "title": "Laboratory 04",
+    "section": "",
+    "text": "My lord jumped on my desk for a warm greeting:\n\n\n\nThe Lord",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#a-quick-dataset-check-up",
+    "href": "session07-08/assignment.html#a-quick-dataset-check-up",
+    "title": "Laboratory 04",
+    "section": "A quick dataset check-up",
+    "text": "A quick dataset check-up\n\nimport pandas as pd\ncatterplot_df = pd.read_spss('./datasets/catterplot.sav')\n\nprint(f'Description on the dataset: \\n',catterplot_df.describe())\n\nDescription on the dataset: \n        dinner_time       meow\ncount    78.000000  78.000000\nmean      9.865385   8.217949\nstd       6.068159   3.747371\nmin       1.000000   2.000000\n25%       5.000000   5.000000\n50%       9.000000   8.000000\n75%      14.000000  12.000000\nmax      24.000000  15.000000",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q1-data-distribution",
+    "href": "session07-08/assignment.html#q1-data-distribution",
+    "title": "Laboratory 04",
+    "section": "Q1: Data distribution",
+    "text": "Q1: Data distribution\nAnswer\n\n\n\nTable 1: Mean, mode and median\n\n\n\n\n\nMeasurement\nValue\n\n\n\n\nMean\n9.87\n\n\nMedian\n9.00\n\n\nMode\n5.00\n\n\n\n\n\n\nTable 1 lists measurements on the central tendency of this data, the mean (9.87) is slightly higher than the median (9.00) but much higher than the mode (5.00). The distribution is right-skewed as shown by Figure 1, and a longer tail is found on the right side. There is a clear peak around 5, which indicates most cats in this sample were fed with in 5 hours.\nSolution\nTo describe the distribution of the dataset, I will again use the mean, median, and mode to assess central tendency, along with a histogram to visualize the distribution.\n\ndef centrality(df): \n    mean = df.mean()\n    median = df.median()\n    mode = df.mode()[0]\n    return mean, median, mode\n\ncats_mean, cats_median, cats_mode = centrality(catterplot_df['dinner_time'])\nprint(f'Central Tendency: \\n'\n      f'Mean: {cats_mean}, \\n'\n      f'Median: {cats_median} \\n' \n      f'Mode: {cats_mode}')\n\nCentral Tendency: \nMean: 9.865384615384615, \nMedian: 9.0 \nMode: 5.0\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\n# Create a histogram to reveal the distribution. \ndinner_time_hist = sns.histplot(catterplot_df, x='dinner_time', kde=True, bins=23)\n# Set titles and labels for x- and y- axis\ndinner_time_hist.set_title('Distribution of the time since last feeding a cat')\ndinner_time_hist.set_xlabel('last_feed: Time elapsed since the last feed')\ndinner_time_hist.set_ylabel('Frequency')\n# Display the plot\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Distribution of Dinner Time",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q2-the-scatterplot",
+    "href": "session07-08/assignment.html#q2-the-scatterplot",
+    "title": "Laboratory 04",
+    "section": "Q2: The (s)catterplot",
+    "text": "Q2: The (s)catterplot\nAnswer\nThe scatter plot in Figure 2 shows that the data, at least, forms a perfect shape of a cat! However, the scattered points and the gentle slope of the LOESS curve suggest that there is not a strong linear relationship between the time since the last feeding (dinner_time) and the loudness of purring (meow). The scatter plot also indicates a weak correlation between these two variables.\nSolution\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ncatterplot = sns.regplot(catterplot_df, x='dinner_time', y='meow', fit_reg=True, lowess=True)\ncatterplot.set_title('The (S)catterplot')\ncatterplot.set_xlabel('last_feed: Time elapsed since the last feed')\ncatterplot.set_ylabel('meow: Loudness of Purring')\nplt.show()\n\n\n\n\n\n\n\nFigure 2: The (s)catterplot on meow againt dinnertime.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-v.-meow",
+    "href": "session07-08/assignment.html#q3-the-pearsons-r-of-dinner_time-v.-meow",
+    "title": "Laboratory 04",
+    "section": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow",
+    "text": "Q3: The Pearson’s \\(r\\) of dinner_time v. meow\nAnswer\n\\(r \\approx -6.12 \\times 10^{-3}\\)\nThe pearson’s correlation coefficient \\(r \\approx -6.12 \\times 10^{-3}\\) is very close to zero, suggesting there may be no linear relationship between dinner_time and meow in this dataset. However, it’s important to note that the data lacks further details, particularly regarding the sampling procedure. Specifically, we don’t know if the data represents multiple observations of a single cat (in which case it would be a single case) or if it was collected from several different cats (in which case the sample size and whether the sample is similar to population of interest needs to be justified). Although the correlation is statistically weak, we cannot definitively conclude that there is no relationship between the given variables.1\nIn conclusion, the pearson’s \\(r\\) suggests there is no strong linear relationship between the time since last feed and the volume of cats’ purring. That’s all I can say.\nSolution\nTo calculate the pearson’s \\(r\\), I use the formula2:\n\\[r = \\frac{\\sum{Z_XZ_Y}}{N-1}\\]\n\nimport scipy.stats as stats\n\npearson_r_results_cats = stats.pearsonr(catterplot_df.meow, catterplot_df.dinner_time)\n\npearson_r_cats = pearson_r_results_cats[0]\np_cats = pearson_r_results_cats[1]\n\nprint(f'Correlation Coefficient\\n'\n      f'Pearson-r: {pearson_r_cats}\\n'\n      f'p-value: {pearson_r_results_cats[1]}')\n\nCorrelation Coefficient\nPearson-r: -0.006117549224989473\np-value: 0.9576068830096687",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q4-test-h_0-at-the-5-sig-level",
+    "href": "session07-08/assignment.html#q4-test-h_0-at-the-5-sig-level",
+    "title": "Laboratory 04",
+    "section": "Q4: Test \\(H_0\\) at the 5% sig-level",
+    "text": "Q4: Test \\(H_0\\) at the 5% sig-level\nAnswer\n\\(p \\approx 0.9576\\)\nThe \\(p\\)-value is much greater than the significance level \\(\\alpha = 0.05\\), therefore, we fail to reject the null hypothesis (\\(H_0\\)) that dinner_time and meow are not linearly related. This means that there is insufficient evidence to suggest a linear relationship between dinner_time and meow at the 5% significance level, the sample does not indicate a significant linear correlation between the two variables.\nSolution\nThe null hypothesis (\\(H_0\\)) and the alternative hypothesis (\\(H_1\\)) are formulated as follows:\n\n\\(H_0:\\rho = 0\\): no linear relationship.\n\\(H_1:\\rho \\neq 0\\): linear relationship exists.\n\nGiven \\(r \\approx -0.0061\\), \\(p \\approx 0.9576\\) and \\(\\alpha = 0.05\\):\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis: \\nThere is evidence of a linear relationship.\")\n    else:\n        print(\"Fail to reject the null hypothesis: \\nNo significant linear relationship.\")\n\ntest_hypothesis(p_cats, alpha=0.05)\n\nGiven the p-value=0.9576068830096687 and alpha=0.05:\nFail to reject the null hypothesis: \nNo significant linear relationship.",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#q5-95-ci-of-rho",
+    "href": "session07-08/assignment.html#q5-95-ci-of-rho",
+    "title": "Laboratory 04",
+    "section": "Q5: 95% CI of \\(\\rho\\)",
+    "text": "Q5: 95% CI of \\(\\rho\\)\nAnswer\nThe 95% confidence interval for the population correlation coefficient \\(\\rho\\) is approximately: \\[[-0.2283, 0.2167]\\]\nSolution\nGiven \\(N = 78\\), \\(r = -6.12 \\times 10^{-3}\\), the 95% confidence interval for the population correlation coefficient \\(\\rho\\) is then calculated based on the Fisher \\(z\\)-transformation, steps of calculation is listed below and I wrapped the calculation procedure in a single function:\n\\(z\\)-transformation\n\\[\nz = \\frac{1}{2}ln(\\frac{1+r}{1-r}) = artanh(r)\n\\]\nStandard error of \\(z\\)\n\\[\nSE_z = \\frac{1}{\\sqrt{N-3}}\n\\]\nCI in the \\(z\\)-scale\n\\[\nz_{lower} = z - c \\times SE_z\n\\]\n\\[\nz_{upper} = z - c \\times SE_z\n\\]\nInverse Fisher transformation\n\\[\nr = \\frac{exp(2z)-1}{exp(2z)+1} = tanh(z)\n\\]\nFinally we get\n\\[\nr_{lower} = tanh(z_{lower})\n\\] \\[\nr_{upper} = tanh(z_{upper})\n\\]\n\nfrom math import sqrt, tanh, atanh\n\nn_cats = len(catterplot_df)\n\ndef ci_rho(n, pearson_r, alpha=0.05):\n    # z-transformation\n    z = atanh(pearson_r)\n    # SEM of z\n    se_z = 1 / sqrt(n - 3)\n    # CI in the z score in the 95% level.  \n    c = stats.norm.ppf(1 - alpha / 2)\n    z_lower = z - c * se_z\n    z_upper = z + c * se_z\n    # Inverse Fisher transformation\n    r_lower = tanh(z_lower)\n    r_upper = tanh(z_upper)\n    return r_lower, r_upper\n\nr_lower_cats, r_upper_cats = ci_rho(n_cats, pearson_r_cats)\n\nprint(f'0.95 Confidence Intervals of rho: \\n'\n      f'Lower Limit: {r_lower_cats} \\n'\n      f'Upper Limit: {r_upper_cats}')\n\n0.95 Confidence Intervals of rho: \nLower Limit: -0.22833745967041358 \nUpper Limit: 0.21670822097748485\n\n\n\n# Or just call the function: \n\n# Ths pearson-r results was calculated in Q3, and stored in pearson_r_results_cats\n# Just apply the confidence_interval method on the pearson_r_results_cats, and bingo! \n\nci_rho_cats = pearson_r_results_cats.confidence_interval(confidence_level=0.95) # It does the Fisher transformation by default\n\nprint(f'0.95 Confidence Intervals of rho: \\n'\n      f'Lower Limit: {ci_rho_cats[0]} \\n'\n      f'Upper Limit: {ci_rho_cats[1]}')\n\n0.95 Confidence Intervals of rho: \nLower Limit: -0.22833745967041358 \nUpper Limit: 0.21670822097748485",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
+  },
+  {
+    "objectID": "session07-08/assignment.html#footnotes",
+    "href": "session07-08/assignment.html#footnotes",
+    "title": "Laboratory 04",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAs a devoted servant to cat, I must say that, in my experience, our cat never purrs after a meal. So, there’s definitely no relationship between those variables in my case. Staying silent seems to be his strategy for navigating this wild and dangerous world.↩︎\nI just put the formula here for … nothing? I didn’t actually calculated on hand this time. :P↩︎\nAn easter egg here, something can’t be compiled by {}.↩︎",
+    "crumbs": [
+      "Labs",
+      "Session07 08",
+      "Laboratory 04"
+    ]
   },
   {
     "objectID": "session03/assignment-r.html",
@@ -1045,78 +1129,11 @@
     ]
   },
   {
-    "objectID": "final/final-project.html",
-    "href": "final/final-project.html",
-    "title": "Currently I haven’t got any idea",
-    "section": "",
-    "text": "The journey of discovering the open data starts here.\n\nIntroduction\nBrief introduction, maybe like the of each lab works.\n\n\nResearch question\nBriefly describe the background and the research questions. Comprehensive literature review is required for journal papers but not required for this project.\n\n\nData and methods\nDescribe the source of the data and all data cleaning steps (how many observations are removed due to missing values, whether a subset rather than the whole dataset is used for analysis, etc.) to make sure that this study is replicable by readers of the paper. Basic descriptive statistics, including relevant tables and/or plots, should be provided. Relate your research question to which methods to use.\n\n\nResults\nShow and interpret your findings from the data. Only report necessary statistical results. It is unacceptable to simply paste a screenshot of tables obtained from statistical software which include a lot of irrelevant information. Tables and Figures should be numbered and have captions that describe what they show.\n\n\nConclusion and discussion\nSummarize the paper. Discuss limitations of the current study (whether the statistical method used is appropriate, whether the relationship is correlation rather than causation, whether the data is collected from a nonrepresentative sample, etc.) and propose possible future directions."
-  },
-  {
-    "objectID": "session16-17/assignment.html",
-    "href": "session16-17/assignment.html",
+    "objectID": "session16-17/assignment.html#footnotes",
+    "href": "session16-17/assignment.html#footnotes",
     "title": "Laboratory 09",
-    "section": "",
-    "text": "Have you heard of the beer-goggles effect? It predicts that subjective perceptions of physical attractiveness become inaccurate after drinking alcohol. The logic is that alcohol consumption has been shown to reduce accuracy in symmetry judgement, and symmetric faces have been shown to be rated as more attractive. If the beer-goggles effect is driven by alcohol impairing symmetry judgement then you would expect a stronger effect for unattractive (asymmetric) faces (because alcohol will affect the perception of asymmetry) than attractive (symmetric) ones.\nAn anthropologist was interested in the effects of facial attractiveness on the beer-goggles effect. She randomly selected 48 participants. Participants were randomly subdivided into three groups of 16:\n\na placebo group drank 500 ml of alcohol-free beer;\na low-dose group drank 500 ml of average strength beer (4% ABV); and\na high-dose group drank 500 ml of strong beer (7% ABV).\n\nWithin each group, half (\\(n =8\\)) rated the attractiveness of 50 photos of unattractive (asymmetric) faces on a scale from 0 (pass me a paper bag) to 10 (pass me their phone number) and the remaining half rated 50 photos of attractive (symmetric) faces. The outcome for each participant was their median rating across the 50 photos. The data are in goggles.sav.\n\n\n\n\nConduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial \\(\\eta^2\\).\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\nSummarize your findings from the analyses.\n\n\n\n\nThe Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected).So, based on the results from the factorial ANOVA:\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\({\\eta_p}^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a $ {_p}^2 = 0.271 $, showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\({\\eta_p}^2 = 0.288\\). The beer-goggles effect appears more pronounced for unattractive faces: ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, the line chart in Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting the hypothesis that alcohol affects symmetry perception more in unattractive faces.\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#context",
-    "href": "session16-17/assignment.html#context",
-    "title": "Laboratory 09",
-    "section": "",
-    "text": "Have you heard of the beer-goggles effect? It predicts that subjective perceptions of physical attractiveness become inaccurate after drinking alcohol. The logic is that alcohol consumption has been shown to reduce accuracy in symmetry judgement, and symmetric faces have been shown to be rated as more attractive. If the beer-goggles effect is driven by alcohol impairing symmetry judgement then you would expect a stronger effect for unattractive (asymmetric) faces (because alcohol will affect the perception of asymmetry) than attractive (symmetric) ones.\nAn anthropologist was interested in the effects of facial attractiveness on the beer-goggles effect. She randomly selected 48 participants. Participants were randomly subdivided into three groups of 16:\n\na placebo group drank 500 ml of alcohol-free beer;\na low-dose group drank 500 ml of average strength beer (4% ABV); and\na high-dose group drank 500 ml of strong beer (7% ABV).\n\nWithin each group, half (\\(n =8\\)) rated the attractiveness of 50 photos of unattractive (asymmetric) faces on a scale from 0 (pass me a paper bag) to 10 (pass me their phone number) and the remaining half rated 50 photos of attractive (symmetric) faces. The outcome for each participant was their median rating across the 50 photos. The data are in goggles.sav.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#objectives",
-    "href": "session16-17/assignment.html#objectives",
-    "title": "Laboratory 09",
-    "section": "",
-    "text": "Conduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial \\(\\eta^2\\).\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\nSummarize your findings from the analyses.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#context-1",
-    "href": "session16-17/assignment.html#context-1",
-    "title": "Laboratory 09",
-    "section": "Context",
-    "text": "Context\nThe researcher took a follow-up sample of 26 people and gave them doses of alcohol (0 pints, 2 pints, 4 pints and 6 pints of lager) over four different weeks. She asked them to rate a bunch of photos of unattractive faces in either dim or bright lighting. The outcome measure was the mean attractiveness rating (out of 100) of the faces and the predictors were the dose of alcohol and the lighting conditions. The data are in goggles_lighting.sav.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#objectives-1",
-    "href": "session16-17/assignment.html#objectives-1",
-    "title": "Laboratory 09",
-    "section": "Objectives",
-    "text": "Objectives\n\nConduct a repeated-measures ANOVA to study whether the dose of alcohol affects the mean attractiveness rating in bright lighting. Report the result of the test and the corresponding effect size.\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ be alcohol consumption, and include error bars showing the 95% confidence intervals of the means.\nSummarize your findings from the analyses.\n(Extra credit) Test whether alcohol dose and lighting interact to magnify the beer goggles effect. In SPSS, we can add another factor, lighting with two levels, to the repeated-measures ANOVA procedure in SPSS.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#solutions",
-    "href": "session16-17/assignment.html#solutions",
-    "title": "Laboratory 09",
-    "section": "Solutions",
-    "text": "Solutions\n\nQ4-Q6: Repeated-measures ANOVA\nThe effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, \\(F(3, 75) = 25.198\\), \\(p &lt; 0.001\\), \\({\\eta_p}^2 = 0.502\\), indicating a large effect size, suggesting that the dose of alcohol explains about 50% of the variance in attractiveness ratings. The chart shown in Figure 2 also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the “beer-goggles effect” hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.\n\n\n\n\n\n\nFigure 2\n\n\n\n\n\nQ7: The magnification of the beer goggles effect\nThe significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.\nMain Effect of Alcohol Dose:: There is a significant main effect of alcohol dose on attractiveness ratings, \\(F(3, 75) = 104.385\\), \\(p &lt; 0.001\\), with a large effect size (partial \\(\\eta^2 = 0.807\\)). This indicates that different alcohol doses significantly change attractiveness ratings.\nMain Effect of Lighting:: A significant main effect of lighting on attractiveness ratings is observed, \\(F(1, 25) = 23.421\\), \\(p &lt; 0.001\\), with a substantial effect size (partial \\(\\eta^2 = 0.484\\)). This underscores the impact of lighting conditions on perceived attractiveness.\nInteraction Effect between Dose and Lighting: The interaction between alcohol dose and lighting is significant, \\(F(3, 75) = 22.218\\), \\(p &lt; 0.001\\), with a considerable effect size (partial \\(\\eta^2 = 0.471\\)). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI think Andy once said in the book that we should always do the correction for sphericity.↩︎",
     "crumbs": [
       "Labs",
       "Session16 17",
@@ -1128,19 +1145,7 @@
     "href": "session16-17/assignment.html#solutions-1",
     "title": "Laboratory 09",
     "section": "Solutions",
-    "text": "Solutions\n\nQ4-Q6: Repeated-measures ANOVA\n\nMain Effect of Alcohol Dose:\n\nThe effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, \\(F(3, 75) = 25.198\\), \\(p &lt; 0.001\\).\nThe partial η² is 0.502, indicating a large effect size, suggesting that the dose of alcohol explains about 50% of the variance in attractiveness ratings.\n\nThe chart shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints.\nError bars represent the 95% confidence intervals; relatively narrow, indicating consistent ratings across participants.\nThis trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the “beer-goggles effect” hypothesis.\n\nThese results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.\n\n\nQ7: The magnification of the beer goggles effect\nThe significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.\nMain Effect of Alcohol Dose:: There is a significant main effect of alcohol dose on attractiveness ratings, \\(F(3, 75) = 104.385\\), \\(p &lt; 0.001\\), with a large effect size (partial \\(\\eta^2 = 0.807\\)). This indicates that different alcohol doses significantly change attractiveness ratings.\nMain Effect of Lighting:: A significant main effect of lighting on attractiveness ratings is observed, \\(F(1, 25) = 23.421\\), \\(p &lt; 0.001\\), with a substantial effect size (partial \\(\\eta^2 = 0.484\\)). This underscores the impact of lighting conditions on perceived attractiveness.\nInteraction Effect between Dose and Lighting: The interaction between alcohol dose and lighting is significant, \\(F(3, 75) = 22.218\\), \\(p &lt; 0.001\\), with a considerable effect size (partial \\(\\eta^2 = 0.471\\)). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#solutions-q1-q3-combined",
-    "href": "session16-17/assignment.html#solutions-q1-q3-combined",
-    "title": "Laboratory 09",
-    "section": "",
-    "text": "The Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected).So, based on the results from the factorial ANOVA:\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\({\\eta_p}^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a $ {_p}^2 = 0.271 $, showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\({\\eta_p}^2 = 0.288\\). The beer-goggles effect appears more pronounced for unattractive faces: ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, the line chart in Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting the hypothesis that alcohol affects symmetry perception more in unattractive faces.\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
+    "text": "Solutions\n\nQ4-Q6: Repeated-measures ANOVA\nSince Mauchly’s sphericity test did not indicate a significant violation of the sphericity test (\\(p = 0.190\\), just as what you planned), sphericity assumption assumed. The repeated-measures ANOVA was conducted and report as follows:\n\n\n\nTable 2: Repeated-measure ANOVA of alcohol dose on attractiveness ratings\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nDoseBright\n7434.192\n3\n2478.064\n25.198\n&lt;.001\n.502\n\n\nError\n7375.808\n75\n98.344\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Dose of alcohol on attractiveness ratings in bright lighting conditions\n\n\n\nThe effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, \\(F(3, 75) = 25.198\\), \\(p &lt; 0.001\\), \\(\\eta_p^2 = 0.502\\), indicating a large effect size, suggesting that the dose of alcohol explains about 50.2% of the variance in attractiveness ratings. The chart shown in Figure 2 also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the beer-goggles effect hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.\n\n\nQ7: The magnification of the beer goggles effect\nAgain, Mauchly’s test did not indicate a significant violation of the sphericity for both variables (\\(p_{D} = 0.454\\), \\(p_{D \\times L} = 0.768\\)), which may seldom happen to the real world data 1. Anyway, the repeated-measures ANOVA was conducted and report as follows:\n\n\n\nTable 3: Repeated-measure ANOVA of alcohol dose and lighting interact to the attractiveness ratings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nDOSE\n38591.654\n3\n12863.885\n104.385\n&lt;.001\n.807\n\n\nError (\\(D\\))\n9242.596\n75\n123.235\n\n\n\n\n\nLIGHTING\n1993.923\n1\n1993.923\n23.421\n&lt;.001\n.484\n\n\nError (\\(L\\))\n2128.327\n25\n85.133\n\n\n\n\n\n\\(D \\times L\\)\n5765.423\n3\n1921.808\n22.218\n&lt;.001\n.471\n\n\nError (\\(D \\times L\\))\n6487.327\n75\n86.498\n\n\n\n\n\n\n\n\n\nThere is a significant main effect of alcohol dose on attractiveness ratings, \\(F_D(3, 75) = 104.385\\), \\(p &lt; 0.001\\), with a large effect size (\\(\\eta_p^2 = 0.807\\)). This indicates that different alcohol doses significantly change attractiveness ratings. A significant main effect of lighting on attractiveness ratings is also observed, \\(F_L(1, 25) = 23.421\\), \\(p &lt; 0.001\\), with a substantial effect size (\\(\\eta_p^2 = 0.484\\)). This underscores the impact of lighting conditions on perceived attractiveness.\nThe interaction between alcohol dose and lighting is significant, \\(F_{D \\times L}(3, 75) = 22.218\\), \\(p &lt; 0.001\\), with \\(\\eta_p^2 = 0.471\\). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.\n\n\n\n\n\n\nFigure 3: Dose of alcohol and lighting conditions on attractiveness ratings. For the lighting condition, level 1 for dim, level 2 for bright.\n\n\n\nOverall, as Table 3 and Figure 3 suggested, the significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.",
     "crumbs": [
       "Labs",
       "Session16 17",

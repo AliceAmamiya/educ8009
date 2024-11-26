@@ -316,13 +316,16 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#solutions-q1-q3-combined" id="toc-solutions-q1-q3-combined" class="nav-link" data-scroll-target="#solutions-q1-q3-combined">Solutions (Q1-Q3 combined)</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <ul class="collapse">
+  <li><a href="#q1-q3-factorial-anova" id="toc-q1-q3-factorial-anova" class="nav-link" data-scroll-target="#q1-q3-factorial-anova">Q1-Q3: Factorial ANOVA</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#part-b-lighting-conditions-considered" id="toc-part-b-lighting-conditions-considered" class="nav-link" data-scroll-target="#part-b-lighting-conditions-considered">Part B: Lighting conditions considered</a>
   <ul class="collapse">
   <li><a href="#context-1" id="toc-context-1" class="nav-link" data-scroll-target="#context-1">Context</a></li>
   <li><a href="#objectives-1" id="toc-objectives-1" class="nav-link" data-scroll-target="#objectives-1">Objectives</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <li><a href="#solutions-1" id="toc-solutions-1" class="nav-link" data-scroll-target="#solutions-1">Solutions</a>
   <ul class="collapse">
   <li><a href="#q4-q6-repeated-measures-anova" id="toc-q4-q6-repeated-measures-anova" class="nav-link" data-scroll-target="#q4-q6-repeated-measures-anova">Q4-Q6: Repeated-measures ANOVA</a></li>
   <li><a href="#q7-the-magnification-of-the-beer-goggles-effect" id="toc-q7-the-magnification-of-the-beer-goggles-effect" class="nav-link" data-scroll-target="#q7-the-magnification-of-the-beer-goggles-effect">Q7: The magnification of the beer goggles effect</a></li>
@@ -369,18 +372,86 @@ window.Quarto = {
 <section id="objectives" class="level2">
 <h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
 <ol type="1">
-<li>Conduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial <span class="math inline">\(\eta^2\)</span>.</li>
+<li>Conduct a factorial ANOVA to study the effects of facial attractiveness and alcohol consumption on the rating. Report the results of tests for main effects and interaction effects, and their corresponding partial <span class="math inline">\(\eta_p^2\)</span>.</li>
 <li>Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.</li>
 <li>Summarize your findings from the analyses.</li>
 </ol>
 </section>
-<section id="solutions-q1-q3-combined" class="level2">
-<h2 class="anchored" data-anchor-id="solutions-q1-q3-combined">Solutions (Q1-Q3 combined)</h2>
-<p>The Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected).So, based on the results from the factorial ANOVA:</p>
-<p>There is a significant main effect of alcohol consumption on attractiveness ratings, <span class="math inline">\(F(2, 42) = 6.041\)</span>, <span class="math inline">\(p = 0.005\)</span>, with a <span class="math inline">\({\eta_p}^2 = 0.223\)</span>, indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.</p>
-<p>The main effect on facial attractiveness on attractiveness ratings is significant as well, <span class="math inline">\(F(1, 42) = 15.583\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a $ {_p}^2 = 0.271 $, showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.</p>
-<p>For the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, <span class="math inline">\(F(2, 42) = 8.507\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a <span class="math inline">\({\eta_p}^2 = 0.288\)</span>. The <em>beer-goggles effect</em> appears more pronounced for unattractive faces: ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.</p>
-<p>Additionally, the line chart in <a href="#fig-line-chart-q3" class="quarto-xref">Figure&nbsp;1</a> illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting the hypothesis that alcohol affects symmetry perception more in unattractive faces.</p>
+<section id="solutions" class="level2">
+<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
+<section id="q1-q3-factorial-anova" class="level3">
+<h3 class="anchored" data-anchor-id="q1-q3-factorial-anova">Q1-Q3: Factorial ANOVA</h3>
+<p>Just mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:</p>
+<p>A <span class="math inline">\(3 \times 2\)</span> factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating <span class="math inline">\(Y\)</span> could be predicted from level of alcohol consumption (<span class="math inline">\(A_1 =\)</span> Placebo, <span class="math inline">\(A_2 =\)</span> Low dose, <span class="math inline">\(A_3 =\)</span> High dose), facial attractiveness (<span class="math inline">\(B_1 =\)</span> Unattractive, <span class="math inline">\(B_2 =\)</span> Attractive), and the interaction between doses of alcohol and the facial attractiveness.</p>
+<div id="tbl-factorial-anova" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-factorial-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: <span class="math inline">\(3 \times 2\)</span> factorial ANOVA (RANKING by ALCOHOL and FACETYPE)
+</figcaption>
+<div aria-describedby="tbl-factorial-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>SS</th>
+<th><span class="math inline">\(df\)</span></th>
+<th>MS</th>
+<th><span class="math inline">\(F\)</span></th>
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(\eta_p^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ALCOHOL</td>
+<td>16.542</td>
+<td>2</td>
+<td>8.271</td>
+<td>6.041</td>
+<td>.005</td>
+<td>.223</td>
+</tr>
+<tr class="even">
+<td>FACETYPE</td>
+<td>21.333</td>
+<td>1</td>
+<td>21.333</td>
+<td>15.583</td>
+<td>&lt;.001</td>
+<td>.271</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(A \times F\)</span></td>
+<td>23.292</td>
+<td>2</td>
+<td>11.646</td>
+<td>8.507</td>
+<td>&lt;.001</td>
+<td>.288</td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td>57.500</td>
+<td>42</td>
+<td>1.369</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <div id="fig-line-chart-q3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-line-chart-q3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -391,7 +462,12 @@ Figure&nbsp;1: The interaction of type of face and alcohol consumption on the ra
 </figcaption>
 </figure>
 </div>
+<p>There is a significant main effect of alcohol consumption on attractiveness ratings, <span class="math inline">\(F_A(2, 42) = 6.041\)</span>, <span class="math inline">\(p = 0.005\)</span>, with a <span class="math inline">\(\eta_p^2 = 0.223\)</span>, indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.</p>
+<p>The main effect on facial attractiveness on attractiveness ratings is significant as well, <span class="math inline">\(F_B(1, 42) = 15.583\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a <span class="math inline">\(\eta_p^2 = 0.271\)</span>, showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.</p>
+<p>For the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, <span class="math inline">\(F_{A \times B}(2, 42) = 8.507\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a <span class="math inline">\(\eta_p^2 = 0.288\)</span>. The <em>beer-goggles effect</em> is more pronounced for unattractive faces (see <a href="#fig-line-chart-q3" class="quarto-xref">Figure&nbsp;1</a>): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.</p>
+<p>Additionally, <a href="#fig-line-chart-q3" class="quarto-xref">Figure&nbsp;1</a> illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.</p>
 <p>Overall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.</p>
+</section>
 </section>
 </section>
 <section id="part-b-lighting-conditions-considered" class="level1">
@@ -409,35 +485,183 @@ Figure&nbsp;1: The interaction of type of face and alcohol consumption on the ra
 <li>(Extra credit) Test whether alcohol dose and lighting interact to magnify the beer goggles effect. In SPSS, we can add another factor, lighting with two levels, to the repeated-measures ANOVA procedure in SPSS.</li>
 </ol>
 </section>
-<section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
+<section id="solutions-1" class="level2">
+<h2 class="anchored" data-anchor-id="solutions-1">Solutions</h2>
 <section id="q4-q6-repeated-measures-anova" class="level3">
 <h3 class="anchored" data-anchor-id="q4-q6-repeated-measures-anova">Q4-Q6: Repeated-measures ANOVA</h3>
-<p>The effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, <span class="math inline">\(F(3, 75) = 25.198\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, <span class="math inline">\({\eta_p}^2 = 0.502\)</span>, indicating a large effect size, suggesting that the dose of alcohol explains about 50% of the variance in attractiveness ratings. The chart shown in <a href="#fig-line-chart-q5" class="quarto-xref">Figure&nbsp;2</a> also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the “beer-goggles effect” hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.</p>
+<p>Since Mauchly’s sphericity test did not indicate a significant violation of the sphericity test (<span class="math inline">\(p = 0.190\)</span>, just as what you planned), sphericity assumption assumed. The repeated-measures ANOVA was conducted and report as follows:</p>
+<div id="tbl-rm-anova" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rm-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Repeated-measure ANOVA of alcohol dose on attractiveness ratings
+</figcaption>
+<div aria-describedby="tbl-rm-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>SS</th>
+<th><span class="math inline">\(df\)</span></th>
+<th>MS</th>
+<th><span class="math inline">\(F\)</span></th>
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(\eta_p^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DoseBright</td>
+<td>7434.192</td>
+<td>3</td>
+<td>2478.064</td>
+<td>25.198</td>
+<td>&lt;.001</td>
+<td>.502</td>
+</tr>
+<tr class="even">
+<td>Error</td>
+<td>7375.808</td>
+<td>75</td>
+<td>98.344</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 <div id="fig-line-chart-q5" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-line-chart-q5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./q5-line-chart.png" id="fig-line-chart-q5" class="img-fluid figure-img">
+<img src="./q5-line-chart.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-line-chart-q5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-chart-q5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Dose of alcohol on attractiveness ratings in bright lighting conditions
 </figcaption>
 </figure>
 </div>
+<p>The effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, <span class="math inline">\(F(3, 75) = 25.198\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, <span class="math inline">\(\eta_p^2 = 0.502\)</span>, indicating a large effect size, suggesting that the dose of alcohol explains about 50.2% of the variance in attractiveness ratings. The chart shown in <a href="#fig-line-chart-q5" class="quarto-xref">Figure&nbsp;2</a> also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the <em>beer-goggles effect</em> hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.</p>
 </section>
 <section id="q7-the-magnification-of-the-beer-goggles-effect" class="level3">
 <h3 class="anchored" data-anchor-id="q7-the-magnification-of-the-beer-goggles-effect">Q7: The magnification of the beer goggles effect</h3>
-<p>The significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.</p>
-<p><strong>Main Effect of Alcohol Dose:</strong>: There is a significant main effect of alcohol dose on attractiveness ratings, <span class="math inline">\(F(3, 75) = 104.385\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a large effect size (partial <span class="math inline">\(\eta^2 = 0.807\)</span>). This indicates that different alcohol doses significantly change attractiveness ratings.</p>
-<p><strong>Main Effect of Lighting:</strong>: A significant main effect of lighting on attractiveness ratings is observed, <span class="math inline">\(F(1, 25) = 23.421\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a substantial effect size (partial <span class="math inline">\(\eta^2 = 0.484\)</span>). This underscores the impact of lighting conditions on perceived attractiveness.</p>
-<p><strong>Interaction Effect between Dose and Lighting:</strong> The interaction between alcohol dose and lighting is significant, <span class="math inline">\(F(3, 75) = 22.218\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a considerable effect size (partial <span class="math inline">\(\eta^2 = 0.471\)</span>). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.</p>
+<p>Again, Mauchly’s test did not indicate a significant violation of the sphericity for both variables (<span class="math inline">\(p_{D} = 0.454\)</span>, <span class="math inline">\(p_{D \times L} = 0.768\)</span>), which may seldom happen to the real world data <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Anyway, the repeated-measures ANOVA was conducted and report as follows:</p>
+<div id="tbl-rm-anova-interact" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rm-anova-interact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Repeated-measure ANOVA of alcohol dose and lighting interact to the attractiveness ratings
+</figcaption>
+<div aria-describedby="tbl-rm-anova-interact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>SS</th>
+<th><span class="math inline">\(df\)</span></th>
+<th>MS</th>
+<th><span class="math inline">\(F\)</span></th>
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(\eta_p^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DOSE</td>
+<td>38591.654</td>
+<td>3</td>
+<td>12863.885</td>
+<td>104.385</td>
+<td>&lt;.001</td>
+<td>.807</td>
+</tr>
+<tr class="even">
+<td>Error (<span class="math inline">\(D\)</span>)</td>
+<td>9242.596</td>
+<td>75</td>
+<td>123.235</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>LIGHTING</td>
+<td>1993.923</td>
+<td>1</td>
+<td>1993.923</td>
+<td>23.421</td>
+<td>&lt;.001</td>
+<td>.484</td>
+</tr>
+<tr class="even">
+<td>Error (<span class="math inline">\(L\)</span>)</td>
+<td>2128.327</td>
+<td>25</td>
+<td>85.133</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D \times L\)</span></td>
+<td>5765.423</td>
+<td>3</td>
+<td>1921.808</td>
+<td>22.218</td>
+<td>&lt;.001</td>
+<td>.471</td>
+</tr>
+<tr class="even">
+<td>Error (<span class="math inline">\(D \times L\)</span>)</td>
+<td>6487.327</td>
+<td>75</td>
+<td>86.498</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>There is a significant main effect of alcohol dose on attractiveness ratings, <span class="math inline">\(F_D(3, 75) = 104.385\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a large effect size (<span class="math inline">\(\eta_p^2 = 0.807\)</span>). This indicates that different alcohol doses significantly change attractiveness ratings. A significant main effect of lighting on attractiveness ratings is also observed, <span class="math inline">\(F_L(1, 25) = 23.421\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with a substantial effect size (<span class="math inline">\(\eta_p^2 = 0.484\)</span>). This underscores the impact of lighting conditions on perceived attractiveness.</p>
+<p>The interaction between alcohol dose and lighting is significant, <span class="math inline">\(F_{D \times L}(3, 75) = 22.218\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, with <span class="math inline">\(\eta_p^2 = 0.471\)</span>. This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.</p>
+<div id="fig-line-chart-q7" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-line-chart-q7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./q7-dose-lighting.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-line-chart-q7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Dose of alcohol and lighting conditions on attractiveness ratings. For the lighting condition, level 1 for dim, level 2 for bright.
+</figcaption>
+</figure>
+</div>
+<p>Overall, as <a href="#tbl-rm-anova-interact" class="quarto-xref">Table&nbsp;3</a> and <a href="#fig-line-chart-q7" class="quarto-xref">Figure&nbsp;3</a> suggested, the significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.</p>
+<p><br>
+</p>
 
 
 </section>
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I think Andy once said in the book that we should always do the correction for sphericity.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
