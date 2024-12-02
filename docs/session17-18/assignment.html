@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -69,10 +35,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-02966aa17e1c6f70a9252574ec59cebc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -371,14 +337,12 @@ window.Quarto = {
   <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
   <ul class="collapse">
-  <li><a href="#q1-q4-and-q6-result-of-ancova-and-its-findings" id="toc-q1-q4-and-q6-result-of-ancova-and-its-findings" class="nav-link" data-scroll-target="#q1-q4-and-q6-result-of-ancova-and-its-findings">Q1-Q4, and Q6: result of ANCOVA and its findings</a>
-  <ul class="collapse">
-  <li><a href="#data-screening-scatterplot" id="toc-data-screening-scatterplot" class="nav-link" data-scroll-target="#data-screening-scatterplot">Data screening: scatterplot</a></li>
-  <li><a href="#sanity-check-independence-of-x_c-and-a" id="toc-sanity-check-independence-of-x_c-and-a" class="nav-link" data-scroll-target="#sanity-check-independence-of-x_c-and-a">Sanity check: Independence of <span class="math inline">\(X_c\)</span> and <span class="math inline">\(A\)</span></a></li>
-  <li><a href="#sanity-check-homogeneity-of-regression-slopes" id="toc-sanity-check-homogeneity-of-regression-slopes" class="nav-link" data-scroll-target="#sanity-check-homogeneity-of-regression-slopes">Sanity check: Homogeneity of regression slopes</a></li>
-  <li><a href="#ancova-result-and-the-adjusted-means-of-group-a_1-a_2-and-a_3." id="toc-ancova-result-and-the-adjusted-means-of-group-a_1-a_2-and-a_3." class="nav-link" data-scroll-target="#ancova-result-and-the-adjusted-means-of-group-a_1-a_2-and-a_3.">ANCOVA result and the adjusted means of Group <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> and <span class="math inline">\(A_3\)</span>.</a></li>
-  </ul></li>
+  <li><a href="#q1-the-scatterplot" id="toc-q1-the-scatterplot" class="nav-link" data-scroll-target="#q1-the-scatterplot">Q1: The scatterplot</a></li>
+  <li><a href="#q2-independence-of-x_c-and-a" id="toc-q2-independence-of-x_c-and-a" class="nav-link" data-scroll-target="#q2-independence-of-x_c-and-a">Q2: Independence of <span class="math inline">\(X_c\)</span> and <span class="math inline">\(A\)</span></a></li>
+  <li><a href="#q3-homogeneity-of-regression-slopes" id="toc-q3-homogeneity-of-regression-slopes" class="nav-link" data-scroll-target="#q3-homogeneity-of-regression-slopes">Q3: Homogeneity of regression slopes</a></li>
+  <li><a href="#q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3." id="toc-q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3." class="nav-link" data-scroll-target="#q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3.">Q4: ANCOVA and the adjusted means of Group <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> and <span class="math inline">\(A_3\)</span>.</a></li>
   <li><a href="#q5-anova-or-ancova" id="toc-q5-anova-or-ancova" class="nav-link" data-scroll-target="#q5-anova-or-ancova">Q5: ANOVA or ANCOVA</a></li>
+  <li><a href="#q6-everything-wrapped-up-the-summary" id="toc-q6-everything-wrapped-up-the-summary" class="nav-link" data-scroll-target="#q6-everything-wrapped-up-the-summary">Q6: Everything wrapped up (the summary)</a></li>
   </ul></li>
   <li><a href="#final-thoughts" id="toc-final-thoughts" class="nav-link" data-scroll-target="#final-thoughts">Final thoughts</a></li>
   </ul>
@@ -410,41 +374,12 @@ window.Quarto = {
 <h1>Reply on the Comments from Lab 09</h1>
 <section id="the-line-plot-and-ggplot2" class="level2">
 <h2 class="anchored" data-anchor-id="the-line-plot-and-ggplot2">The line plot and <code>ggplot2</code></h2>
-<p>Although conducting ANOVA or ANCOVA in the world of <code>Python</code> or <code>R</code> is not as straightforward as training a even more complex ML model. Plotting could be easier. So challenge accepted. Recall back our second question:</p>
+<p>Although conducting ANOVA or ANCOVA in the world of <code>Python</code> or <code>R</code> is not as straightforward as training a even more complex ML model. Plotting could be easier. So,</p>
+<p>Recall back our second question:</p>
 <blockquote class="blockquote">
 <p>Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.</p>
 </blockquote>
-<p>It’s quite simple to just draw two line-plot with error bar as shown in <a href="#fig-emmeans-q3" class="quarto-xref">Figure&nbsp;1</a>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(haven)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>goggles <span class="ot">&lt;-</span> <span class="fu">read_sav</span>(<span class="st">"goggles.sav"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5"></a></span>
-<span id="cb1-6"><a href="#cb1-6"></a>goggles<span class="sc">$</span>facetype <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(goggles<span class="sc">$</span>facetype)</span>
-<span id="cb1-7"><a href="#cb1-7"></a>goggles<span class="sc">$</span>alcohol <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(goggles<span class="sc">$</span>alcohol)</span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">ggplot</span>(goggles, <span class="fu">aes</span>(<span class="at">x =</span> alcohol, <span class="at">y =</span> attractiveness, </span>
-<span id="cb1-10"><a href="#cb1-10"></a>                    <span class="at">group =</span> facetype, <span class="at">color =</span> facetype)) <span class="sc">+</span> </span>
-<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"point"</span>) <span class="sc">+</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"line"</span>) <span class="sc">+</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data =</span> mean_cl_normal, <span class="at">geom =</span> <span class="st">"errorbar"</span>, <span class="at">width =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
-<span id="cb1-14"><a href="#cb1-14"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Placebo"</span>, <span class="st">"Low dose"</span>, <span class="st">"High dose"</span>)) <span class="sc">+</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a>  <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-emmeans-q3" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-emmeans-q3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assignment_files/figure-html/fig-emmeans-q3-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-emmeans-q3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The interaction of type of face and alcohol consumption on the ratings
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p><code>ggplot2</code> is always the most elegant way to visualize the data and idea.</p>
+<p>It’s quite simple to just draw a line-plot with error bar.</p>
 </section>
 </section>
 <section id="context" class="level1">
@@ -464,35 +399,29 @@ Figure&nbsp;1: The interaction of type of face and alcohol consumption on the ra
 </section>
 <section id="solutions" class="level1">
 <h1>Solutions</h1>
-<section id="q1-q4-and-q6-result-of-ancova-and-its-findings" class="level2">
-<h2 class="anchored" data-anchor-id="q1-q4-and-q6-result-of-ancova-and-its-findings">Q1-Q4, and Q6: result of ANCOVA and its findings</h2>
 <p>In this experiment, given:</p>
-<ul>
-<li><p><span class="math inline">\(Y\)</span>: Measures of how well a hangover person feel after the soft drink treatment.</p></li>
-<li><p><span class="math inline">\(X_c\)</span>: Measures of how drunk a person got last night.</p></li>
-<li><p><span class="math inline">\(A\)</span>: Types of drink. Group <span class="math inline">\(A_1\)</span> for water, <span class="math inline">\(A_2\)</span> for Lucozade and <span class="math inline">\(A_3\)</span> for Cola.</p></li>
-</ul>
-<section id="data-screening-scatterplot" class="level3">
-<h3 class="anchored" data-anchor-id="data-screening-scatterplot">Data screening: scatterplot</h3>
-<p>The scatterplot between how drunk the person was before the treatment (<span class="math inline">\(X_c\)</span>) and how well they felt after treatment (<span class="math inline">\(Y\)</span>) is shown as <a href="#fig-q1-scatter" class="quarto-xref">Figure&nbsp;2</a>, <span class="math inline">\(X_c\)</span> and <span class="math inline">\(Y\)</span> showed a linear relation with no bivariate outliers.</p>
+<p><span class="math inline">\(Y\)</span>: Measures of how well a hangover person feel after the soft drink treatment. <span class="math inline">\(X_c\)</span>: Measures of how drunk a person got last night. <span class="math inline">\(A\)</span>: Types of drink. Group <span class="math inline">\(A_1\)</span> for water, <span class="math inline">\(A_2\)</span> for Lucozade and <span class="math inline">\(A_3\)</span> for Cola.</p>
+<section id="q1-the-scatterplot" class="level2">
+<h2 class="anchored" data-anchor-id="q1-the-scatterplot">Q1: The scatterplot</h2>
+<p>The scatterplot between how drunk the person was before the treatment (<span class="math inline">\(X_c\)</span>) and how well they felt after treatment (<span class="math inline">\(Y\)</span>) is shown as <a href="#fig-q1-scatter" class="quarto-xref">Figure&nbsp;1</a>, <span class="math inline">\(X_c\)</span> and <span class="math inline">\(Y\)</span> showed a linear relation with no bivariate outliers.</p>
 <div id="fig-q1-scatter" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-q1-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./q1-scatter.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-q1-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The outcome <span class="math inline">\(Y\)</span> against the covariate <span class="math inline">\(X_c\)</span>.
+Figure&nbsp;1: The outcome <span class="math inline">\(Y\)</span> against the covariate <span class="math inline">\(X_c\)</span>.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="sanity-check-independence-of-x_c-and-a" class="level3">
-<h3 class="anchored" data-anchor-id="sanity-check-independence-of-x_c-and-a">Sanity check: Independence of <span class="math inline">\(X_c\)</span> and <span class="math inline">\(A\)</span></h3>
+<section id="q2-independence-of-x_c-and-a" class="level2">
+<h2 class="anchored" data-anchor-id="q2-independence-of-x_c-and-a">Q2: Independence of <span class="math inline">\(X_c\)</span> and <span class="math inline">\(A\)</span></h2>
 <p>To reveal whether people in the three groups differ in how drunk they were before the treatment, a one-way ANOVA was conducted and the results were listed as <a href="#tbl-mean-between-groups" class="quarto-xref">Table&nbsp;1</a>.</p>
 <div id="tbl-mean-between-groups" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mean-between-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Result of one-way ANOVA for <span class="math inline">\(A\)</span> on <span class="math inline">\(X_c\)</span>.
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-mean-between-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
 </figcaption>
 <div aria-describedby="tbl-mean-between-groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -528,16 +457,10 @@ Table&nbsp;1: Result of one-way ANOVA for <span class="math inline">\(A\)</span>
 </div>
 </figure>
 </div>
-<p>The result showed that the main effect of drink is not significant, with <span class="math inline">\(F(2, 12) = 1.355\)</span>, <span class="math inline">\(p=0.295\)</span>, that indicated that statically there were no differences on the average drunk level between all three groups. That means the <span class="math inline">\(X_c\)</span> and <span class="math inline">\(A\)</span> are independent, one of the assumptions of ANCOVA appeared to be satisfied.</p>
+<p>The result showed that the main effect of drink is not significant, with <span class="math inline">\(F(2, 12) = 1.355\)</span>, <span class="math inline">\(p=0.295\)</span>, that indicated that statically there were no differences on the average drunk level between all three groups. That means the <span class="math inline">\(X_c\)</span> and <span class="math inline">\(A\)</span> are independent, the assumption of ANCOVA appeared to be satisfied.</p>
 </section>
-<section id="sanity-check-homogeneity-of-regression-slopes" class="level3">
-<h3 class="anchored" data-anchor-id="sanity-check-homogeneity-of-regression-slopes">Sanity check: Homogeneity of regression slopes</h3>
-<div id="tbl-interaction" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Result of ANCOVA for the interaction between <span class="math inline">\(A\)</span> and <span class="math inline">\(X_c\)</span>.
-</figcaption>
-<div aria-describedby="tbl-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<section id="q3-homogeneity-of-regression-slopes" class="level2">
+<h2 class="anchored" data-anchor-id="q3-homogeneity-of-regression-slopes">Q3: Homogeneity of regression slopes</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
@@ -576,25 +499,16 @@ Table&nbsp;2: Result of ANCOVA for the interaction between <span class="math inl
 </tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
-<p>To assess whether there was an interaction between <span class="math inline">\(A\)</span> and <span class="math inline">\(X_c\)</span>, a preliminary ANCOVA was run using the SPSS GLM procedure with a custom model that included an <span class="math inline">\(A \times X_c\)</span> interaction term and the result was shown in <a href="#tbl-interaction" class="quarto-xref">Table&nbsp;2</a>. This interaction was statistically significant with an <span class="math inline">\(F(3, 11) = 6.951\)</span>, <span class="math inline">\(p = 0.007\)</span>. This indicates that the effect of the treatment on how well the person feels depends on how drunk they felt before the treatment.</p>
+<p>To assess whether there was an interaction between <span class="math inline">\(A\)</span> and <span class="math inline">\(X_c\)</span>, a preliminary ANCOVA was run using the SPSS GLM procedure with a custom model that included an <span class="math inline">\(A \times X_c\)</span> interaction term. This interaction was statistically significant with an <span class="math inline">\(F(3, 11) = 6.951\)</span>, <span class="math inline">\(p = 0.007\)</span>. This indicates that the effect of the treatment on how well the person feels depends on how drunk they felt before the treatment.</p>
 <p>In conclusion, there is a significant interaction between the treatment and the covariate, meaning the initial feeling of drunkenness influences the treatment effect on how well the person feels.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> The assumption of homogeneity of regression slopes may be violated.</p>
 </section>
-<section id="ancova-result-and-the-adjusted-means-of-group-a_1-a_2-and-a_3." class="level3">
-<h3 class="anchored" data-anchor-id="ancova-result-and-the-adjusted-means-of-group-a_1-a_2-and-a_3.">ANCOVA result and the adjusted means of Group <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> and <span class="math inline">\(A_3\)</span>.</h3>
-<div id="tbl-ancova" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ancova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Result of ANCOVA.
-</figcaption>
-<div aria-describedby="tbl-ancova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<section id="q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3." class="level2">
+<h2 class="anchored" data-anchor-id="q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3.">Q4: ANCOVA and the adjusted means of Group <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> and <span class="math inline">\(A_3\)</span>.</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 16%">
-<col style="width: 7%">
+<col style="width: 26%">
+<col style="width: 12%">
+<col style="width: 8%">
 <col style="width: 12%">
 <col style="width: 12%">
 <col style="width: 12%">
@@ -641,23 +555,20 @@ Table&nbsp;3: Result of ANCOVA.
 </tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
-<p>An ANCOVA was conducted to examine the effect of drink type on recovery while controlling for initial drunkenness and the result was shown in <a href="#tbl-ancova" class="quarto-xref">Table&nbsp;3</a>. The effect of how drunk the person felt the night before was significant, <span class="math inline">\(F(1,11) = 24.568\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, <span class="math inline">\(\eta_p^2 = 0.691\)</span>, indicated that pre-existing drunkenness significantly affects how well the person feels. The treatment had a significant effect on how well the person felt, <span class="math inline">\(F(2,11) = 4.318\)</span>, <span class="math inline">\(p = 0.041\)</span>, <span class="math inline">\(\eta_p^2 = 0.440\)</span>.</p>
-<p>The adjusted means were given in <a href="#tbl-adjusted-means" class="quarto-xref">Table&nbsp;4</a> <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, after the adjustment for the <span class="math inline">\(Y\)</span> of drunkenness, participants who took Lucozade (<span class="math inline">\(M_2 = 6.239\)</span>) felt better than participants who drunk water or cola (<span class="math inline">\(M_1 = 5.110\)</span>, <span class="math inline">\(M_3 = 5.252\)</span>).</p>
+<p>An ANCOVA was conducted to examine the effect of drink type on recovery while controlling for initial drunkenness. The effect of how drunk the person felt the night before was significant, <span class="math inline">\(F(1,11) = 24.568\)</span>, <span class="math inline">\(p &lt; 0.001\)</span>, <span class="math inline">\(\eta_p^2 = 0.691\)</span>, indicated that pre-existing drunkenness significantly affects how well the person feels. The treatment had a significant effect on how well the person felt, <span class="math inline">\(F(2,11) = 4.318\)</span>, <span class="math inline">\(p = 0.041\)</span>, <span class="math inline">\(\eta_p^2 = 0.440\)</span>.</p>
+<p>The adjusted means were given in <a href="#tbl-adjusted-means" class="quarto-xref">Table&nbsp;2</a>, suggested that participants who drank Lucozade felt better than those who drank Water or Cola.</p>
 <div id="tbl-adjusted-means" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-adjusted-means-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4: Adjusted means (evaluated at initial drunkenness = 3.40).
+Table&nbsp;2: Adjusted means (evaluated at initial drunkenness = 3.40).
 </figcaption>
 <div aria-describedby="tbl-adjusted-means-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 18%">
 <col style="width: 13%">
-<col style="width: 39%">
-<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 41%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -669,19 +580,19 @@ Table&nbsp;4: Adjusted means (evaluated at initial drunkenness = 3.40).
 </thead>
 <tbody>
 <tr class="odd">
-<td>Group <span class="math inline">\(A_1\)</span></td>
+<td>Group 1</td>
 <td>Water</td>
 <td>5.110</td>
 <td>5.00</td>
 </tr>
 <tr class="even">
-<td>Group <span class="math inline">\(A_2\)</span></td>
+<td>Group 2</td>
 <td>Lucozade</td>
 <td>6.239</td>
 <td>5.80</td>
 </tr>
 <tr class="odd">
-<td>Group <span class="math inline">\(A_3\)</span></td>
+<td>Group 3</td>
 <td>Cola</td>
 <td>5.252</td>
 <td>5.80</td>
@@ -692,41 +603,33 @@ Table&nbsp;4: Adjusted means (evaluated at initial drunkenness = 3.40).
 </figure>
 </div>
 </section>
-</section>
 <section id="q5-anova-or-ancova" class="level2">
 <h2 class="anchored" data-anchor-id="q5-anova-or-ancova">Q5: ANOVA or ANCOVA</h2>
-<p>Given all assumptions of ANCOVA or ANOVA were satisfied (although this may only happen in the statistician’s Disneyland). In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including covariates that can influence the dependent variable. In this case, ANCOVA may reduce error variance and increases statistical power to detect treatment effects, especially with the small sample size (like this dataset with <span class="math inline">\(n = 15\)</span>). Therefore, ANCOVA may provides a clearer understanding of the treatment effects. In this study, however, because of the significant interaction between the treatment and the covariate, the causal relationship between drink type and recovery from hangover tended to remain unclear <a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>.</p>
+<p>If there’s another other chance for me I would like to say I prefer neither of them then go for casual inference. I swear I WILL master this method after Christmas and Lunar New Year recess.</p>
+<p>In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for any confounding variables or covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including one or more covariate(s) that can influence the dependent variable. By controlling for these covariates, ANCOVA adjusts the group means, providing a clearer understanding of the treatment effects while accounting for variability attributed to other factors.</p>
+<p>From we see significant effects both from the covariate (“drunk”) and the treatment (“drink”), indicating that initial drunkenness plays a substantial role in how participants feel subsequently.</p>
+<p>ANCOVA is the better choice here for several reasons:</p>
+<ol type="1">
+<li><p>Power: By accounting for the variance explained by initial drunkenness, ANCOVA reduces error variance and increases statistical power to detect treatment effects. This is particularly important with the small sample size (<span class="math inline">\(n = 15\)</span>).</p></li>
+<li><p>Precision: Initial drunkenness strongly predicts recovery (shown by the large effect size). Controlling for this relationship provides a more precise estimate of the treatment effect.</p></li>
+<li><p>Individual Differences: Even with successful randomization, individuals entered the study with different levels of drunkenness. ANCOVA adjusts for these pre-existing differences, giving us a clearer picture of the drink effects.</p></li>
+</ol>
+<p>Therefore, while both analyses are valid given the successful randomization, ANCOVA provides a more powerful and precise test of the causal relationship between drink type and recovery in this study.</p>
+</section>
+<section id="q6-everything-wrapped-up-the-summary" class="level2">
+<h2 class="anchored" data-anchor-id="q6-everything-wrapped-up-the-summary">Q6: Everything wrapped up (the summary)</h2>
+<p>I think the</p>
 </section>
 </section>
 <section id="final-thoughts" class="level1">
 <h1>Final thoughts</h1>
-<p>I felt lonely when I started writing this part. Initially I had many things to say but later I decided wrap them all into two sentences with bullet points.</p>
-<ul>
-<li>Thank you for all the tolerance for my foolish this semester.</li>
-<li>May all the cats at UM, as well as the force, be with you.</li>
-</ul>
-<div style="page-break-after: always;"></div>
-<p>Also Greetings from our lovely cats, the Prince (in <a href="#fig-cat-prince" class="quarto-xref">Figure&nbsp;3</a>) and A-bao (阿煲, see <a href="#fig-cat-bao" class="quarto-xref">Figure&nbsp;4</a>). A-bao is the cat—and the real boss—at a coffee shop I love. If you ever pass through Guangzhou, I’ll let the shop owner know and treat you to a hot Americano.</p>
-<div id="fig-cat-prince" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cat-prince-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./the-prince-2.jpg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cat-prince-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: The Prince
-</figcaption>
-</figure>
-</div>
-<div id="fig-cat-bao" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cat-bao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./a-bao.jpg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cat-bao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: A-bao
-</figcaption>
-</figure>
-</div>
+<p>I felt lonely when I started writing this part.</p>
+<p>I have mentioned in your SFQ that</p>
+<p>Again Thanks for all the torlerance this semester.</p>
+<p>May all the cats be with you and your journey in UM.</p>
+<p>Last month one of best friend in UM, a hard-core CS guy, as nerd as I do, who works in Kingsoft Office, came to see me (of course his <em>alma mater</em>).</p>
+<p>True, FED or even UM sucked. But still, we may find something interesting here.</p>
+<p>Happy thanksgiving and メリークリスマス.</p>
 
 
 </section>
@@ -737,10 +640,7 @@ Figure&nbsp;4: A-bao
 <ol>
 <li id="fn1"><p>And it is now owned by Japanese (SUNTORY bought it from GSK in 2013).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>The leading brand? That should be the reeeeeeeeeeeeeed one.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>I tested on myself and this is true.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>The rank ordering of <span class="math inline">\(Y\)</span> means across levels of groups in <span class="math inline">\(A\)</span> changed slightly. I believe the adjusted mean is more close to the fact, see the reason in next footnote.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>But it has been proven that consuming glucose-rich foods is an effective way to alleviate hangover symptoms because when people drink alcohol, their blood glucose levels tend to decrease, leading to hypoglycemia that makes people <em>feel like death</em>. The power of glucose was also confirmed by an experienced drinker who wrote this footnote.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>If I get another chance, I’d like to say that I prefer neither option and would choose causal inference instead. I’m determined to <strong>almost</strong> master this method after the Christmas and Lunar New Year breaks.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>I tested on myself and that’s true.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -825,6 +725,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -935,6 +837,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
