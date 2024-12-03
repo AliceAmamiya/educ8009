@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Yang SHEN, Y-C4-7113-4">
 
-<title>Laboratory 07 – educ8009-assignments</title>
+<title>Currently I haven’t got any idea – educ8009-assignments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -109,7 +81,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session13-14/assignment.html">Session13 14</a></li><li class="breadcrumb-item"><a href="../session13-14/assignment.html">Laboratory 07</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      educ8009-assignments
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -251,16 +225,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">Session13 14</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../session13-14/assignment.html" class="sidebar-item-text sidebar-link active">
+  <a href="../session13-14/assignment.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Laboratory 07</span></a>
   </div>
 </li>
@@ -329,41 +303,33 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dataset-1-tea-vs-cognitive-function" id="toc-dataset-1-tea-vs-cognitive-function" class="nav-link active" data-scroll-target="#dataset-1-tea-vs-cognitive-function">Dataset 1: Tea vs Cognitive function</a>
-  <ul class="collapse">
-  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
-  <ul class="collapse">
-  <li><a href="#q1-why-independent-samples-t-test" id="toc-q1-why-independent-samples-t-test" class="nav-link" data-scroll-target="#q1-why-independent-samples-t-test">Q1: Why independent-samples <span class="math inline">\(t\)</span>-test?</a></li>
-  <li><a href="#q2-interpret-the-independent-samples-t-test-result." id="toc-q2-interpret-the-independent-samples-t-test-result." class="nav-link" data-scroll-target="#q2-interpret-the-independent-samples-t-test-result.">Q2: Interpret the independent-samples <span class="math inline">\(t\)</span>-test result.</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#dataset-2-download-music-festival" id="toc-dataset-2-download-music-festival" class="nav-link" data-scroll-target="#dataset-2-download-music-festival">Dataset 2: Download Music Festival</a>
-  <ul class="collapse">
-  <li><a href="#context-1" id="toc-context-1" class="nav-link" data-scroll-target="#context-1">Context</a></li>
-  <li><a href="#objectives-1" id="toc-objectives-1" class="nav-link" data-scroll-target="#objectives-1">Objectives</a></li>
-  <li><a href="#solutions-1" id="toc-solutions-1" class="nav-link" data-scroll-target="#solutions-1">Solutions</a>
-  <ul class="collapse">
-  <li><a href="#q3-is-correlation-coefficient-appropriate" id="toc-q3-is-correlation-coefficient-appropriate" class="nav-link" data-scroll-target="#q3-is-correlation-coefficient-appropriate">Q3: Is correlation coefficient appropriate</a></li>
-  <li><a href="#q4-interpret-the-paired-sample-t-test-result" id="toc-q4-interpret-the-paired-sample-t-test-result" class="nav-link" data-scroll-target="#q4-interpret-the-paired-sample-t-test-result">Q4: Interpret the paired-sample <span class="math inline">\(t\)</span>-test result</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research question</a></li>
+  <li><a href="#data-and-methods" id="toc-data-and-methods" class="nav-link" data-scroll-target="#data-and-methods">Data and methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#conclusion-and-discussion" id="toc-conclusion-and-discussion" class="nav-link" data-scroll-target="#conclusion-and-discussion">Conclusion and discussion</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="final-project.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session13-14/assignment.html">Session13 14</a></li><li class="breadcrumb-item"><a href="../session13-14/assignment.html">Laboratory 07</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Laboratory 07</h1>
+<h1 class="title">Currently I haven’t got any idea</h1>
+<p class="subtitle lead">A short term paper for EDUC8009</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yang SHEN, Y-C4-7113-4 </p>
+          </div>
+  </div>
     
   
     
@@ -374,318 +340,31 @@ window.Quarto = {
 </header>
 
 
-<p>Finally I noticed something on the requirement of all lab assignments I have ignored from the very beginning:</p>
-<blockquote class="blockquote">
-<p>You are <strong>NOT</strong> required to show all the codes or the raw output of statistical software. You only need to answer the questions.</p>
-</blockquote>
-<p>I therefore turned <code>echo</code> for few code block to <code>false</code>. The long and annoying code must be interruptive while reading.</p>
-<section id="dataset-1-tea-vs-cognitive-function" class="level1">
-<h1>Dataset 1: Tea vs Cognitive function</h1>
-<section id="context" class="level2">
-<h2 class="anchored" data-anchor-id="context">Context</h2>
-<p>In Laboratory 5 we analyzed <code>tea.sav</code>, which contains cognitive function scores of participants who consumed varying amounts of tea every day. Now we hope to study whether there is a difference in cognitive function scores between individuals who do not drink tea and those who drink two cups of tea per day.</p>
+<p>The journey of discovering the open data starts here.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Brief introduction, maybe like the of each lab works.</p>
 </section>
-<section id="objectives" class="level2">
-<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
-<ol type="1">
-<li>Do you think the independent-samples <span class="math inline">\(t\)</span>-test is a good choice? Why or why not?</li>
-<li>Conduct an independent-samples <span class="math inline">\(t\)</span>-test. Write a short paragraph that summarizes and interprets the results of the test.</li>
-</ol>
+<section id="research-question" class="level1">
+<h1>Research question</h1>
+<p>Briefly describe the background and the research questions. Comprehensive literature review is required for journal papers but not required for this project.</p>
 </section>
-<section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<section id="q1-why-independent-samples-t-test" class="level3">
-<h3 class="anchored" data-anchor-id="q1-why-independent-samples-t-test">Q1: Why independent-samples <span class="math inline">\(t\)</span>-test?</h3>
-<p>Given:</p>
-<p><span class="math inline">\(X\)</span>: cups of tea<br>
-<span class="math inline">\(Y\)</span>: cognitive function scores</p>
-<p>Group 1: not drink tea per day (<code>tea == 0</code>)<br>
-Group 2: 2 cups of tea per day (<code>tea == 2</code>)</p>
-<p>In addition, in the description of Lab 5:</p>
-<blockquote class="blockquote">
-<p>The researcher recruits a <strong>large group</strong> of respondents and <strong>randomly assigns</strong> each one with a different number of cups of tea to drink every day.</p>
-</blockquote>
-<p>Based on the assumption of independent-samples t-test and the design of the experiment, It might be a good choice for the following reason:</p>
-<ol type="1">
-<li><strong>Continuous Variable</strong>: The dependent variable, cognitive function scores, is continuous, which is suitable for an independent-samples <span class="math inline">\(t\)</span>-test.</li>
-<li><strong>Normal Distribution</strong>: The scores appear to follow a normal distribution, and with a large sample size, the Central Limit Theorem supports the normality assumption.</li>
-<li><strong>Independence Between Groups</strong>: Each participant belongs to only one group (either <code>tea = 0</code> or <code>tea = 2</code>), ensuring independence of scores between groups.</li>
-<li><strong>Random Sampling</strong>: Random sampling ensures that scores are independent within groups, fulfilling this assumption of the independent-samples <span class="math inline">\(t\)</span>-test.</li>
-</ol>
-<p>These points may confirm that the independent-samples <span class="math inline">\(t\)</span>-test is an appropriate statistical method for this analysis.</p>
-<div id="cell-fig-hist-cog-fun" class="cell">
-<div class="cell-output cell-output-display">
-<div id="fig-hist-cog-fun" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hist-cog-fun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assignment_files/figure-html/fig-hist-cog-fun-output-1.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hist-cog-fun-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Histograms on cognitive function for 0-and 2-cup-tea drinker
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<section id="data-and-methods" class="level1">
+<h1>Data and methods</h1>
+<p>Describe the source of the data and all data cleaning steps (how many observations are removed due to missing values, whether a subset rather than the whole dataset is used for analysis, etc.) to make sure that this study is replicable by readers of the paper. Basic descriptive statistics, including relevant tables and/or plots, should be provided. Relate your research question to which methods to use.</p>
 </section>
-<section id="q2-interpret-the-independent-samples-t-test-result." class="level3">
-<h3 class="anchored" data-anchor-id="q2-interpret-the-independent-samples-t-test-result.">Q2: Interpret the independent-samples <span class="math inline">\(t\)</span>-test result.</h3>
-<p>The Levene’s Test resulted <span class="math inline">\(F \approx 0.0797\)</span> and a high <span class="math inline">\(p \approx 0.7781\)</span>, indicated that there is no significant difference in variances between the groups, however, due to the unequal sample size, we may stick on the Welch’s <span class="math inline">\(t\)</span>-test here. The result was shown as follows:</p>
-<p>In the independent-samples <span class="math inline">\(t\)</span>-test comparing cognitive function scores between individuals who do not drink tea (Group 1) and those who drink two cups of tea per day (Group 2), the results indicated a <span class="math inline">\(t(89.65) \approx 1.375\)</span>, <span class="math inline">\(p \approx 0.1725\)</span>, two-tailed, which suggests that there is no statistically significant difference in cognitive function scores between the two groups at the conventional level of <span class="math inline">\(\alpha = 0.05\)</span>. The 95% confidence interval for the difference in means are <span class="math inline">\([-1.11, 6.09]\)</span>. The effect size, measured by Cohen’s <span class="math inline">\(d \approx 0.23\)</span>, reflecting a small effect. Additionally, the Bayes factor <span class="math inline">\(BF_{10} \approx 0.432\)</span> suggests that the evidence is more in favor of the null hypothesis than the alternative. Overall, these findings imply that drinking two cups of tea per day does not significantly impact cognitive function compared to non-tea drinkers within the context of this experiment.</p>
-<div id="cell-8" class="cell" data-execution_count="13">
-<div class="cell-output cell-output-stdout">
-<pre><code>Levene's Test for Equality of Variances: 
-F: 0.07969429918151855
-Sig: 0.7780595985739489</code></pre>
-</div>
-</div>
-<div id="cell-9" class="cell" data-execution_count="77">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="77">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 12%">
-<col style="width: 8%">
-<col style="width: 12%">
-<col style="width: 9%">
-<col style="width: 6%">
-<col style="width: 7%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Type</th>
-<th style="text-align: right;">T</th>
-<th style="text-align: right;">dof</th>
-<th style="text-align: left;">alternative</th>
-<th style="text-align: right;">p-val</th>
-<th style="text-align: left;">CI95%</th>
-<th style="text-align: right;">cohen-d</th>
-<th style="text-align: right;">BF10</th>
-<th style="text-align: right;">power</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Welch’s <span class="math inline">\(t\)</span>-test applied</strong></td>
-<td style="text-align: right;">1.37534</td>
-<td style="text-align: right;">89.6494</td>
-<td style="text-align: left;">two-sided</td>
-<td style="text-align: right;">0.172453</td>
-<td style="text-align: left;">[-1.11 6.09]</td>
-<td style="text-align: right;">0.229847</td>
-<td style="text-align: right;">0.432</td>
-<td style="text-align: right;">0.26855</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Independent-samples <span class="math inline">\(t\)</span>-test</td>
-<td style="text-align: right;">1.34901</td>
-<td style="text-align: right;">168</td>
-<td style="text-align: left;">two-sided</td>
-<td style="text-align: right;">0.17915</td>
-<td style="text-align: left;">[-1.15 6.14]</td>
-<td style="text-align: right;">0.229847</td>
-<td style="text-align: right;">0.418</td>
-<td style="text-align: right;">0.26855</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="results" class="level1">
+<h1>Results</h1>
+<p>Show and interpret your findings from the data. Only report necessary statistical results. It is unacceptable to simply paste a screenshot of tables obtained from statistical software which include a lot of irrelevant information. Tables and Figures should be numbered and have captions that describe what they show.</p>
 </section>
-</section>
-</section>
-<section id="dataset-2-download-music-festival" class="level1">
-<h1>Dataset 2: Download Music Festival</h1>
-<section id="context-1" class="level2">
-<h2 class="anchored" data-anchor-id="context-1">Context</h2>
-<p>In Laboratory 1 we analyzed download.sav, which contains hygiene scores of concert goers over three days of a rock music festival. Now we hope to study the relationship between hygiene scores on days 2 and 3.</p>
-</section>
-<section id="objectives-1" class="level2">
-<h2 class="anchored" data-anchor-id="objectives-1">Objectives</h2>
-<ol start="3" type="1">
-<li>Is the correlation coefficient an appropriate measure of the relationship between hygiene scores on days 2 and 3? Why or why not?</li>
-<li>Conduct a paired-samples 𝑡 test. Write a short paragraph that summarizes and interprets the results of the test.</li>
-</ol>
-</section>
-<section id="solutions-1" class="level2">
-<h2 class="anchored" data-anchor-id="solutions-1">Solutions</h2>
-<p>You may still remember the <em>Ms.&nbsp;Laundry Pod the Outlier</em> in the story of Lab 1. The bad news is she’s still living in the provided dataset. While the good news is this typo only happens on <code>day_1</code> and since we are interested in the hygiene scores for <code>day_2</code> and <code>day_3</code> this time, we may not need to “say goodbye” as we did in Lab 1.</p>
-<p>良かったね、ランドリーポッドさん。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p><strong>or should I say that?</strong></p>
-<p>Since the assumption of paired sample <span class="math inline">\(t\)</span>-test requires the same variable measured in the same units for the two situations, all participants without hygiene scores for either <code>day_2</code> or <code>day_3</code> should be dropped. The <code>pingouin</code> package will handle this automatically while doing the math, but not for plotting. Therefore, a new <code>DataFrame</code> was created with a new <span class="math inline">\(N = 123\)</span>.</p>
-<p>さよなら、ランドリーポッドさん。</p>
-<div id="cell-12" class="cell">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="117">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">index</th>
-<th style="text-align: right;">ticket_no</th>
-<th style="text-align: right;">day_1</th>
-<th style="text-align: right;">day_2</th>
-<th style="text-align: right;">day_3</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">count</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: right;">123</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">mean</td>
-<td style="text-align: right;">3647.98</td>
-<td style="text-align: right;">1.65146</td>
-<td style="text-align: right;">0.92748</td>
-<td style="text-align: right;">0.976504</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">std</td>
-<td style="text-align: right;">626.302</td>
-<td style="text-align: right;">0.643897</td>
-<td style="text-align: right;">0.666004</td>
-<td style="text-align: right;">0.710277</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">min</td>
-<td style="text-align: right;">2111</td>
-<td style="text-align: right;">0.43</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">0.02</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">25%</td>
-<td style="text-align: right;">3274.5</td>
-<td style="text-align: right;">1.16</td>
-<td style="text-align: right;">0.425</td>
-<td style="text-align: right;">0.44</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">50%</td>
-<td style="text-align: right;">3649</td>
-<td style="text-align: right;">1.55</td>
-<td style="text-align: right;">0.78</td>
-<td style="text-align: right;">0.76</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">75%</td>
-<td style="text-align: right;">4183</td>
-<td style="text-align: right;">2.095</td>
-<td style="text-align: right;">1.215</td>
-<td style="text-align: right;">1.525</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">max</td>
-<td style="text-align: right;">4724</td>
-<td style="text-align: right;">3.38</td>
-<td style="text-align: right;">3.44</td>
-<td style="text-align: right;">3.41</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<section id="q3-is-correlation-coefficient-appropriate" class="level3">
-<h3 class="anchored" data-anchor-id="q3-is-correlation-coefficient-appropriate">Q3: Is correlation coefficient appropriate</h3>
-<p>Recall back to the assumption of Pearson’s <span class="math inline">\(r\)</span>, the correlation coefficient is partially an appropriate measure to study the relationship between hygiene scores on days 2 and 3:</p>
-<ol type="1">
-<li><strong>Sample Size</strong>: As suggested in the description of Lab1, the researcher had tested all comers with an <span class="math inline">\(N = 123\)</span>, which is relatively large and similar to the population of interest.</li>
-<li><strong>Linear Relationship</strong>: The scatter plot on the relationship between hygiene scores on Day 2 and Day 3 (see <a href="#fig-scatter-download" class="quarto-xref">Figure&nbsp;2</a>) shows a clear linear trend, indicating a positive linear relationship. This suggests that using a correlation coefficient to measure this relationship is appropriate.</li>
-<li><strong>Scale of Measurement</strong>: The hygiene scores are continuous variables, making the correlation coefficient suitable.</li>
-<li><strong>Paired Observations</strong>: The data represents paired measurements from the same individuals.</li>
-<li><strong>Outliers</strong>: There seems not appear to be any significant outliers that would severely distort the correlation.</li>
-</ol>
-<p>However: As for the normality: While there is some skewness (as shown by <a href="#fig-hist-hygiene" class="quarto-xref">Figure&nbsp;3</a>), the relationship appears reasonably linear and without extreme outliers that would severely distort the correlation.</p>
-<div id="cell-fig-scatter-download" class="cell">
-<div class="cell-output cell-output-display">
-<div id="fig-scatter-download" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-scatter-download-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assignment_files/figure-html/fig-scatter-download-output-1.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatter-download-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Scatter-plot on hygiene scores between day 2 vs day 3
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div id="cell-fig-hist-hygiene" class="cell" data-execution_count="141">
-<div class="cell-output cell-output-display">
-<div id="fig-hist-hygiene" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hist-hygiene-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assignment_files/figure-html/fig-hist-hygiene-output-1.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hist-hygiene-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Histograms on Hygiene Scores of Day 2 vs Day 3
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="q4-interpret-the-paired-sample-t-test-result" class="level3">
-<h3 class="anchored" data-anchor-id="q4-interpret-the-paired-sample-t-test-result">Q4: Interpret the paired-sample <span class="math inline">\(t\)</span>-test result</h3>
-<p>A paired sample <span class="math inline">\(t\)</span>-test was conducted to compare the hygiene scores between days 2 and 3 of the Download Music Festival. The test yielded <span class="math inline">\(t(122) \approx -0.9685\)</span>, <span class="math inline">\(p \approx 0.3347\)</span>. This indicates that there is no statistically significant difference in hygiene scores between the two days. The 95% CI for the mean difference is <span class="math inline">\([-0.15, 0.05]\)</span>, suggesting that any difference is likely small and not meaningful. The effect size, as measured by Cohen’s <span class="math inline">\(d \approx 0.0712\)</span>, indicating a negligible effect. The Bayes Factor <span class="math inline">\(BF_{10} \approx 0.158\)</span> suggests that the data provide more support for the null hypothesis than the alternative. Overall, the results suggest no substantial change in hygiene scores from day 2 to day 3 <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
-<div id="cell-18" class="cell" data-execution_count="100">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="100">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 8%">
-<col style="width: 17%">
-<col style="width: 11%">
-<col style="width: 17%">
-<col style="width: 12%">
-<col style="width: 9%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: right;">T</th>
-<th style="text-align: right;">dof</th>
-<th style="text-align: left;">alternative</th>
-<th style="text-align: right;">p-val</th>
-<th style="text-align: left;">CI95%</th>
-<th style="text-align: right;">cohen-d</th>
-<th style="text-align: right;">BF10</th>
-<th style="text-align: right;">power</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">-0.968472</td>
-<td style="text-align: right;">122</td>
-<td style="text-align: left;">two-sided</td>
-<td style="text-align: right;">0.334725</td>
-<td style="text-align: left;">[-0.15 0.05]</td>
-<td style="text-align: right;">0.071205</td>
-<td style="text-align: right;">0.158</td>
-<td style="text-align: right;">0.122744</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<section id="conclusion-and-discussion" class="level1">
+<h1>Conclusion and discussion</h1>
+<p>Summarize the paper. Discuss limitations of the current study (whether the statistical method used is appropriate, whether the relationship is correlation rather than causation, whether the data is collected from a nonrepresentative sample, etc.) and propose possible future directions.</p>
 
 
 </section>
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>This sounds like an anime quote.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>That’s definitely true for a music festival full of sweat, alcohol, <em>Seishun (青春, that’s youth in Japanese)</em> and romance! Only problem for these activities is they are too “リア充”, it’s a shame the bands there never appears to play Anisongs. There’s no random <em>Togenashi Togeari</em> (トゲナシトゲアリ) appear on the stage of summer music festival, at least you can’t count this happen in Greater China. <br> If you can’t figure out what I am saying, skip it TTATT.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

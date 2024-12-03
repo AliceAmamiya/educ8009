@@ -15,6 +15,7 @@ format:
         header-includes:
             - \usepackage{fvextra}
             - \usepackage{xeCJK}
+            - \setCJKmainfont{Noto Serif CJK JP}
             - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 ---
 
@@ -50,18 +51,23 @@ A marketing manager tested the benefit of soft drinks for curing hangovers. He t
 
 # Solutions
 
+## Q1-Q4, and Q6: result of ANCOVA and its findings
+
 In this experiment, given: 
 
-$Y$: Measures of how well a hangover person feel after the soft drink treatment. 
-$X_c$: Measures of how drunk a person got last night.
-$A$: Types of drink. Group $A_1$ for water, $A_2$ for Lucozade and $A_3$ for Cola. 
+ - $Y$: Measures of how well a hangover person feel after the soft drink treatment. 
 
-## Q1: The scatterplot
+ - $X_c$: Measures of how drunk a person got last night.
+
+ - $A$: Types of drink. Group $A_1$ for water, $A_2$ for Lucozade and $A_3$ for Cola. 
+
+### Data screening: scatterplot
+
 The scatterplot between how drunk the person was before the treatment ($X_c$) and how well they felt after treatment ($Y$) is shown as @fig-q1-scatter, $X_c$ and $Y$ showed a linear relation with no bivariate outliers. 
 
 ![The outcome $Y$ against the covariate $X_c$.](./q1-scatter.png){#fig-q1-scatter}
 
-## Q2: Independence of $X_c$ and $A$
+### Sanity check: Independence of $X_c$ and $A$
 
 To reveal whether people in the three groups differ in how drunk they were before the treatment, a one-way ANOVA was conducted and the results were listed as @tbl-mean-between-groups. 
 
@@ -70,34 +76,38 @@ To reveal whether people in the three groups differ in how drunk they were befor
 | drink                  | 8.400    | 2     | 4.200 | 1.355   | .295  |
 | Error                  | 37.200   | 12    | 3.100 |         |       |
 
-: {#tbl-mean-between-groups}
+: Result of one-way ANOVA for $A$ on $X_c$. {#tbl-mean-between-groups}
 
-The result showed that the main effect of drink is not significant, with $F(2, 12) = 1.355$, $p=0.295$, that indicated that statically there were no differences on the average drunk level between all three groups. That means the $X_c$ and $A$ are independent, the assumption of ANCOVA appeared to be satisfied. 
+The result showed that the main effect of drink is not significant, with $F(2, 12) = 1.355$, $p=0.295$, that indicated that statically there were no differences on the average drunk level between all three groups. That means the $X_c$ and $A$ are independent, one of the assumptions of ANCOVA appeared to be satisfied. 
 
-## Q3: Homogeneity of regression slopes
+### Sanity check: Homogeneity of regression slopes
 
 | Source                | SS            | $df$  | MS        | $F$       | $p$   |
 |-----------------------|-----------    |-------|-----------|-----------|-------|
 | drink * drunk	        |11.610	        | 3	    | 3.870	    | 6.951	    | 0.007	|
 | Error	                |6.124	        | 11	| 0.557		|           |       |
 
-To assess whether there was an interaction between $A$ and $X_c$, a preliminary ANCOVA was run using the SPSS GLM procedure with a custom model that included an $A \times X_c$ interaction term. This interaction was statistically significant with an $F(3, 11) = 6.951$, $p = 0.007$. This indicates that the effect of the treatment on how well the person feels depends on how drunk they felt before the treatment.
+: Result of ANCOVA for the interaction between $A$ and $X_c$. {#tbl-interaction}
+
+To assess whether there was an interaction between $A$ and $X_c$, a preliminary ANCOVA was run using the SPSS GLM procedure with a custom model that included an $A \times X_c$ interaction term and the result was shown in @tbl-interaction. This interaction was statistically significant with an $F(3, 11) = 6.951$, $p = 0.007$. This indicates that the effect of the treatment on how well the person feels depends on how drunk they felt before the treatment.
 
 In conclusion, there is a significant interaction between the treatment and the covariate, meaning the initial feeling of drunkenness influences the treatment effect on how well the person feels.[^3] The assumption of homogeneity of regression slopes may be violated. 
 
-[^3]: I tested on myself and that's true.
+[^3]: I tested on myself and this is true.
 
-## Q4: ANCOVA and the adjusted means of Group $A_1$, $A_2$ and $A_3$.
+### ANCOVA result and the adjusted means of Group $A_1$, $A_2$ and $A_3$.
 
 | Source                | SS            | $df$  | MS        | $F$       | $p$       | $\eta_p^2$ |
-|-----------------------|-----------    |-------|-----------|-----------|-----------|------------|
+|-----------------------|---------------|-------|-----------|-----------|-----------|------------|
 | drunk	                | 9.856	        | 1     | 9.856     | 24.568    | <0.001	| 0.691      |
 | drink	                | 3.464	        | 2     | 1.732	    | 4.318	    | 0.041	    | 0.440      |
 | Error	                | 4.413	        | 11	| 0.401		|           |           |   		 |
 
-An ANCOVA was conducted to examine the effect of drink type on recovery while controlling for initial drunkenness. The effect of how drunk the person felt the night before was significant, $F(1,11) = 24.568$, $p < 0.001$, $\eta_p^2 = 0.691$, indicated that pre-existing drunkenness significantly affects how well the person feels. The treatment had a significant effect on how well the person felt, $F(2,11) = 4.318$, $p = 0.041$, $\eta_p^2 = 0.440$. 
+:Result of ANCOVA. {#tbl-ancova}
 
-The adjusted means were given in @tbl-adjusted-means, suggested that participants who drank Lucozade felt better than those who drank Water or Cola.
+An ANCOVA was conducted to examine the effect of drink type on recovery while controlling for initial drunkenness and the result was shown in @tbl-ancova. The effect of how drunk the person felt the night before was significant, $F(1,11) = 24.568$, $p < 0.001$, $\eta_p^2 = 0.691$, indicated that pre-existing drunkenness significantly affects how well the person feels. The treatment had a significant effect on how well the person felt, $F(2,11) = 4.318$, $p = 0.041$, $\eta_p^2 = 0.440$. 
+
+The adjusted means were given in @tbl-adjusted-means [^4], after the adjustment for the $Y$ of drunkenness, participants who took Lucozade ($M_2 = 6.239$) felt better than participants who drunk water or cola ($M_1 = 5.110$, $M_3 = 5.252$). 
 
 |           |           | Mean of $Y$, adjusted for $X_c$ | Unadjusted Mean of $Y$ | 
 |-----------|-----------|---------------------------------|------------------------|
@@ -105,42 +115,29 @@ The adjusted means were given in @tbl-adjusted-means, suggested that participant
 | Group 2   | Lucozade  | 6.239                           | 5.80                   |
 | Group 3   | Cola      | 5.252                           | 5.80                   |
 
-: Adjusted means (evaluated at initial drunkenness = 3.40). {#tbl-adjusted-means}
+:Adjusted means (evaluated at initial drunkenness = 3.40). {#tbl-adjusted-means}
+
+[^4]: The rank ordering of $Y$ means across levels of groups in $A$ changed slightly. I believe the adjusted mean is more close to the fact, see the reason in next footnote. 
 
 ## Q5: ANOVA or ANCOVA
 
-If there's another other chance for me I would like to say I prefer neither of them then go for casual inference. I swear I WILL master this method after Christmas and Lunar New Year recess. 
+Given all assumptions of ANCOVA or ANOVA were satisfied (although this may only happen in the statistician's Disneyland). In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including covariates that can influence the dependent variable. In this case, ANCOVA may reduce error variance and increases statistical power to detect treatment effects, especially with the small sample size (like this dataset with $n = 15$). Therefore, ANCOVA may provides a clearer understanding of the treatment effects. In this study, however, because of the significant interaction between the treatment and the covariate, the causal relationship between drink type and recovery from hangover tended to remain unclear [^5].
 
-In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for any confounding variables or covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including one or more covariate(s) that can influence the dependent variable. By controlling for these covariates, ANCOVA adjusts the group means, providing a clearer understanding of the treatment effects while accounting for variability attributed to other factors.
+[^5]: But it has been proven that consuming glucose-rich foods is an effective way to alleviate hangover symptoms because when people drink alcohol, their blood glucose levels tend to decrease, leading to hypoglycemia that makes people *feel like death*. The power of glucose was also confirmed by an experienced drinker who wrote this footnote. 
 
-From we see significant effects both from the covariate ("drunk") and the treatment ("drink"), indicating that initial drunkenness plays a substantial role in how participants feel subsequently.
-
-ANCOVA is the better choice here for several reasons:
-
-1. Power: By accounting for the variance explained by initial drunkenness, ANCOVA reduces error variance and increases statistical power to detect treatment effects. This is particularly important with the small sample size ($n = 15$).
-
-2. Precision: Initial drunkenness strongly predicts recovery (shown by the large effect size). Controlling for this relationship provides a more precise estimate of the treatment effect.
-
-3. Individual Differences: Even with successful randomization, individuals entered the study with different levels of drunkenness. ANCOVA adjusts for these pre-existing differences, giving us a clearer picture of the drink effects.
-
-Therefore, while both analyses are valid given the successful randomization, ANCOVA provides a more powerful and precise test of the causal relationship between drink type and recovery in this study.
-
-## Q6: Everything wrapped up (the summary)
-
-I think the 
+> If I get another chance, I’d like to say that I prefer neither option and would choose causal inference instead. I’m determined to **almost** master this method after the Christmas and Lunar New Year breaks.
 
 # Final thoughts
 
-I felt lonely when I started writing this part. 
+I felt lonely when I started writing this part. Initially I had many things to say but later I decided wrap them all into two sentences with bullet points. 
 
-I have mentioned in your SFQ that 
-
-Again Thanks for all the torlerance this semester. 
-
-May all the cats be with you and your journey in UM. 
-
-Last month one of best friend in UM, a hard-core CS guy, as nerd as I do, who works in Kingsoft Office, came to see me (of course his *alma mater*).  
-
-True, FED or even UM sucked. But still, we may find something interesting here. 
+ - Thank you for all the tolerance for my foolish this semester.
+ - May all the cats at UM, as well as the force, be with you.
 
 Happy thanksgiving and メリークリスマス. 
+
+Greetings from our lovely cats, the Prince (@fig-cat-prince) and A-bao (阿煲, see @fig-cat-bao). A-bao is the cat—and the real boss—at a coffee shop I love. If you ever pass through Guangzhou, I'll let the shop owner know and treat you to a hot Americano. 
+
+![The Prince](./the-prince-2.jpg){#fig-cat-prince}
+
+![A-bao](./a-bao.jpg){#fig-cat-bao}
