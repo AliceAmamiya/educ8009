@@ -345,11 +345,11 @@
     ]
   },
   {
-    "objectID": "session16-17/assignment.html#solutions-q1-q3-combined",
-    "href": "session16-17/assignment.html#solutions-q1-q3-combined",
+    "objectID": "session16-17/assignment.html#solutions",
+    "href": "session16-17/assignment.html#solutions",
     "title": "Laboratory 09",
     "section": "",
-    "text": "Just mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:\nA \\(3 \\times 2\\) factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating \\(Y\\) could be predicted from level of alcohol consumption (\\(A_1 =\\) Placebo, \\(A_2 =\\) Low dose, \\(A_3 =\\) High dose), facial attractiveness (\\(B_1 =\\) Unattractive, \\(B_2 =\\) Attractive), and the interaction between doses of alcohol and the facial attractiveness.\n\n\n\nTable 1: \\(3 \\times 2\\) factorial ANOVA (RANKING by ALCOHOL and FACETYPE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nScore\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nALCOHOL\n16.542\n2\n8.271\n6.041\n.005\n.223\n\n\nFACETYPE\n21.333\n1\n21.333\n15.583\n&lt;.001\n.271\n\n\n\\(A \\times F\\)\n23.292\n2\n11.646\n8.507\n&lt;.001\n.288\n\n\nError\n57.500\n42\n1.369\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F_A(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\(\\eta_p^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F_B(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.271\\), showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F_{A \\times B}(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.288\\). The beer-goggles effect is more pronounced for unattractive faces (see Figure 1): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
+    "text": "Just mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:\nA \\(3 \\times 2\\) factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating \\(Y\\) could be predicted from level of alcohol consumption (\\(A_1 =\\) Placebo, \\(A_2 =\\) Low dose, \\(A_3 =\\) High dose), facial attractiveness (\\(B_1 =\\) Unattractive, \\(B_2 =\\) Attractive), and the interaction between doses of alcohol and the facial attractiveness.\n\n\n\nTable 1: \\(3 \\times 2\\) factorial ANOVA (RANKING by ALCOHOL and FACETYPE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nALCOHOL\n16.542\n2\n8.271\n6.041\n.005\n.223\n\n\nFACETYPE\n21.333\n1\n21.333\n15.583\n&lt;.001\n.271\n\n\n\\(A \\times F\\)\n23.292\n2\n11.646\n8.507\n&lt;.001\n.288\n\n\nError\n57.500\n42\n1.369\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F_A(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\(\\eta_p^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F_B(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.271\\), showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F_{A \\times B}(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.288\\). The beer-goggles effect is more pronounced for unattractive faces (see Figure 1): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
     "crumbs": [
       "Labs",
       "Session16 17",
@@ -381,11 +381,11 @@
     ]
   },
   {
-    "objectID": "session16-17/assignment.html#solutions",
-    "href": "session16-17/assignment.html#solutions",
+    "objectID": "session16-17/assignment.html#solutions-1",
+    "href": "session16-17/assignment.html#solutions-1",
     "title": "Laboratory 09",
-    "section": "",
-    "text": "Just mention that the Levene’s test being not significant indicates that the assumption of homogeneity of variance is satisfied (as you expected). So, based on the results from the factorial ANOVA:\nA \\(3 \\times 2\\) factorial ANOVA was performed using the SPSS GLM procedure to assess whether the attractiveness rating \\(Y\\) could be predicted from level of alcohol consumption (\\(A_1 =\\) Placebo, \\(A_2 =\\) Low dose, \\(A_3 =\\) High dose), facial attractiveness (\\(B_1 =\\) Unattractive, \\(B_2 =\\) Attractive), and the interaction between doses of alcohol and the facial attractiveness.\n\n\n\nTable 1: \\(3 \\times 2\\) factorial ANOVA (RANKING by ALCOHOL and FACETYPE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nALCOHOL\n16.542\n2\n8.271\n6.041\n.005\n.223\n\n\nFACETYPE\n21.333\n1\n21.333\n15.583\n&lt;.001\n.271\n\n\n\\(A \\times F\\)\n23.292\n2\n11.646\n8.507\n&lt;.001\n.288\n\n\nError\n57.500\n42\n1.369\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\nThere is a significant main effect of alcohol consumption on attractiveness ratings, \\(F_A(2, 42) = 6.041\\), \\(p = 0.005\\), with a \\(\\eta_p^2 = 0.223\\), indicating that alcohol consumption influences attractiveness ratings. As alcohol consumption increases, ratings generally change, especially between low and high doses.\nThe main effect on facial attractiveness on attractiveness ratings is significant as well, \\(F_B(1, 42) = 15.583\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.271\\), showing that symmetric (attractive) faces are rated higher than asymmetric (unattractive) faces across all alcohol consumption levels.\nFor the interaction effect, there is a significant interaction between alcohol consumption and facial attractiveness, \\(F_{A \\times B}(2, 42) = 8.507\\), \\(p &lt; 0.001\\), with a \\(\\eta_p^2 = 0.288\\). The beer-goggles effect is more pronounced for unattractive faces (see Figure 1): ratings increase significantly as alcohol consumption increases from placebo to high dose. In contrast, attractive faces maintain relatively consistent ratings across alcohol levels.\nAdditionally, Figure 1 illustrates that ratings for unattractive faces improve significantly from placebo to high-dose conditions, highlighting the interaction effect. Attractive faces show smaller changes, supporting that alcohol affects symmetry perception more in unattractive faces.\nOverall, the findings suggest that both alcohol consumption and facial attractiveness independently influence attractiveness ratings, and their interaction further impacts these ratings.",
+    "section": "Solutions",
+    "text": "Solutions\n\nQ4-Q6: Repeated-measures ANOVA\nSince Mauchly’s sphericity test did not indicate a significant violation of the sphericity test (\\(p = 0.190\\), just as what you planned), sphericity assumption assumed. The repeated-measures ANOVA was conducted and report as follows:\n\n\n\nTable 2: Repeated-measure ANOVA of alcohol dose on attractiveness ratings\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nDoseBright\n7434.192\n3\n2478.064\n25.198\n&lt;.001\n.502\n\n\nError\n7375.808\n75\n98.344\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Dose of alcohol on attractiveness ratings in bright lighting conditions\n\n\n\nThe effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, \\(F(3, 75) = 25.198\\), \\(p &lt; 0.001\\), \\(\\eta_p^2 = 0.502\\), indicating a large effect size, suggesting that the dose of alcohol explains about 50.2% of the variance in attractiveness ratings. The chart shown in Figure 2 also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the beer-goggles effect hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.\n\n\nQ7: The magnification of the beer goggles effect\nAgain, Mauchly’s test did not indicate a significant violation of the sphericity for both variables (\\(p_{D} = 0.454\\), \\(p_{D \\times L} = 0.768\\)), which may seldom happen to the real world data 1. Anyway, the repeated-measures ANOVA was conducted and report as follows:\n\n\n\nTable 3: Repeated-measure ANOVA of alcohol dose and lighting interact to the attractiveness ratings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nDOSE\n38591.654\n3\n12863.885\n104.385\n&lt;.001\n.807\n\n\nError (\\(D\\))\n9242.596\n75\n123.235\n\n\n\n\n\nLIGHTING\n1993.923\n1\n1993.923\n23.421\n&lt;.001\n.484\n\n\nError (\\(L\\))\n2128.327\n25\n85.133\n\n\n\n\n\n\\(D \\times L\\)\n5765.423\n3\n1921.808\n22.218\n&lt;.001\n.471\n\n\nError (\\(D \\times L\\))\n6487.327\n75\n86.498\n\n\n\n\n\n\n\n\n\nThere is a significant main effect of alcohol dose on attractiveness ratings, \\(F_D(3, 75) = 104.385\\), \\(p &lt; 0.001\\), with a large effect size (\\(\\eta_p^2 = 0.807\\)). This indicates that different alcohol doses significantly change attractiveness ratings. A significant main effect of lighting on attractiveness ratings is also observed, \\(F_L(1, 25) = 23.421\\), \\(p &lt; 0.001\\), with a substantial effect size (\\(\\eta_p^2 = 0.484\\)). This underscores the impact of lighting conditions on perceived attractiveness.\nThe interaction between alcohol dose and lighting is significant, \\(F_{D \\times L}(3, 75) = 22.218\\), \\(p &lt; 0.001\\), with \\(\\eta_p^2 = 0.471\\). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.\n\n\n\n\n\n\nFigure 3: Dose of alcohol and lighting conditions on attractiveness ratings. For the lighting condition, level 1 for dim, level 2 for bright.\n\n\n\nOverall, as Table 3 and Figure 3 suggested, the significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.",
     "crumbs": [
       "Labs",
       "Session16 17",
@@ -393,100 +393,152 @@
     ]
   },
   {
-    "objectID": "session13-14/assignment.html",
-    "href": "session13-14/assignment.html",
-    "title": "Laboratory 07",
-    "section": "",
-    "text": "Finally I noticed something on the requirement of all lab assignments I have ignored from the very beginning:\nI therefore turned echo for few code block to false. The long and annoying code must be interruptive while reading.",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#context",
-    "href": "session13-14/assignment.html#context",
-    "title": "Laboratory 07",
-    "section": "Context",
-    "text": "Context\nIn Laboratory 5 we analyzed tea.sav, which contains cognitive function scores of participants who consumed varying amounts of tea every day. Now we hope to study whether there is a difference in cognitive function scores between individuals who do not drink tea and those who drink two cups of tea per day.",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#objectives",
-    "href": "session13-14/assignment.html#objectives",
-    "title": "Laboratory 07",
-    "section": "Objectives",
-    "text": "Objectives\n\nDo you think the independent-samples \\(t\\)-test is a good choice? Why or why not?\nConduct an independent-samples \\(t\\)-test. Write a short paragraph that summarizes and interprets the results of the test.",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#solutions",
-    "href": "session13-14/assignment.html#solutions",
-    "title": "Laboratory 07",
-    "section": "Solutions",
-    "text": "Solutions\n\nQ1: Why independent-samples \\(t\\)-test?\nGiven:\n\\(X\\): cups of tea\n\\(Y\\): cognitive function scores\nGroup 1: not drink tea per day (tea == 0)\nGroup 2: 2 cups of tea per day (tea == 2)\nIn addition, in the description of Lab 5:\n\nThe researcher recruits a large group of respondents and randomly assigns each one with a different number of cups of tea to drink every day.\n\nBased on the assumption of independent-samples t-test and the design of the experiment, It might be a good choice for the following reason:\n\nContinuous Variable: The dependent variable, cognitive function scores, is continuous, which is suitable for an independent-samples \\(t\\)-test.\nNormal Distribution: The scores appear to follow a normal distribution, and with a large sample size, the Central Limit Theorem supports the normality assumption.\nIndependence Between Groups: Each participant belongs to only one group (either tea = 0 or tea = 2), ensuring independence of scores between groups.\nRandom Sampling: Random sampling ensures that scores are independent within groups, fulfilling this assumption of the independent-samples \\(t\\)-test.\n\nThese points may confirm that the independent-samples \\(t\\)-test is an appropriate statistical method for this analysis.\n\n\n\n\n\n\n\n\nFigure 1: Histograms on cognitive function for 0-and 2-cup-tea drinker\n\n\n\n\n\n\n\nQ2: Interpret the independent-samples \\(t\\)-test result.\nThe Levene’s Test resulted \\(F \\approx 0.0797\\) and a high \\(p \\approx 0.7781\\), indicated that there is no significant difference in variances between the groups, however, due to the unequal sample size, we may stick on the Welch’s \\(t\\)-test here. The result was shown as follows:\nIn the independent-samples \\(t\\)-test comparing cognitive function scores between individuals who do not drink tea (Group 1) and those who drink two cups of tea per day (Group 2), the results indicated a \\(t(89.65) \\approx 1.375\\), \\(p \\approx 0.1725\\), two-tailed, which suggests that there is no statistically significant difference in cognitive function scores between the two groups at the conventional level of \\(\\alpha = 0.05\\). The 95% confidence interval for the difference in means are \\([-1.11, 6.09]\\). The effect size, measured by Cohen’s \\(d \\approx 0.23\\), reflecting a small effect. Additionally, the Bayes factor \\(BF_{10} \\approx 0.432\\) suggests that the evidence is more in favor of the null hypothesis than the alternative. Overall, these findings imply that drinking two cups of tea per day does not significantly impact cognitive function compared to non-tea drinkers within the context of this experiment.\n\n\nLevene's Test for Equality of Variances: \nF: 0.07969429918151855\nSig: 0.7780595985739489\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nT\ndof\nalternative\np-val\nCI95%\ncohen-d\nBF10\npower\n\n\n\n\nWelch’s \\(t\\)-test applied\n1.37534\n89.6494\ntwo-sided\n0.172453\n[-1.11 6.09]\n0.229847\n0.432\n0.26855\n\n\nIndependent-samples \\(t\\)-test\n1.34901\n168\ntwo-sided\n0.17915\n[-1.15 6.14]\n0.229847\n0.418\n0.26855",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#context-1",
-    "href": "session13-14/assignment.html#context-1",
-    "title": "Laboratory 07",
-    "section": "Context",
-    "text": "Context\nIn Laboratory 1 we analyzed download.sav, which contains hygiene scores of concert goers over three days of a rock music festival. Now we hope to study the relationship between hygiene scores on days 2 and 3.",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#objectives-1",
-    "href": "session13-14/assignment.html#objectives-1",
-    "title": "Laboratory 07",
-    "section": "Objectives",
-    "text": "Objectives\n\nIs the correlation coefficient an appropriate measure of the relationship between hygiene scores on days 2 and 3? Why or why not?\nConduct a paired-samples 𝑡 test. Write a short paragraph that summarizes and interprets the results of the test.",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#solutions-1",
-    "href": "session13-14/assignment.html#solutions-1",
-    "title": "Laboratory 07",
-    "section": "Solutions",
-    "text": "Solutions\nYou may still remember the Ms. Laundry Pod the Outlier in the story of Lab 1. The bad news is she’s still living in the provided dataset. While the good news is this typo only happens on day_1 and since we are interested in the hygiene scores for day_2 and day_3 this time, we may not need to “say goodbye” as we did in Lab 1.\n良かったね、ランドリーポッドさん。1\nor should I say that?\nSince the assumption of paired sample \\(t\\)-test requires the same variable measured in the same units for the two situations, all participants without hygiene scores for either day_2 or day_3 should be dropped. The pingouin package will handle this automatically while doing the math, but not for plotting. Therefore, a new DataFrame was created with a new \\(N = 123\\).\nさよなら、ランドリーポッドさん。\n\n\n\n\n\nindex\nticket_no\nday_1\nday_2\nday_3\n\n\n\n\ncount\n123\n123\n123\n123\n\n\nmean\n3647.98\n1.65146\n0.92748\n0.976504\n\n\nstd\n626.302\n0.643897\n0.666004\n0.710277\n\n\nmin\n2111\n0.43\n0.05\n0.02\n\n\n25%\n3274.5\n1.16\n0.425\n0.44\n\n\n50%\n3649\n1.55\n0.78\n0.76\n\n\n75%\n4183\n2.095\n1.215\n1.525\n\n\nmax\n4724\n3.38\n3.44\n3.41\n\n\n\n\n\n\nQ3: Is correlation coefficient appropriate\nRecall back to the assumption of Pearson’s \\(r\\), the correlation coefficient is partially an appropriate measure to study the relationship between hygiene scores on days 2 and 3:\n\nSample Size: As suggested in the description of Lab1, the researcher had tested all comers with an \\(N = 123\\), which is relatively large and similar to the population of interest.\nLinear Relationship: The scatter plot on the relationship between hygiene scores on Day 2 and Day 3 (see Figure 2) shows a clear linear trend, indicating a positive linear relationship. This suggests that using a correlation coefficient to measure this relationship is appropriate.\nScale of Measurement: The hygiene scores are continuous variables, making the correlation coefficient suitable.\nPaired Observations: The data represents paired measurements from the same individuals.\nOutliers: There seems not appear to be any significant outliers that would severely distort the correlation.\n\nHowever: As for the normality: While there is some skewness (as shown by Figure 3), the relationship appears reasonably linear and without extreme outliers that would severely distort the correlation.\n\n\n\n\n\n\n\n\nFigure 2: Scatter-plot on hygiene scores between day 2 vs day 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Histograms on Hygiene Scores of Day 2 vs Day 3\n\n\n\n\n\n\n\nQ4: Interpret the paired-sample \\(t\\)-test result\nA paired sample \\(t\\)-test was conducted to compare the hygiene scores between days 2 and 3 of the Download Music Festival. The test yielded \\(t(122) \\approx -0.9685\\), \\(p \\approx 0.3347\\). This indicates that there is no statistically significant difference in hygiene scores between the two days. The 95% CI for the mean difference is \\([-0.15, 0.05]\\), suggesting that any difference is likely small and not meaningful. The effect size, as measured by Cohen’s \\(d \\approx 0.0712\\), indicating a negligible effect. The Bayes Factor \\(BF_{10} \\approx 0.158\\) suggests that the data provide more support for the null hypothesis than the alternative. Overall, the results suggest no substantial change in hygiene scores from day 2 to day 3 2.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT\ndof\nalternative\np-val\nCI95%\ncohen-d\nBF10\npower\n\n\n\n\n-0.968472\n122\ntwo-sided\n0.334725\n[-0.15 0.05]\n0.071205\n0.158\n0.122744",
-    "crumbs": [
-      "Labs",
-      "Session13 14",
-      "Laboratory 07"
-    ]
-  },
-  {
-    "objectID": "session13-14/assignment.html#footnotes",
-    "href": "session13-14/assignment.html#footnotes",
-    "title": "Laboratory 07",
+    "objectID": "session16-17/assignment.html#footnotes",
+    "href": "session16-17/assignment.html#footnotes",
+    "title": "Laboratory 09",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis sounds like an anime quote.↩︎\nThat’s definitely true for a music festival full of sweat, alcohol, Seishun (青春, that’s youth in Japanese) and romance! Only problem for these activities is they are too “リア充”, it’s a shame the bands there never appears to play Anisongs. There’s no random Togenashi Togeari (トゲナシトゲアリ) appear on the stage of summer music festival, at least you can’t count this happen in Greater China.  If you can’t figure out what I am saying, skip it TTATT.↩︎",
+    "text": "Footnotes\n\n\nI think Andy once said in the book that we should always do the correction for sphericity.↩︎",
     "crumbs": [
       "Labs",
-      "Session13 14",
-      "Laboratory 07"
+      "Session16 17",
+      "Laboratory 09"
     ]
+  },
+  {
+    "objectID": "session09-10/assignment.html",
+    "href": "session09-10/assignment.html",
+    "title": "Laboratory 05",
+    "section": "",
+    "text": "For all typos on Lab 4 (e.g. 4.4 Q3): All fixed on the online version.",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#a-peek-on-the-dataset-as-always",
+    "href": "session09-10/assignment.html#a-peek-on-the-dataset-as-always",
+    "title": "Laboratory 05",
+    "section": "A peek on the dataset as always",
+    "text": "A peek on the dataset as always\n\nimport pandas as pd\n\ntea = pd.read_spss('./datasets/tea.sav')\nprint(tea.describe())\n\n              tea     cog_fun\ncount  716.000000  716.000000\nmean     3.032123   50.611732\nstd      1.669245    9.882814\nmin      0.000000   24.000000\n25%      2.000000   44.000000\n50%      3.000000   51.000000\n75%      4.000000   57.000000\nmax      8.000000   80.000000",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q1-the-bivariate-regression-equation",
+    "href": "session09-10/assignment.html#q1-the-bivariate-regression-equation",
+    "title": "Laboratory 05",
+    "section": "Q1: The bivariate regression equation",
+    "text": "Q1: The bivariate regression equation\nAnswer\nGiven the independent variable \\(X\\), the predicted \\(\\hat Y_{cog\\_fun}\\) 2 is:\n\\[\n\\hat Y_{cog\\_fun} = \\beta_0 + \\beta_1X\n\\]",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data",
+    "href": "session09-10/assignment.html#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data",
+    "title": "Laboratory 05",
+    "section": "Q2: Whether bi-variate regression is a good choice for the data",
+    "text": "Q2: Whether bi-variate regression is a good choice for the data\nAnswer\nThe bi-variate regression may not be a strong model for this data for:\n\nThe Pearson’s Correlation: The Pearson’s correlation coefficient (\\(r \\approx 0.0777\\)) indicates a relatively weak positive relationship between tea consumption and cognitive function. The \\(p\\)-value (\\(p \\approx 0.0378\\)) is below 0.05, suggesting that the weak correlation is statistically significant.\nLinearity and Distribution: The scatter plot in Figure 1 shows that a weak and flat linear relationship between tea consumption and cognitive function, which aligns with the low Pearson’s \\(r\\). While the histograms in Figure 2 show that the cognitive function scores are approximately normally distributed.\nHowever, the sample size (\\(N = 716\\)) is relatively large, which may be beneficial for conducting a regression.\n\nBased on this weak linear trend, although bi-variate regression could be employed as they meet the assumption of a linear regression, the model may not explain much variability in cognitive function. Other factors like age, education background even SES may (and must) influence cognitive function. For sake of this assignment, I will assume that other variables either do not vary significantly across participants or are not measured.\nSolution\n\nimport scipy.stats as stats\ntea_pearsonr, tea_pvalue = stats.pearsonr(tea.tea, tea.cog_fun)\nprint(f'Pearson\\'s r: {tea_pearsonr}\\n'\n      f'p-value: {tea_pvalue}')\n\nPearson's r: 0.07765252417388956\np-value: 0.03776954868447832\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ntea_scatter = sns.lmplot(tea, x='tea', y='cog_fun')\ntea_scatter.fig.suptitle('Scatter plot on tea v. cog_fun')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Scatter Plot on tea v. cog_fun\n\n\n\n\n\n\nfig, ax =plt.subplots(1,2)\nsns.histplot(tea, x='tea', kde=True, bins=8, ax=ax[0])\nsns.histplot(tea, x='cog_fun', kde=True, ax=ax[1])\nax[0].set_title('Tea')\nax[1].set_title('Cognitive Function')\nfig.suptitle('Histograms on variables: Tea and Cognitive Function')\n\nplt.show()\n\n\n\n\n\n\n\nFigure 2: Distribution of cups of tea and cognitive function scores",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q3-bivariate-regression-analysis",
+    "href": "session09-10/assignment.html#q3-bivariate-regression-analysis",
+    "title": "Laboratory 05",
+    "section": "Q3: Bivariate regression analysis",
+    "text": "Q3: Bivariate regression analysis\nAnswer\nIntercept: \\(\\beta_0 \\approx 49.2177\\), suggests that when a respondent drinks 0 cups of tea per day, the expected cognitive function score is 49.2177.\nSlope: \\(\\beta_1 \\approx 0.4597\\), indicates a positive relationship between tea consumption and cognitive function. For each additional cup of tea consumed per day, the cognitive function score increases by approximately 0.4597 points.\nSolution\n\ndef print_linregress(x, y): \n      b1, b0, r, p, stderr =  stats.linregress(x=x, y=y)\n      print(f'Intercept: {b0}')\n      print(f'Slope: {b1}')\n      print(f'R-squared: {r**2}')\n      print(f'P-value: {p}')\n      print(f'Standard error: {stderr}')\n\nprint_linregress(tea['tea'], tea['cog_fun'])\n\nIntercept: 49.217731459509174\nSlope: 0.45974402348753085\nR-squared: 0.006029914510576479\nP-value: 0.03776954868447834\nStandard error: 0.22090119534570854\n\n\nIn the world of python, scipy.stats works fine for applying basic linear models, however, statsmodels gives you this pretty damn cool all-in-one summary output as shown below:\n\nimport statsmodels.api as sm\n\ndef bivariate_regression(x, y): \n    X = sm.add_constant(x)\n    model = sm.OLS(y, X).fit()\n    summary = model.summary()\n    print(summary)\n    return model\n\ntea_model = bivariate_regression(tea['tea'], tea['cog_fun'])\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                cog_fun   R-squared:                       0.006\nModel:                            OLS   Adj. R-squared:                  0.005\nMethod:                 Least Squares   F-statistic:                     4.331\nDate:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378\nTime:                        19:52:27   Log-Likelihood:                -2653.5\nNo. Observations:                 716   AIC:                             5311.\nDf Residuals:                     714   BIC:                             5320.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         49.2177      0.764     64.382      0.000      47.717      50.719\ntea            0.4597      0.221      2.081      0.038       0.026       0.893\n==============================================================================\nOmnibus:                        0.140   Durbin-Watson:                   1.912\nProb(Omnibus):                  0.932   Jarque-Bera (JB):                0.229\nSkew:                          -0.009   Prob(JB):                        0.892\nKurtosis:                       2.914   Cond. No.                         7.65\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q4-the-slope-from-the-standardized-regression",
+    "href": "session09-10/assignment.html#q4-the-slope-from-the-standardized-regression",
+    "title": "Laboratory 05",
+    "section": "Q4: The slope from the standardized regression",
+    "text": "Q4: The slope from the standardized regression\nAnswer\nQ4a: Interpret the slope from the standardized regression.\n\\[\\beta^* \\approx 0.07765\\]\nThe standardized slope is approximately 0.07765, means that for every one standard deviation increase in tea consumption, the cognitive function score increases by 0.07765 standard deviations.\nQ4b: From which regression (raw or standardized) is the slope easier to interpret and understand?\nIt depends.\nThe raw slope is easy to interpret in the context of the actual units of measurement as it represents the change in the dependent variable (cog_fun) for a one-unit change in the independent variable (tea).\nThe standardized slope makes comparing effects across different variables or studies much easier as it tells us how many standard deviations the dependent variable changes for a one standard deviation change in the independent variable.\nSolution\nBoth the independent (tea) and dependent variables (cog_fun) are transformed into z-scores, then:\n\n# Preparing standardized\ntea['tea_std'] = tea['tea'].apply(lambda x: (x - tea['tea'].mean()) / tea['tea'].std())\ntea['cog_fun_std'] = tea['cog_fun'].apply(lambda x: (x - tea['cog_fun'].mean()) / tea['cog_fun'].std())\n\n# Intercept and slope of standardized regression\nprint_linregress(tea['tea_std'], tea['cog_fun_std'])\n\nIntercept: -1.2880252063838454e-16\nSlope: 0.07765252417388924\nR-squared: 0.006029914510576491\nP-value: 0.0377695486844781\nStandard error: 0.03731105688226283\n\n\n\n# And the pretty damn detailed OLS summary\nbivariate_regression(tea['tea_std'], tea['cog_fun_std'])\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:            cog_fun_std   R-squared:                       0.006\nModel:                            OLS   Adj. R-squared:                  0.005\nMethod:                 Least Squares   F-statistic:                     4.331\nDate:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378\nTime:                        19:52:27   Log-Likelihood:                -1013.3\nNo. Observations:                 716   AIC:                             2031.\nDf Residuals:                     714   BIC:                             2040.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst      -6.765e-17      0.037  -1.81e-15      1.000      -0.073       0.073\ntea_std        0.0777      0.037      2.081      0.038       0.004       0.151\n==============================================================================\nOmnibus:                        0.140   Durbin-Watson:                   1.912\nProb(Omnibus):                  0.932   Jarque-Bera (JB):                0.229\nSkew:                          -0.009   Prob(JB):                        0.892\nKurtosis:                       2.914   Cond. No.                         1.00\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n\n\n&lt;statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7ff15145ae90&gt;",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day",
+    "href": "session09-10/assignment.html#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day",
+    "title": "Laboratory 05",
+    "section": "Q5: Cognitive function score if drink 3 cups of tea per day",
+    "text": "Q5: Cognitive function score if drink 3 cups of tea per day\nAnswer\nGiven \\(X = 3\\), the cognitive function score for a respondent who drinks 3 cups of tea per day is:\n\\[\\hat Y = \\beta_0 + \\beta_1 \\times 3 \\approx 50.5970\\]\nHowever, the prediction might not be very close to the true score. Although the slope is statistically significant (with a \\(p\\)-value of \\(p = 0.038\\)), the low \\(R\\)-squared (\\(R^2 \\approx 0.006\\)) indicates that statistically, there’s only 0.6% of the variance in cognitive function scores is explained by tea consumption.\nSolution\n\ncog_fun_after_3_cups = tea_model.predict([1.0, 3]) # The 1.0 here is the constant required by statsmodels\nprint(f'Cognitive function score if drink 3 cups of tea per day: \\n'\n      f'{cog_fun_after_3_cups[0]}')\n\nCognitive function score if drink 3 cups of tea per day: \n50.59696352997175",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#q6-tea-predicts-cognitive-function",
+    "href": "session09-10/assignment.html#q6-tea-predicts-cognitive-function",
+    "title": "Laboratory 05",
+    "section": "Q6: Tea predicts cognitive function?",
+    "text": "Q6: Tea predicts cognitive function?\nAnswers\nThe \\(p\\)-value for the slope is:\n\\[p \\approx 0.0378\\]\nSince the \\(p\\)-value is less than 0.05 (\\(p &lt; 0.05\\)), we can reject the null hypothesis (\\(H_0\\)). This suggests that there is evidence of an association between tea consumption and cognitive function scores.\nHowever, the low \\(R\\)-squared value (\\(R^2 \\approx 0.006\\)) indicates that tea consumption explains only a tiny fraction of the variability in cognitive function.\nWhile the results suggest a statistically significant but weak association between tea consumption and cognitive function, they do not provide evidence of a causal effect. Besides, if simply drinking more tea could raise cognitive scores, we might think about advising children to drink tea to guarantee a bright future! That said, those less inclined to drink tea might still end up in schools of education.\nSolution\nHypothesis:\n\\(H_0\\): The slope (\\(\\beta_1\\)) is zero, meaning tea consumption does not predict cognitive function.\n\\(H_1\\): The slope (\\(\\beta_1\\)) is not zero, meaning tea consumption does predict cognitive function.\n\ntea_p_value = tea_model.pvalues['tea']\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis.\")\n    else:\n        print(\"Fail to reject the null hypothesis.\")\n\ntest_hypothesis(tea_p_value, alpha=0.05)\n\nGiven the p-value=0.03776954868447742 and alpha=0.05:\nReject the null hypothesis.",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session09-10/assignment.html#footnotes",
+    "href": "session09-10/assignment.html#footnotes",
+    "title": "Laboratory 05",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nOh wait, could this kind of torture be approved by the IRB?↩︎\nAdd \\(\\epsilon\\) if consider the error term.↩︎",
+    "crumbs": [
+      "Labs",
+      "Session09 10",
+      "Laboratory 05"
+    ]
+  },
+  {
+    "objectID": "session01/lecture-notes.html",
+    "href": "session01/lecture-notes.html",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#summary",
+    "href": "session01/lecture-notes.html#summary",
+    "title": "Session 01: Introduction",
+    "section": "",
+    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
+  },
+  {
+    "objectID": "session01/lecture-notes.html#implementations",
+    "href": "session01/lecture-notes.html#implementations",
+    "title": "Session 01: Introduction",
+    "section": "Implementations",
+    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
+  },
+  {
+    "objectID": "session01/lecture-notes.html#descriptive-statistics",
+    "href": "session01/lecture-notes.html#descriptive-statistics",
+    "title": "Session 01: Introduction",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
   },
   {
     "objectID": "session05-06/assignment.html",
@@ -597,139 +649,159 @@
     ]
   },
   {
-    "objectID": "session01/lecture-notes.html",
-    "href": "session01/lecture-notes.html",
-    "title": "Session 01: Introduction",
+    "objectID": "session13-14/assignment.html",
+    "href": "session13-14/assignment.html",
+    "title": "Laboratory 07",
     "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
-  },
-  {
-    "objectID": "session01/lecture-notes.html#summary",
-    "href": "session01/lecture-notes.html#summary",
-    "title": "Session 01: Introduction",
-    "section": "",
-    "text": "We didn’t discuss too much on statistics or quantitative methods.\nRather, we tried to import dataset into SPSS and played around with datasets below:\n\nmtcars: a built-in dataset in base-r, wrapped in an .xlsx file for some reason.\ntemphr10.sav: a dataset came from the textbook, looks like a series of weather data."
-  },
-  {
-    "objectID": "session01/lecture-notes.html#implementations",
-    "href": "session01/lecture-notes.html#implementations",
-    "title": "Session 01: Introduction",
-    "section": "Implementations",
-    "text": "Implementations\nSince I use python for my daily work, the data were loaded to pandas.\n\n# Also, for descriptive statistics, pandas itself is enough for the job. \nimport pandas as pd\nimport seaborn as sns\n\n\n# Load the SPSS dataset called \"temphr10.sav\".\ntemphr10 = pd.read_spss('./datasets/temphr10.sav')\n# I converted the excel file to csv. \nmtcars = pd.read_csv('./datasets/mtcars.csv')\n\n\nIn SPSS: Measures of variables\n\n# What's in the variable view in SPSS\ntemphr10.columns\n\nIndex(['sex', 'hr', 'temp_Fahrenheit', 'temp_Celcius', 'Likert_rating'], dtype='object')\n\n\nIn SPSS: - Nominal: labels, e.g. races or gender / sex - Ordinal: ranking - Interval: ordinal, equally spaced, e.g. temperature, IQ - Ratio: interval + a true zero point, e.g. ago, wage, height, weight (it can be 0)\n\n\n\n\n\n\n\nLevel of Measurement\nValid Operations\n\n\n\n\nNominal\n\\(=\\), \\(\\neq\\)\n\n\nOrdinal\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\)\n\n\nInterval\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\)\n\n\nRatio\n\\(=\\), \\(\\neq\\), \\(&lt;\\), \\(&gt;\\), \\(+\\), \\(-\\), \\(\\times\\), \\(\\div\\)"
-  },
-  {
-    "objectID": "session01/lecture-notes.html#descriptive-statistics",
-    "href": "session01/lecture-notes.html#descriptive-statistics",
-    "title": "Session 01: Introduction",
-    "section": "Descriptive Statistics",
-    "text": "Descriptive Statistics\n\n# Ways to do descriptive things in pandas.\ntemphr10['sex'].describe()\n\ncount       10\nunique       2\ntop       Male\nfreq         7\nName: sex, dtype: object\n\n\n\ntemphr10['Likert_rating'].value_counts()\n\nLikert_rating\nNeutral or Don't Know    3\nAgree                    2\nDisagree                 2\nStrongly Disagree        2\nStrongly Agree           1\nName: count, dtype: int64\n\n\n\ntemphr10['hr'].value_counts()\n\nhr\n75.0    2\n70.0    1\n69.0    1\n71.0    1\n62.0    1\n74.0    1\n80.0    1\n73.0    1\n82.0    1\nName: count, dtype: int64"
-  },
-  {
-    "objectID": "session09-10/assignment.html",
-    "href": "session09-10/assignment.html",
-    "title": "Laboratory 05",
-    "section": "",
-    "text": "For all typos on Lab 4 (e.g. 4.4 Q3): All fixed on the online version.",
+    "text": "Finally I noticed something on the requirement of all lab assignments I have ignored from the very beginning:\nI therefore turned echo for few code block to false. The long and annoying code must be interruptive while reading.",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#a-peek-on-the-dataset-as-always",
-    "href": "session09-10/assignment.html#a-peek-on-the-dataset-as-always",
-    "title": "Laboratory 05",
-    "section": "A peek on the dataset as always",
-    "text": "A peek on the dataset as always\n\nimport pandas as pd\n\ntea = pd.read_spss('./datasets/tea.sav')\nprint(tea.describe())\n\n              tea     cog_fun\ncount  716.000000  716.000000\nmean     3.032123   50.611732\nstd      1.669245    9.882814\nmin      0.000000   24.000000\n25%      2.000000   44.000000\n50%      3.000000   51.000000\n75%      4.000000   57.000000\nmax      8.000000   80.000000",
+    "objectID": "session13-14/assignment.html#context",
+    "href": "session13-14/assignment.html#context",
+    "title": "Laboratory 07",
+    "section": "Context",
+    "text": "Context\nIn Laboratory 5 we analyzed tea.sav, which contains cognitive function scores of participants who consumed varying amounts of tea every day. Now we hope to study whether there is a difference in cognitive function scores between individuals who do not drink tea and those who drink two cups of tea per day.",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#q1-the-bivariate-regression-equation",
-    "href": "session09-10/assignment.html#q1-the-bivariate-regression-equation",
-    "title": "Laboratory 05",
-    "section": "Q1: The bivariate regression equation",
-    "text": "Q1: The bivariate regression equation\nAnswer\nGiven the independent variable \\(X\\), the predicted \\(\\hat Y_{cog\\_fun}\\) 2 is:\n\\[\n\\hat Y_{cog\\_fun} = \\beta_0 + \\beta_1X\n\\]",
+    "objectID": "session13-14/assignment.html#objectives",
+    "href": "session13-14/assignment.html#objectives",
+    "title": "Laboratory 07",
+    "section": "Objectives",
+    "text": "Objectives\n\nDo you think the independent-samples \\(t\\)-test is a good choice? Why or why not?\nConduct an independent-samples \\(t\\)-test. Write a short paragraph that summarizes and interprets the results of the test.",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data",
-    "href": "session09-10/assignment.html#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data",
-    "title": "Laboratory 05",
-    "section": "Q2: Whether bi-variate regression is a good choice for the data",
-    "text": "Q2: Whether bi-variate regression is a good choice for the data\nAnswer\nThe bi-variate regression may not be a strong model for this data for:\n\nThe Pearson’s Correlation: The Pearson’s correlation coefficient (\\(r \\approx 0.0777\\)) indicates a relatively weak positive relationship between tea consumption and cognitive function. The \\(p\\)-value (\\(p \\approx 0.0378\\)) is below 0.05, suggesting that the weak correlation is statistically significant.\nLinearity and Distribution: The scatter plot in Figure 1 shows that a weak and flat linear relationship between tea consumption and cognitive function, which aligns with the low Pearson’s \\(r\\). While the histograms in Figure 2 show that the cognitive function scores are approximately normally distributed.\nHowever, the sample size (\\(N = 716\\)) is relatively large, which may be beneficial for conducting a regression.\n\nBased on this weak linear trend, although bi-variate regression could be employed as they meet the assumption of a linear regression, the model may not explain much variability in cognitive function. Other factors like age, education background even SES may (and must) influence cognitive function. For sake of this assignment, I will assume that other variables either do not vary significantly across participants or are not measured.\nSolution\n\nimport scipy.stats as stats\ntea_pearsonr, tea_pvalue = stats.pearsonr(tea.tea, tea.cog_fun)\nprint(f'Pearson\\'s r: {tea_pearsonr}\\n'\n      f'p-value: {tea_pvalue}')\n\nPearson's r: 0.07765252417388956\np-value: 0.03776954868447832\n\n\n\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\ntea_scatter = sns.lmplot(tea, x='tea', y='cog_fun')\ntea_scatter.fig.suptitle('Scatter plot on tea v. cog_fun')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Scatter Plot on tea v. cog_fun\n\n\n\n\n\n\nfig, ax =plt.subplots(1,2)\nsns.histplot(tea, x='tea', kde=True, bins=8, ax=ax[0])\nsns.histplot(tea, x='cog_fun', kde=True, ax=ax[1])\nax[0].set_title('Tea')\nax[1].set_title('Cognitive Function')\nfig.suptitle('Histograms on variables: Tea and Cognitive Function')\n\nplt.show()\n\n\n\n\n\n\n\nFigure 2: Distribution of cups of tea and cognitive function scores",
+    "objectID": "session13-14/assignment.html#solutions",
+    "href": "session13-14/assignment.html#solutions",
+    "title": "Laboratory 07",
+    "section": "Solutions",
+    "text": "Solutions\n\nQ1: Why independent-samples \\(t\\)-test?\nGiven:\n\\(X\\): cups of tea\n\\(Y\\): cognitive function scores\nGroup 1: not drink tea per day (tea == 0)\nGroup 2: 2 cups of tea per day (tea == 2)\nIn addition, in the description of Lab 5:\n\nThe researcher recruits a large group of respondents and randomly assigns each one with a different number of cups of tea to drink every day.\n\nBased on the assumption of independent-samples t-test and the design of the experiment, It might be a good choice for the following reason:\n\nContinuous Variable: The dependent variable, cognitive function scores, is continuous, which is suitable for an independent-samples \\(t\\)-test.\nNormal Distribution: The scores appear to follow a normal distribution, and with a large sample size, the Central Limit Theorem supports the normality assumption.\nIndependence Between Groups: Each participant belongs to only one group (either tea = 0 or tea = 2), ensuring independence of scores between groups.\nRandom Sampling: Random sampling ensures that scores are independent within groups, fulfilling this assumption of the independent-samples \\(t\\)-test.\n\nThese points may confirm that the independent-samples \\(t\\)-test is an appropriate statistical method for this analysis.\n\n\n\n\n\n\n\n\nFigure 1: Histograms on cognitive function for 0-and 2-cup-tea drinker\n\n\n\n\n\n\n\nQ2: Interpret the independent-samples \\(t\\)-test result.\nThe Levene’s Test resulted \\(F \\approx 0.0797\\) and a high \\(p \\approx 0.7781\\), indicated that there is no significant difference in variances between the groups, however, due to the unequal sample size, we may stick on the Welch’s \\(t\\)-test here. The result was shown as follows:\nIn the independent-samples \\(t\\)-test comparing cognitive function scores between individuals who do not drink tea (Group 1) and those who drink two cups of tea per day (Group 2), the results indicated a \\(t(89.65) \\approx 1.375\\), \\(p \\approx 0.1725\\), two-tailed, which suggests that there is no statistically significant difference in cognitive function scores between the two groups at the conventional level of \\(\\alpha = 0.05\\). The 95% confidence interval for the difference in means are \\([-1.11, 6.09]\\). The effect size, measured by Cohen’s \\(d \\approx 0.23\\), reflecting a small effect. Additionally, the Bayes factor \\(BF_{10} \\approx 0.432\\) suggests that the evidence is more in favor of the null hypothesis than the alternative. Overall, these findings imply that drinking two cups of tea per day does not significantly impact cognitive function compared to non-tea drinkers within the context of this experiment.\n\n\nLevene's Test for Equality of Variances: \nF: 0.07969429918151855\nSig: 0.7780595985739489\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nType\nT\ndof\nalternative\np-val\nCI95%\ncohen-d\nBF10\npower\n\n\n\n\nWelch’s \\(t\\)-test applied\n1.37534\n89.6494\ntwo-sided\n0.172453\n[-1.11 6.09]\n0.229847\n0.432\n0.26855\n\n\nIndependent-samples \\(t\\)-test\n1.34901\n168\ntwo-sided\n0.17915\n[-1.15 6.14]\n0.229847\n0.418\n0.26855",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#q3-bivariate-regression-analysis",
-    "href": "session09-10/assignment.html#q3-bivariate-regression-analysis",
-    "title": "Laboratory 05",
-    "section": "Q3: Bivariate regression analysis",
-    "text": "Q3: Bivariate regression analysis\nAnswer\nIntercept: \\(\\beta_0 \\approx 49.2177\\), suggests that when a respondent drinks 0 cups of tea per day, the expected cognitive function score is 49.2177.\nSlope: \\(\\beta_1 \\approx 0.4597\\), indicates a positive relationship between tea consumption and cognitive function. For each additional cup of tea consumed per day, the cognitive function score increases by approximately 0.4597 points.\nSolution\n\ndef print_linregress(x, y): \n      b1, b0, r, p, stderr =  stats.linregress(x=x, y=y)\n      print(f'Intercept: {b0}')\n      print(f'Slope: {b1}')\n      print(f'R-squared: {r**2}')\n      print(f'P-value: {p}')\n      print(f'Standard error: {stderr}')\n\nprint_linregress(tea['tea'], tea['cog_fun'])\n\nIntercept: 49.217731459509174\nSlope: 0.45974402348753085\nR-squared: 0.006029914510576479\nP-value: 0.03776954868447834\nStandard error: 0.22090119534570854\n\n\nIn the world of python, scipy.stats works fine for applying basic linear models, however, statsmodels gives you this pretty damn cool all-in-one summary output as shown below:\n\nimport statsmodels.api as sm\n\ndef bivariate_regression(x, y): \n    X = sm.add_constant(x)\n    model = sm.OLS(y, X).fit()\n    summary = model.summary()\n    print(summary)\n    return model\n\ntea_model = bivariate_regression(tea['tea'], tea['cog_fun'])\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                cog_fun   R-squared:                       0.006\nModel:                            OLS   Adj. R-squared:                  0.005\nMethod:                 Least Squares   F-statistic:                     4.331\nDate:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378\nTime:                        19:52:27   Log-Likelihood:                -2653.5\nNo. Observations:                 716   AIC:                             5311.\nDf Residuals:                     714   BIC:                             5320.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         49.2177      0.764     64.382      0.000      47.717      50.719\ntea            0.4597      0.221      2.081      0.038       0.026       0.893\n==============================================================================\nOmnibus:                        0.140   Durbin-Watson:                   1.912\nProb(Omnibus):                  0.932   Jarque-Bera (JB):                0.229\nSkew:                          -0.009   Prob(JB):                        0.892\nKurtosis:                       2.914   Cond. No.                         7.65\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.",
+    "objectID": "session13-14/assignment.html#context-1",
+    "href": "session13-14/assignment.html#context-1",
+    "title": "Laboratory 07",
+    "section": "Context",
+    "text": "Context\nIn Laboratory 1 we analyzed download.sav, which contains hygiene scores of concert goers over three days of a rock music festival. Now we hope to study the relationship between hygiene scores on days 2 and 3.",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#q4-the-slope-from-the-standardized-regression",
-    "href": "session09-10/assignment.html#q4-the-slope-from-the-standardized-regression",
-    "title": "Laboratory 05",
-    "section": "Q4: The slope from the standardized regression",
-    "text": "Q4: The slope from the standardized regression\nAnswer\nQ4a: Interpret the slope from the standardized regression.\n\\[\\beta^* \\approx 0.07765\\]\nThe standardized slope is approximately 0.07765, means that for every one standard deviation increase in tea consumption, the cognitive function score increases by 0.07765 standard deviations.\nQ4b: From which regression (raw or standardized) is the slope easier to interpret and understand?\nIt depends.\nThe raw slope is easy to interpret in the context of the actual units of measurement as it represents the change in the dependent variable (cog_fun) for a one-unit change in the independent variable (tea).\nThe standardized slope makes comparing effects across different variables or studies much easier as it tells us how many standard deviations the dependent variable changes for a one standard deviation change in the independent variable.\nSolution\nBoth the independent (tea) and dependent variables (cog_fun) are transformed into z-scores, then:\n\n# Preparing standardized\ntea['tea_std'] = tea['tea'].apply(lambda x: (x - tea['tea'].mean()) / tea['tea'].std())\ntea['cog_fun_std'] = tea['cog_fun'].apply(lambda x: (x - tea['cog_fun'].mean()) / tea['cog_fun'].std())\n\n# Intercept and slope of standardized regression\nprint_linregress(tea['tea_std'], tea['cog_fun_std'])\n\nIntercept: -1.2880252063838454e-16\nSlope: 0.07765252417388924\nR-squared: 0.006029914510576491\nP-value: 0.0377695486844781\nStandard error: 0.03731105688226283\n\n\n\n# And the pretty damn detailed OLS summary\nbivariate_regression(tea['tea_std'], tea['cog_fun_std'])\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:            cog_fun_std   R-squared:                       0.006\nModel:                            OLS   Adj. R-squared:                  0.005\nMethod:                 Least Squares   F-statistic:                     4.331\nDate:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378\nTime:                        19:52:27   Log-Likelihood:                -1013.3\nNo. Observations:                 716   AIC:                             2031.\nDf Residuals:                     714   BIC:                             2040.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst      -6.765e-17      0.037  -1.81e-15      1.000      -0.073       0.073\ntea_std        0.0777      0.037      2.081      0.038       0.004       0.151\n==============================================================================\nOmnibus:                        0.140   Durbin-Watson:                   1.912\nProb(Omnibus):                  0.932   Jarque-Bera (JB):                0.229\nSkew:                          -0.009   Prob(JB):                        0.892\nKurtosis:                       2.914   Cond. No.                         1.00\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n\n\n&lt;statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7ff15145ae90&gt;",
+    "objectID": "session13-14/assignment.html#objectives-1",
+    "href": "session13-14/assignment.html#objectives-1",
+    "title": "Laboratory 07",
+    "section": "Objectives",
+    "text": "Objectives\n\nIs the correlation coefficient an appropriate measure of the relationship between hygiene scores on days 2 and 3? Why or why not?\nConduct a paired-samples 𝑡 test. Write a short paragraph that summarizes and interprets the results of the test.",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day",
-    "href": "session09-10/assignment.html#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day",
-    "title": "Laboratory 05",
-    "section": "Q5: Cognitive function score if drink 3 cups of tea per day",
-    "text": "Q5: Cognitive function score if drink 3 cups of tea per day\nAnswer\nGiven \\(X = 3\\), the cognitive function score for a respondent who drinks 3 cups of tea per day is:\n\\[\\hat Y = \\beta_0 + \\beta_1 \\times 3 \\approx 50.5970\\]\nHowever, the prediction might not be very close to the true score. Although the slope is statistically significant (with a \\(p\\)-value of \\(p = 0.038\\)), the low \\(R\\)-squared (\\(R^2 \\approx 0.006\\)) indicates that statistically, there’s only 0.6% of the variance in cognitive function scores is explained by tea consumption.\nSolution\n\ncog_fun_after_3_cups = tea_model.predict([1.0, 3]) # The 1.0 here is the constant required by statsmodels\nprint(f'Cognitive function score if drink 3 cups of tea per day: \\n'\n      f'{cog_fun_after_3_cups[0]}')\n\nCognitive function score if drink 3 cups of tea per day: \n50.59696352997175",
+    "objectID": "session13-14/assignment.html#solutions-1",
+    "href": "session13-14/assignment.html#solutions-1",
+    "title": "Laboratory 07",
+    "section": "Solutions",
+    "text": "Solutions\nYou may still remember the Ms. Laundry Pod the Outlier in the story of Lab 1. The bad news is she’s still living in the provided dataset. While the good news is this typo only happens on day_1 and since we are interested in the hygiene scores for day_2 and day_3 this time, we may not need to “say goodbye” as we did in Lab 1.\n良かったね、ランドリーポッドさん。1\nor should I say that?\nSince the assumption of paired sample \\(t\\)-test requires the same variable measured in the same units for the two situations, all participants without hygiene scores for either day_2 or day_3 should be dropped. The pingouin package will handle this automatically while doing the math, but not for plotting. Therefore, a new DataFrame was created with a new \\(N = 123\\).\nさよなら、ランドリーポッドさん。\n\n\n\n\n\nindex\nticket_no\nday_1\nday_2\nday_3\n\n\n\n\ncount\n123\n123\n123\n123\n\n\nmean\n3647.98\n1.65146\n0.92748\n0.976504\n\n\nstd\n626.302\n0.643897\n0.666004\n0.710277\n\n\nmin\n2111\n0.43\n0.05\n0.02\n\n\n25%\n3274.5\n1.16\n0.425\n0.44\n\n\n50%\n3649\n1.55\n0.78\n0.76\n\n\n75%\n4183\n2.095\n1.215\n1.525\n\n\nmax\n4724\n3.38\n3.44\n3.41\n\n\n\n\n\n\nQ3: Is correlation coefficient appropriate\nRecall back to the assumption of Pearson’s \\(r\\), the correlation coefficient is partially an appropriate measure to study the relationship between hygiene scores on days 2 and 3:\n\nSample Size: As suggested in the description of Lab1, the researcher had tested all comers with an \\(N = 123\\), which is relatively large and similar to the population of interest.\nLinear Relationship: The scatter plot on the relationship between hygiene scores on Day 2 and Day 3 (see Figure 2) shows a clear linear trend, indicating a positive linear relationship. This suggests that using a correlation coefficient to measure this relationship is appropriate.\nScale of Measurement: The hygiene scores are continuous variables, making the correlation coefficient suitable.\nPaired Observations: The data represents paired measurements from the same individuals.\nOutliers: There seems not appear to be any significant outliers that would severely distort the correlation.\n\nHowever: As for the normality: While there is some skewness (as shown by Figure 3), the relationship appears reasonably linear and without extreme outliers that would severely distort the correlation.\n\n\n\n\n\n\n\n\nFigure 2: Scatter-plot on hygiene scores between day 2 vs day 3\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Histograms on Hygiene Scores of Day 2 vs Day 3\n\n\n\n\n\n\n\nQ4: Interpret the paired-sample \\(t\\)-test result\nA paired sample \\(t\\)-test was conducted to compare the hygiene scores between days 2 and 3 of the Download Music Festival. The test yielded \\(t(122) \\approx -0.9685\\), \\(p \\approx 0.3347\\). This indicates that there is no statistically significant difference in hygiene scores between the two days. The 95% CI for the mean difference is \\([-0.15, 0.05]\\), suggesting that any difference is likely small and not meaningful. The effect size, as measured by Cohen’s \\(d \\approx 0.0712\\), indicating a negligible effect. The Bayes Factor \\(BF_{10} \\approx 0.158\\) suggests that the data provide more support for the null hypothesis than the alternative. Overall, the results suggest no substantial change in hygiene scores from day 2 to day 3 2.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nT\ndof\nalternative\np-val\nCI95%\ncohen-d\nBF10\npower\n\n\n\n\n-0.968472\n122\ntwo-sided\n0.334725\n[-0.15 0.05]\n0.071205\n0.158\n0.122744",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
     ]
   },
   {
-    "objectID": "session09-10/assignment.html#q6-tea-predicts-cognitive-function",
-    "href": "session09-10/assignment.html#q6-tea-predicts-cognitive-function",
-    "title": "Laboratory 05",
-    "section": "Q6: Tea predicts cognitive function?",
-    "text": "Q6: Tea predicts cognitive function?\nAnswers\nThe \\(p\\)-value for the slope is:\n\\[p \\approx 0.0378\\]\nSince the \\(p\\)-value is less than 0.05 (\\(p &lt; 0.05\\)), we can reject the null hypothesis (\\(H_0\\)). This suggests that there is evidence of an association between tea consumption and cognitive function scores.\nHowever, the low \\(R\\)-squared value (\\(R^2 \\approx 0.006\\)) indicates that tea consumption explains only a tiny fraction of the variability in cognitive function.\nWhile the results suggest a statistically significant but weak association between tea consumption and cognitive function, they do not provide evidence of a causal effect. Besides, if simply drinking more tea could raise cognitive scores, we might think about advising children to drink tea to guarantee a bright future! That said, those less inclined to drink tea might still end up in schools of education.\nSolution\nHypothesis:\n\\(H_0\\): The slope (\\(\\beta_1\\)) is zero, meaning tea consumption does not predict cognitive function.\n\\(H_1\\): The slope (\\(\\beta_1\\)) is not zero, meaning tea consumption does predict cognitive function.\n\ntea_p_value = tea_model.pvalues['tea']\n\ndef test_hypothesis(p_value, alpha=0.05): \n    print(f'Given the p-value={p_value} and alpha={alpha}:')\n    if p_value &lt; alpha:\n        print(\"Reject the null hypothesis.\")\n    else:\n        print(\"Fail to reject the null hypothesis.\")\n\ntest_hypothesis(tea_p_value, alpha=0.05)\n\nGiven the p-value=0.03776954868447742 and alpha=0.05:\nReject the null hypothesis.",
-    "crumbs": [
-      "Labs",
-      "Session09 10",
-      "Laboratory 05"
-    ]
-  },
-  {
-    "objectID": "session09-10/assignment.html#footnotes",
-    "href": "session09-10/assignment.html#footnotes",
-    "title": "Laboratory 05",
+    "objectID": "session13-14/assignment.html#footnotes",
+    "href": "session13-14/assignment.html#footnotes",
+    "title": "Laboratory 07",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nOh wait, could this kind of torture be approved by the IRB?↩︎\nAdd \\(\\epsilon\\) if consider the error term.↩︎",
+    "text": "Footnotes\n\n\nThis sounds like an anime quote.↩︎\nThat’s definitely true for a music festival full of sweat, alcohol, Seishun (青春, that’s youth in Japanese) and romance! Only problem for these activities is they are too “リア充”, it’s a shame the bands there never appears to play Anisongs. There’s no random Togenashi Togeari (トゲナシトゲアリ) appear on the stage of summer music festival, at least you can’t count this happen in Greater China.  If you can’t figure out what I am saying, skip it TTATT.↩︎",
     "crumbs": [
       "Labs",
-      "Session09 10",
-      "Laboratory 05"
+      "Session13 14",
+      "Laboratory 07"
+    ]
+  },
+  {
+    "objectID": "session17-18/assignment.html",
+    "href": "session17-18/assignment.html",
+    "title": "Laboratory 10",
+    "section": "",
+    "text": "Although conducting ANOVA or ANCOVA in the world of Python or R is not as straightforward as training a even more complex ML model. Plotting could be easier. So challenge accepted. Recall back our second question:\n\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\n\nIt’s quite simple to just draw two line-plot with error bar as shown in Figure 1:\n\nlibrary(ggplot2)\nlibrary(haven)\n\ngoggles &lt;- read_sav(\"goggles.sav\")\n\ngoggles$facetype &lt;- as.factor(goggles$facetype)\ngoggles$alcohol &lt;- as.factor(goggles$alcohol)\n\nggplot(goggles, aes(x = alcohol, y = attractiveness, \n                    group = facetype, color = facetype)) + \n  stat_summary(fun = mean, geom = \"point\") +\n  stat_summary(fun = mean, geom = \"line\") +\n  stat_summary(fun.data = mean_cl_normal, geom = \"errorbar\", width = 0.1) + \n  scale_x_discrete(labels = c(\"Placebo\", \"Low dose\", \"High dose\")) +\n  theme_light()\n\nWarning: Computation failed in `stat_summary()`\nCaused by error in `fun.data()`:\n! The package \"Hmisc\" is required.\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\n\n\nggplot2 is always the most elegant way to visualize the data and idea.",
+    "crumbs": [
+      "Labs",
+      "Session17 18",
+      "Laboratory 10"
+    ]
+  },
+  {
+    "objectID": "session17-18/assignment.html#the-line-plot-and-ggplot2",
+    "href": "session17-18/assignment.html#the-line-plot-and-ggplot2",
+    "title": "Laboratory 10",
+    "section": "",
+    "text": "Although conducting ANOVA or ANCOVA in the world of Python or R is not as straightforward as training a even more complex ML model. Plotting could be easier. So challenge accepted. Recall back our second question:\n\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\n\nIt’s quite simple to just draw two line-plot with error bar as shown in Figure 1:\n\nlibrary(ggplot2)\nlibrary(haven)\n\ngoggles &lt;- read_sav(\"goggles.sav\")\n\ngoggles$facetype &lt;- as.factor(goggles$facetype)\ngoggles$alcohol &lt;- as.factor(goggles$alcohol)\n\nggplot(goggles, aes(x = alcohol, y = attractiveness, \n                    group = facetype, color = facetype)) + \n  stat_summary(fun = mean, geom = \"point\") +\n  stat_summary(fun = mean, geom = \"line\") +\n  stat_summary(fun.data = mean_cl_normal, geom = \"errorbar\", width = 0.1) + \n  scale_x_discrete(labels = c(\"Placebo\", \"Low dose\", \"High dose\")) +\n  theme_light()\n\nWarning: Computation failed in `stat_summary()`\nCaused by error in `fun.data()`:\n! The package \"Hmisc\" is required.\n\n\n\n\n\n\n\n\nFigure 1: The interaction of type of face and alcohol consumption on the ratings\n\n\n\n\n\nggplot2 is always the most elegant way to visualize the data and idea.",
+    "crumbs": [
+      "Labs",
+      "Session17 18",
+      "Laboratory 10"
+    ]
+  },
+  {
+    "objectID": "session17-18/assignment.html#q1-q4-and-q6-result-of-ancova-and-its-findings",
+    "href": "session17-18/assignment.html#q1-q4-and-q6-result-of-ancova-and-its-findings",
+    "title": "Laboratory 10",
+    "section": "Q1-Q4, and Q6: result of ANCOVA and its findings",
+    "text": "Q1-Q4, and Q6: result of ANCOVA and its findings\nIn this experiment, given:\n\n\\(Y\\): Measures of how well a hangover person feel after the soft drink treatment.\n\\(X_c\\): Measures of how drunk a person got last night.\n\\(A\\): Types of drink. Group \\(A_1\\) for water, \\(A_2\\) for Lucozade and \\(A_3\\) for Cola.\n\n\nData screening: scatterplot\nThe scatterplot between how drunk the person was before the treatment (\\(X_c\\)) and how well they felt after treatment (\\(Y\\)) is shown as Figure 2, \\(X_c\\) and \\(Y\\) showed a linear relation with no bivariate outliers.\n\n\n\n\n\n\nFigure 2: The outcome \\(Y\\) against the covariate \\(X_c\\).\n\n\n\n\n\nSanity check: Independence of \\(X_c\\) and \\(A\\)\nTo reveal whether people in the three groups differ in how drunk they were before the treatment, a one-way ANOVA was conducted and the results were listed as Table 1.\n\n\n\nTable 1: Result of one-way ANOVA for \\(A\\) on \\(X_c\\).\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\n\n\n\ndrink\n8.400\n2\n4.200\n1.355\n.295\n\n\nError\n37.200\n12\n3.100\n\n\n\n\n\n\n\n\nThe result showed that the main effect of drink is not significant, with \\(F(2, 12) = 1.355\\), \\(p=0.295\\), that indicated that statically there were no differences on the average drunk level between all three groups. That means the \\(X_c\\) and \\(A\\) are independent, one of the assumptions of ANCOVA appeared to be satisfied.\n\n\nSanity check: Homogeneity of regression slopes\n\n\n\nTable 2: Result of ANCOVA for the interaction between \\(A\\) and \\(X_c\\).\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\n\n\n\ndrink * drunk\n11.610\n3\n3.870\n6.951\n0.007\n\n\nError\n6.124\n11\n0.557\n\n\n\n\n\n\n\n\nTo assess whether there was an interaction between \\(A\\) and \\(X_c\\), a preliminary ANCOVA was run using the SPSS GLM procedure with a custom model that included an \\(A \\times X_c\\) interaction term and the result was shown in Table 2. This interaction was statistically significant with an \\(F(3, 11) = 6.951\\), \\(p = 0.007\\). This indicates that the effect of the treatment on how well the person feels depends on how drunk they felt before the treatment.\nIn conclusion, there is a significant interaction between the treatment and the covariate, meaning the initial feeling of drunkenness influences the treatment effect on how well the person feels.3 The assumption of homogeneity of regression slopes may be violated.\n\n\nANCOVA result and the adjusted means of Group \\(A_1\\), \\(A_2\\) and \\(A_3\\).\n\n\n\nTable 3: Result of ANCOVA.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\ndrunk\n9.856\n1\n9.856\n24.568\n&lt;0.001\n0.691\n\n\ndrink\n3.464\n2\n1.732\n4.318\n0.041\n0.440\n\n\nError\n4.413\n11\n0.401\n\n\n\n\n\n\n\n\n\nAn ANCOVA was conducted to examine the effect of drink type on recovery while controlling for initial drunkenness and the result was shown in Table 3. The effect of how drunk the person felt the night before was significant, \\(F(1,11) = 24.568\\), \\(p &lt; 0.001\\), \\(\\eta_p^2 = 0.691\\), indicated that pre-existing drunkenness significantly affects how well the person feels. The treatment had a significant effect on how well the person felt, \\(F(2,11) = 4.318\\), \\(p = 0.041\\), \\(\\eta_p^2 = 0.440\\).\nThe adjusted means were given in Table 4 4, after the adjustment for the \\(Y\\) of drunkenness, participants who took Lucozade (\\(M_2 = 6.239\\)) felt better than participants who drunk water or cola (\\(M_1 = 5.110\\), \\(M_3 = 5.252\\)).\n\n\n\nTable 4: Adjusted means (evaluated at initial drunkenness = 3.40).\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean of \\(Y\\), adjusted for \\(X_c\\)\nUnadjusted Mean of \\(Y\\)\n\n\n\n\nGroup \\(A_1\\)\nWater\n5.110\n5.00\n\n\nGroup \\(A_2\\)\nLucozade\n6.239\n5.80\n\n\nGroup \\(A_3\\)\nCola\n5.252\n5.80",
+    "crumbs": [
+      "Labs",
+      "Session17 18",
+      "Laboratory 10"
+    ]
+  },
+  {
+    "objectID": "session17-18/assignment.html#q5-anova-or-ancova",
+    "href": "session17-18/assignment.html#q5-anova-or-ancova",
+    "title": "Laboratory 10",
+    "section": "Q5: ANOVA or ANCOVA",
+    "text": "Q5: ANOVA or ANCOVA\nGiven all assumptions of ANCOVA or ANOVA were satisfied (although this may only happen in the statistician’s Disneyland). In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including covariates that can influence the dependent variable. In this case, ANCOVA may reduce error variance and increases statistical power to detect treatment effects, especially with the small sample size (like this dataset with \\(n = 15\\)). Therefore, ANCOVA may provides a clearer understanding of the treatment effects. In this study, however, because of the significant interaction between the treatment and the covariate, the causal relationship between drink type and recovery from hangover tended to remain unclear 56.",
+    "crumbs": [
+      "Labs",
+      "Session17 18",
+      "Laboratory 10"
+    ]
+  },
+  {
+    "objectID": "session17-18/assignment.html#footnotes",
+    "href": "session17-18/assignment.html#footnotes",
+    "title": "Laboratory 10",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAnd it is now owned by Japanese (SUNTORY bought it from GSK in 2013).↩︎\nThe leading brand? That should be the reeeeeeeeeeeeeed one.↩︎\nI tested on myself and this is true.↩︎\nThe rank ordering of \\(Y\\) means across levels of groups in \\(A\\) changed slightly. I believe the adjusted mean is more close to the fact, see the reason in next footnote.↩︎\nBut it has been proven that consuming glucose-rich foods is an effective way to alleviate hangover symptoms because when people drink alcohol, their blood glucose levels tend to decrease, leading to hypoglycemia that makes people feel like death. The power of glucose was also confirmed by an experienced drinker who wrote this footnote.↩︎\nIf I get another chance, I’d like to say that I prefer neither option and would choose causal inference instead. I’m determined to almost master this method after the Christmas and Lunar New Year breaks.↩︎",
+    "crumbs": [
+      "Labs",
+      "Session17 18",
+      "Laboratory 10"
     ]
   },
   {
@@ -1126,138 +1198,6 @@
       "Labs",
       "Session04",
       "Laboratory 02"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#footnotes",
-    "href": "session16-17/assignment.html#footnotes",
-    "title": "Laboratory 09",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nI think Andy once said in the book that we should always do the correction for sphericity.↩︎",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session16-17/assignment.html#solutions-1",
-    "href": "session16-17/assignment.html#solutions-1",
-    "title": "Laboratory 09",
-    "section": "Solutions",
-    "text": "Solutions\n\nQ4-Q6: Repeated-measures ANOVA\nSince Mauchly’s sphericity test did not indicate a significant violation of the sphericity test (\\(p = 0.190\\), just as what you planned), sphericity assumption assumed. The repeated-measures ANOVA was conducted and report as follows:\n\n\n\nTable 2: Repeated-measure ANOVA of alcohol dose on attractiveness ratings\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nDoseBright\n7434.192\n3\n2478.064\n25.198\n&lt;.001\n.502\n\n\nError\n7375.808\n75\n98.344\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Dose of alcohol on attractiveness ratings in bright lighting conditions\n\n\n\nThe effect of alcohol dose on mean attractiveness ratings in bright lighting is significant, \\(F(3, 75) = 25.198\\), \\(p &lt; 0.001\\), \\(\\eta_p^2 = 0.502\\), indicating a large effect size, suggesting that the dose of alcohol explains about 50.2% of the variance in attractiveness ratings. The chart shown in Figure 2 also shows a decreasing trend in attractiveness ratings as the alcohol dose increases from 0 to 6 pints. This trend suggests that higher doses of alcohol may lead to lower attractiveness ratings under bright lighting conditions, contrary to the beer-goggles effect hypothesis. These results indicate that, in bright lighting, increasing alcohol consumption tends to decrease attractiveness ratings, showing a clear dose-response relationship.\n\n\nQ7: The magnification of the beer goggles effect\nAgain, Mauchly’s test did not indicate a significant violation of the sphericity for both variables (\\(p_{D} = 0.454\\), \\(p_{D \\times L} = 0.768\\)), which may seldom happen to the real world data 1. Anyway, the repeated-measures ANOVA was conducted and report as follows:\n\n\n\nTable 3: Repeated-measure ANOVA of alcohol dose and lighting interact to the attractiveness ratings\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\nDOSE\n38591.654\n3\n12863.885\n104.385\n&lt;.001\n.807\n\n\nError (\\(D\\))\n9242.596\n75\n123.235\n\n\n\n\n\nLIGHTING\n1993.923\n1\n1993.923\n23.421\n&lt;.001\n.484\n\n\nError (\\(L\\))\n2128.327\n25\n85.133\n\n\n\n\n\n\\(D \\times L\\)\n5765.423\n3\n1921.808\n22.218\n&lt;.001\n.471\n\n\nError (\\(D \\times L\\))\n6487.327\n75\n86.498\n\n\n\n\n\n\n\n\n\nThere is a significant main effect of alcohol dose on attractiveness ratings, \\(F_D(3, 75) = 104.385\\), \\(p &lt; 0.001\\), with a large effect size (\\(\\eta_p^2 = 0.807\\)). This indicates that different alcohol doses significantly change attractiveness ratings. A significant main effect of lighting on attractiveness ratings is also observed, \\(F_L(1, 25) = 23.421\\), \\(p &lt; 0.001\\), with a substantial effect size (\\(\\eta_p^2 = 0.484\\)). This underscores the impact of lighting conditions on perceived attractiveness.\nThe interaction between alcohol dose and lighting is significant, \\(F_{D \\times L}(3, 75) = 22.218\\), \\(p &lt; 0.001\\), with \\(\\eta_p^2 = 0.471\\). This suggests that the effect of alcohol dose on attractiveness ratings depends on the lighting condition, indicating that lighting may amplify the beer goggles effect.\n\n\n\n\n\n\nFigure 3: Dose of alcohol and lighting conditions on attractiveness ratings. For the lighting condition, level 1 for dim, level 2 for bright.\n\n\n\nOverall, as Table 3 and Figure 3 suggested, the significant interaction effect indicates that both alcohol dose and lighting conditions jointly influence attractiveness ratings. The beer goggles effect is more pronounced under certain lighting conditions, with the potential for lighting to either enhance or mitigate the influence of alcohol on attractiveness ratings. This complex interaction shows the importance of considering environmental factors like lighting when evaluating social behaviors influenced by alcohol.",
-    "crumbs": [
-      "Labs",
-      "Session16 17",
-      "Laboratory 09"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html",
-    "href": "session17-18/assignment.html",
-    "title": "Laboratory 10",
-    "section": "",
-    "text": "Although conducting ANOVA or ANCOVA in the world of Python or R is not as straightforward as training a even more complex ML model. Plotting could be easier. So,\nRecall back our second question:\n\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\n\nIt’s quite simple to just draw a line-plot with error bar.",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#the-line-plot-and-ggplot2",
-    "href": "session17-18/assignment.html#the-line-plot-and-ggplot2",
-    "title": "Laboratory 10",
-    "section": "",
-    "text": "Although conducting ANOVA or ANCOVA in the world of Python or R is not as straightforward as training a even more complex ML model. Plotting could be easier. So,\nRecall back our second question:\n\nDraw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.\n\nIt’s quite simple to just draw a line-plot with error bar.",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#q1-the-scatterplot",
-    "href": "session17-18/assignment.html#q1-the-scatterplot",
-    "title": "Laboratory 10",
-    "section": "Q1: The scatterplot",
-    "text": "Q1: The scatterplot\nThe scatterplot between how drunk the person was before the treatment (\\(X_c\\)) and how well they felt after treatment (\\(Y\\)) is shown as Figure 1, \\(X_c\\) and \\(Y\\) showed a linear relation with no bivariate outliers.\n\n\n\n\n\n\nFigure 1: The outcome \\(Y\\) against the covariate \\(X_c\\).",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#q2-independence-of-x_c-and-a",
-    "href": "session17-18/assignment.html#q2-independence-of-x_c-and-a",
-    "title": "Laboratory 10",
-    "section": "Q2: Independence of \\(X_c\\) and \\(A\\)",
-    "text": "Q2: Independence of \\(X_c\\) and \\(A\\)\nTo reveal whether people in the three groups differ in how drunk they were before the treatment, a one-way ANOVA was conducted and the results were listed as Table 1.\n\n\n\nTable 1\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\n\n\n\ndrink\n8.400\n2\n4.200\n1.355\n.295\n\n\nError\n37.200\n12\n3.100\n\n\n\n\n\n\n\n\nThe result showed that the main effect of drink is not significant, with \\(F(2, 12) = 1.355\\), \\(p=0.295\\), that indicated that statically there were no differences on the average drunk level between all three groups. That means the \\(X_c\\) and \\(A\\) are independent, the assumption of ANCOVA appeared to be satisfied.",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#q3-homogeneity-of-regression-slopes",
-    "href": "session17-18/assignment.html#q3-homogeneity-of-regression-slopes",
-    "title": "Laboratory 10",
-    "section": "Q3: Homogeneity of regression slopes",
-    "text": "Q3: Homogeneity of regression slopes\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\n\n\n\ndrink * drunk\n11.610\n3\n3.870\n6.951\n0.007\n\n\nError\n6.124\n11\n0.557\n\n\n\n\n\nTo assess whether there was an interaction between \\(A\\) and \\(X_c\\), a preliminary ANCOVA was run using the SPSS GLM procedure with a custom model that included an \\(A \\times X_c\\) interaction term. This interaction was statistically significant with an \\(F(3, 11) = 6.951\\), \\(p = 0.007\\). This indicates that the effect of the treatment on how well the person feels depends on how drunk they felt before the treatment.\nIn conclusion, there is a significant interaction between the treatment and the covariate, meaning the initial feeling of drunkenness influences the treatment effect on how well the person feels.3 The assumption of homogeneity of regression slopes may be violated.",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3.",
-    "href": "session17-18/assignment.html#q4-ancova-and-the-adjusted-means-of-group-a_1-a_2-and-a_3.",
-    "title": "Laboratory 10",
-    "section": "Q4: ANCOVA and the adjusted means of Group \\(A_1\\), \\(A_2\\) and \\(A_3\\).",
-    "text": "Q4: ANCOVA and the adjusted means of Group \\(A_1\\), \\(A_2\\) and \\(A_3\\).\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nSS\n\\(df\\)\nMS\n\\(F\\)\n\\(p\\)\n\\(\\eta_p^2\\)\n\n\n\n\ndrunk\n9.856\n1\n9.856\n24.568\n&lt;0.001\n0.691\n\n\ndrink\n3.464\n2\n1.732\n4.318\n0.041\n0.440\n\n\nError\n4.413\n11\n0.401\n\n\n\n\n\n\nAn ANCOVA was conducted to examine the effect of drink type on recovery while controlling for initial drunkenness. The effect of how drunk the person felt the night before was significant, \\(F(1,11) = 24.568\\), \\(p &lt; 0.001\\), \\(\\eta_p^2 = 0.691\\), indicated that pre-existing drunkenness significantly affects how well the person feels. The treatment had a significant effect on how well the person felt, \\(F(2,11) = 4.318\\), \\(p = 0.041\\), \\(\\eta_p^2 = 0.440\\).\nThe adjusted means were given in Table 2, suggested that participants who drank Lucozade felt better than those who drank Water or Cola.\n\n\n\nTable 2: Adjusted means (evaluated at initial drunkenness = 3.40).\n\n\n\n\n\n\n\n\n\n\n\n\n\nMean of \\(Y\\), adjusted for \\(X_c\\)\nUnadjusted Mean of \\(Y\\)\n\n\n\n\nGroup 1\nWater\n5.110\n5.00\n\n\nGroup 2\nLucozade\n6.239\n5.80\n\n\nGroup 3\nCola\n5.252\n5.80",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#q5-anova-or-ancova",
-    "href": "session17-18/assignment.html#q5-anova-or-ancova",
-    "title": "Laboratory 10",
-    "section": "Q5: ANOVA or ANCOVA",
-    "text": "Q5: ANOVA or ANCOVA\nIf there’s another other chance for me I would like to say I prefer neither of them then go for casual inference. I swear I WILL master this method after Christmas and Lunar New Year recess.\nIn general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for any confounding variables or covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including one or more covariate(s) that can influence the dependent variable. By controlling for these covariates, ANCOVA adjusts the group means, providing a clearer understanding of the treatment effects while accounting for variability attributed to other factors.\nFrom we see significant effects both from the covariate (“drunk”) and the treatment (“drink”), indicating that initial drunkenness plays a substantial role in how participants feel subsequently.\nANCOVA is the better choice here for several reasons:\n\nPower: By accounting for the variance explained by initial drunkenness, ANCOVA reduces error variance and increases statistical power to detect treatment effects. This is particularly important with the small sample size (\\(n = 15\\)).\nPrecision: Initial drunkenness strongly predicts recovery (shown by the large effect size). Controlling for this relationship provides a more precise estimate of the treatment effect.\nIndividual Differences: Even with successful randomization, individuals entered the study with different levels of drunkenness. ANCOVA adjusts for these pre-existing differences, giving us a clearer picture of the drink effects.\n\nTherefore, while both analyses are valid given the successful randomization, ANCOVA provides a more powerful and precise test of the causal relationship between drink type and recovery in this study.",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#q6-everything-wrapped-up-the-summary",
-    "href": "session17-18/assignment.html#q6-everything-wrapped-up-the-summary",
-    "title": "Laboratory 10",
-    "section": "Q6: Everything wrapped up (the summary)",
-    "text": "Q6: Everything wrapped up (the summary)\nI think the",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
-    ]
-  },
-  {
-    "objectID": "session17-18/assignment.html#footnotes",
-    "href": "session17-18/assignment.html#footnotes",
-    "title": "Laboratory 10",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nAnd it is now owned by Japanese (SUNTORY bought it from GSK in 2013).↩︎\nThe leading brand? That should be the reeeeeeeeeeeeeed one.↩︎\nI tested on myself and that’s true.↩︎",
-    "crumbs": [
-      "Labs",
-      "Session17 18",
-      "Laboratory 10"
     ]
   }
 ]
