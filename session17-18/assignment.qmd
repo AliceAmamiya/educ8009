@@ -23,19 +23,37 @@ format:
 
 ## The line plot and `ggplot2`
 
-Although conducting ANOVA or ANCOVA in the world of `Python` or `R` is not as straightforward as training a even more complex ML model. Plotting could be easier. So, 
-
-\begin{center}
-\textbf{Challenge accepted}
-\end{center}
-
-Recall back our second question: 
+Although conducting ANOVA or ANCOVA in the world of `Python` or `R` is not as straightforward as training a even more complex ML model. Plotting could be easier. So challenge accepted. Recall back our second question: 
 
 > Draw a line chart using the ⟨ Plots ⟩ option. Let ⟨ Horizontal Axis ⟩ and ⟨ Separate Lines ⟩ be alcohol consumption and facial attractiveness respectively, and include error bars showing the 95% confidence intervals of the means.
 
-It's quite simple to just draw a line-plot with error bar. 
+It's quite simple to just draw two line-plot with error bar as shown in @fig-emmeans-q3: 
+
+```{r}
+#| fig-cap: The interaction of type of face and alcohol consumption on the ratings
+#| label: fig-emmeans-q3
+library(ggplot2)
+library(haven)
+
+goggles <- read_sav("goggles.sav")
+
+goggles$facetype <- as.factor(goggles$facetype)
+goggles$alcohol <- as.factor(goggles$alcohol)
+
+ggplot(goggles, aes(x = alcohol, y = attractiveness, 
+                    group = facetype, color = facetype)) + 
+  stat_summary(fun = mean, geom = "point") +
+  stat_summary(fun = mean, geom = "line") +
+  stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.1) + 
+  scale_x_discrete(labels = c("Placebo", "Low dose", "High dose")) +
+  theme_light()
+
+```
+
+`ggplot2` is always the most elegant way to visualize the data and idea.
 
 # Context
+
 A marketing manager tested the benefit of soft drinks for curing hangovers. He took 15 people and got them drunk. Then he measured how drunk the person got on a scale of `0 = straight edge` to `10 = flapping about like a haddock out of water`. The next morning as they awoke and dehydrated, he gave five of them water to drink, five of them Lucozade (a very nice glucose-based UK drink [^1]) and the remaining five a leading brand of cola [^2]. These people were randomly assigned to the three treatment groups. He measured how well they felt (on a scale from 0 = I feel like death to 10 = I feel really full of beans and healthy) two hours later. The dataset is saved in `hangover.sav`. The goal is to study whether different drinks (treatment) affect how the drunk people feel (outcome).
 
 [^1]: And it is now owned by Japanese (SUNTORY bought it from GSK in 2013). 
@@ -109,23 +127,23 @@ An ANCOVA was conducted to examine the effect of drink type on recovery while co
 
 The adjusted means were given in @tbl-adjusted-means [^4], after the adjustment for the $Y$ of drunkenness, participants who took Lucozade ($M_2 = 6.239$) felt better than participants who drunk water or cola ($M_1 = 5.110$, $M_3 = 5.252$). 
 
-|           |           | Mean of $Y$, adjusted for $X_c$ | Unadjusted Mean of $Y$ | 
-|-----------|-----------|---------------------------------|------------------------|
-| Group 1   | Water     | 5.110                           | 5.00                   |
-| Group 2   | Lucozade  | 6.239                           | 5.80                   |
-| Group 3   | Cola      | 5.252                           | 5.80                   |
+|               |           | Mean of $Y$, adjusted for $X_c$ | Unadjusted Mean of $Y$ | 
+|---------------|-----------|---------------------------------|------------------------|
+| Group $A_1$   | Water     | 5.110                           | 5.00                   |
+| Group $A_2$   | Lucozade  | 6.239                           | 5.80                   |
+| Group $A_3$   | Cola      | 5.252                           | 5.80                   |
 
 :Adjusted means (evaluated at initial drunkenness = 3.40). {#tbl-adjusted-means}
 
 [^4]: The rank ordering of $Y$ means across levels of groups in $A$ changed slightly. I believe the adjusted mean is more close to the fact, see the reason in next footnote. 
 
-## Q5: ANOVA or ANCOVA
+## Q5: ANOVA or ANCOVA 
 
-Given all assumptions of ANCOVA or ANOVA were satisfied (although this may only happen in the statistician's Disneyland). In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including covariates that can influence the dependent variable. In this case, ANCOVA may reduce error variance and increases statistical power to detect treatment effects, especially with the small sample size (like this dataset with $n = 15$). Therefore, ANCOVA may provides a clearer understanding of the treatment effects. In this study, however, because of the significant interaction between the treatment and the covariate, the causal relationship between drink type and recovery from hangover tended to remain unclear [^5].
+Given all assumptions of ANCOVA or ANOVA were satisfied (although this may only happen in the statistician's Disneyland). In general, ANOVA is used to compare the means of different groups and determine if there are statistically significant differences between them. It assumes that all groups are treated equally and does not adjust for covariates that might affect the dependent variable. In contrast, ANCOVA extends ANOVA by including covariates that can influence the dependent variable. In this case, ANCOVA may reduce error variance and increases statistical power to detect treatment effects, especially with the small sample size (like this dataset with $n = 15$). Therefore, ANCOVA may provides a clearer understanding of the treatment effects. In this study, however, because of the significant interaction between the treatment and the covariate, the causal relationship between drink type and recovery from hangover tended to remain unclear [^5][^6].
 
 [^5]: But it has been proven that consuming glucose-rich foods is an effective way to alleviate hangover symptoms because when people drink alcohol, their blood glucose levels tend to decrease, leading to hypoglycemia that makes people *feel like death*. The power of glucose was also confirmed by an experienced drinker who wrote this footnote. 
 
-> If I get another chance, I’d like to say that I prefer neither option and would choose causal inference instead. I’m determined to **almost** master this method after the Christmas and Lunar New Year breaks.
+[^6]: If I get another chance, I’d like to say that I prefer neither option and would choose causal inference instead. I’m determined to **almost** master this method after the Christmas and Lunar New Year breaks.
 
 # Final thoughts
 
@@ -134,9 +152,17 @@ I felt lonely when I started writing this part. Initially I had many things to s
  - Thank you for all the tolerance for my foolish this semester.
  - May all the cats at UM, as well as the force, be with you.
 
-Happy thanksgiving and メリークリスマス. 
+\vfill
 
-Greetings from our lovely cats, the Prince (@fig-cat-prince) and A-bao (阿煲, see @fig-cat-bao). A-bao is the cat—and the real boss—at a coffee shop I love. If you ever pass through Guangzhou, I'll let the shop owner know and treat you to a hot Americano. 
+\begin{center}
+Happy thanksgiving and メリークリスマス. 
+\end{center}
+
+\vfill
+
+\pagebreak
+
+Also Greetings from our lovely cats, the Prince (in @fig-cat-prince) and A-bao (阿煲, see @fig-cat-bao). A-bao is the cat—and the real boss—at a coffee shop I love. If you ever pass through Guangzhou, I'll let the shop owner know and treat you to a hot Americano. 
 
 ![The Prince](./the-prince-2.jpg){#fig-cat-prince}
 
