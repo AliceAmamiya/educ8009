@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Laboratory 05 – educ8009-assignments</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-02966aa17e1c6f70a9252574ec59cebc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session09-10/assignment.html">Session09 10</a></li><li class="breadcrumb-item"><a href="../session09-10/assignment.html">Laboratory 05</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">educ8009-assignments</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Labs</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session03</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session03/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session03/assignment-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 01 (feat. R)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session04</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session04/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 02</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session05 06</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session05-06/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 03</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session07 08</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session07-08/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 04</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Session09 10</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session09-10/assignment.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Laboratory 05</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session11 12</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session11-12/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 06</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session13 14</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session13-14/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 07</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session15 16</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session15-16/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 08</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session16 17</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session16-17/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 09</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Session17 18</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../session17-18/assignment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Laboratory 10</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#reply-on-the-feedback-of-lab-4" id="toc-reply-on-the-feedback-of-lab-4" class="nav-link active" data-scroll-target="#reply-on-the-feedback-of-lab-4">Reply on the feedback of Lab 4</a></li>
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a>
+  <ul class="collapse">
+  <li><a href="#a-peek-on-the-dataset-as-always" id="toc-a-peek-on-the-dataset-as-always" class="nav-link" data-scroll-target="#a-peek-on-the-dataset-as-always">A peek on the dataset as always</a></li>
+  <li><a href="#q1-the-bivariate-regression-equation" id="toc-q1-the-bivariate-regression-equation" class="nav-link" data-scroll-target="#q1-the-bivariate-regression-equation">Q1: The bivariate regression equation</a></li>
+  <li><a href="#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data" id="toc-q2-whether-bi-variate-regression-is-a-good-choice-for-the-data" class="nav-link" data-scroll-target="#q2-whether-bi-variate-regression-is-a-good-choice-for-the-data">Q2: Whether bi-variate regression is a good choice for the data</a></li>
+  <li><a href="#q3-bivariate-regression-analysis" id="toc-q3-bivariate-regression-analysis" class="nav-link" data-scroll-target="#q3-bivariate-regression-analysis">Q3: Bivariate regression analysis</a></li>
+  <li><a href="#q4-the-slope-from-the-standardized-regression" id="toc-q4-the-slope-from-the-standardized-regression" class="nav-link" data-scroll-target="#q4-the-slope-from-the-standardized-regression">Q4: The slope from the standardized regression</a></li>
+  <li><a href="#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day" id="toc-q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day" class="nav-link" data-scroll-target="#q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day">Q5: Cognitive function score if drink 3 cups of tea per day</a></li>
+  <li><a href="#q6-tea-predicts-cognitive-function" id="toc-q6-tea-predicts-cognitive-function" class="nav-link" data-scroll-target="#q6-tea-predicts-cognitive-function">Q6: Tea predicts cognitive function?</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="assignment.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Labs</li><li class="breadcrumb-item"><a href="../session09-10/assignment.html">Session09 10</a></li><li class="breadcrumb-item"><a href="../session09-10/assignment.html">Laboratory 05</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Laboratory 05</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="reply-on-the-feedback-of-lab-4" class="level1">
+<h1>Reply on the feedback of Lab 4</h1>
+<p>For all typos on Lab 4 (e.g.&nbsp;4.4 Q3): All fixed on the online version.</p>
+</section>
+<section id="context" class="level1">
+<h1>Context</h1>
+<p>A researcher enjoys drinking tea when trying to do brain-melting things like studying statistics. He feels that tea helps him think, and he wants to verify whether tea really improves cognitive function. The researcher recruits a large group of respondents and randomly assigns each one with a different number of cups of tea to drink every day <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. After one month, he measures the cognitive function score of each participant and saves the data in <code>tea.sav</code>.</p>
+</section>
+<section id="objectives" class="level1">
+<h1>Objectives</h1>
+<ol type="1">
+<li>Write down the bivariate regression equation to be estimated. The goal is to study whether tea affects cognitive function.</li>
+<li>Do you think the bivariate regression is a good choice for the data? Why or why not?</li>
+<li>Conduct the bivariate regression analysis using the data. Interpret the intercept and the slope from the raw regression.</li>
+<li>Interpret the slope from the standardized regression. From which regression (raw or standardized) is the slope easier to interpret and understand?</li>
+<li>Predict the cognitive function score of a respondent who drinks 3 cups of tea per day. Do you think your prediction is accurate (close to the truth)?</li>
+<li>Test the hypothesis that tea predicts cognitive function using the regression. Does your result imply any findings about the causal effect of tea on cognitive function?</li>
+</ol>
+</section>
+<section id="solutions" class="level1">
+<h1>Solutions</h1>
+<section id="a-peek-on-the-dataset-as-always" class="level2">
+<h2 class="anchored" data-anchor-id="a-peek-on-the-dataset-as-always">A peek on the dataset as always</h2>
+<div id="cell-5" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>tea <span class="op">=</span> pd.read_spss(<span class="st">'./datasets/tea.sav'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="bu">print</span>(tea.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              tea     cog_fun
+count  716.000000  716.000000
+mean     3.032123   50.611732
+std      1.669245    9.882814
+min      0.000000   24.000000
+25%      2.000000   44.000000
+50%      3.000000   51.000000
+75%      4.000000   57.000000
+max      8.000000   80.000000</code></pre>
+</div>
+</div>
+</section>
+<section id="q1-the-bivariate-regression-equation" class="level2">
+<h2 class="anchored" data-anchor-id="q1-the-bivariate-regression-equation">Q1: The bivariate regression equation</h2>
+<p><strong>Answer</strong></p>
+<p>Given the independent variable <span class="math inline">\(X\)</span>, the predicted <span class="math inline">\(\hat Y_{cog\_fun}\)</span> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> is:</p>
+<p><span class="math display">\[
+\hat Y_{cog\_fun} = \beta_0 + \beta_1X
+\]</span></p>
+</section>
+<section id="q2-whether-bi-variate-regression-is-a-good-choice-for-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="q2-whether-bi-variate-regression-is-a-good-choice-for-the-data">Q2: Whether bi-variate regression is a good choice for the data</h2>
+<p><strong>Answer</strong></p>
+<p>The bi-variate regression may not be a strong model for this data for:</p>
+<ol type="1">
+<li><p>The Pearson’s Correlation: The Pearson’s correlation coefficient (<span class="math inline">\(r \approx 0.0777\)</span>) indicates a relatively weak positive relationship between tea consumption and cognitive function. The <span class="math inline">\(p\)</span>-value (<span class="math inline">\(p \approx 0.0378\)</span>) is below 0.05, suggesting that the weak correlation is statistically significant.</p></li>
+<li><p>Linearity and Distribution: The scatter plot in <a href="#fig-scatter" class="quarto-xref">Figure&nbsp;1</a> shows that a weak and flat linear relationship between tea consumption and cognitive function, which aligns with the low Pearson’s <span class="math inline">\(r\)</span>. While the histograms in <a href="#fig-histograms" class="quarto-xref">Figure&nbsp;2</a> show that the cognitive function scores are approximately normally distributed.</p></li>
+<li><p>However, the sample size (<span class="math inline">\(N = 716\)</span>) is relatively large, which may be beneficial for conducting a regression.</p></li>
+</ol>
+<p>Based on this weak linear trend, although bi-variate regression could be employed as they meet the assumption of a linear regression, the model may not explain much variability in cognitive function. Other factors like age, education background even SES may (and must) influence cognitive function. For sake of this assignment, I will assume that other variables either do not vary significantly across participants or are not measured.</p>
+<p><strong>Solution</strong></p>
+<div id="cell-8" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb3-2"><a href="#cb3-2"></a>tea_pearsonr, tea_pvalue <span class="op">=</span> stats.pearsonr(tea.tea, tea.cog_fun)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="bu">print</span>(<span class="ss">f'Pearson</span><span class="ch">\'</span><span class="ss">s r: </span><span class="sc">{</span>tea_pearsonr<span class="sc">}</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>      <span class="ss">f'p-value: </span><span class="sc">{</span>tea_pvalue<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pearson's r: 0.07765252417388956
+p-value: 0.03776954868447832</code></pre>
+</div>
+</div>
+<div id="cell-fig-scatter" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>tea_scatter <span class="op">=</span> sns.lmplot(tea, x<span class="op">=</span><span class="st">'tea'</span>, y<span class="op">=</span><span class="st">'cog_fun'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>tea_scatter.fig.suptitle(<span class="st">'Scatter plot on tea v. cog_fun'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-scatter" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-scatter-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Scatter Plot on tea v. cog_fun
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-histograms" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>fig, ax <span class="op">=</span>plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>sns.histplot(tea, x<span class="op">=</span><span class="st">'tea'</span>, kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">8</span>, ax<span class="op">=</span>ax[<span class="dv">0</span>])</span>
+<span id="cb6-3"><a href="#cb6-3"></a>sns.histplot(tea, x<span class="op">=</span><span class="st">'cog_fun'</span>, kde<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb6-4"><a href="#cb6-4"></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Tea'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Cognitive Function'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a>fig.suptitle(<span class="st">'Histograms on variables: Tea and Cognitive Function'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="fig-histograms" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-histograms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assignment_files/figure-html/fig-histograms-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-histograms-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Distribution of cups of tea and cognitive function scores
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="q3-bivariate-regression-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="q3-bivariate-regression-analysis">Q3: Bivariate regression analysis</h2>
+<p><strong>Answer</strong></p>
+<p>Intercept: <span class="math inline">\(\beta_0 \approx 49.2177\)</span>, suggests that when a respondent drinks 0 cups of tea per day, the expected cognitive function score is 49.2177.</p>
+<p>Slope: <span class="math inline">\(\beta_1 \approx 0.4597\)</span>, indicates a positive relationship between tea consumption and cognitive function. For each additional cup of tea consumed per day, the cognitive function score increases by approximately 0.4597 points.</p>
+<p><strong>Solution</strong></p>
+<div id="cell-12" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> print_linregress(x, y): </span>
+<span id="cb7-2"><a href="#cb7-2"></a>      b1, b0, r, p, stderr <span class="op">=</span>  stats.linregress(x<span class="op">=</span>x, y<span class="op">=</span>y)</span>
+<span id="cb7-3"><a href="#cb7-3"></a>      <span class="bu">print</span>(<span class="ss">f'Intercept: </span><span class="sc">{</span>b0<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4"></a>      <span class="bu">print</span>(<span class="ss">f'Slope: </span><span class="sc">{</span>b1<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>      <span class="bu">print</span>(<span class="ss">f'R-squared: </span><span class="sc">{</span>r<span class="op">**</span><span class="dv">2</span><span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6"></a>      <span class="bu">print</span>(<span class="ss">f'P-value: </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7"></a>      <span class="bu">print</span>(<span class="ss">f'Standard error: </span><span class="sc">{</span>stderr<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a></span>
+<span id="cb7-9"><a href="#cb7-9"></a>print_linregress(tea[<span class="st">'tea'</span>], tea[<span class="st">'cog_fun'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Intercept: 49.217731459509174
+Slope: 0.45974402348753085
+R-squared: 0.006029914510576479
+P-value: 0.03776954868447834
+Standard error: 0.22090119534570854</code></pre>
+</div>
+</div>
+<p>In the world of python, <code>scipy.stats</code> works fine for applying basic linear models, <strong>however</strong>, <code>statsmodels</code> gives you this pretty damn cool all-in-one summary output as shown below:</p>
+<div id="cell-14" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="kw">def</span> bivariate_regression(x, y): </span>
+<span id="cb9-4"><a href="#cb9-4"></a>    X <span class="op">=</span> sm.add_constant(x)</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    model <span class="op">=</span> sm.OLS(y, X).fit()</span>
+<span id="cb9-6"><a href="#cb9-6"></a>    summary <span class="op">=</span> model.summary()</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="bu">print</span>(summary)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="cf">return</span> model</span>
+<span id="cb9-9"><a href="#cb9-9"></a></span>
+<span id="cb9-10"><a href="#cb9-10"></a>tea_model <span class="op">=</span> bivariate_regression(tea[<span class="st">'tea'</span>], tea[<span class="st">'cog_fun'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                cog_fun   R-squared:                       0.006
+Model:                            OLS   Adj. R-squared:                  0.005
+Method:                 Least Squares   F-statistic:                     4.331
+Date:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378
+Time:                        19:52:27   Log-Likelihood:                -2653.5
+No. Observations:                 716   AIC:                             5311.
+Df Residuals:                     714   BIC:                             5320.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         49.2177      0.764     64.382      0.000      47.717      50.719
+tea            0.4597      0.221      2.081      0.038       0.026       0.893
+==============================================================================
+Omnibus:                        0.140   Durbin-Watson:                   1.912
+Prob(Omnibus):                  0.932   Jarque-Bera (JB):                0.229
+Skew:                          -0.009   Prob(JB):                        0.892
+Kurtosis:                       2.914   Cond. No.                         7.65
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
+</div>
+</div>
+</section>
+<section id="q4-the-slope-from-the-standardized-regression" class="level2">
+<h2 class="anchored" data-anchor-id="q4-the-slope-from-the-standardized-regression">Q4: The slope from the standardized regression</h2>
+<p><strong>Answer</strong></p>
+<p><strong>Q4a: Interpret the slope from the standardized regression.</strong></p>
+<p><span class="math display">\[\beta^* \approx 0.07765\]</span></p>
+<p>The standardized slope is approximately 0.07765, means that for every one standard deviation increase in tea consumption, the cognitive function score increases by 0.07765 standard deviations.</p>
+<p><strong>Q4b: From which regression (raw or standardized) is the slope easier to interpret and understand?</strong></p>
+<p>It depends.</p>
+<p>The raw slope is easy to interpret in the context of the actual units of measurement as it represents the change in the dependent variable (<code>cog_fun</code>) for a one-unit change in the independent variable (<code>tea</code>).</p>
+<p>The standardized slope makes comparing effects across different variables or studies much easier as it tells us how many standard deviations the dependent variable changes for a one standard deviation change in the independent variable.</p>
+<p><strong>Solution</strong></p>
+<p>Both the independent (<code>tea</code>) and dependent variables (<code>cog_fun</code>) are transformed into z-scores, then:</p>
+<div id="cell-17" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Preparing standardized</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>tea[<span class="st">'tea_std'</span>] <span class="op">=</span> tea[<span class="st">'tea'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: (x <span class="op">-</span> tea[<span class="st">'tea'</span>].mean()) <span class="op">/</span> tea[<span class="st">'tea'</span>].std())</span>
+<span id="cb11-3"><a href="#cb11-3"></a>tea[<span class="st">'cog_fun_std'</span>] <span class="op">=</span> tea[<span class="st">'cog_fun'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: (x <span class="op">-</span> tea[<span class="st">'cog_fun'</span>].mean()) <span class="op">/</span> tea[<span class="st">'cog_fun'</span>].std())</span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co"># Intercept and slope of standardized regression</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>print_linregress(tea[<span class="st">'tea_std'</span>], tea[<span class="st">'cog_fun_std'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Intercept: -1.2880252063838454e-16
+Slope: 0.07765252417388924
+R-squared: 0.006029914510576491
+P-value: 0.0377695486844781
+Standard error: 0.03731105688226283</code></pre>
+</div>
+</div>
+<div id="cell-18" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># And the pretty damn detailed OLS summary</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>bivariate_regression(tea[<span class="st">'tea_std'</span>], tea[<span class="st">'cog_fun_std'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:            cog_fun_std   R-squared:                       0.006
+Model:                            OLS   Adj. R-squared:                  0.005
+Method:                 Least Squares   F-statistic:                     4.331
+Date:                Mon, 28 Oct 2024   Prob (F-statistic):             0.0378
+Time:                        19:52:27   Log-Likelihood:                -1013.3
+No. Observations:                 716   AIC:                             2031.
+Df Residuals:                     714   BIC:                             2040.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const      -6.765e-17      0.037  -1.81e-15      1.000      -0.073       0.073
+tea_std        0.0777      0.037      2.081      0.038       0.004       0.151
+==============================================================================
+Omnibus:                        0.140   Durbin-Watson:                   1.912
+Prob(Omnibus):                  0.932   Jarque-Bera (JB):                0.229
+Skew:                          -0.009   Prob(JB):                        0.892
+Kurtosis:                       2.914   Cond. No.                         1.00
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>&lt;statsmodels.regression.linear_model.RegressionResultsWrapper at 0x7ff15145ae90&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day" class="level2">
+<h2 class="anchored" data-anchor-id="q5-cognitive-function-score-if-drink-3-cups-of-tea-per-day">Q5: Cognitive function score if drink 3 cups of tea per day</h2>
+<p><strong>Answer</strong></p>
+<p>Given <span class="math inline">\(X = 3\)</span>, the cognitive function score for a respondent who drinks 3 cups of tea per day is:</p>
+<p><span class="math display">\[\hat Y = \beta_0 + \beta_1 \times 3 \approx 50.5970\]</span></p>
+<p>However, the prediction might not be very close to the true score. Although the slope is statistically significant (with a <span class="math inline">\(p\)</span>-value of <span class="math inline">\(p = 0.038\)</span>), the low <span class="math inline">\(R\)</span>-squared (<span class="math inline">\(R^2 \approx 0.006\)</span>) indicates that statistically, there’s only 0.6% of the variance in cognitive function scores is explained by tea consumption.</p>
+<p><strong>Solution</strong></p>
+<div id="cell-20" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>cog_fun_after_3_cups <span class="op">=</span> tea_model.predict([<span class="fl">1.0</span>, <span class="dv">3</span>]) <span class="co"># The 1.0 here is the constant required by statsmodels</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="bu">print</span>(<span class="ss">f'Cognitive function score if drink 3 cups of tea per day: </span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>      <span class="ss">f'</span><span class="sc">{</span>cog_fun_after_3_cups[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cognitive function score if drink 3 cups of tea per day: 
+50.59696352997175</code></pre>
+</div>
+</div>
+</section>
+<section id="q6-tea-predicts-cognitive-function" class="level2">
+<h2 class="anchored" data-anchor-id="q6-tea-predicts-cognitive-function">Q6: Tea predicts cognitive function?</h2>
+<p><strong>Answers</strong></p>
+<p>The <span class="math inline">\(p\)</span>-value for the slope is:</p>
+<p><span class="math display">\[p \approx 0.0378\]</span></p>
+<p>Since the <span class="math inline">\(p\)</span>-value is less than 0.05 (<span class="math inline">\(p &lt; 0.05\)</span>), we can reject the null hypothesis (<span class="math inline">\(H_0\)</span>). This suggests that there is evidence of an association between tea consumption and cognitive function scores.</p>
+<p>However, the low <span class="math inline">\(R\)</span>-squared value (<span class="math inline">\(R^2 \approx 0.006\)</span>) indicates that tea consumption explains only a tiny fraction of the variability in cognitive function.</p>
+<p>While the results suggest a statistically significant but weak association between tea consumption and cognitive function, they do not provide evidence of a causal effect. Besides, if simply drinking more tea could raise cognitive scores, we might think about advising children to drink tea to guarantee a bright future! That said, those less inclined to drink tea might still end up in schools of education.</p>
+<p><strong>Solution</strong></p>
+<p>Hypothesis:</p>
+<p><span class="math inline">\(H_0\)</span>: The slope (<span class="math inline">\(\beta_1\)</span>) is zero, meaning tea consumption does not predict cognitive function.<br>
+<span class="math inline">\(H_1\)</span>: The slope (<span class="math inline">\(\beta_1\)</span>) is not zero, meaning tea consumption does predict cognitive function.</p>
+<div id="cell-22" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>tea_p_value <span class="op">=</span> tea_model.pvalues[<span class="st">'tea'</span>]</span>
+<span id="cb18-2"><a href="#cb18-2"></a></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="kw">def</span> test_hypothesis(p_value, alpha<span class="op">=</span><span class="fl">0.05</span>): </span>
+<span id="cb18-4"><a href="#cb18-4"></a>    <span class="bu">print</span>(<span class="ss">f'Given the p-value=</span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss"> and alpha=</span><span class="sc">{</span>alpha<span class="sc">}</span><span class="ss">:'</span>)</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    <span class="cf">if</span> p_value <span class="op">&lt;</span> alpha:</span>
+<span id="cb18-6"><a href="#cb18-6"></a>        <span class="bu">print</span>(<span class="st">"Reject the null hypothesis."</span>)</span>
+<span id="cb18-7"><a href="#cb18-7"></a>    <span class="cf">else</span>:</span>
+<span id="cb18-8"><a href="#cb18-8"></a>        <span class="bu">print</span>(<span class="st">"Fail to reject the null hypothesis."</span>)</span>
+<span id="cb18-9"><a href="#cb18-9"></a></span>
+<span id="cb18-10"><a href="#cb18-10"></a>test_hypothesis(tea_p_value, alpha<span class="op">=</span><span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Given the p-value=0.03776954868447742 and alpha=0.05:
+Reject the null hypothesis.</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Oh wait, could this kind of torture be approved by the IRB?<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Add <span class="math inline">\(\epsilon\)</span> if consider the error term.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
